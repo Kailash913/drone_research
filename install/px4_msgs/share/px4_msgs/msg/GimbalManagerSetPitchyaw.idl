@@ -1,0 +1,61 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/GimbalManagerSetPitchyaw.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module GimbalManagerSetPitchyaw_Constants {
+      const uint32 GIMBAL_MANAGER_FLAGS_PITCH_LOCK = 8;
+      const uint32 GIMBAL_MANAGER_FLAGS_YAW_LOCK = 16;
+      const uint32 GIMBAL_MANAGER_FLAGS_YAW_IN_EARTH_FRAME = 64;
+    };
+    @verbatim (language="comment", text=
+      "Gimbal manager pitch/yaw setpoint " "\n"
+      "" "\n"
+      "This is sent by PX4 (acting as a gimbal manager client) to an" "\n"
+      "external gimbal manager). Streamed out as GIMBAL_MANAGER_SET_PITCHYAW.")
+    struct GimbalManagerSetPitchyaw {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "System id of the external gimbal manager")
+      @unit (value="-")
+      uint8 target_system;
+
+      @verbatim (language="comment", text=
+        "Component id of the external gimbal manager")
+      @unit (value="-")
+      uint8 target_component;
+
+      @verbatim (language="comment", text=
+        "Gimbal device to address (0 for all)")
+      @unit (value="-")
+      uint8 gimbal_device_id;
+
+      @verbatim (language="comment", text=
+        "GIMBAL_MANAGER_FLAGS bitmask")
+      @unit (value="@enum GIMBAL_MANAGER_FLAGS")
+      uint32 flags;
+
+      @verbatim (language="comment", text=
+        "[rad] [@invalid NaN to ignore] pitch angle")
+      float pitch;
+
+      @verbatim (language="comment", text=
+        "[rad] [@invalid NaN to ignore] yaw angle")
+      float yaw;
+
+      @verbatim (language="comment", text=
+        "[rad/s] [@invalid NaN to ignore] Pitch angular rate")
+      float pitch_rate;
+
+      @verbatim (language="comment", text=
+        "[rad/s] [@invalid NaN to ignore] Yaw angular rate")
+      float yaw_rate;
+    };
+  };
+};

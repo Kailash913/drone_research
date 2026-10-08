@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/InternalCombustionEngineControl.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Internal combustion engine (ICE) actuator setpoints" "\n"
+      "" "\n"
+      "Published by the `internal_combustion_engine_control` module, which runs the engine" "\n"
+      "start/stop state machine and the idle RPM governor." "\n"
+      "The mixer maps these setpoints onto the IC Engine output functions (ignition," "\n"
+      "throttle, choke, starter), which are assigned to the flight controller outputs." "\n"
+      "The resulting state machine state is reported in `InternalCombustionEngineStatus`.")
+    struct InternalCombustionEngineControl {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Activate/deactivate the ignition (spark plug)")
+      boolean ignition_on;
+
+      @verbatim (language="comment", text=
+        "[norm] [@range 0, 1] [@invalid NaN Stops the engine: output goes to its disarmed value] Throttle actuator setpoint, rate limited by `ICE_THR_SLEW`. 0 is closed throttle")
+      float throttle_control;
+
+      @verbatim (language="comment", text=
+        "[@range 0, 1] Choke actuator setpoint, 1 is fully closed")
+      @unit (value="norm")
+      float choke_control;
+
+      @verbatim (language="comment", text=
+        "[@range 0, 1] (Electric) starter motor setpoint")
+      @unit (value="norm")
+      float starter_engine_control;
+
+      @verbatim (language="comment", text=
+        "User intent for the engine to be running, from the source selected by `ICE_ON_SOURCE`")
+      boolean user_request_motor_on;
+    };
+  };
+};

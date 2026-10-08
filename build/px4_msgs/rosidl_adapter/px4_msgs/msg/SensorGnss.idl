@@ -1,0 +1,229 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorGnss.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module SensorGnss_Constants {
+      const uint8 FIX_TYPE_NONE = 1;
+      const uint8 FIX_TYPE_2D = 2;
+      const uint8 FIX_TYPE_3D = 3;
+      const uint8 FIX_TYPE_RTCM_CODE_DIFFERENTIAL = 4;
+      const uint8 FIX_TYPE_RTK_FLOAT = 5;
+      const uint8 FIX_TYPE_RTK_FIXED = 6;
+      const uint8 FIX_TYPE_EXTRAPOLATED = 8;
+      const uint8 JAMMING_STATE_UNKNOWN = 0;
+      const uint8 JAMMING_STATE_OK = 1;
+      const uint8 JAMMING_STATE_MITIGATED = 2;
+      const uint8 JAMMING_STATE_DETECTED = 3;
+      const uint8 SPOOFING_STATE_UNKNOWN = 0;
+      const uint8 SPOOFING_STATE_OK = 1;
+      const uint8 SPOOFING_STATE_MITIGATED = 2;
+      const uint8 SPOOFING_STATE_DETECTED = 3;
+      const uint8 AUTHENTICATION_STATE_UNKNOWN = 0;
+      const uint8 AUTHENTICATION_STATE_INITIALIZING = 1;
+      const uint8 AUTHENTICATION_STATE_ERROR = 2;
+      const uint8 AUTHENTICATION_STATE_OK = 3;
+      const uint8 AUTHENTICATION_STATE_DISABLED = 4;
+      const uint32 SYSTEM_ERROR_OK = 0;
+      const uint32 SYSTEM_ERROR_INCOMING_CORRECTIONS = 1;
+      const uint32 SYSTEM_ERROR_CONFIGURATION = 2;
+      const uint32 SYSTEM_ERROR_SOFTWARE = 4;
+      const uint32 SYSTEM_ERROR_ANTENNA = 8;
+      const uint32 SYSTEM_ERROR_EVENT_CONGESTION = 16;
+      const uint32 SYSTEM_ERROR_CPU_OVERLOAD = 32;
+      const uint32 SYSTEM_ERROR_OUTPUT_CONGESTION = 64;
+      const uint8 CORRECTIONS_PROTOCOL_UNKNOWN = 0;
+      const uint8 CORRECTIONS_PROTOCOL_RTCM3 = 1;
+      const uint8 CORRECTIONS_PROTOCOL_SPARTN = 2;
+      @verbatim (language="comment", text=
+        "Galileo High Accuracy Service, received on E6")
+      const uint8 CORRECTIONS_PROTOCOL_HAS = 3;
+      @verbatim (language="comment", text=
+        "SPARTN over L-band (u-blox NEO-D9S)")
+      const uint8 CORRECTIONS_PROTOCOL_PMP = 4;
+      @verbatim (language="comment", text=
+        "QZSS CLAS")
+      const uint8 CORRECTIONS_PROTOCOL_QZSS_L6 = 5;
+      const uint8 CORRECTIONS_MSG_USED_UNKNOWN = 0;
+      const uint8 CORRECTIONS_MSG_USED_NOT_USED = 1;
+      const uint8 CORRECTIONS_MSG_USED_USED = 2;
+    };
+    @verbatim (language="comment", text=
+      "GNSS receiver report, position in WGS84" "\n"
+      "" "\n"
+      "One instance per receiver, published by its driver: the receiver's own solution, unmodified." "\n"
+      "The sensors module publishes the selected receiver on vehicle_gnss.")
+    struct SensorGnss {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Measurement time if the driver knows it, else 0 or equal to timestamp. vehicle_gnss carries the corrected value")
+      @unit (value="us")
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "Unique device ID for the sensor that does not change between power cycles")
+      @unit (value="-")
+      uint32 device_id;
+
+      @verbatim (language="comment", text=
+        "Latitude, allows centimeter level RTK precision")
+      @unit (value="deg")
+      double latitude;
+
+      @verbatim (language="comment", text=
+        "Longitude, allows centimeter level RTK precision")
+      @unit (value="deg")
+      double longitude;
+
+      @verbatim (language="comment", text=
+        "Altitude above MSL, from the receiver's own geoid model")
+      @unit (value="m")
+      double altitude_msl;
+
+      @verbatim (language="comment", text=
+        "Altitude above the WGS84 ellipsoid")
+      @unit (value="m")
+      double altitude_ellipsoid;
+
+      @verbatim (language="comment", text=
+        "Speed accuracy estimate")
+      @unit (value="m/s")
+      float speed_accuracy;
+
+      @verbatim (language="comment", text=
+        "Course accuracy estimate")
+      @unit (value="rad")
+      float course_accuracy;
+
+      @verbatim (language="comment", text=
+        "Value 0 is also valid to represent no fix")
+      @unit (value="@enum FIX_TYPE")
+      uint8 fix_type;
+
+      @verbatim (language="comment", text=
+        "Horizontal position accuracy")
+      @unit (value="m")
+      float eph;
+
+      @verbatim (language="comment", text=
+        "Vertical position accuracy")
+      @unit (value="m")
+      float epv;
+
+      @verbatim (language="comment", text=
+        "Horizontal dilution of precision")
+      @unit (value="-")
+      float hdop;
+
+      @verbatim (language="comment", text=
+        "Vertical dilution of precision")
+      @unit (value="-")
+      float vdop;
+
+      @verbatim (language="comment", text=
+        "Noise level per millisecond")
+      @unit (value="-")
+      int32 noise;
+
+      @verbatim (language="comment", text=
+        "Automatic gain control monitor")
+      @unit (value="-")
+      uint16 automatic_gain_control;
+
+      @unit (value="@enum JAMMING_STATE")
+      uint8 jamming_state;
+
+      @verbatim (language="comment", text=
+        "Jamming indicator")
+      @unit (value="-")
+      int32 jamming_indicator;
+
+      @unit (value="@enum SPOOFING_STATE")
+      uint8 spoofing_state;
+
+      @verbatim (language="comment", text=
+        "Combined signal authentication state (e.g. Galileo OSNMA)")
+      @unit (value="@enum AUTHENTICATION_STATE")
+      uint8 authentication_state;
+
+      @verbatim (language="comment", text=
+        "Ground speed")
+      @unit (value="m/s")
+      float ground_speed;
+
+      @verbatim (language="comment", text=
+        "North velocity")
+      @unit (value="m/s")
+      float vel_north;
+
+      @verbatim (language="comment", text=
+        "East velocity")
+      @unit (value="m/s")
+      float vel_east;
+
+      @verbatim (language="comment", text=
+        "Down velocity")
+      @unit (value="m/s")
+      float vel_down;
+
+      @verbatim (language="comment", text=
+        "[@range -PI, PI] Course over ground, not heading")
+      @unit (value="rad")
+      float course;
+
+      @verbatim (language="comment", text=
+        "NED velocity is valid")
+      boolean vel_ned_valid;
+
+      @verbatim (language="comment", text=
+        "timestamp + timestamp_time_relative = time of the UTC timestamp since system start")
+      @unit (value="us")
+      int32 timestamp_time_relative;
+
+      @verbatim (language="comment", text=
+        "UTC time from the receiver, 0 until known")
+      @unit (value="us")
+      uint64 time_utc_usec;
+
+      @verbatim (language="comment", text=
+        "Satellites used in the solution")
+      @unit (value="-")
+      uint8 satellites_used;
+
+      @verbatim (language="comment", text=
+        "Bitmask of receiver errors")
+      @unit (value="@enum SYSTEM_ERROR")
+      uint32 system_error;
+
+      @verbatim (language="comment", text=
+        "Correction injection rate")
+      @unit (value="Hz")
+      float rtcm_injection_rate;
+
+      @verbatim (language="comment", text=
+        "uORB instance used for corrections")
+      @unit (value="-")
+      uint8 selected_rtcm_instance;
+
+      @verbatim (language="comment", text=
+        "Protocol of the last correction message the receiver parsed")
+      @unit (value="@enum CORRECTIONS_PROTOCOL")
+      uint8 corrections_protocol;
+
+      @verbatim (language="comment", text=
+        "Last correction message failed its CRC or content check")
+      boolean corrections_crc_failed;
+
+      @verbatim (language="comment", text=
+        "Whether the receiver used the last correction message")
+      @unit (value="@enum CORRECTIONS_MSG_USED")
+      uint8 corrections_msg_used;
+    };
+  };
+};

@@ -1,0 +1,43 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/PrecTakeoffStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module PrecTakeoffStatus_Constants {
+      @verbatim (language="comment", text=
+        "Not active")
+      const uint8 PREC_TAKEOFF_STATE_STOPPED = 0;
+      @verbatim (language="comment", text=
+        "Takeoff active; the estimator may still be acquiring the target")
+      const uint8 PREC_TAKEOFF_STATE_ONGOING = 1;
+      @verbatim (language="comment", text=
+        "Takeoff altitude reached")
+      const uint8 PREC_TAKEOFF_STATE_DONE = 2;
+    };
+    @verbatim (language="comment", text=
+      "Precision takeoff status." "\n"
+      "" "\n"
+      "Published by: navigator (prec_takeoff.cpp)." "\n"
+      "Subscribed by: vision_target_estimator, flight_mode_manager (FlightTaskAuto)." "\n"
+      "" "\n"
+      "ONGOING while a vertical takeoff setpoint is active and MIS_TKO_PREC is set. DONE is published when the" "\n"
+      "takeoff altitude is reached, then STOPPED once the takeoff is no longer active. Published every Navigator cycle.")
+    struct PrecTakeoffStatus {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Current precision-takeoff state")
+      @unit (value="@enum PREC_TAKEOFF_STATE")
+      uint8 state;
+
+      @verbatim (language="comment", text=
+        "True after a valid target adjusted the horizontal setpoint")
+      boolean setpoint_adjusted;
+    };
+  };
+};

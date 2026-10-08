@@ -1,0 +1,72 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorsStatusGnss.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef uint32 uint32__4[4];
+    typedef int8 int8__4[4];
+    typedef boolean boolean__4[4];
+    typedef uint16 uint16__4[4];
+    typedef float float__4[4];
+    module SensorsStatusGnss_Constants {
+      @verbatim (language="comment", text=
+        "Length of the per-receiver arrays")
+      const uint8 MAX_RECEIVERS = 4;
+    };
+    @verbatim (language="comment", text=
+      "Per-receiver GNSS health and check diagnostics" "\n"
+      "" "\n"
+      "Published by the sensors module. Describes the latest sample of each receiver: to gate on a sample, use vehicle_gnss.usable.")
+    struct SensorsStatusGnss {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Receiver that vehicle_gnss carries")
+      @unit (value="-")
+      uint32 device_id_selected;
+
+      @verbatim (language="comment", text=
+        "One entry per receiver, 0 where unused")
+      @unit (value="-")
+      uint32__4 device_ids;
+
+      @verbatim (language="comment", text=
+        "Fixed position of the receiver: 0 for the preferred one, otherwise for the first to publish, then in order of first publication. Changes only with the preference, -1 until the receiver publishes")
+      @unit (value="-")
+      int8__4 order;
+
+      @verbatim (language="comment", text=
+        "Publishing, and has passed its checks for long enough")
+      boolean__4 healthy;
+
+      @verbatim (language="comment", text=
+        "Bitmask of the enabled checks that failed, VehicleGnss CHECK_* bits")
+      @unit (value="-")
+      uint16__4 failed_checks;
+
+      @verbatim (language="comment", text=
+        "The pre-flight thresholds apply rather than the relaxed in-flight ones")
+      boolean__4 strict;
+
+      @verbatim (language="comment", text=
+        "Horizontal position drift rate at rest")
+      @unit (value="m/s")
+      float__4 drift_rate_horizontal;
+
+      @verbatim (language="comment", text=
+        "Vertical position drift rate at rest")
+      @unit (value="m/s")
+      float__4 drift_rate_vertical;
+
+      @verbatim (language="comment", text=
+        "Filtered horizontal speed at rest")
+      @unit (value="m/s")
+      float__4 speed_horizontal_filtered;
+    };
+  };
+};

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/FixedWingTakeoffStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Status of a fixed-wing takeoff" "\n"
+      "Passes information from the FixedWingModeManager to the Navigator.")
+    struct FixedWingTakeoffStatus {
+      @verbatim (language="comment", text=
+        "time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Whether the takeoff climbout is finished (altitude, or time if FW_TKO_CLMB_T is set)")
+      boolean climbout_completed;
+    };
+  };
+};

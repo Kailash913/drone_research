@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/ExternalGimbalManagerStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "External gimbal manager status" "\n"
+      "" "\n"
+      "Status of a gimbal manager running on another component (not us), decoded from" "\n"
+      "an incoming GIMBAL_MANAGER_STATUS message. Used to track which component" "\n"
+      "currently controls an external gimbal manager.")
+    struct ExternalGimbalManagerStatus {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "System id of the external gimbal manager")
+      @unit (value="-")
+      uint8 manager_sysid;
+
+      @verbatim (language="comment", text=
+        "Component id of the external gimbal manager")
+      @unit (value="-")
+      uint8 manager_compid;
+
+      @unit (value="-")
+      uint32 flags;
+
+      uint8 gimbal_device_id;
+
+      uint8 primary_control_sysid;
+
+      uint8 primary_control_compid;
+
+      uint8 secondary_control_sysid;
+
+      uint8 secondary_control_compid;
+    };
+  };
+};

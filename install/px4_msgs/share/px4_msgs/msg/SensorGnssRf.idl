@@ -1,0 +1,134 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorGnssRf.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module SensorGnssRf_Constants {
+      @verbatim (language="comment", text=
+        "Initializing")
+      const uint8 ANTENNA_STATUS_INIT = 0;
+      @verbatim (language="comment", text=
+        "Status unknown")
+      const uint8 ANTENNA_STATUS_UNKNOWN = 1;
+      @verbatim (language="comment", text=
+        "Antenna OK")
+      const uint8 ANTENNA_STATUS_OK = 2;
+      @verbatim (language="comment", text=
+        "Short circuit detected")
+      const uint8 ANTENNA_STATUS_SHORT = 3;
+      @verbatim (language="comment", text=
+        "Open circuit detected")
+      const uint8 ANTENNA_STATUS_OPEN = 4;
+      @verbatim (language="comment", text=
+        "Power off")
+      const uint8 ANTENNA_POWER_OFF = 0;
+      @verbatim (language="comment", text=
+        "Power on")
+      const uint8 ANTENNA_POWER_ON = 1;
+      @verbatim (language="comment", text=
+        "Power state unknown")
+      const uint8 ANTENNA_POWER_UNKNOWN = 2;
+      @verbatim (language="comment", text=
+        "Unknown")
+      const uint8 JAMMING_STATE_UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "No jamming detected")
+      const uint8 JAMMING_STATE_OK = 1;
+      @verbatim (language="comment", text=
+        "Interference visible but fix OK")
+      const uint8 JAMMING_STATE_WARNING = 2;
+      @verbatim (language="comment", text=
+        "Interference visible and no fix")
+      const uint8 JAMMING_STATE_CRITICAL = 3;
+    };
+    @verbatim (language="comment", text=
+      "GNSS RF status" "\n"
+      "" "\n"
+      "Reports RF block status for a GNSS receiver, decoded from the u-blox UBX-MON-RF message." "\n"
+      "Includes antenna status/power, jamming/interference indicators, automatic gain control (AGC)," "\n"
+      "noise level, and I/Q demodulation metrics. Published by the `gps` driver (UBX protocol only), once" "\n"
+      "per RF block, via the block-specific topics below.")
+    struct SensorGnssRf {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Timestamp of the raw data")
+      @unit (value="us")
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "Unique device ID for the sensor that does not change between power cycles")
+      uint32 device_id;
+
+      @verbatim (language="comment", text=
+        "Only used for multi-topic publishing")
+      @unit (value="-")
+      uint8 block_id;
+
+      @verbatim (language="comment", text=
+        "Status of the antenna supervisor state machine")
+      @unit (value="@enum ANTENNA_STATUS")
+      uint8 antenna_status;
+
+      @verbatim (language="comment", text=
+        "Antenna power state")
+      @unit (value="@enum ANTENNA_POWER")
+      uint8 antenna_power;
+
+      @verbatim (language="comment", text=
+        "Power-on self-test (POST) status word (vendor-specific bitmask)")
+      @unit (value="-")
+      uint32 post_status;
+
+      @verbatim (language="comment", text=
+        "Noise level as measured by the GNSS receiver core")
+      @unit (value="-")
+      uint16 noise_per_ms;
+
+      @verbatim (language="comment", text=
+        "[@range 0, 8191] Automatic Gain Control (AGC) monitor value (8191 = 100% of max gain)")
+      @unit (value="-")
+      uint16 automatic_gain_control;
+
+      @verbatim (language="comment", text=
+        "[@range 0, 255] Continuous wave (CW) jamming indicator (0 = no CW jamming, 255 = strong CW jamming)")
+      @unit (value="-")
+      uint8 jamming_indicator;
+
+      @verbatim (language="comment", text=
+        "Jamming state")
+      @unit (value="@enum JAMMING_STATE")
+      uint8 jamming_state;
+
+      @verbatim (language="comment", text=
+        "[@range -128, 127] Imbalance of the I-part of the complex signal (0 = no imbalance)")
+      @unit (value="-")
+      int8 i_offset;
+
+      @verbatim (language="comment", text=
+        "[@range 0, 255] Magnitude of the I-part of the complex signal (0 = no signal, 255 = max magnitude)")
+      @unit (value="-")
+      uint8 i_magnitude;
+
+      @verbatim (language="comment", text=
+        "[@range -128, 127] Imbalance of the Q-part of the complex signal (0 = no imbalance)")
+      @unit (value="-")
+      int8 q_offset;
+
+      @verbatim (language="comment", text=
+        "[@range 0, 255] Magnitude of the Q-part of the complex signal (0 = no signal, 255 = max magnitude)")
+      @unit (value="-")
+      uint8 q_magnitude;
+
+      @verbatim (language="comment", text=
+        "Nominal center frequency of the RF block. 0 = unknown.")
+      @unit (value="Hz")
+      uint32 center_frequency;
+    };
+  };
+};

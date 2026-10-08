@@ -1,0 +1,115 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorUwb.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Ultra-wideband (UWB) distance sensor" "\n"
+      "" "\n"
+      "Distance and angle-of-arrival ranging data from an ultra-wideband (UWB) positioning" "\n"
+      "system, such as Pozyx or NXP Rddrone. Published and consumed internally by the UWB" "\n"
+      "ranging driver (src/drivers/uwb/uwb_sr150), which parses serial ranging results from" "\n"
+      "the sensor module and publishes them on this topic; no other module in the codebase" "\n"
+      "currently subscribes to it.")
+    struct SensorUwb {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "UWB SessionID")
+      uint32 sessionid;
+
+      @verbatim (language="comment", text=
+        "Time between Ranging Rounds in ms")
+      uint32 time_offset;
+
+      @verbatim (language="comment", text=
+        "Number of Ranges since last Start of Ranging")
+      uint32 counter;
+
+      @verbatim (language="comment", text=
+        "MAC address of Initiator (controller)")
+      @unit (value="-")
+      uint16 mac;
+
+      @verbatim (language="comment", text=
+        "MAC address of Responder (Controlee)")
+      @unit (value="-")
+      uint16 mac_dest;
+
+      @verbatim (language="comment", text=
+        "Ranging status code passed through from the UWB module's measurement result")
+      @unit (value="-")
+      uint16 status;
+
+      @verbatim (language="comment", text=
+        "Non-line-of-sight condition (y/n)")
+      @unit (value="-")
+      uint8 nlos;
+
+      @verbatim (language="comment", text=
+        "Distance to the UWB receiver")
+      @unit (value="m")
+      float distance;
+
+      @verbatim (language="comment", text=
+        "Angle of arrival, Angle in Degree -60..+60; FOV in both axis is 120 degrees" "\n"
+        " [deg] Angle of arrival of first incoming RX msg")
+      @unit (value="deg")
+      float aoa_azimuth_dev;
+
+      @verbatim (language="comment", text=
+        "Angle of arrival of first incoming RX msg")
+      @unit (value="deg")
+      float aoa_elevation_dev;
+
+      @verbatim (language="comment", text=
+        "Angle of arrival of first incoming RX msg at the responder")
+      @unit (value="deg")
+      float aoa_azimuth_resp;
+
+      @verbatim (language="comment", text=
+        "Angle of arrival of first incoming RX msg at the responder")
+      @unit (value="deg")
+      float aoa_elevation_resp;
+
+      @verbatim (language="comment", text=
+        "Figure of merit for the angle measurements" "\n"
+        "AOA Azimuth Figure of Merit (FOM)")
+      uint8 aoa_azimuth_fom;
+
+      @verbatim (language="comment", text=
+        "AOA Elevation FOM")
+      uint8 aoa_elevation_fom;
+
+      @verbatim (language="comment", text=
+        "AOA Azimuth FOM")
+      uint8 aoa_dest_azimuth_fom;
+
+      @verbatim (language="comment", text=
+        "AOA Elevation FOM")
+      uint8 aoa_dest_elevation_fom;
+
+      @verbatim (language="comment", text=
+        "Initiator physical configuration" "\n"
+        "Direction the sensor faces from MAV_SENSOR_ORIENTATION enum. Standard configuration has antennas facing down and azimuth aligned in the forward direction.")
+      uint8 orientation;
+
+      @verbatim (language="comment", text=
+        "UWB initiator offset in X axis (NED drone frame)")
+      float offset_x;
+
+      @verbatim (language="comment", text=
+        "UWB initiator offset in Y axis (NED drone frame)")
+      float offset_y;
+
+      @verbatim (language="comment", text=
+        "UWB initiator offset in Z axis (NED drone frame)")
+      float offset_z;
+    };
+  };
+};

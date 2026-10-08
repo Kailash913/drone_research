@@ -1,0 +1,61 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorGnssSpectrum.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef uint8 uint8__256[256];
+    @verbatim (language="comment", text=
+      "GNSS spectrum analysis" "\n"
+      "" "\n"
+      "Reports a basic RF spectrum analysis for a GNSS receiver, decoded from the u-blox UBX-MON-SPAN message." "\n"
+      "Published by the `gps` driver (UBX protocol only), once per RF block, via the block-specific topics below." "\n"
+      "The center frequency of bin i is: f(i) = center_frequency + spectrum_span * (i - 127) / 256")
+    struct SensorGnssSpectrum {
+      @verbatim (language="comment", text=
+        "Time since system start")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Timestamp of the raw data")
+      @unit (value="us")
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "Unique device ID for the sensor that does not change between power cycles")
+      uint32 device_id;
+
+      @verbatim (language="comment", text=
+        "Only used for multi-topic publishing. Use center_frequency to determine which RF band it is.")
+      @unit (value="-")
+      uint8 block_id;
+
+      @verbatim (language="comment", text=
+        "Spectrum magnitude per bin (number of points = spectrum_span / resolution)")
+      @unit (value="(2^-2)dB")
+      uint8__256 spectrum;
+
+      @verbatim (language="comment", text=
+        "Frequency span covered by the spectrum")
+      @unit (value="Hz")
+      uint32 spectrum_span;
+
+      @verbatim (language="comment", text=
+        "Frequency resolution of the spectrum (bin width)")
+      @unit (value="Hz")
+      uint32 resolution;
+
+      @verbatim (language="comment", text=
+        "Center frequency of the spectrum span")
+      @unit (value="Hz")
+      uint32 center_frequency;
+
+      @verbatim (language="comment", text=
+        "Programmable gain amplifier setting")
+      @unit (value="dB")
+      uint8 programmable_gain_amplifier;
+    };
+  };
+};

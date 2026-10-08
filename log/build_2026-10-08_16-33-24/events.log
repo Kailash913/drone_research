@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.002392] (-) JobUnselected: {'identifier': 'drone_node'}
+[0.002490] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.002526] (baseline_measurement) JobQueued: {'identifier': 'baseline_measurement', 'dependencies': OrderedDict({'px4_msgs': '/home/kailash/ros2_ws/install/px4_msgs'})}
+[0.002563] (baseline_measurement) JobStarted: {'identifier': 'baseline_measurement'}
+[0.019978] (baseline_measurement) JobEnded: {'identifier': 'baseline_measurement', 'rc': 1}
+[0.030599] (-) EventReactorShutdown: {}
