@@ -8,6 +8,8 @@ import os
 from pathlib import Path
 import platform
 import time
+import re
+import uuid
 
 import psutil
 import rclpy
@@ -18,10 +20,14 @@ from rclpy.serialization import serialize_message
 from px4_msgs.msg import (
     VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected,
     VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode,
+    BatteryStatus,
 )
 
 from .experiment_logger import RunLog
 from .mission_state import Mission, Telemetry
+from .experiment import Experiment, aggregate_runs
+from .resource_monitor import ResourceMonitor
+from .cli import validate_options
 
 
 OUTPUTS = {
@@ -30,6 +36,7 @@ OUTPUTS = {
     'attitude': ('/fmu/out/vehicle_attitude', VehicleAttitude),
     'land': ('/fmu/out/vehicle_land_detected', VehicleLandDetected),
     'ack': ('/fmu/out/vehicle_command_ack_v1', VehicleCommandAck),
+    'battery': ('/fmu/out/battery_status_v1', BatteryStatus),
 }
 INPUTS = {
     'mode': ('/fmu/in/offboard_control_mode', OffboardControlMode),
@@ -65,6 +72,18 @@ class MissionNode(Node):
         if self.get_parameter('use_sim_time').value:
             raise RuntimeError('This experiment requires wall time; use_sim_time must be false')
         self.options = options
+        self.outputs = {key: (options.topics.get(key, topic), msg_type)
+                        for key, (topic, msg_type) in OUTPUTS.items()}
+        self.experiment = None
+        self.resource_monitor = None
+        self.last_baseline_sample = time.monotonic()
+        if not options.execute_sitl:
+            self.experiment = Experiment(options.output, options.experiment_id,
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                                   'topics': {k: v[0] for k, v in self.outputs.items()},
+                                   'qos': 'BEST_EFFORT KEEP_LAST 10 VOLATILE'})
+            self.resource_monitor = ResourceMonitor()
+            self.resource_monitor.sample()  # prime CPU percentages
         self.latest, self.received, self.stamps = {}, {}, {}
         self.reset = False
         self.reset_counters = None
@@ -106,7 +125,7 @@ class MissionNode(Node):
                 f.name: hashlib.sha256(f.read_bytes()).hexdigest()
                 for f in Path(__file__).parent.glob('*.py')
             },
-            'outputs': {k: v[0] for k, v in OUTPUTS.items()},
+            'outputs': {k: v[0] for k, v in self.outputs.items()},
         }
         self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)
         self.mission = Mission(self.log.start)
@@ -114,7 +133,7 @@ class MissionNode(Node):
                          history=HistoryPolicy.KEEP_LAST, depth=10,
                          durability=DurabilityPolicy.VOLATILE)
         self.subscriptions_kept = []
-        for key, (topic, msg_type) in OUTPUTS.items():
+        for key, (topic, msg_type) in self.outputs.items():
             self.subscriptions_kept.append(self.create_subscription(
                 msg_type, topic, lambda msg, k=key: self.receive(k, msg), qos))
         if options.execute_sitl:
@@ -133,8 +152,15 @@ class MissionNode(Node):
             self.received[key] = now
         self.stamps[key] = max(previous or 0, msg.timestamp)
         self.latest[key] = msg
-        self.log.message(OUTPUTS[key][0], 'rx_callback', msg,
-                         len(serialize_message(msg)), self.mission.state)
+        size = len(serialize_message(msg))
+        self.log.message(self.outputs[key][0], 'rx_callback', msg,
+                         size, self.mission.state)
+        if self.experiment is not None:
+            self.experiment.message(self.outputs[key][0], size, now)
+            self.experiment.sample(f'{key}:source_timestamp', getattr(msg, 'timestamp', None),
+                                   'us', 'PX4 clock domain; not host elapsed time', now=now)
+            if key == 'battery':
+                self.experiment.battery(msg.voltage_v, msg.current_a, msg.connected, now)
         if key == 'position' and self.mission.home is not None:
             counters = (msg.xy_reset_counter, msg.z_reset_counter, msg.heading_reset_counter)
             if self.reset_counters is not None and counters != self.reset_counters:
@@ -258,7 +284,36 @@ class MissionNode(Node):
                 self.get_logger().info(f'PASSIVE: connected={t.connected}, healthy={t.healthy}, '
                                        f'valid={t.valid}, landed={t.landed}, '
                                        f'armed={t.armed}, competing_publisher={t.competition}')
+        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:
+            self.last_baseline_sample = now
+            resources = self.resource_monitor.sample()
+            for role, pid, cpu, rss in resources:
+                self.experiment.resource(role, pid, cpu, rss, now)
+            if resources:
+                self.experiment.sample('monitored_process_cpu_total',
+                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),
+                    '%_one_logical_cpu', 'sum of sampled WSL process CPU', now=now)
+                self.experiment.sample('monitored_process_rss_total',
+                    sum(rss for _, _, _, rss in resources), 'MiB',
+                    'sum of RSS; shared pages may be double-counted', now=now)
         if not self.options.execute_sitl and now-self.started >= self.options.observe_seconds:
+            graph = dict(self.get_topic_names_and_types())
+            for key, (topic, msg_type) in self.outputs.items():
+                expected = f'px4_msgs/msg/{msg_type.__name__}'
+                found = graph.get(topic, [])
+                publishers = self.count_publishers(topic)
+                self.experiment.status[f'topic:{key}'] = {
+                    'available': expected in found and publishers > 0,
+                    'topic': topic, 'expected_type': expected,
+                    'discovered_types': found, 'publisher_count': publishers,
+                    'reason': '' if expected in found and publishers > 0
+                              else 'Missing topic, incompatible type, or no publisher'}
+            sampled_roles = {item['role'] for item in self.experiment.resources.values()}
+            for role in ('measurement_node', 'px4_sitl', 'gazebo_sim', 'xrce_agent'):
+                self.experiment.status[f'process:{role}'] = {
+                    'available': role in sampled_roles,
+                    'reason': '' if role in sampled_roles else 'No matching process sampled'}
+            self.experiment.finish('not_attempted')
             self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')
             self.done = True
 
@@ -267,35 +322,92 @@ def main(args=None):
     """Default is passive. --execute-sitl is the explicit one-mission command."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--execute-sitl', action='store_true')
-    parser.add_argument('--observe-seconds', type=float, default=15.)
-    parser.add_argument('--output', default=str(Path.home()/'ros2_ws'/'baseline_results'))
+    parser.add_argument('--observe-seconds', type=float, default=None)
+    parser.add_argument('--sampling-interval', type=float, default=None)
+    parser.add_argument('--output', '--output-dir', dest='output', default=None)
+    parser.add_argument('--experiment-id')
+    parser.add_argument('--scenario', default='telemetry_only')
+    parser.add_argument('--config')
+    parser.add_argument('--run-count', type=int, default=1)
+    parser.add_argument('--passive-only', action='store_true')
     options, ros_args = parser.parse_known_args(args)
-    if options.observe_seconds <= 0 or not math.isfinite(options.observe_seconds):
-        parser.error('--observe-seconds must be finite and positive')
-    rclpy.init(args=ros_args)
-    node = None
+    config = {}
+    if options.config:
+        import yaml
+        with Path(options.config).expanduser().open(encoding='utf-8') as stream:
+            config = yaml.safe_load(stream) or {}
+        if not isinstance(config, dict):
+            parser.error('--config must contain a YAML mapping')
+    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)
+    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)
+    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))
+    options.topics = config.get('topics', {})
     try:
-        node = MissionNode(options)
-        while rclpy.ok() and not node.done:
-            rclpy.spin_once(node, timeout_sec=.1)
-    except KeyboardInterrupt:
-        if node is not None:
-            node.get_logger().error('Interrupted: stopping stream; PX4 link-loss failsafe applies')
-    except Exception as exc:
-        if node is not None:
-            node.get_logger().error(f'Unhandled error; stopping stream: {exc}')
-        raise
+        validate_options(options.observe_seconds, options.sampling_interval,
+                         options.run_count, options.experiment_id,
+                         options.execute_sitl, options.passive_only,
+                         options.topics, OUTPUTS)
+    except ValueError as exc:
+        parser.error(str(exc))
+    if not options.execute_sitl:
+        if options.experiment_id:
+            first = int(options.experiment_id.split('-')[1])
+        else:
+            directory = Path(options.output).expanduser()
+            existing = [int(match.group(1)) for path in directory.glob('BASE-*_*.json')
+                        if (match := re.match(r'BASE-(\d{3})_', path.name))]
+            first = max(existing, default=0) + 1
+        if first + options.run_count - 1 > 30:
+            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')
+    else:
+        first = 0
+    rclpy.init(args=ros_args)
+    try:
+        completed_run_ids = []
+        for index in range(options.run_count):
+            if not options.execute_sitl:
+                options.experiment_id = f'BASE-{first+index:03d}'
+            node = None
+            error = ''
+            interrupted = False
+            try:
+                node = MissionNode(options)
+                while rclpy.ok() and not node.done:
+                    rclpy.spin_once(node, timeout_sec=.1)
+            except KeyboardInterrupt:
+                interrupted = True
+                error = 'Interrupted by Ctrl+C'
+                if node is not None:
+                    node.get_logger().warning(error)
+            except Exception as exc:
+                error = f'{type(exc).__name__}: {exc}'
+                if node is not None:
+                    node.get_logger().error(error)
+                raise
+            finally:
+                if node is not None:
+                    if node.experiment is not None:
+                        if not node.experiment.closed:
+                            node.experiment.finish('interrupted' if interrupted else 'failed', error)
+                        completed_run_ids.append(node.experiment.run_id)
+                    if not node.log.finished:
+                        if node.options.execute_sitl and node.mission.owned and rclpy.ok():
+                            try:
+                                node.command('LAND')
+                            except Exception:
+                                pass
+                        node.log.finish(False, node.mission.state,
+                                        error or 'Interrupted or runtime error', node.mission.state)
+                    node.destroy_node()
+            if interrupted:
+                break
+        if not options.execute_sitl and options.run_count > 1:
+            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)
+            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'
+            with destination.open('x', encoding='utf-8') as stream:
+                json.dump(aggregate, stream, indent=2, allow_nan=False)
+                stream.write('\n')
     finally:
-        if node is not None:
-            if not node.log.finished:
-                # Best-effort land on interruption; never force-disarm.
-                if node.options.execute_sitl and node.mission.owned and rclpy.ok():
-                    try:
-                        node.command('LAND')
-                    except Exception:
-                        pass
-                node.log.finish(False, node.mission.state, 'Interrupted or runtime error', node.mission.state)
-            node.destroy_node()
         if rclpy.ok():
             rclpy.shutdown()
 

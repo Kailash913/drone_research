@@ -1,0 +1,47 @@
+[3.361s] Invoking command in '/home/kailash/ros2_ws/src/baseline_measurement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kailash/ros2_ws/build/baseline_measurement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/baseline_measurement build --build-base /home/kailash/ros2_ws/build/baseline_measurement/build install --record /home/kailash/ros2_ws/build/baseline_measurement/install.log --install-scripts $base/lib/baseline_measurement --single-version-externally-managed install_data
+[3.862s] running egg_info
+[3.862s] creating ../../build/baseline_measurement/baseline_measurement.egg-info
+[3.881s] writing ../../build/baseline_measurement/baseline_measurement.egg-info/PKG-INFO
+[3.883s] writing dependency_links to ../../build/baseline_measurement/baseline_measurement.egg-info/dependency_links.txt
+[3.885s] writing entry points to ../../build/baseline_measurement/baseline_measurement.egg-info/entry_points.txt
+[3.885s] writing requirements to ../../build/baseline_measurement/baseline_measurement.egg-info/requires.txt
+[3.886s] writing top-level names to ../../build/baseline_measurement/baseline_measurement.egg-info/top_level.txt
+[3.886s] writing manifest file '../../build/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'
+[3.937s] reading manifest file '../../build/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'
+[3.938s] writing manifest file '../../build/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'
+[3.939s] running build
+[3.939s] running build_py
+[3.939s] creating /home/kailash/ros2_ws/build/baseline_measurement/build
+[3.940s] creating /home/kailash/ros2_ws/build/baseline_measurement/build/lib
+[3.941s] creating /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement
+[3.943s] copying baseline_measurement/mission_node.py -> /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement
+[3.943s] copying baseline_measurement/mission_state.py -> /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement
+[3.943s] copying baseline_measurement/experiment_logger.py -> /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement
+[3.944s] copying baseline_measurement/baseline_node.py -> /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement
+[3.944s] copying baseline_measurement/__init__.py -> /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement
+[3.944s] running install
+[3.955s] running install_lib
+[3.976s] creating /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+[3.977s] copying /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement/mission_node.py -> /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+[3.977s] copying /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement/mission_state.py -> /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+[3.977s] copying /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement/experiment_logger.py -> /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+[3.978s] copying /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement/baseline_node.py -> /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+[3.978s] copying /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement/__init__.py -> /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+[3.979s] byte-compiling /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/mission_node.py to mission_node.cpython-312.pyc
+[3.986s] byte-compiling /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/mission_state.py to mission_state.cpython-312.pyc
+[3.988s] byte-compiling /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/experiment_logger.py to experiment_logger.cpython-312.pyc
+[3.990s] byte-compiling /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/baseline_node.py to baseline_node.cpython-312.pyc
+[3.991s] byte-compiling /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/__init__.py to __init__.cpython-312.pyc
+[3.991s] running install_data
+[3.992s] creating /home/kailash/ros2_ws/install/baseline_measurement/share/ament_index
+[3.992s] creating /home/kailash/ros2_ws/install/baseline_measurement/share/ament_index/resource_index
+[3.993s] creating /home/kailash/ros2_ws/install/baseline_measurement/share/ament_index/resource_index/packages
+[3.993s] copying resource/baseline_measurement -> /home/kailash/ros2_ws/install/baseline_measurement/share/ament_index/resource_index/packages
+[3.994s] copying package.xml -> /home/kailash/ros2_ws/install/baseline_measurement/share/baseline_measurement
+[3.994s] running install_egg_info
+[4.028s] Copying ../../build/baseline_measurement/baseline_measurement.egg-info to /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement-0.0.0-py3.12.egg-info
+[4.040s] running install_scripts
+[4.333s] Installing baseline_node script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement
+[4.334s] Installing mission_node script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement
+[4.335s] writing list of installed files to '/home/kailash/ros2_ws/build/baseline_measurement/install.log'
+[4.441s] Invoked command in '/home/kailash/ros2_ws/src/baseline_measurement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kailash/ros2_ws/build/baseline_measurement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/baseline_measurement build --build-base /home/kailash/ros2_ws/build/baseline_measurement/build install --record /home/kailash/ros2_ws/build/baseline_measurement/install.log --install-scripts $base/lib/baseline_measurement --single-version-externally-managed install_data

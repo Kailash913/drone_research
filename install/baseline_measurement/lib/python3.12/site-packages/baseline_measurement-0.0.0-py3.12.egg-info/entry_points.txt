@@ -1,0 +1,3 @@
+[console_scripts]
+baseline_node = baseline_measurement.baseline_node:main
+mission_node = baseline_measurement.mission_node:main

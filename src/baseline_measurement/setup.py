@@ -15,8 +15,9 @@ setup(
             'share/' + package_name,
             ['package.xml']
         ),
+        ('share/' + package_name + '/config', ['config/baseline.yaml']),
     ],
-    install_requires=['setuptools', 'psutil'],
+    install_requires=['setuptools', 'psutil', 'PyYAML'],
     zip_safe=True,
     maintainer='kailash',
     maintainer_email='kailash@example.com',
