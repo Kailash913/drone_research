@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "phase1_status": "PARTIALLY COMPLETE",
+  "category_a": {
+    "verified_passes": 5,
+    "failed_attempts": 2,
+    "historical_preflight_005_counted": false,
+    "supplementary_passes": 1
+  },
+  "category_b": {
+    "verified_missions": 0,
+    "status": "not_attempted",
+    "criterion": "takeoff, three waypoints, return, landing, disarming"
+  },
+  "build": {
+    "baseline_measurement": "PASS",
+    "cpp_probe": "PASS"
+  },
+  "automated_tests": {
+    "functional_passed": 57,
+    "package_passed": 57,
+    "package_failed": 2,
+    "package_skipped": 1,
+    "failures": [
+      "existing flake8 (82 findings)",
+      "existing pep257"
+    ]
+  },
+  "live_probe": {
+    "processes": {
+      "px4": [
+        78833
+      ],
+      "agent": [
+        1615
+      ],
+      "gazebo": [
+        79035,
+        79036
+      ]
+    },
+    "callback_counts": {
+      "attitude": 292,
+      "position": 292,
+      "land": 6,
+      "status": 11,
+      "battery": 6
+    },
+    "values": {
+      "status": {
+        "timestamp": 1791619346351107,
+        "arming_state": 1,
+        "pre_flight_checks_pass": true,
+        "failsafe": false,
+        "gcs_connection_lost": false,
+        "nav_state": 4,
+        "system_id": 1,
+        "component_id": 1
+      },
+      "position": {
+        "heading": 1.729767084121704,
+        "heading_good_for_control": true,
+        "xy_valid": true,
+        "z_valid": true,
+        "v_xy_valid": true,
+        "v_z_valid": true,
+        "dead_reckoning": false
+      },
+      "attitude": {
+        "q": [
+          0.6487283706665039,
+          0.0009655461180955172,
+          -0.0010549182770773768,
+          0.7610188126564026
+        ],
+        "quat_reset_counter": 1
+      },
+      "land": {
+        "landed": true
+      },
+      "battery": {
+        "connected": true,
+        "voltage_v": 16.200000762939453,
+        "current_a": -1.0
+      }
+    },
+    "input_graph": {
+      "mode": {
+        "publishers": 0,
+        "subscribers": 1
+      },
+      "trajectory": {
+        "publishers": 0,
+        "subscribers": 1
+      },
+      "command": {
+        "publishers": 0,
+        "subscribers": 1
+      }
+    },
+    "output_graph": {
+      "status": {
+        "types": [
+          "px4_msgs/msg/VehicleStatus"
+        ],
+        "publishers": 1
+      },
+      "position": {
+        "types": [
+          "px4_msgs/msg/VehicleLocalPosition"
+        ],
+        "publishers": 1
+      },
+      "attitude": {
+        "types": [
+          "px4_msgs/msg/VehicleAttitude"
+        ],
+        "publishers": 1
+      },
+      "land": {
+        "types": [
+          "px4_msgs/msg/VehicleLandDetected"
+        ],
+        "publishers": 1
+      },
+      "ack": {
+        "types": [
+          "px4_msgs/msg/VehicleCommandAck"
+        ],
+        "publishers": 1
+      },
+      "battery": {
+        "types": [
+          "px4_msgs/msg/BatteryStatus"
+        ],
+        "publishers": 1
+      }
+    },
+    "flight_publishers_created": 0
+  },
+  "cpp_probe_output": "received=10 timestamp_us=1791619272604524 arming_state=1 checks_pass=1 failsafe=0 gcs_connection_lost=0",
+  "runs": [
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_006.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T07:59:22.692202+00:00",
+      "end_utc": "2026-10-10T07:59:37.695066+00:00",
+      "duration_s": 15.003361904004123,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 29,
+          "rate_hz": 1.932900118356835
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 739,
+          "rate_hz": 49.25562715398969
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 739,
+          "rate_hz": 49.25562715398969
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9997759232880181
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9997759232880181
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 1.00097722200735,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_006",
+      "sha256": "2f6b8adf52262bfa930e5f346af98c3a965bb11abbb171f971bb21f128d3c967",
+      "start_ist": "2026-10-10T13:29:22.692202+05:30",
+      "clock_regressions": [],
+      "experiment_id": "BASE-006",
+      "experiment_run_id": "ceccca3501ab",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-006_ceccca3501ab.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-006_ceccca3501ab_raw.csv",
+      "source_clock_regressions": []
+    },
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_007.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T07:59:37.772220+00:00",
+      "end_utc": "2026-10-10T07:59:52.785077+00:00",
+      "duration_s": 15.01275292900391,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 30,
+          "rate_hz": 1.9983010539020767
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 746,
+          "rate_hz": 49.69108620703164
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 746,
+          "rate_hz": 49.69108620703164
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9991505269510383
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9991505269510383
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.009889729990391,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_007",
+      "sha256": "c2a11c0343fa4b1f5bcc7bbdd2171dc4c44b4e6fda3195f0545b78502218b4c1",
+      "start_ist": "2026-10-10T13:29:37.772220+05:30",
+      "clock_regressions": [],
+      "experiment_id": "BASE-007",
+      "experiment_run_id": "e8997d22e4d0",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-007_e8997d22e4d0.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-007_e8997d22e4d0_raw.csv",
+      "source_clock_regressions": []
+    },
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_008.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T07:59:52.846986+00:00",
+      "end_utc": "2026-10-10T08:00:07.853602+00:00",
+      "duration_s": 15.006501979005407,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 25,
+          "rate_hz": 1.6659445375728352
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 653,
+          "rate_hz": 43.51447132140246
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 652,
+          "rate_hz": 43.44783353989955
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 13,
+          "rate_hz": 0.8662911595378744
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 13,
+          "rate_hz": 0.8662911595378744
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 3.054401594999945,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_008",
+      "sha256": "2e98131ddb74cccaa6d9b372f51bfb02688364474ac09745fc9319a14a0b4ec4",
+      "start_ist": "2026-10-10T13:29:52.846986+05:30",
+      "clock_regressions": [],
+      "experiment_id": "BASE-008",
+      "experiment_run_id": "eca2301e0bae",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-008_eca2301e0bae.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-008_eca2301e0bae_raw.csv",
+      "source_clock_regressions": []
+    },
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_009.csv",
+      "category": "A_PASSIVE",
+      "decision": "FAIL",
+      "errors": [
+        "Received source timestamp regressed; clock/reset guard must remain latched",
+        "Insufficient continuous stable sampled telemetry window"
+      ],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T08:00:07.921189+00:00",
+      "end_utc": "2026-10-10T08:00:22.936936+00:00",
+      "duration_s": 15.015700504998676,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 29,
+          "rate_hz": 1.9313118285987387
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 746,
+          "rate_hz": 49.681331866712384
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 745,
+          "rate_hz": 49.61473490710553
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.998954394102796
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.998954394102796
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.063096976999077,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_009",
+      "sha256": "a6121713e06408935459ceb34fcb0868d997748fab133ae5a0707daf5c40de9c",
+      "start_ist": "2026-10-10T13:30:07.921189+05:30",
+      "clock_regressions": [
+        {
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 4.7621416530018905,
+          "previous_us": 1791619212526932,
+          "current_us": 4056700000
+        }
+      ],
+      "experiment_id": "BASE-009",
+      "experiment_run_id": "9e514e2441e8",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-009_9e514e2441e8.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-009_9e514e2441e8_raw.csv",
+      "source_clock_regressions": [
+        {
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 4.7621416530018905,
+          "previous_us": 1791619212526932,
+          "current_us": 4056700000
+        }
+      ]
+    },
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_010.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T08:00:22.999909+00:00",
+      "end_utc": "2026-10-10T08:00:38.006889+00:00",
+      "duration_s": 15.006947205998586,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 29,
+          "rate_hz": 1.9324383301893742
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 741,
+          "rate_hz": 49.37713112656297
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 741,
+          "rate_hz": 49.37713112656297
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9995370673393315
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9995370673393315
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.0059631269978127,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_010",
+      "sha256": "02e9d91e96e3fb6d5f829838bc4c3e568c30addbcfee944d6c6f502a71b75f19",
+      "start_ist": "2026-10-10T13:30:22.999909+05:30",
+      "clock_regressions": [],
+      "experiment_id": "BASE-010",
+      "experiment_run_id": "4063051e6292",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-010_4063051e6292.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-010_4063051e6292_raw.csv",
+      "source_clock_regressions": []
+    },
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_011.csv",
+      "category": "A_PASSIVE",
+      "decision": "FAIL",
+      "errors": [
+        "Received source timestamp regressed; clock/reset guard must remain latched",
+        "Insufficient continuous stable sampled telemetry window"
+      ],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T08:02:29.949302+00:00",
+      "end_utc": "2026-10-10T08:02:44.979451+00:00",
+      "duration_s": 15.030025048996322,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 28,
+          "rate_hz": 1.8629376803247437
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 695,
+          "rate_hz": 46.24077456520346
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 695,
+          "rate_hz": 46.24077456520346
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 14,
+          "rate_hz": 0.9314688401623719
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 14,
+          "rate_hz": 0.9314688401623719
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.072306556001422,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_011",
+      "sha256": "f731c783e31f4dfcb2df2de3a6349c87ee2c09b091a369ec72328673724d4aa9",
+      "start_ist": "2026-10-10T13:32:29.949302+05:30",
+      "clock_regressions": [
+        {
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 7.878542071994161,
+          "previous_us": 1791619356759107,
+          "current_us": 4200496000
+        }
+      ],
+      "experiment_id": "BASE-011",
+      "experiment_run_id": "86637ac9d960",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-011_86637ac9d960.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-011_86637ac9d960_raw.csv",
+      "source_clock_regressions": [
+        {
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 7.878542071994161,
+          "previous_us": 1791619356759107,
+          "current_us": 4200496000
+        }
+      ]
+    },
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_012.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T08:03:51.469265+00:00",
+      "end_utc": "2026-10-10T08:04:06.482591+00:00",
+      "duration_s": 15.013120130999596,
+      "publication_records": 0,
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 30,
+          "rate_hz": 1.9982521779769808
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 733,
+          "rate_hz": 48.8239615485709
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 733,
+          "rate_hz": 48.8239615485709
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9991260889884904
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9991260889884904
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 1.0083412140083965,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear",
+      "run_id": "preflight_012",
+      "sha256": "ca3933819408a9942f516de668d2b270ace894d10a88b44f9a541dee90336514",
+      "start_ist": "2026-10-10T13:33:51.469265+05:30",
+      "clock_regressions": [],
+      "experiment_id": "BASE-012",
+      "experiment_run_id": "98d8e4557d48",
+      "experiment_json": "/home/kailash/uav_research/baseline/BASE-012_98d8e4557d48.json",
+      "raw_csv": "/home/kailash/uav_research/baseline/BASE-012_98d8e4557d48_raw.csv",
+      "source_clock_regressions": []
+    }
+  ],
+  "limitations": [
+    "QGC identity/UI and control operations not independently demonstrated",
+    "Two source timestamp clock-domain regressions require investigation before active control",
+    "ACK interface discovered but no live ACK received; no commands sent",
+    "Battery current -1 sentinel: power/energy unavailable",
+    "No transport loss, end-to-end latency, link bandwidth or hardware power measurement"
+  ],
+  "phase2_started": false,
+  "supplementary_integrated_capture": {
+    "csv": "/home/kailash/uav_research/baseline/preflight_013.csv",
+    "category": "A_PASSIVE",
+    "decision": "PASS",
+    "errors": [],
+    "mission_status": "not_demonstrated",
+    "start_utc": "2026-10-10T08:07:34.212741+00:00",
+    "end_utc": "2026-10-10T08:07:49.244227+00:00",
+    "duration_s": 15.031499741002335,
+    "publication_records": 0,
+    "source_clock_regressions": [],
+    "topics": {
+      "status": {
+        "topic": "/fmu/out/vehicle_status_v4",
+        "count": 29,
+        "rate_hz": 1.9292818747084124
+      },
+      "position": {
+        "topic": "/fmu/out/vehicle_local_position_v1",
+        "count": 738,
+        "rate_hz": 49.09689736326925
+      },
+      "attitude": {
+        "topic": "/fmu/out/vehicle_attitude",
+        "count": 738,
+        "rate_hz": 49.09689736326925
+      },
+      "land": {
+        "topic": "/fmu/out/vehicle_land_detected",
+        "count": 15,
+        "rate_hz": 0.9979044179526271
+      },
+      "battery": {
+        "topic": "/fmu/out/battery_status_v1",
+        "count": 15,
+        "rate_hz": 0.9979044179526271
+      }
+    },
+    "resource_records": 14,
+    "first_valid_sample_s": 1.0308186420006678,
+    "startup_records": 4,
+    "stable_records": 10,
+    "heading_ready_at_end": true,
+    "publisher_status": "clear"
+  },
+  "selected_category_a_runs": [
+    "preflight_006",
+    "preflight_007",
+    "preflight_008",
+    "preflight_010",
+    "preflight_012"
+  ],
+  "environment": {
+    "os": "Ubuntu 24.04.4 LTS under WSL",
+    "ros": "Jazzy",
+    "python": "3.12.3",
+    "px4_checkout": "v1.18.0-beta1-213-g43cccdea0e",
+    "gazebo_server": "8.15.0 (startup log)",
+    "xrce_agent": "MicroXRCEAgent udp4 -p 8888; observed PID 1615",
+    "git_branch": "master; workspace initially modified"
+  },
+  "integrated_validation": "PASS: script exited zero after CSV acceptance, not just capture"
+}

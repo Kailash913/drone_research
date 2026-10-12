@@ -1,0 +1,11 @@
+# Pass with --config. CLI options override duration, interval and output directory.
+observe_seconds: 60
+sampling_interval: 1.0
+output_dir: ~/uav_research/baseline
+topics:
+  status: /fmu/out/vehicle_status_v4
+  position: /fmu/out/vehicle_local_position_v1
+  attitude: /fmu/out/vehicle_attitude
+  land: /fmu/out/vehicle_land_detected
+  ack: /fmu/out/vehicle_command_ack_v1
+  battery: /fmu/out/battery_status_v1

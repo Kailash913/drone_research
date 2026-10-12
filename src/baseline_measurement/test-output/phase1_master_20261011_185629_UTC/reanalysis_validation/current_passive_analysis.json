@@ -1,0 +1,699 @@
+{
+  "source": "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/passive_clock/clock_probe_4f27539a0c1a40a6973d7b1b5907927c.csv",
+  "source_sha256": "af1df40ddcf8c2558f2876ceb2ae99aec1c4f83afb348c4a72e6d84661eeb015",
+  "duration_monotonic_s": 25.00629520200164,
+  "message_counts": {
+    "/fmu/out/vehicle_attitude": 1189,
+    "/fmu/out/vehicle_local_position_v1": 1188,
+    "/fmu/out/vehicle_status_v4": 47,
+    "/fmu/out/timesync_status": 40,
+    "/fmu/out/estimator_status_flags": 24,
+    "/fmu/out/vehicle_land_detected": 24
+  },
+  "observed_callback_hz": {
+    "/fmu/out/vehicle_attitude": 47.548027022604536,
+    "/fmu/out/vehicle_local_position_v1": 47.50803709239208,
+    "/fmu/out/vehicle_status_v4": 1.8795267199852086,
+    "/fmu/out/timesync_status": 1.5995972084980499,
+    "/fmu/out/estimator_status_flags": 0.95975832509883,
+    "/fmu/out/vehicle_land_detected": 0.95975832509883
+  },
+  "latest_topic_values": {
+    "/fmu/out/vehicle_attitude": {
+      "utc": "2026-10-11T18:57:06.163303+00:00",
+      "local_monotonic_s": "27232.917350236",
+      "native_delivered_fields": {
+        "timestamp": 1791745025087463,
+        "timestamp_sample": 1791745025087463,
+        "quat_reset_counter": 1
+      }
+    },
+    "/fmu/out/vehicle_local_position_v1": {
+      "utc": "2026-10-11T18:57:06.136040+00:00",
+      "local_monotonic_s": "27232.889881602",
+      "native_delivered_fields": {
+        "timestamp": 1791745025071463,
+        "timestamp_sample": 1791745025067463,
+        "xy_reset_counter": 4,
+        "z_reset_counter": 2,
+        "vxy_reset_counter": 4,
+        "vz_reset_counter": 1,
+        "heading_reset_counter": 1,
+        "heading_good_for_control": false,
+        "heading": 1.683447241783142,
+        "x": 19.98788070678711,
+        "y": 20.278114318847656,
+        "z": -0.3619685173034668,
+        "vx": -0.013586631044745445,
+        "vy": -0.008576502092182636,
+        "vz": -0.32007673382759094,
+        "ref_alt": 0.22974872589111328,
+        "xy_global": true,
+        "z_global": true,
+        "xy_valid": true,
+        "z_valid": true,
+        "v_xy_valid": true,
+        "v_z_valid": true,
+        "dead_reckoning": false
+      }
+    },
+    "/fmu/out/vehicle_status_v4": {
+      "utc": "2026-10-11T18:57:05.549990+00:00",
+      "local_monotonic_s": "27232.303889769",
+      "native_delivered_fields": {
+        "timestamp": 1791745024627463,
+        "pre_flight_checks_pass": true,
+        "gcs_connection_lost": false,
+        "calibration_enabled": false,
+        "arming_state": 1,
+        "nav_state": 4,
+        "failsafe": false
+      }
+    },
+    "/fmu/out/timesync_status": {
+      "utc": "2026-10-11T18:57:04.903623+00:00",
+      "local_monotonic_s": "27231.657744837",
+      "native_delivered_fields": {
+        "timestamp": 1791745024127463,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745024894375,
+        "observed_offset": -1791735603842375,
+        "estimated_offset": -1791735603075463,
+        "round_trip_time": 0
+      }
+    },
+    "/fmu/out/estimator_status_flags": {
+      "utc": "2026-10-11T18:57:05.768484+00:00",
+      "local_monotonic_s": "27232.522616346",
+      "native_delivered_fields": {
+        "timestamp": 1791745024771463,
+        "timestamp_sample": 1791745024579463,
+        "cs_tilt_align": true,
+        "cs_mag_hdg": true,
+        "cs_mag_3d": false,
+        "cs_yaw_align": true,
+        "cs_mag_aligned_in_flight": false,
+        "cs_mag_fault": false,
+        "cs_mag_field_disturbed": false,
+        "fs_bad_hdg": false
+      }
+    },
+    "/fmu/out/vehicle_land_detected": {
+      "utc": "2026-10-11T18:57:06.149728+00:00",
+      "local_monotonic_s": "27232.903710222",
+      "native_delivered_fields": {
+        "timestamp": 1791745025083463,
+        "landed": true
+      }
+    }
+  },
+  "observed_flag_values": {
+    "heading_good_for_control": [
+      false
+    ],
+    "arming_state": [
+      1
+    ],
+    "nav_state": [
+      4
+    ],
+    "failsafe": [
+      false
+    ],
+    "cs_yaw_align": [
+      true
+    ],
+    "cs_mag_hdg": [
+      true
+    ],
+    "cs_mag_3d": [
+      false
+    ],
+    "cs_mag_aligned_in_flight": [
+      false
+    ],
+    "cs_mag_fault": [
+      false
+    ],
+    "cs_mag_field_disturbed": [
+      false
+    ],
+    "fs_bad_hdg": [
+      false
+    ],
+    "landed": [
+      true
+    ]
+  },
+  "heading_branch_explanation": {
+    "expected_ready": false,
+    "reason": "Magnetic in-flight alignment incomplete"
+  },
+  "receiver_wall_steps": [
+    {
+      "before_utc": "2026-10-11T18:56:43.546493+00:00",
+      "after_utc": "2026-10-11T18:56:45.778690+00:00",
+      "wall_delta_s": 2.232197,
+      "monotonic_delta_s": 0.01718666500164545,
+      "wall_minus_monotonic_s": 2.2150103349983548
+    }
+  ],
+  "dds_analysis": {
+    "samples": [
+      {
+        "utc": "2026-10-11T18:56:39.265601+00:00",
+        "receive_monotonic_s": 27208.234514823,
+        "timestamp": 1791744999084569,
+        "source_protocol": 2,
+        "remote_timestamp": 1791744999263814,
+        "observed_offset": -1791735600799814,
+        "estimated_offset": -1791735600620569,
+        "round_trip_time": 0,
+        "deviation_us": 179245,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9398464000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.269482+00:00",
+        "receive_monotonic_s": 27209.238314858,
+        "timestamp": 9399468000,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000267903,
+        "observed_offset": -1791735600799903,
+        "estimated_offset": 0,
+        "round_trip_time": 0,
+        "deviation_us": 1791735600799903,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9399468000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.270148+00:00",
+        "receive_monotonic_s": 27209.239331185,
+        "timestamp": 1791745000268324,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000268324,
+        "observed_offset": -1791735600800324,
+        "estimated_offset": -1791735600800324,
+        "round_trip_time": 0,
+        "deviation_us": 0,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9399468000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.369316+00:00",
+        "receive_monotonic_s": 27209.338377274,
+        "timestamp": 1791745000369188,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000368162,
+        "observed_offset": -1791735600800162,
+        "estimated_offset": -1791735600801188,
+        "round_trip_time": 0,
+        "deviation_us": 1026,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9399568000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.473342+00:00",
+        "receive_monotonic_s": 27209.442389606,
+        "timestamp": 1791745000468533,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000468359,
+        "observed_offset": -1791735600800359,
+        "estimated_offset": -1791735600800533,
+        "round_trip_time": 0,
+        "deviation_us": 174,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9399668000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.570908+00:00",
+        "receive_monotonic_s": 27209.539965017,
+        "timestamp": 1791745000568910,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000568612,
+        "observed_offset": -1791735600802612,
+        "estimated_offset": -1791735600800910,
+        "round_trip_time": 4000,
+        "deviation_us": 1702,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9399766000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.669365+00:00",
+        "receive_monotonic_s": 27209.638454195,
+        "timestamp": 1791745000669306,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000668257,
+        "observed_offset": -1791735600800257,
+        "estimated_offset": -1791735600801306,
+        "round_trip_time": 0,
+        "deviation_us": 1049,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9399868000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.769543+00:00",
+        "receive_monotonic_s": 27209.738654853,
+        "timestamp": 1791745000769004,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000768136,
+        "observed_offset": -1791735600800136,
+        "estimated_offset": -1791735600801004,
+        "round_trip_time": 0,
+        "deviation_us": 868,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9399968000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.868932+00:00",
+        "receive_monotonic_s": 27209.83810313,
+        "timestamp": 1791745000868744,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000867884,
+        "observed_offset": -1791735600799884,
+        "estimated_offset": -1791735600800744,
+        "round_trip_time": 0,
+        "deviation_us": 860,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9400068000
+      },
+      {
+        "utc": "2026-10-11T18:56:40.969148+00:00",
+        "receive_monotonic_s": 27209.938287151,
+        "timestamp": 1791745000968581,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745000968140,
+        "observed_offset": -1791735600800140,
+        "estimated_offset": -1791735600800581,
+        "round_trip_time": 0,
+        "deviation_us": 441,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9400168000
+      },
+      {
+        "utc": "2026-10-11T18:56:41.069196+00:00",
+        "receive_monotonic_s": 27210.038342453,
+        "timestamp": 1791745001020459,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745001021918,
+        "observed_offset": -1791735600801918,
+        "estimated_offset": -1791735600800459,
+        "round_trip_time": 0,
+        "deviation_us": 1459,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9400220000
+      },
+      {
+        "utc": "2026-10-11T18:56:42.025053+00:00",
+        "receive_monotonic_s": 27210.994188622,
+        "timestamp": 1791745002024454,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745002023902,
+        "observed_offset": -1791735600799902,
+        "estimated_offset": -1791735600800454,
+        "round_trip_time": 0,
+        "deviation_us": 552,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9401224000
+      },
+      {
+        "utc": "2026-10-11T18:56:43.053212+00:00",
+        "receive_monotonic_s": 27212.022377272,
+        "timestamp": 1791745003028522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745003052227,
+        "observed_offset": -1791735600824227,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 23705,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9402228000
+      },
+      {
+        "utc": "2026-10-11T18:56:46.276433+00:00",
+        "receive_monotonic_s": 27213.030608888,
+        "timestamp": 1791745004032522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745006275228,
+        "observed_offset": -1791735603043228,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2242706,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9403232000
+      },
+      {
+        "utc": "2026-10-11T18:56:47.280607+00:00",
+        "receive_monotonic_s": 27214.03464872,
+        "timestamp": 1791745005036522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745007279466,
+        "observed_offset": -1791735603043466,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2242944,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9404236000
+      },
+      {
+        "utc": "2026-10-11T18:56:48.291485+00:00",
+        "receive_monotonic_s": 27215.045668463,
+        "timestamp": 1791745006040522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745008290341,
+        "observed_offset": -1791735603050341,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2249819,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9405240000
+      },
+      {
+        "utc": "2026-10-11T18:56:49.300719+00:00",
+        "receive_monotonic_s": 27216.054793059,
+        "timestamp": 1791745007044522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745009295861,
+        "observed_offset": -1791735603051861,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2251339,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9406244000
+      },
+      {
+        "utc": "2026-10-11T18:56:50.299311+00:00",
+        "receive_monotonic_s": 27217.053448352,
+        "timestamp": 1791745008048522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745010298582,
+        "observed_offset": -1791735603050582,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2250060,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9407248000
+      },
+      {
+        "utc": "2026-10-11T18:56:51.316290+00:00",
+        "receive_monotonic_s": 27218.070436336,
+        "timestamp": 1791745009052522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745011313841,
+        "observed_offset": -1791735603061841,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2261319,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9408252000
+      },
+      {
+        "utc": "2026-10-11T18:56:52.327346+00:00",
+        "receive_monotonic_s": 27219.081419595,
+        "timestamp": 1791745010056522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745012326226,
+        "observed_offset": -1791735603070226,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2269704,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9409256000
+      },
+      {
+        "utc": "2026-10-11T18:56:53.336068+00:00",
+        "receive_monotonic_s": 27220.090201827,
+        "timestamp": 1791745011060522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745013334528,
+        "observed_offset": -1791735603074528,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2274006,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9410260000
+      },
+      {
+        "utc": "2026-10-11T18:56:54.340091+00:00",
+        "receive_monotonic_s": 27221.094186114,
+        "timestamp": 1791745012064522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745014338603,
+        "observed_offset": -1791735603074603,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2274081,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9411264000
+      },
+      {
+        "utc": "2026-10-11T18:56:55.343765+00:00",
+        "receive_monotonic_s": 27222.097822718,
+        "timestamp": 1791745013068522,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745015342724,
+        "observed_offset": -1791735603074724,
+        "estimated_offset": -1791735600800522,
+        "round_trip_time": 0,
+        "deviation_us": 2274202,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9412268000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.349141+00:00",
+        "receive_monotonic_s": 27223.103212784,
+        "timestamp": 9413272000,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016346746,
+        "observed_offset": -1791735603074746,
+        "estimated_offset": 0,
+        "round_trip_time": 0,
+        "deviation_us": 1791735603074746,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9413272000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.350517+00:00",
+        "receive_monotonic_s": 27223.10458998,
+        "timestamp": 1791745016347161,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016347161,
+        "observed_offset": -1791735603075161,
+        "estimated_offset": -1791735603075161,
+        "round_trip_time": 0,
+        "deviation_us": 0,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413272000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.447880+00:00",
+        "receive_monotonic_s": 27223.202021337,
+        "timestamp": 1791745016447188,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016446541,
+        "observed_offset": -1791735603074541,
+        "estimated_offset": -1791735603075188,
+        "round_trip_time": 0,
+        "deviation_us": 647,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413372000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.548282+00:00",
+        "receive_monotonic_s": 27223.302457918,
+        "timestamp": 1791745016547248,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016546881,
+        "observed_offset": -1791735603076881,
+        "estimated_offset": -1791735603075248,
+        "round_trip_time": 4000,
+        "deviation_us": 1633,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413470000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.647787+00:00",
+        "receive_monotonic_s": 27223.401970355,
+        "timestamp": 1791745016646889,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016646574,
+        "observed_offset": -1791735603074574,
+        "estimated_offset": -1791735603074889,
+        "round_trip_time": 0,
+        "deviation_us": 315,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413572000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.747918+00:00",
+        "receive_monotonic_s": 27223.502003399,
+        "timestamp": 1791745016747055,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016746723,
+        "observed_offset": -1791735603074723,
+        "estimated_offset": -1791735603075055,
+        "round_trip_time": 0,
+        "deviation_us": 332,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413672000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.847899+00:00",
+        "receive_monotonic_s": 27223.602047457,
+        "timestamp": 1791745016847289,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016846365,
+        "observed_offset": -1791735603074365,
+        "estimated_offset": -1791735603075289,
+        "round_trip_time": 0,
+        "deviation_us": 924,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413772000
+      },
+      {
+        "utc": "2026-10-11T18:56:56.948314+00:00",
+        "receive_monotonic_s": 27223.702471812,
+        "timestamp": 1791745016947284,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745016946566,
+        "observed_offset": -1791735603074566,
+        "estimated_offset": -1791735603075284,
+        "round_trip_time": 0,
+        "deviation_us": 718,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413872000
+      },
+      {
+        "utc": "2026-10-11T18:56:57.047828+00:00",
+        "receive_monotonic_s": 27223.802006247,
+        "timestamp": 1791745017047359,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745017046692,
+        "observed_offset": -1791735603074692,
+        "estimated_offset": -1791735603075359,
+        "round_trip_time": 0,
+        "deviation_us": 667,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9413972000
+      },
+      {
+        "utc": "2026-10-11T18:56:57.147230+00:00",
+        "receive_monotonic_s": 27223.901411427,
+        "timestamp": 1791745017091456,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745017093692,
+        "observed_offset": -1791735603077692,
+        "estimated_offset": -1791735603075456,
+        "round_trip_time": 0,
+        "deviation_us": 2236,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9414016000
+      },
+      {
+        "utc": "2026-10-11T18:56:58.095582+00:00",
+        "receive_monotonic_s": 27224.849740749,
+        "timestamp": 1791745018095454,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745018094287,
+        "observed_offset": -1791735603074287,
+        "estimated_offset": -1791735603075454,
+        "round_trip_time": 0,
+        "deviation_us": 1167,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9415020000
+      },
+      {
+        "utc": "2026-10-11T18:56:59.099497+00:00",
+        "receive_monotonic_s": 27225.853602961,
+        "timestamp": 1791745019099453,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745019098693,
+        "observed_offset": -1791735603074693,
+        "estimated_offset": -1791735603075453,
+        "round_trip_time": 0,
+        "deviation_us": 760,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9416024000
+      },
+      {
+        "utc": "2026-10-11T18:57:00.103176+00:00",
+        "receive_monotonic_s": 27226.857313057,
+        "timestamp": 1791745020103451,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745020102374,
+        "observed_offset": -1791735603074374,
+        "estimated_offset": -1791735603075451,
+        "round_trip_time": 0,
+        "deviation_us": 1077,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9417028000
+      },
+      {
+        "utc": "2026-10-11T18:57:01.112258+00:00",
+        "receive_monotonic_s": 27227.866432126,
+        "timestamp": 1791745021107463,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745021110964,
+        "observed_offset": -1791735603078964,
+        "estimated_offset": -1791735603075463,
+        "round_trip_time": 0,
+        "deviation_us": 3501,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 9418032000
+      },
+      {
+        "utc": "2026-10-11T18:57:02.317911+00:00",
+        "receive_monotonic_s": 27229.071941757,
+        "timestamp": 1791745022119463,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745022311529,
+        "observed_offset": -1791735603271529,
+        "estimated_offset": -1791735603075463,
+        "round_trip_time": 8000,
+        "deviation_us": 196066,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9419040000
+      },
+      {
+        "utc": "2026-10-11T18:57:03.654933+00:00",
+        "receive_monotonic_s": 27230.409076935,
+        "timestamp": 1791745023123463,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745023631097,
+        "observed_offset": -1791735603583097,
+        "estimated_offset": -1791735603075463,
+        "round_trip_time": 0,
+        "deviation_us": 507634,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9420048000
+      },
+      {
+        "utc": "2026-10-11T18:57:04.903623+00:00",
+        "receive_monotonic_s": 27231.657744837,
+        "timestamp": 1791745024127463,
+        "source_protocol": 2,
+        "remote_timestamp": 1791745024894375,
+        "observed_offset": -1791735603842375,
+        "estimated_offset": -1791735603075463,
+        "round_trip_time": 0,
+        "deviation_us": 766912,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 9421052000
+      }
+    ],
+    "zero_transition_indices": [
+      1,
+      23
+    ],
+    "intervals_before_first_zero": [],
+    "filter_convergence_observed": false,
+    "latency_measured": false,
+    "underlying_os_cause_proven": false,
+    "method": "native midpoint=(originate+receive)/2 from observed+remote fields; integer division has <=1 us rounding, not a calibrated clock mapping",
+    "native_to_peer_cumulative_ratio_before_zero": null,
+    "before_zero_count": 1,
+    "before_zero_qualifying_if_converged": 1,
+    "before_zero_max_rtt_us": 0
+  },
+  "not_mission_or_latency_measurement": true
+}

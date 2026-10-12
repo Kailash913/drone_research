@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "test",
+    "-q",
+    "--junitxml=/home/kailash/ros2_ws/src/baseline_measurement/test-output/final_suite_20261011_180508/full_suite.xml"
+  ],
+  "returncode": 0,
+  "flight_commands_sent": 0,
+  "output": "/home/kailash/ros2_ws/src/baseline_measurement/test-output/final_suite_20261011_180508"
+}

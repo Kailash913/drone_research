@@ -1,0 +1,470 @@
+{
+  "schema_version": 1,
+  "experiment": {
+    "experiment_id": "BASE-001",
+    "run_id": "a881d304106e",
+    "scenario": "preflight",
+    "start_time": "2026-10-11T18:29:37.779927+00:00",
+    "end_time": "2026-10-11T18:29:49.815965+00:00",
+    "observation_duration_s": 12.036014752000483,
+    "mission_status": "not_attempted"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "ros_distro": "jazzy",
+    "px4_version": "1.18.0-beta1 (configured; live version unverified)",
+    "topics": {
+      "status": "/fmu/out/vehicle_status_v4",
+      "position": "/fmu/out/vehicle_local_position_v1",
+      "attitude": "/fmu/out/vehicle_attitude",
+      "land": "/fmu/out/vehicle_land_detected",
+      "ack": "/fmu/out/vehicle_command_ack_v1",
+      "battery": "/fmu/out/battery_status_v1",
+      "estimator": "/fmu/out/estimator_status_flags"
+    },
+    "qos": "BEST_EFFORT KEEP_LAST 10 VOLATILE"
+  },
+  "topics": {
+    "/fmu/out/vehicle_local_position_v1": {
+      "count": 597,
+      "delivered_cdr_bytes": 131340,
+      "rate_hz": 49.60113561681816,
+      "inter_arrival_ms": {
+        "count": 596,
+        "mean": 19.976224630874096,
+        "median": 19.942911500038463,
+        "median_approximate": false,
+        "std": 2.0311298215154507,
+        "min": 0.551049000932835,
+        "max": 30.733290997886797,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "payload_size_bytes": {
+        "count": 597,
+        "mean": 220.0,
+        "median": 220.0,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 220.0,
+        "max": 220.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "/fmu/out/vehicle_attitude": {
+      "count": 596,
+      "delivered_cdr_bytes": 33376,
+      "rate_hz": 49.51805163756051,
+      "inter_arrival_ms": {
+        "count": 595,
+        "mean": 19.986648793271616,
+        "median": 20.01575999747729,
+        "median_approximate": false,
+        "std": 1.6068055776973174,
+        "min": 2.1076569973956794,
+        "max": 29.980497998622013,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "payload_size_bytes": {
+        "count": 596,
+        "mean": 56.0,
+        "median": 56.0,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 56.0,
+        "max": 56.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "/fmu/out/battery_status_v1": {
+      "count": 12,
+      "delivered_cdr_bytes": 2160,
+      "rate_hz": 0.9970077510918224,
+      "inter_arrival_ms": {
+        "count": 11,
+        "mean": 1000.2619459998889,
+        "median": 1000.2454550012772,
+        "median_approximate": false,
+        "std": 6.3936385393366155,
+        "min": 983.8759180020133,
+        "max": 1010.1086600006965,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "payload_size_bytes": {
+        "count": 12,
+        "mean": 180.0,
+        "median": 180.0,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 180.0,
+        "max": 180.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "/fmu/out/vehicle_land_detected": {
+      "count": 12,
+      "delivered_cdr_bytes": 288,
+      "rate_hz": 0.9970077510918224,
+      "inter_arrival_ms": {
+        "count": 11,
+        "mean": 1002.3990662726151,
+        "median": 1000.7300639990717,
+        "median_approximate": false,
+        "std": 4.494909065132074,
+        "min": 997.3234290009714,
+        "max": 1014.1850929976499,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "payload_size_bytes": {
+        "count": 12,
+        "mean": 24.0,
+        "median": 24.0,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 24.0,
+        "max": 24.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "/fmu/out/vehicle_status_v4": {
+      "count": 23,
+      "delivered_cdr_bytes": 2024,
+      "rate_hz": 1.9109315229259929,
+      "inter_arrival_ms": {
+        "count": 22,
+        "mean": 504.98450227265005,
+        "median": 503.94186549965525,
+        "median_approximate": false,
+        "std": 3.3924987798456328,
+        "min": 502.0193099990138,
+        "max": 516.8456709980092,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "payload_size_bytes": {
+        "count": 23,
+        "mean": 88.0,
+        "median": 88.0,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 88.0,
+        "max": 88.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "/fmu/out/estimator_status_flags": {
+      "count": 12,
+      "delivered_cdr_bytes": 1104,
+      "rate_hz": 0.9970077510918224,
+      "inter_arrival_ms": {
+        "count": 11,
+        "mean": 1009.8060772725148,
+        "median": 1008.0568899975333,
+        "median_approximate": false,
+        "std": 4.466476736204792,
+        "min": 1004.1369479986315,
+        "max": 1017.538998999953,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "payload_size_bytes": {
+        "count": 12,
+        "mean": 92.0,
+        "median": 92.0,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 92.0,
+        "max": 92.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    }
+  },
+  "resources": {
+    "xrce_agent:4216": {
+      "role": "xrce_agent",
+      "pid": 4216,
+      "cpu_pct": {
+        "count": 11,
+        "mean": 8.081818181818182,
+        "median": 7.7,
+        "median_approximate": false,
+        "std": 0.9978157964455983,
+        "min": 7.0,
+        "max": 10.5,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "rss_mib": {
+        "count": 11,
+        "mean": 25.36328125,
+        "median": 25.36328125,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 25.36328125,
+        "max": 25.36328125,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "px4_sitl:46593": {
+      "role": "px4_sitl",
+      "pid": 46593,
+      "cpu_pct": {
+        "count": 11,
+        "mean": 51.19090909090908,
+        "median": 51.2,
+        "median_approximate": false,
+        "std": 2.3985222723395974,
+        "min": 47.0,
+        "max": 55.2,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "rss_mib": {
+        "count": 11,
+        "mean": 18.90234375,
+        "median": 18.90234375,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 18.90234375,
+        "max": 18.90234375,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "gazebo_sim:46767": {
+      "role": "gazebo_sim",
+      "pid": 46767,
+      "cpu_pct": {
+        "count": 11,
+        "mean": 68.66363636363637,
+        "median": 68.3,
+        "median_approximate": false,
+        "std": 3.871245982180086,
+        "min": 63.9,
+        "max": 75.7,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "rss_mib": {
+        "count": 11,
+        "mean": 185.0234375,
+        "median": 185.0234375,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 185.0234375,
+        "max": 185.0234375,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "gazebo_sim:46768": {
+      "role": "gazebo_sim",
+      "pid": 46768,
+      "cpu_pct": {
+        "count": 11,
+        "mean": 193.0727272727273,
+        "median": 194.4,
+        "median_approximate": false,
+        "std": 4.530141478826228,
+        "min": 185.5,
+        "max": 199.3,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "rss_mib": {
+        "count": 11,
+        "mean": 846.72265625,
+        "median": 846.72265625,
+        "median_approximate": false,
+        "std": 0.0,
+        "min": 846.72265625,
+        "max": 846.72265625,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    },
+    "measurement_node:82408": {
+      "role": "measurement_node",
+      "pid": 82408,
+      "cpu_pct": {
+        "count": 11,
+        "mean": 20.909090909090907,
+        "median": 19.8,
+        "median_approximate": false,
+        "std": 3.3470747065025437,
+        "min": 18.0,
+        "max": 30.0,
+        "ci95_lower": null,
+        "ci95_upper": null
+      },
+      "rss_mib": {
+        "count": 11,
+        "mean": 104.51207386363636,
+        "median": 104.52734375,
+        "median_approximate": false,
+        "std": 0.07099182566380395,
+        "min": 104.37109375,
+        "max": 104.59765625,
+        "ci95_lower": null,
+        "ci95_upper": null
+      }
+    }
+  },
+  "metrics": {
+    "throughput_mbps": 0.11318829596595241,
+    "received_cdr_bytes": 170292,
+    "simulated_energy_wh": null
+  },
+  "availability": {
+    "topic:status": {
+      "available": true,
+      "topic": "/fmu/out/vehicle_status_v4",
+      "expected_type": "px4_msgs/msg/VehicleStatus",
+      "discovered_types": [
+        "px4_msgs/msg/VehicleStatus"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "topic:position": {
+      "available": true,
+      "topic": "/fmu/out/vehicle_local_position_v1",
+      "expected_type": "px4_msgs/msg/VehicleLocalPosition",
+      "discovered_types": [
+        "px4_msgs/msg/VehicleLocalPosition"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "topic:attitude": {
+      "available": true,
+      "topic": "/fmu/out/vehicle_attitude",
+      "expected_type": "px4_msgs/msg/VehicleAttitude",
+      "discovered_types": [
+        "px4_msgs/msg/VehicleAttitude"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "topic:land": {
+      "available": true,
+      "topic": "/fmu/out/vehicle_land_detected",
+      "expected_type": "px4_msgs/msg/VehicleLandDetected",
+      "discovered_types": [
+        "px4_msgs/msg/VehicleLandDetected"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "topic:ack": {
+      "available": true,
+      "topic": "/fmu/out/vehicle_command_ack_v1",
+      "expected_type": "px4_msgs/msg/VehicleCommandAck",
+      "discovered_types": [
+        "px4_msgs/msg/VehicleCommandAck"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "topic:battery": {
+      "available": true,
+      "topic": "/fmu/out/battery_status_v1",
+      "expected_type": "px4_msgs/msg/BatteryStatus",
+      "discovered_types": [
+        "px4_msgs/msg/BatteryStatus"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "topic:estimator": {
+      "available": true,
+      "topic": "/fmu/out/estimator_status_flags",
+      "expected_type": "px4_msgs/msg/EstimatorStatusFlags",
+      "discovered_types": [
+        "px4_msgs/msg/EstimatorStatusFlags"
+      ],
+      "publisher_count": 1,
+      "reason": ""
+    },
+    "process:measurement_node": {
+      "available": true,
+      "reason": ""
+    },
+    "process:px4_sitl": {
+      "available": true,
+      "reason": ""
+    },
+    "process:gazebo_sim": {
+      "available": true,
+      "reason": ""
+    },
+    "process:xrce_agent": {
+      "available": true,
+      "reason": ""
+    },
+    "latency": {
+      "available": false,
+      "reason": "No instrumented sender-to-receiver probe or common clock."
+    },
+    "telemetry_latency": {
+      "available": false,
+      "reason": "PX4 source timestamp and host monotonic clock are not validated as one domain."
+    },
+    "command_latency": {
+      "available": false,
+      "reason": "Passive mode sends no command; ACK lacks unique request correlation."
+    },
+    "packet_loss": {
+      "available": false,
+      "reason": "ROS callbacks do not expose transmitted sequence counts or transport packets."
+    },
+    "link_capacity": {
+      "available": false,
+      "reason": "No meaningful physical link-capacity measurement in WSL SITL."
+    },
+    "mission_time": {
+      "available": false,
+      "reason": "Passive observation does not execute a mission."
+    },
+    "energy": {
+      "available": false,
+      "reason": "Fewer than two valid connected battery voltage/current samples."
+    },
+    "throughput": {
+      "available": true,
+      "kind": "delivered ROS CDR payload rate"
+    },
+    "traffic_rate": {
+      "available": true,
+      "kind": "received ROS CDR traffic rate; not link capacity"
+    },
+    "mission": {
+      "available": true,
+      "status": "not_attempted"
+    }
+  },
+  "errors": [],
+  "metric_definitions": {
+    "throughput_mbps": "received ROS CDR bytes * 8 / monotonic observation seconds / 1e6",
+    "traffic_rate_mbps": "same observed ROS CDR receive rate; not physical link capacity",
+    "telemetry_rate_hz": "callback count / entire monotonic observation window",
+    "inter_arrival_ms": "adjacent callback monotonic interval on one topic",
+    "jitter_ms": "sample standard deviation of within-topic inter-arrival intervals",
+    "cpu_pct": "psutil process CPU; 100% means one logical CPU",
+    "rss_mib": "resident bytes / 2^20; summed RSS can double-count shared pages",
+    "simulated_energy_wh": "trapezoidal integral of valid PX4 BatteryStatus voltage*current / 3600",
+    "latency": "unavailable until instrumented endpoints and valid clock mapping exist",
+    "packet_loss": "unavailable without sent/received sequence-numbered probe counts"
+  },
+  "raw_sample_file": "BASE-001_a881d304106e_raw.csv"
+}

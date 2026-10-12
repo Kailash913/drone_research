@@ -1,0 +1,378 @@
+{
+  "source": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\phase1_master_20261011_185629_UTC\\verification_193155\\paired_passive\\clock_probe_da8160fb4050449f8f10ebc8cf72d1fa.csv",
+  "source_sha256": "6bd24eb33339b1aadcaa04ab1fe67c75db10cb19e2cff50c4701a1ef594ccb57",
+  "duration_monotonic_s": 15.011175707997609,
+  "dds": {
+    "samples": [
+      {
+        "utc": "2026-10-11T19:32:50.304401+00:00",
+        "receive_monotonic_s": 29246.714605978,
+        "timestamp": 1791747168151370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747170287580,
+        "observed_offset": -1791735775113580,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 12000,
+        "deviation_us": 2142210,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11395174000
+      },
+      {
+        "utc": "2026-10-11T19:32:50.306620+00:00",
+        "receive_monotonic_s": 29246.716882089,
+        "timestamp": 1791747168151370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747170302148,
+        "observed_offset": -1791735775122148,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2150778,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11395180000
+      },
+      {
+        "utc": "2026-10-11T19:32:51.401825+00:00",
+        "receive_monotonic_s": 29247.81236772,
+        "timestamp": 1791747169155370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747171400578,
+        "observed_offset": -1791735775216578,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2245208,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11396184000
+      },
+      {
+        "utc": "2026-10-11T19:32:52.406027+00:00",
+        "receive_monotonic_s": 29248.816536171,
+        "timestamp": 1791747170159370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747172405185,
+        "observed_offset": -1791735775217185,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2245815,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11397188000
+      },
+      {
+        "utc": "2026-10-11T19:32:53.410133+00:00",
+        "receive_monotonic_s": 29249.820543683,
+        "timestamp": 1791747171163370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747173409008,
+        "observed_offset": -1791735775217008,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2245638,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11398192000
+      },
+      {
+        "utc": "2026-10-11T19:32:54.418230+00:00",
+        "receive_monotonic_s": 29250.828724502,
+        "timestamp": 1791747172167370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747174417430,
+        "observed_offset": -1791735775221430,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2250060,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11399196000
+      },
+      {
+        "utc": "2026-10-11T19:32:55.422316+00:00",
+        "receive_monotonic_s": 29251.832805393,
+        "timestamp": 1791747173171370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747175421321,
+        "observed_offset": -1791735775221321,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2249951,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11400200000
+      },
+      {
+        "utc": "2026-10-11T19:32:56.426381+00:00",
+        "receive_monotonic_s": 29252.836941837,
+        "timestamp": 1791747174175370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747176425303,
+        "observed_offset": -1791735775221303,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2249933,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11401204000
+      },
+      {
+        "utc": "2026-10-11T19:32:57.431070+00:00",
+        "receive_monotonic_s": 29253.841457361,
+        "timestamp": 1791747175179370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747177429581,
+        "observed_offset": -1791735775221581,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2250211,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11402208000
+      },
+      {
+        "utc": "2026-10-11T19:32:58.438236+00:00",
+        "receive_monotonic_s": 29254.84871277,
+        "timestamp": 1791747176183370,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747178437308,
+        "observed_offset": -1791735775225308,
+        "estimated_offset": -1791735772971370,
+        "round_trip_time": 0,
+        "deviation_us": 2253938,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11403212000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.442941+00:00",
+        "receive_monotonic_s": 29255.853201571,
+        "timestamp": 11404216000,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179441506,
+        "observed_offset": -1791735775225506,
+        "estimated_offset": 0,
+        "round_trip_time": 0,
+        "deviation_us": 1791735775225506,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 11404216000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.443387+00:00",
+        "receive_monotonic_s": 29255.853933184,
+        "timestamp": 1791747179441941,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179441941,
+        "observed_offset": -1791735775225941,
+        "estimated_offset": -1791735775225941,
+        "round_trip_time": 0,
+        "deviation_us": 0,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404216000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.542908+00:00",
+        "receive_monotonic_s": 29255.953403823,
+        "timestamp": 1791747179542176,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179541830,
+        "observed_offset": -1791735775225830,
+        "estimated_offset": -1791735775226176,
+        "round_trip_time": 0,
+        "deviation_us": 346,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404316000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.643062+00:00",
+        "receive_monotonic_s": 29256.053538018,
+        "timestamp": 1791747179642384,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179641827,
+        "observed_offset": -1791735775225827,
+        "estimated_offset": -1791735775226384,
+        "round_trip_time": 0,
+        "deviation_us": 557,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404416000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.742813+00:00",
+        "receive_monotonic_s": 29256.153307384,
+        "timestamp": 1791747179742095,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179741752,
+        "observed_offset": -1791735775225752,
+        "estimated_offset": -1791735775226095,
+        "round_trip_time": 0,
+        "deviation_us": 343,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404516000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.842939+00:00",
+        "receive_monotonic_s": 29256.253348169,
+        "timestamp": 1791747179842256,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179841524,
+        "observed_offset": -1791735775225524,
+        "estimated_offset": -1791735775226256,
+        "round_trip_time": 0,
+        "deviation_us": 732,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404616000
+      },
+      {
+        "utc": "2026-10-11T19:32:59.942563+00:00",
+        "receive_monotonic_s": 29256.353074461,
+        "timestamp": 1791747179942175,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747179941515,
+        "observed_offset": -1791735775225515,
+        "estimated_offset": -1791735775226175,
+        "round_trip_time": 0,
+        "deviation_us": 660,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404716000
+      },
+      {
+        "utc": "2026-10-11T19:33:00.042286+00:00",
+        "receive_monotonic_s": 29256.45279843,
+        "timestamp": 1791747180042326,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747180041454,
+        "observed_offset": -1791735775225454,
+        "estimated_offset": -1791735775226326,
+        "round_trip_time": 0,
+        "deviation_us": 872,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404816000
+      },
+      {
+        "utc": "2026-10-11T19:33:00.142482+00:00",
+        "receive_monotonic_s": 29256.552990371,
+        "timestamp": 1791747180142251,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747180141471,
+        "observed_offset": -1791735775225471,
+        "estimated_offset": -1791735775226251,
+        "round_trip_time": 0,
+        "deviation_us": 780,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11404916000
+      },
+      {
+        "utc": "2026-10-11T19:33:00.242731+00:00",
+        "receive_monotonic_s": 29256.653240515,
+        "timestamp": 1791747180238300,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747180239767,
+        "observed_offset": -1791735775227767,
+        "estimated_offset": -1791735775226300,
+        "round_trip_time": 0,
+        "deviation_us": 1467,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11405012000
+      },
+      {
+        "utc": "2026-10-11T19:33:01.242101+00:00",
+        "receive_monotonic_s": 29257.652590231,
+        "timestamp": 1791747181242297,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747181241213,
+        "observed_offset": -1791735775225213,
+        "estimated_offset": -1791735775226297,
+        "round_trip_time": 0,
+        "deviation_us": 1084,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11406016000
+      },
+      {
+        "utc": "2026-10-11T19:33:02.246622+00:00",
+        "receive_monotonic_s": 29258.657087903,
+        "timestamp": 1791747182246295,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747182245558,
+        "observed_offset": -1791735775225558,
+        "estimated_offset": -1791735775226295,
+        "round_trip_time": 0,
+        "deviation_us": 737,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11407020000
+      },
+      {
+        "utc": "2026-10-11T19:33:03.252057+00:00",
+        "receive_monotonic_s": 29259.662454647,
+        "timestamp": 1791747183250294,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747183249919,
+        "observed_offset": -1791735775225919,
+        "estimated_offset": -1791735775226294,
+        "round_trip_time": 0,
+        "deviation_us": 375,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11408024000
+      },
+      {
+        "utc": "2026-10-11T19:33:04.254782+00:00",
+        "receive_monotonic_s": 29260.665266945,
+        "timestamp": 1791747184254293,
+        "source_protocol": 2,
+        "remote_timestamp": 1791747184253710,
+        "observed_offset": -1791735775225710,
+        "estimated_offset": -1791735775226293,
+        "round_trip_time": 0,
+        "deviation_us": 583,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 11409028000
+      }
+    ],
+    "zero_transition_indices": [
+      10
+    ],
+    "intervals_before_first_zero": [
+      {
+        "peer_delta_us": 14568,
+        "native_midpoint_delta_us": 6000,
+        "native_to_peer_progression_ratio": 0.41186161449752884
+      },
+      {
+        "peer_delta_us": 1098430,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.9140318454521453
+      },
+      {
+        "peer_delta_us": 1004607,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.9993957836248404
+      },
+      {
+        "peer_delta_us": 1003823,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 1.0001763259060612
+      },
+      {
+        "peer_delta_us": 1008422,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.9956149310506911
+      },
+      {
+        "peer_delta_us": 1003891,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 1.0001085775248508
+      },
+      {
+        "peer_delta_us": 1003982,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 1.0000179286082818
+      },
+      {
+        "peer_delta_us": 1004278,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.9997231842179157
+      },
+      {
+        "peer_delta_us": 1007727,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.9963015777090423
+      }
+    ],
+    "filter_convergence_observed": false,
+    "latency_measured": false,
+    "underlying_os_cause_proven": false,
+    "method": "native midpoint=(originate+receive)/2 from observed+remote fields; integer division has <=1 us rounding, not a calibrated clock mapping"
+  },
+  "native_midpoint_to_agent_progression_ratio_before_first_zero": 0.9862905854035865,
+  "not_latency_measurement": true,
+  "not_historical_cause_proof": true
+}

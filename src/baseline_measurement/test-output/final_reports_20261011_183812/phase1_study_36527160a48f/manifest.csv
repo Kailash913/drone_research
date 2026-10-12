@@ -1,0 +1,2 @@
+experiment_id,run_id,source_file,sha256,mode,mission_outcome,complete_record,strict_experiment_valid,failure_stage,failure_reason,configuration_group,duplicate_of
+BASE-001,import-9d9d2e719473c6f49ab7b9b0,/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/baseline_run_001.csv,9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224,SITL_MISSION,FAIL,True,True,TAKEOFF,Estimator or source clock reset,e6c136eb4369aa30a7e958098ef7516680cd77920a67b00b0126cc8bb35457c8,

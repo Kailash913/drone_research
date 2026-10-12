@@ -1,0 +1,46 @@
+src/cpp/processor/Processor.cpp:731:        dds::xrce::TIMESTAMP_REPLY_Payload timestamp_reply;
+src/cpp/processor/Processor.cpp:732:        time::get_epoch_time(timestamp_reply.receive_timestamp().seconds(),
+src/cpp/processor/Processor.cpp:733:                             timestamp_reply.receive_timestamp().nanoseconds());
+src/cpp/processor/Processor.cpp:734:        timestamp_reply.originate_timestamp(timestamp.transmit_timestamp());
+src/cpp/processor/Processor.cpp:735:        time::get_epoch_time(timestamp_reply.transmit_timestamp().seconds(),
+src/cpp/processor/Processor.cpp:736:                             timestamp_reply.transmit_timestamp().nanoseconds());
+src/cpp/processor/Processor.cpp:740:            dds::xrce::TIMESTAMP_REPLY,
+src/cpp/processor/Processor.cpp:741:            timestamp_reply,
+src/cpp/types/XRCETypes.cpp:6921:    m_session_time_offset = 0;
+src/cpp/types/XRCETypes.cpp:6932:    m_session_time_offset = x.m_session_time_offset;
+src/cpp/types/XRCETypes.cpp:6939:    m_session_time_offset = x.m_session_time_offset;
+src/cpp/types/XRCETypes.cpp:6946:    m_session_time_offset = x.m_session_time_offset;
+src/cpp/types/XRCETypes.cpp:6955:    m_session_time_offset = x.m_session_time_offset;
+src/cpp/types/XRCETypes.cpp:6991:    scdr << m_session_time_offset;
+src/cpp/types/XRCETypes.cpp:6998:    dcdr >> m_session_time_offset;
+src/cpp/types/XRCETypes.cpp:9352:dds::xrce::TIMESTAMP_REPLY_Payload::TIMESTAMP_REPLY_Payload()
+src/cpp/types/XRCETypes.cpp:9356:dds::xrce::TIMESTAMP_REPLY_Payload::~TIMESTAMP_REPLY_Payload()
+src/cpp/types/XRCETypes.cpp:9360:size_t dds::xrce::TIMESTAMP_REPLY_Payload::getMaxCdrSerializedSize(size_t current_alignment)
+src/cpp/types/XRCETypes.cpp:9371:size_t dds::xrce::TIMESTAMP_REPLY_Payload::getCdrSerializedSize(size_t current_alignment) const
+src/cpp/types/XRCETypes.cpp:9382:void dds::xrce::TIMESTAMP_REPLY_Payload::serialize(eprosima::fastcdr::Cdr &scdr) const
+src/cpp/types/XRCETypes.cpp:9389:void dds::xrce::TIMESTAMP_REPLY_Payload::deserialize(eprosima::fastcdr::Cdr &dcdr)
+include/uxr/agent/types/XRCETypes.hpp:7831:     * @brief This function sets a value in member session_time_offset
+include/uxr/agent/types/XRCETypes.hpp:7832:     * @param _session_time_offset New value for member session_time_offset
+include/uxr/agent/types/XRCETypes.hpp:7834:    inline void session_time_offset(uint32_t _session_time_offset)
+include/uxr/agent/types/XRCETypes.hpp:7836:        m_session_time_offset = _session_time_offset;
+include/uxr/agent/types/XRCETypes.hpp:7840:     * @brief This function returns the value of member session_time_offset
+include/uxr/agent/types/XRCETypes.hpp:7841:     * @return Value of member session_time_offset
+include/uxr/agent/types/XRCETypes.hpp:7843:    inline uint32_t session_time_offset() const
+include/uxr/agent/types/XRCETypes.hpp:7845:        return m_session_time_offset;
+include/uxr/agent/types/XRCETypes.hpp:7849:     * @brief This function returns a reference to member session_time_offset
+include/uxr/agent/types/XRCETypes.hpp:7850:     * @return Reference to member session_time_offset
+include/uxr/agent/types/XRCETypes.hpp:7852:    inline uint32_t& session_time_offset()
+include/uxr/agent/types/XRCETypes.hpp:7854:        return m_session_time_offset;
+include/uxr/agent/types/XRCETypes.hpp:7888:    uint32_t m_session_time_offset;
+include/uxr/agent/types/XRCETypes.hpp:11198:class TIMESTAMP_REPLY_Payload
+include/uxr/agent/types/XRCETypes.hpp:11205:    TIMESTAMP_REPLY_Payload();
+include/uxr/agent/types/XRCETypes.hpp:11210:    ~TIMESTAMP_REPLY_Payload();
+include/uxr/agent/types/XRCETypes.hpp:11214:     * @param x Reference to the object TIMESTAMP_REPLY_Payload that will be copied.
+include/uxr/agent/types/XRCETypes.hpp:11216:    TIMESTAMP_REPLY_Payload(const TIMESTAMP_REPLY_Payload &x);
+include/uxr/agent/types/XRCETypes.hpp:11220:     * @param x Reference to the object TIMESTAMP_REPLY_Payload that will be copied.
+include/uxr/agent/types/XRCETypes.hpp:11222:    TIMESTAMP_REPLY_Payload(TIMESTAMP_REPLY_Payload &&x);
+include/uxr/agent/types/XRCETypes.hpp:11226:     * @param x Reference to the object TIMESTAMP_REPLY_Payload that will be copied.
+include/uxr/agent/types/XRCETypes.hpp:11228:    TIMESTAMP_REPLY_Payload& operator=(const TIMESTAMP_REPLY_Payload &x);
+include/uxr/agent/types/XRCETypes.hpp:11232:     * @param x Reference to the object TIMESTAMP_REPLY_Payload that will be copied.
+include/uxr/agent/types/XRCETypes.hpp:11234:    TIMESTAMP_REPLY_Payload& operator=(TIMESTAMP_REPLY_Payload &&x);
+include/uxr/agent/types/XRCETypes.hpp:11399:    TIMESTAMP_REPLY = 15,

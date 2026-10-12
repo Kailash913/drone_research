@@ -1,0 +1,135 @@
+[0.000000] (-) TimerEvent: {}
+[0.000651] (-) JobUnselected: {'identifier': 'drone_node'}
+[0.002174] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.003704] (baseline_measurement) JobQueued: {'identifier': 'baseline_measurement', 'dependencies': OrderedDict({'px4_msgs': '/home/kailash/ros2_ws/install/px4_msgs'})}
+[0.004186] (baseline_measurement) JobStarted: {'identifier': 'baseline_measurement'}
+[0.098287] (-) TimerEvent: {}
+[0.198714] (-) TimerEvent: {}
+[0.299161] (-) TimerEvent: {}
+[0.399467] (-) TimerEvent: {}
+[0.499864] (-) TimerEvent: {}
+[0.600430] (-) TimerEvent: {}
+[0.700835] (-) TimerEvent: {}
+[0.801191] (-) TimerEvent: {}
+[0.901510] (-) TimerEvent: {}
+[1.001832] (-) TimerEvent: {}
+[1.102319] (-) TimerEvent: {}
+[1.203561] (-) TimerEvent: {}
+[1.303911] (-) TimerEvent: {}
+[1.404162] (-) TimerEvent: {}
+[1.504519] (-) TimerEvent: {}
+[1.604802] (-) TimerEvent: {}
+[1.706085] (-) TimerEvent: {}
+[1.807148] (-) TimerEvent: {}
+[1.907625] (-) TimerEvent: {}
+[2.008188] (-) TimerEvent: {}
+[2.115221] (-) TimerEvent: {}
+[2.215584] (-) TimerEvent: {}
+[2.316219] (-) TimerEvent: {}
+[2.418932] (-) TimerEvent: {}
+[2.521334] (-) TimerEvent: {}
+[2.622575] (-) TimerEvent: {}
+[2.722936] (-) TimerEvent: {}
+[2.823415] (-) TimerEvent: {}
+[2.925396] (-) TimerEvent: {}
+[3.025783] (-) TimerEvent: {}
+[3.127281] (-) TimerEvent: {}
+[3.227627] (-) TimerEvent: {}
+[3.328641] (-) TimerEvent: {}
+[3.428963] (-) TimerEvent: {}
+[3.537883] (-) TimerEvent: {}
+[3.639076] (-) TimerEvent: {}
+[3.739793] (-) TimerEvent: {}
+[3.840214] (-) TimerEvent: {}
+[3.940605] (-) TimerEvent: {}
+[4.041022] (-) TimerEvent: {}
+[4.141399] (-) TimerEvent: {}
+[4.241856] (-) TimerEvent: {}
+[4.342224] (-) TimerEvent: {}
+[4.442541] (-) TimerEvent: {}
+[4.542923] (-) TimerEvent: {}
+[4.643321] (-) TimerEvent: {}
+[4.743824] (-) TimerEvent: {}
+[4.845307] (-) TimerEvent: {}
+[4.945691] (-) TimerEvent: {}
+[5.046099] (-) TimerEvent: {}
+[5.148961] (-) TimerEvent: {}
+[5.251672] (-) TimerEvent: {}
+[5.353740] (-) TimerEvent: {}
+[5.454196] (-) TimerEvent: {}
+[5.555336] (-) TimerEvent: {}
+[5.656848] (-) TimerEvent: {}
+[5.757243] (-) TimerEvent: {}
+[5.860429] (-) TimerEvent: {}
+[5.961049] (-) TimerEvent: {}
+[6.061352] (-) TimerEvent: {}
+[6.161564] (-) TimerEvent: {}
+[6.261949] (-) TimerEvent: {}
+[6.364994] (-) TimerEvent: {}
+[6.465310] (-) TimerEvent: {}
+[6.571749] (-) TimerEvent: {}
+[6.672268] (-) TimerEvent: {}
+[6.772808] (-) TimerEvent: {}
+[6.877289] (-) TimerEvent: {}
+[6.977519] (-) TimerEvent: {}
+[7.077947] (-) TimerEvent: {}
+[7.179502] (-) TimerEvent: {}
+[7.281623] (-) TimerEvent: {}
+[7.381988] (-) TimerEvent: {}
+[7.487225] (-) TimerEvent: {}
+[7.592350] (-) TimerEvent: {}
+[7.696056] (-) TimerEvent: {}
+[7.749637] (baseline_measurement) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/baseline_measurement', 'build', '--build-base', '/home/kailash/ros2_ws/build/baseline_measurement/build', 'install', '--record', '/home/kailash/ros2_ws/build/baseline_measurement/install.log', '--install-scripts', '$base/lib/baseline_measurement', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/kailash/ros2_ws/src/baseline_measurement', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/kaila/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'PYTHONIOENCODING': 'utf-8', 'USER': 'kailash', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/kaila/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/kailash/ros2_ws/install/px4_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu', 'HOME': '/home/kailash', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-878b4b25-5d88-4de4-a6a0-252f5a70611c.sock', 'PYTHONUNBUFFERED': '1', 'ROS_PYTHON_VERSION': '3', 'COPILOT_OTEL_FILE_EXPORTER_PATH': '/dev/null', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'GIT_OPTIONAL_LOCKS': '0', 'WAYLAND_DISPLAY': 'wayland-0', 'VSCODE_L10N_BUNDLE_LOCATION': '', 'COLCON_PREFIX_PATH': '/home/kailash/ros2_ws/install', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kailash', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/1063_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/kailash/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_3.0.1.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/WINDOWS/System32":/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/":/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/":/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/:/mnt/c/Users/kaila/.local/bin:/mnt/c/Users/kaila/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kaila/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/MinGW/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Ollama:/mnt/c/Users/kaila/AppData/Roaming/npm:/mnt/c/Users/kaila/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/kaila/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/kaila/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Kiro/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2/:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin:/snap/bin:/opt/xtensa-esp-elf/bin/', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/kailash/ros2_ws/install/px4_msgs:/home/kailash/ros2_ws/install/baseline_measurement:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'MXC_BIN_DIR': '/home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node_modules/@microsoft/mxc-sdk/bin', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/kailash/ros2_ws/build/baseline_measurement', 'DEBUGPY_RUNNING': 'true', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYDEVD_USE_FRAME_EVAL': 'NO', 'PYTHONPATH': '/home/kailash/ros2_ws/build/baseline_measurement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages:/home/kailash/ros2_ws/src/baseline_measurement:/opt/ros/jazzy/lib/python3.12/site-packages:/opt/ros/jazzy/local/lib/python3.12/dist-packages:/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'COPILOT_CLI_ENABLED_FEATURE_FLAGS': 'SHELL_SPAWN_BACKEND', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}, 'shell': False}
+[7.800211] (-) TimerEvent: {}
+[7.900520] (-) TimerEvent: {}
+[8.001618] (-) TimerEvent: {}
+[8.102649] (-) TimerEvent: {}
+[8.202991] (-) TimerEvent: {}
+[8.306557] (-) TimerEvent: {}
+[8.406952] (-) TimerEvent: {}
+[8.509584] (-) TimerEvent: {}
+[8.611938] (-) TimerEvent: {}
+[8.713791] (-) TimerEvent: {}
+[8.806882] (baseline_measurement) StdoutLine: {'line': b'running egg_info\n'}
+[8.814919] (-) TimerEvent: {}
+[8.858999] (baseline_measurement) StdoutLine: {'line': b'writing ../../build/baseline_measurement/baseline_measurement.egg-info/PKG-INFO\n'}
+[8.863313] (baseline_measurement) StdoutLine: {'line': b'writing dependency_links to ../../build/baseline_measurement/baseline_measurement.egg-info/dependency_links.txt\n'}
+[8.867200] (baseline_measurement) StdoutLine: {'line': b'writing entry points to ../../build/baseline_measurement/baseline_measurement.egg-info/entry_points.txt\n'}
+[8.878599] (baseline_measurement) StdoutLine: {'line': b'writing requirements to ../../build/baseline_measurement/baseline_measurement.egg-info/requires.txt\n'}
+[8.879125] (baseline_measurement) StdoutLine: {'line': b'writing top-level names to ../../build/baseline_measurement/baseline_measurement.egg-info/top_level.txt\n'}
+[8.915053] (-) TimerEvent: {}
+[8.978887] (baseline_measurement) StdoutLine: {'line': b"reading manifest file '../../build/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'\n"}
+[8.982060] (baseline_measurement) StdoutLine: {'line': b"writing manifest file '../../build/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'\n"}
+[8.986358] (baseline_measurement) StdoutLine: {'line': b'running build\n'}
+[8.987635] (baseline_measurement) StdoutLine: {'line': b'running build_py\n'}
+[8.988989] (baseline_measurement) StdoutLine: {'line': b'copying baseline_measurement/native_clock.py -> /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement\n'}
+[8.995555] (baseline_measurement) StdoutLine: {'line': b'running install\n'}
+[9.010449] (baseline_measurement) StdoutLine: {'line': b'running install_lib\n'}
+[9.015189] (-) TimerEvent: {}
+[9.072830] (baseline_measurement) StdoutLine: {'line': b'copying /home/kailash/ros2_ws/build/baseline_measurement/build/lib/baseline_measurement/native_clock.py -> /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement\n'}
+[9.076951] (baseline_measurement) StdoutLine: {'line': b'byte-compiling /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/native_clock.py to native_clock.cpython-312.pyc\n'}
+[9.088527] (baseline_measurement) StdoutLine: {'line': b'running install_data\n'}
+[9.094336] (baseline_measurement) StdoutLine: {'line': b'running install_egg_info\n'}
+[9.117424] (-) TimerEvent: {}
+[9.144160] (baseline_measurement) StdoutLine: {'line': b"removing '/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[9.177203] (baseline_measurement) StdoutLine: {'line': b'Copying ../../build/baseline_measurement/baseline_measurement.egg-info to /home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement-0.0.0-py3.12.egg-info\n'}
+[9.177522] (baseline_measurement) StdoutLine: {'line': b'running install_scripts\n'}
+[9.221425] (-) TimerEvent: {}
+[9.322761] (-) TimerEvent: {}
+[9.424210] (-) TimerEvent: {}
+[9.524693] (-) TimerEvent: {}
+[9.630098] (-) TimerEvent: {}
+[9.662684] (baseline_measurement) StdoutLine: {'line': b'Installing baseline_dataset script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.665482] (baseline_measurement) StdoutLine: {'line': b'Installing baseline_node script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.666547] (baseline_measurement) StdoutLine: {'line': b'Installing clock_probe script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.667027] (baseline_measurement) StdoutLine: {'line': b'Installing measurement_import script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.671543] (baseline_measurement) StdoutLine: {'line': b'Installing mission_node script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.674568] (baseline_measurement) StdoutLine: {'line': b'Installing phase1_acceptance script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.675818] (baseline_measurement) StdoutLine: {'line': b'Installing provenance_recovery script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.678232] (baseline_measurement) StdoutLine: {'line': b'Installing record_context script to /home/kailash/ros2_ws/install/baseline_measurement/lib/baseline_measurement\n'}
+[9.681245] (baseline_measurement) StdoutLine: {'line': b"writing list of installed files to '/home/kailash/ros2_ws/build/baseline_measurement/install.log'\n"}
+[9.730276] (-) TimerEvent: {}
+[9.829972] (baseline_measurement) CommandEnded: {'returncode': 0}
+[9.831133] (-) TimerEvent: {}
+[9.893309] (baseline_measurement) JobEnded: {'identifier': 'baseline_measurement', 'rc': 0}
+[9.896436] (-) EventReactorShutdown: {}

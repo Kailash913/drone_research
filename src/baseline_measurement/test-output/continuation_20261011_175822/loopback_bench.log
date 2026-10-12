@@ -1,0 +1,5 @@
+{
+  "output": "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_20261011_175822/loopback_bench",
+  "mode": "LOCALHOST_BENCH_ONLY",
+  "transmitted": 50
+}

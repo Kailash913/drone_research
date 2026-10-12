@@ -1,0 +1,214 @@
+{
+  "started_utc": "2026-10-11T16:37:57Z",
+  "git_status": {
+    "argv": [
+      "git",
+      "status",
+      "--short",
+      "--branch"
+    ],
+    "returncode": 0,
+    "log": "git_status.log"
+  },
+  "git_commit": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "log": "git_commit.log"
+  },
+  "git_diff": {
+    "argv": [
+      "git",
+      "diff",
+      "--",
+      "src/baseline_measurement"
+    ],
+    "returncode": 0,
+    "log": "git_diff.log"
+  },
+  "git_cached_diff": {
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--",
+      "src/baseline_measurement"
+    ],
+    "returncode": 0,
+    "log": "git_cached_diff.log"
+  },
+  "colcon_list": {
+    "argv": [
+      "colcon",
+      "list"
+    ],
+    "returncode": 0,
+    "log": "colcon_list.log"
+  },
+  "installed_executables": {
+    "argv": [
+      "ros2",
+      "pkg",
+      "executables",
+      "baseline_measurement"
+    ],
+    "returncode": 0,
+    "log": "installed_executables.log"
+  },
+  "installed_prefix": {
+    "argv": [
+      "ros2",
+      "pkg",
+      "prefix",
+      "baseline_measurement"
+    ],
+    "returncode": 0,
+    "log": "installed_prefix.log"
+  },
+  "cli_help": {
+    "argv": [
+      "ros2",
+      "run",
+      "baseline_measurement",
+      "mission_node",
+      "--help"
+    ],
+    "returncode": 0,
+    "log": "cli_help.log"
+  },
+  "topics": {
+    "argv": [
+      "ros2",
+      "topic",
+      "list",
+      "-t"
+    ],
+    "returncode": 0,
+    "log": "topics.log"
+  },
+  "nodes": {
+    "argv": [
+      "ros2",
+      "node",
+      "list"
+    ],
+    "returncode": 0,
+    "log": "nodes.log"
+  },
+  "processes": {
+    "argv": [
+      "ps",
+      "-eo",
+      "pid,comm,args"
+    ],
+    "returncode": 0,
+    "log": "processes.log"
+  },
+  "ubuntu": {
+    "argv": [
+      "cat",
+      "/etc/os-release"
+    ],
+    "returncode": 0,
+    "log": "ubuntu.log"
+  },
+  "px4_version": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/kailash/PX4-Autopilot",
+      "describe",
+      "--always",
+      "--dirty"
+    ],
+    "returncode": 0,
+    "log": "px4_version.log"
+  },
+  "px4_status": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/kailash/PX4-Autopilot",
+      "status",
+      "--short",
+      "--branch"
+    ],
+    "returncode": 0,
+    "log": "px4_status.log"
+  },
+  "gz_version": {
+    "argv": [
+      "gz",
+      "sim",
+      "--versions"
+    ],
+    "returncode": 0,
+    "log": "gz_version.log"
+  },
+  "ros_version": {
+    "argv": [
+      "dpkg-query",
+      "-W",
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-rclpy"
+    ],
+    "returncode": 0,
+    "log": "ros_version.log"
+  },
+  "source_hashes": {
+    "validate_baseline.sh": "1d995815d2cc677afc9ee894632a9f16267c67f917701e590d0ba95e8eacd854",
+    "README.md": "cedf9d7da8f71c31379b150074c6ef93a59f5f6597e10cfb523b60286c46ba27",
+    "PHASE1_BASELINE.md": "e8fa1289fb72b2865fe836ffa71d649835e5747817cd9b2de33e3e1360b686e4",
+    "setup.py": "e87a904f44546ee2c95131bc5dd9a7f6c91dfafd48c666a7d5ca631d916dc883",
+    "setup.cfg": "d671efb4fd2a2fc65b973fc8ab6dbc059d88d88a4e265f930285ff1ad402a638",
+    "PHASE1_TEST_RESULTS.md": "00ec91042c9c385c714020586096db847f677f323cfb67cc25d4296b197ce001",
+    "test_phase1.sh": "a95a40322e73dfa1ad976c1a6dc873946ee8bada32ea9c33c794d90ac0cb833b",
+    "PHASE1_ACCEPTANCE.md": "b3964285ddec35501f536f2e9532c35436b2372ca62c4c66ff8e2edaaee86e06",
+    "package.xml": "fea676ccb78a4aa6366860a2b38a03e6e69b29e8c56359a4c02b3c09b69fe65d",
+    "HEADING_DIAGNOSTIC.md": "cce945225cab51f5a4f920242114a850c10f64f49b706a98ff28649d310000a5",
+    "resource/baseline_measurement": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline_measurement/cli.py": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+    "baseline_measurement/acceptance.py": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+    "baseline_measurement/mission_node.py": "8f80d711730e9b5c868d2aafe9bf3c583362813c8461340ce62a6611a59322b7",
+    "baseline_measurement/experiment.py": "27fe0aa85dd79f2baf1d4c01dbe5f906b3748f15e3c16f8d1588117ace480122",
+    "baseline_measurement/mission_state.py": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+    "baseline_measurement/experiment_logger.py": "2bc47d406a0a5de6fec38324ea33c69e205bab38c1a819d01bd6039436035729",
+    "baseline_measurement/resource_monitor.py": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+    "baseline_measurement/baseline_node.py": "2f498944d6165193c85850f1b3ca23323f8173e17b8bd9e2dd159987ebd1bae3",
+    "baseline_measurement/metrics.py": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+    "baseline_measurement/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline_measurement/qgc_plan.py": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+    "config/baseline.yaml": "24b0e3e7aa3123036167af151c727bcc0c4820a723c222d76b4a814f2d4703df",
+    "test/test_copyright.py": "ea71bbbc6247b5c14d176ed09f39ee274d563cc9b2ec355828ea451ceff31757",
+    "test/test_phase1.py": "7e2acdd3796b4dc07be2a9fbbf55bf7e5368a3340bcf78b0a0b8ef6233dded50",
+    "test/test_baseline_new.py": "cd0069c0074786be4d06375dfe69fbf5f39d3e4baeeaaa850a9994e5e055ae73",
+    "test/test_preflight.py": "199238520748f5b18c2fee832439f8a6ab0618772cdf41b79fc23c19534ff9a6",
+    "test/test_acceptance.py": "6acbf246b47aef3b3d76f00d447f1779179939e1baf8c2fe9523300c165cd3cb",
+    "test/test_qgc_plan.py": "d1ce0ae0e73e19d96d3d3d5214a1e47e67ff19376f05929ab2f1f921c8ed1dee",
+    "test/test_flake8.py": "37a813a0507f0ce51a2d0b57312d2cc078a0307a3ca85580ea801b0d2f9755d2",
+    "test/test_auto_takeoff.py": "cef04550749a268312b4bf906a3c4aa9cea7c27b2e6b0563ebaba8fd083edbe9",
+    "test/test_auto_takeoff_adapter.py": "d8d88e36bf419cafdfb0b5116939e6413af57e369f83724eee04d0142bb9a6c7",
+    "test/test_pep257.py": "e8b88d49ee296987b1b40069f81019b5fa09b1aa1bfee9a1faae45bb5cf53eda",
+    "tools/phase1_inspect.py": "deb0f1fdf4bf7b27a679d3014a6dd46085e53b397462c79eeeb95798f23cef65",
+    "tools/telemetry_probe.cpp": "38147fa05cf1eaac91a2f0e0aa0430e96d365564b949f43cfe88c682ac382605",
+    "tools/vscode_apply_heading_fix.py": "aa9bf72062ed925088fb56df482ba333ff7a693f0040a7644ad3a1ff08099d2a",
+    "tools/CMakeLists.txt": "61602d2f682a9eb4ab0e3beb50cf2f2fa90892004e8cb483999aeb6d4714c54f",
+    "tools/vscode_test_runner.py": "9da28ebeab34bf247341744af1041b96b1e09b8383d5930fea320d509e4070df",
+    "tools/phase1_access_probe.txt": "98ff4921c2adf89a5f75e4853f156eab2e83174efe6fced2fd66597919d0f983"
+  },
+  "baseline_pytest": {
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "pytest",
+      "test",
+      "-q",
+      "--junitxml=/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_audit_20261011_163757/baseline_pytest.xml"
+    ],
+    "returncode": 1,
+    "log": "baseline_pytest.log"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "source": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\phase1_master_20261011_185629_UTC\\verification_191436\\gz_stats_passive.log",
+  "n": 114,
+  "first": {
+    "simTime": {
+      "sec": "10428",
+      "nsec": 220000000
+    },
+    "realTime": {
+      "sec": "10605",
+      "nsec": 111687686
+    },
+    "iterations": "2607055",
+    "realTimeFactor": 0.9995167336592757,
+    "stepSize": {
+      "nsec": 4000000
+    }
+  },
+  "last": {
+    "simTime": {
+      "sec": "10439",
+      "nsec": 780000000
+    },
+    "realTime": {
+      "sec": "10616",
+      "nsec": 671691327
+    },
+    "iterations": "2609945",
+    "realTimeFactor": 0.9980161933117446,
+    "stepSize": {
+      "nsec": 4000000
+    }
+  },
+  "sim_delta_s": 11.56000000000131,
+  "server_real_delta_s": 11.56000364099964,
+  "rtf_min": 0.5500974428857892,
+  "rtf_max": 1.8104724971122963,
+  "rtf_mean": 0.9901186511364058,
+  "capture_exit_code": 124,
+  "exit_code_reason": "Intentional bounded passive subscription",
+  "sim_to_server_real_progression_ratio": 0.9999996850348458
+}

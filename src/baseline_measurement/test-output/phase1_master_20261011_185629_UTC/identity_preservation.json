@@ -1,0 +1,23 @@
+[
+  {
+    "study": "baseline_results",
+    "prior_manifest": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\final_reports_20261011_183812\\baseline_results\\manifest.json",
+    "assigned_original_or_prior_ids_checked": 30,
+    "mismatches": {},
+    "identities_preserved": true
+  },
+  {
+    "study": "phase1_study_36527160a48f",
+    "prior_manifest": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\final_reports_20261011_183812\\phase1_study_36527160a48f\\manifest.json",
+    "assigned_original_or_prior_ids_checked": 1,
+    "mismatches": {},
+    "identities_preserved": true
+  },
+  {
+    "study": "phase1_study_c57f5de2b96a",
+    "prior_manifest": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\final_reports_20261011_183812\\phase1_study_c57f5de2b96a\\manifest.json",
+    "assigned_original_or_prior_ids_checked": 0,
+    "mismatches": {},
+    "identities_preserved": true
+  }
+]

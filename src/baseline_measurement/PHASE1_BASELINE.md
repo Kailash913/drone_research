@@ -1,4 +1,11 @@
+> Historical report. See [PHASE1_VALIDATION.md](PHASE1_VALIDATION.md) for the 11 October 2026 audit, current active-mission counts, dataset validation and remaining blockers.
+
 # Phase 1 baseline implementation — not yet flight validated
+
+> Historical implementation report. Current acceptance status and execution
+> evidence are in [PHASE1_ACCEPTANCE.md](PHASE1_ACCEPTANCE.md) and
+> [PHASE1_TEST_RESULTS.md](PHASE1_TEST_RESULTS.md). The historical NOT RUN
+> statements below describe the original work, not the latest validation.
 
 Date: 8 October 2026. Only the unsecured ROS 2 baseline is implemented.
 No security layer, simulator parameters, PX4 source, px4_msgs definitions,

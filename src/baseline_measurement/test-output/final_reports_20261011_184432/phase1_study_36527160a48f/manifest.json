@@ -1,0 +1,951 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-11T18:44:54.102636+00:00",
+  "input_directory": "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f",
+  "records": [
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/baseline_run_001.csv",
+      "sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+      "errors": [],
+      "metadata_gaps": [],
+      "metrics": {
+        "end_to_end_latency_ms": null,
+        "telemetry_latency_ms": null,
+        "command_latency_ms": null,
+        "packet_loss_pct": null,
+        "rx_payload_mbps": 0.09034103850014807,
+        "tx_payload_mbps": 7.457709738235e-05,
+        "bandwidth_mbps": null,
+        "node_cpu_pct": 19.516666666666666,
+        "system_cpu_pct": 61.71666666666667,
+        "node_rss_mib": 87.86414930555556,
+        "mission_completion_s": null,
+        "attempt_duration_s": 19.3088769950009,
+        "energy_wh": null,
+        "power_w": null
+      },
+      "metric_validity": {
+        "end_to_end_latency_ms": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Unavailable: no correlated sender/receiver probe and clock error bound.",
+          "unit": "ms",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "telemetry_latency_ms": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Unavailable: DDS timestamps are offset-adjusted; no independently validated clock mapping.",
+          "unit": "ms",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "command_latency_ms": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Unavailable: ACK records lack a unique request identifier; no independently validated correlation.",
+          "unit": "ms",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "packet_loss_pct": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Unavailable: no identifiable transmitted transport packet/sequence denominator.",
+          "unit": "%",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "rx_payload_mbps": {
+          "valid": true,
+          "status": "MEASURED_LIMITED",
+          "definition": "Sum received ROS CDR bytes * 8 / whole monotonic run duration / 1e6; excludes transport headers.",
+          "unit": "Mbit/s",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "tx_payload_mbps": {
+          "valid": true,
+          "status": "MEASURED_LIMITED",
+          "definition": "Sum local publish-call CDR bytes * 8 / whole monotonic run duration / 1e6; delivery unconfirmed.",
+          "unit": "Mbit/s",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "bandwidth_mbps": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Unavailable: no wire capture or physical link-capacity measurement. Payload throughput is reported separately.",
+          "unit": "Mbit/s",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "node_cpu_pct": {
+          "valid": true,
+          "status": "MEASURED_LIMITED",
+          "definition": "Arithmetic mean of finite primed psutil process CPU interval samples; process can exceed 100%.",
+          "unit": "% of one logical CPU",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "system_cpu_pct": {
+          "valid": true,
+          "status": "MEASURED_LIMITED",
+          "definition": "Arithmetic mean of finite psutil WSL guest CPU interval samples; excludes Windows host/QGC/GPU.",
+          "unit": "%",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "node_rss_mib": {
+          "valid": true,
+          "status": "MEASURED_LIMITED",
+          "definition": "Arithmetic mean of mission-process resident bytes / 2^20, measured at resource callbacks.",
+          "unit": "MiB",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "mission_completion_s": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Logger monotonic initialization to terminal result, including preflight; successful active missions only.",
+          "unit": "s",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "attempt_duration_s": {
+          "valid": true,
+          "status": "MEASURED_LIMITED",
+          "definition": "Logger monotonic initialization to terminal result, including failed/passive attempts; not successful mission completion.",
+          "unit": "s",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "energy_wh": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Physical UAV energy unavailable in SITL; simulated battery estimates are not physical energy.",
+          "unit": "Wh",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        },
+        "power_w": {
+          "valid": false,
+          "status": "NOT_MEASURED",
+          "definition": "Physical UAV power unavailable; requires calibrated battery current/voltage or external power analyzer.",
+          "unit": "W",
+          "clock": "local monotonic for duration/interval; UTC for identity; psutil for resources",
+          "missing_handling": "null excluded from statistics; never imputed as zero"
+        }
+      },
+      "mission_outcome": "FAIL",
+      "complete_record": true,
+      "strict_experiment_valid": true,
+      "experiment_id": "BASE-001",
+      "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+      "duplicate_of": null,
+      "start_utc": "2026-10-11T18:06:49.757172+00:00",
+      "end_utc": "2026-10-11T18:07:11.054667+00:00",
+      "mode": "SITL_MISSION",
+      "metadata": {
+        "config_file": "/home/kailash/ros2_ws/src/baseline_measurement/config/baseline.yaml",
+        "config_sha256": "24b0e3e7aa3123036167af151c727bcc0c4820a723c222d76b4a814f2d4703df",
+        "control_rate_hz": 20.0,
+        "cpu_scope": "WSL Linux guest system and mission process; excludes Windows QGC",
+        "dwell_s": 2.0,
+        "experiment_id": "BASE-001",
+        "frame": "local NED; offsets from measured takeoff home",
+        "heading_bootstrap": "PX4 Auto takeoff with initial yaw alignment and global reference; Offboard begins only after final heading readiness",
+        "latency": "N/A: no independently validated clock mapping or per-command correlation",
+        "missing_messages": "N/A: rate limits are not guaranteed production rates",
+        "mission_timeout_s": 480.0,
+        "mode": "SITL_MISSION",
+        "outputs": {
+          "ack": "/fmu/out/vehicle_command_ack_v1",
+          "attitude": "/fmu/out/vehicle_attitude",
+          "battery": "/fmu/out/battery_status_v1",
+          "estimator": "/fmu/out/estimator_status_flags",
+          "land": "/fmu/out/vehicle_land_detected",
+          "position": "/fmu/out/vehicle_local_position_v1",
+          "status": "/fmu/out/vehicle_status_v4"
+        },
+        "packet_loss": "N/A: no transport capture or sequence counters",
+        "payload": "ROS CDR serialized bytes including encapsulation; excludes transport headers",
+        "position_tolerance_m": 0.7,
+        "power": "N/A: hardware power measurement unavailable",
+        "processes": {
+          "agent": [
+            4216
+          ],
+          "gazebo": [
+            46767,
+            46768
+          ],
+          "px4": [
+            46593
+          ]
+        },
+        "provenance_file": "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/context_BASE-001/provenance.json",
+        "provenance_method": "PX4 process executable contains retained full revision and tag; binary/header hashes retained. Gazebo version command output is installed-version evidence, alongside live process inventory; not physical UAV firmware evidence.",
+        "provenance_sha256": "cfb5954fc361a0b04f9c6c889531ee519ecd8cfc16df9dd9a477bbd509943863",
+        "px4_version": "v1.18.0-beta1-213-g43cccdea0e",
+        "python": "3.12.3",
+        "rmw": "default",
+        "ros_distro": "jazzy",
+        "run_id": "aa0ea63256f2421da5ffa8a14641f17e",
+        "scheduling_gap_limit_s": 0.25,
+        "schema": 1,
+        "segment_duration_s": 15.0,
+        "settled_speed_m_s": 0.5,
+        "simulator_version": "8.15.0",
+        "source_sha256": {
+          "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "acceptance.py": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+          "baseline_node.py": "08cd921784e8c28b390101a7a54b9057d0e508b9c7eb1d6e93b1b77e243cf910",
+          "cli.py": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+          "clock_probe.py": "bb18ad6793a02fb38de919b7743d18557a5c5982e5f30fe4836423706bca0d62",
+          "dataset.py": "afacad9e2820b25c0017c5f7fb9351811194f44f8c076a87cc8be74c11abeab2",
+          "experiment.py": "bec0d867b0f0bc706f021fe472dabf075506caed33d97950044b41aebbec306c",
+          "experiment_logger.py": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+          "measurements.py": "6027f65190678533041d7b107e3f33809655c372fbeeaa6335b1620d371937e5",
+          "metrics.py": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+          "mission_node.py": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+          "mission_state.py": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+          "provenance.py": "68032fd26683930486dba2d947b271a66c6cbbe07f47bc6d8aaed1ee1c58d47c",
+          "qgc_plan.py": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+          "record_context.py": "1a686ca8c30539aea5fb04806e1b684f42973d681c64cba98e4d03e362da048c",
+          "resource_monitor.py": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+          "run_provenance.py": "e942d7204ca8503c41ad29939f56a470d92865b23b522ba0e2b410cc599854ed",
+          "sync_evidence.py": "ccaa99264d171bdab5629842650c50c09508bd4c5c432e29e9ea9f3ae9c57936",
+          "transport_probe.py": "4bd9ff9a55ec8e99bbfc82b46390cc56cdc4fddf5705fd4d6d4ec926810cf97e"
+        },
+        "stage_timeout_s": 60.0,
+        "telemetry_freshness_s": 2.0,
+        "waypoint_offsets_m": [
+          [
+            0,
+            0,
+            -10
+          ],
+          [
+            20,
+            0,
+            -10
+          ],
+          [
+            20,
+            20,
+            -10
+          ],
+          [
+            0,
+            20,
+            -10
+          ],
+          [
+            0,
+            0,
+            -10
+          ]
+        ]
+      },
+      "failure_stage": "TAKEOFF",
+      "failure_reason": "Estimator or source clock reset",
+      "reported_success": "False",
+      "completion_evidence": [
+        {
+          "event": "INIT",
+          "line": 3,
+          "elapsed_s": 0.10458514399942942
+        },
+        {
+          "event": "WAIT_FOR_HEALTH",
+          "line": 100,
+          "elapsed_s": 3.255220464998274
+        },
+        {
+          "event": "WAIT_FOR_HEADING",
+          "line": 299,
+          "elapsed_s": 5.306381567999779
+        },
+        {
+          "event": "AUTO_TAKEOFF_REQUEST",
+          "line": 305,
+          "elapsed_s": 5.363081102997967
+        },
+        {
+          "event": "AUTO_ARM",
+          "line": 327,
+          "elapsed_s": 5.505607175000478
+        },
+        {
+          "event": "TAKEOFF",
+          "line": 349,
+          "elapsed_s": 5.757638097999006
+        },
+        {
+          "event": "FAILSAFE",
+          "line": 910,
+          "elapsed_s": 12.014526500999636
+        },
+        {
+          "event": "MISSION_FAIL",
+          "line": 1653,
+          "elapsed_s": 19.304226922999078
+        }
+      ],
+      "duration_s": 19.3088769950009,
+      "clock_anomalies": [
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "elapsed_s": 11.992532821001078,
+          "previous_us": 1791742020006623,
+          "current_us": 6632104000,
+          "line": 905,
+          "state": "TAKEOFF",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 11.992861047998304,
+          "previous_us": 1791742020006623,
+          "current_us": 6632108000,
+          "line": 907,
+          "state": "TAKEOFF",
+          "estimator_reset_proven": false
+        }
+      ],
+      "logged_reset_events": [
+        {
+          "line": 904,
+          "elapsed_s": 11.9923274770008,
+          "state": "TAKEOFF",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "previous_us": 1791742020006623,
+          "current_us": 6632104000,
+          "grounded_completion": false,
+          "local_receive_monotonic_s": 24403.272707418,
+          "timestamp_sample_us": 6632100000,
+          "estimator_reset_proven": false
+        },
+        {
+          "line": 906,
+          "elapsed_s": 11.992793704001087,
+          "state": "TAKEOFF",
+          "topic": "/fmu/out/vehicle_attitude",
+          "previous_us": 1791742020006623,
+          "current_us": 6632108000,
+          "grounded_completion": false,
+          "local_receive_monotonic_s": 24403.273286628,
+          "timestamp_sample_us": 6632104000,
+          "estimator_reset_proven": false
+        }
+      ],
+      "clock_limitations": [
+        "CSV retains delivered timestamp only, not timestamp_sample, estimator flags/counters or XRCE session offset.",
+        "Local elapsed time is monotonic; ordering anomalies do not prove estimator resets."
+      ],
+      "topics": [
+        {
+          "topic": "/fmu/in/vehicle_command",
+          "direction": "tx_publish_call",
+          "count": 3,
+          "cdr_bytes": 180,
+          "observed_rate_hz": 0.15536895287989586,
+          "inter_arrival_ms": {
+            "n": 2,
+            "mean": 3296.4590250012407,
+            "median": 3296.4590250012407,
+            "std": 4462.339093544148,
+            "min": 141.10879200234194,
+            "max": 6451.809258000139,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            313,
+            908
+          ]
+        },
+        {
+          "topic": "/fmu/out/battery_status_v1",
+          "direction": "rx_callback",
+          "count": 15,
+          "cdr_bytes": 2700,
+          "observed_rate_hz": 0.7768447643994792,
+          "inter_arrival_ms": {
+            "n": 14,
+            "mean": 1117.5163838571668,
+            "median": 1113.840194500881,
+            "std": 109.00732599530838,
+            "min": 997.3685469994962,
+            "max": 1345.041725999181,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            64,
+            1582
+          ]
+        },
+        {
+          "topic": "/fmu/out/estimator_status_flags",
+          "direction": "rx_callback",
+          "count": 18,
+          "cdr_bytes": 1656,
+          "observed_rate_hz": 0.9322137172793751,
+          "inter_arrival_ms": {
+            "n": 17,
+            "mean": 891.1486059411853,
+            "median": 1043.9400629984448,
+            "std": 445.19810435351195,
+            "min": 32.38153200072702,
+            "max": 1311.062264998327,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            92,
+            1560
+          ]
+        },
+        {
+          "topic": "/fmu/out/vehicle_attitude",
+          "direction": "rx_callback",
+          "count": 761,
+          "cdr_bytes": 42616,
+          "observed_rate_hz": 39.411924380533584,
+          "inter_arrival_ms": {
+            "n": 760,
+            "mean": 22.32995687894991,
+            "median": 20.458282999243238,
+            "std": 7.510093589757801,
+            "min": 1.1589079986151773,
+            "max": 71.98631699793623,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            7,
+            1652
+          ]
+        },
+        {
+          "topic": "/fmu/out/vehicle_command_ack_v1",
+          "direction": "rx_callback",
+          "count": 3,
+          "cdr_bytes": 96,
+          "observed_rate_hz": 0.15536895287989586,
+          "inter_arrival_ms": {
+            "n": 2,
+            "mean": 3275.597004998417,
+            "median": 3275.597004998417,
+            "std": 4484.817217673297,
+            "min": 104.35233799944399,
+            "max": 6446.84167199739,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            318,
+            911
+          ]
+        },
+        {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "direction": "rx_callback",
+          "count": 20,
+          "cdr_bytes": 480,
+          "observed_rate_hz": 1.0357930191993057,
+          "inter_arrival_ms": {
+            "n": 19,
+            "mean": 883.8065709473755,
+            "median": 1072.4390300019877,
+            "std": 384.0350504229237,
+            "min": 90.53366000080132,
+            "max": 1254.893142999208,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            20,
+            1645
+          ]
+        },
+        {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "direction": "rx_callback",
+          "count": 761,
+          "cdr_bytes": 167420,
+          "observed_rate_hz": 39.411924380533584,
+          "inter_arrival_ms": {
+            "n": 760,
+            "mean": 22.331712013156473,
+            "median": 20.507324501522817,
+            "std": 7.45568344038238,
+            "min": 0.7421720001730137,
+            "max": 70.27848799771164,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            6,
+            1651
+          ]
+        },
+        {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "direction": "rx_callback",
+          "count": 35,
+          "cdr_bytes": 3080,
+          "observed_rate_hz": 1.812637783598785,
+          "inter_arrival_ms": {
+            "n": 34,
+            "mean": 487.32868691171035,
+            "median": 537.1338754994213,
+            "std": 172.0120329319927,
+            "min": 11.685854999086587,
+            "max": 711.57335099997,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "source_lines": [
+            43,
+            1648
+          ]
+        }
+      ],
+      "provenance": {
+        "node_cpu_pct": {
+          "csv_column": "node_cpu_percent",
+          "n": 18,
+          "lines": [
+            4,
+            5,
+            77,
+            169,
+            277,
+            375,
+            465,
+            559,
+            654,
+            743,
+            822,
+            931,
+            1029,
+            1135,
+            1241,
+            1351,
+            1459,
+            1565
+          ],
+          "sampling_interval_s": {
+            "n": 17,
+            "mean": 1.0235855239411382,
+            "median": 1.0139891340004397,
+            "std": 0.024178575140560567,
+            "min": 0.9947921739985759,
+            "max": 1.0570564900008321,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "scope": "WSL Linux guest system and mission process; excludes Windows QGC"
+        },
+        "system_cpu_pct": {
+          "csv_column": "system_cpu_percent",
+          "n": 18,
+          "lines": [
+            4,
+            5,
+            77,
+            169,
+            277,
+            375,
+            465,
+            559,
+            654,
+            743,
+            822,
+            931,
+            1029,
+            1135,
+            1241,
+            1351,
+            1459,
+            1565
+          ],
+          "sampling_interval_s": {
+            "n": 17,
+            "mean": 1.0235855239411382,
+            "median": 1.0139891340004397,
+            "std": 0.024178575140560567,
+            "min": 0.9947921739985759,
+            "max": 1.0570564900008321,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "scope": "WSL Linux guest system and mission process; excludes Windows QGC"
+        },
+        "node_rss_mib": {
+          "csv_column": "node_rss_mib",
+          "n": 18,
+          "lines": [
+            4,
+            5,
+            77,
+            169,
+            277,
+            375,
+            465,
+            559,
+            654,
+            743,
+            822,
+            931,
+            1029,
+            1135,
+            1241,
+            1351,
+            1459,
+            1565
+          ],
+          "sampling_interval_s": {
+            "n": 17,
+            "mean": 1.0235855239411382,
+            "median": 1.0139891340004397,
+            "std": 0.024178575140560567,
+            "min": 0.9947921739985759,
+            "max": 1.0570564900008321,
+            "ci95": null,
+            "ci_note": "Withheld: independent runs and configuration equivalence are not established."
+          },
+          "scope": "WSL Linux guest system and mission process; excludes Windows QGC"
+        }
+      },
+      "configuration_group": "e6c136eb4369aa30a7e958098ef7516680cd77920a67b00b0126cc8bb35457c8",
+      "configuration_equivalence": "Recorded source/mission settings only; historical config file and environment not fully established.",
+      "id_provenance": "Retrospective active study namespace; original files and passive BASE IDs remain unchanged."
+    }
+  ],
+  "passive_records": [],
+  "counts": {
+    "active_attempts": 1,
+    "active_pass": 0,
+    "active_fail": 1,
+    "active_incomplete_or_invalid": 0,
+    "active_complete_records": 1,
+    "study_slots_assigned": 1,
+    "study_complete_records": 1,
+    "strict_valid_active_experiments": 1,
+    "strict_valid_study_experiments": 1,
+    "passive_runlogs": 0,
+    "passive_json_records": 0,
+    "duplicate_files": 0
+  },
+  "primary_configuration_group": "e6c136eb4369aa30a7e958098ef7516680cd77920a67b00b0126cc8bb35457c8",
+  "group_statistics": {
+    "e6c136eb4369aa30a7e958098ef7516680cd77920a67b00b0126cc8bb35457c8": {
+      "attempts": 1,
+      "pass": 0,
+      "fail": 1,
+      "success_rate": 0.0,
+      "denominator": "all unique active attempts in this recorded configuration group",
+      "metrics": {
+        "end_to_end_latency_ms": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "ms",
+          "missing": 1,
+          "observations": []
+        },
+        "telemetry_latency_ms": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "ms",
+          "missing": 1,
+          "observations": []
+        },
+        "command_latency_ms": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "ms",
+          "missing": 1,
+          "observations": []
+        },
+        "packet_loss_pct": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "%",
+          "missing": 1,
+          "observations": []
+        },
+        "rx_payload_mbps": {
+          "n": 1,
+          "mean": 0.09034103850014807,
+          "median": 0.09034103850014807,
+          "std": null,
+          "min": 0.09034103850014807,
+          "max": 0.09034103850014807,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "Mbit/s",
+          "missing": 0,
+          "observations": [
+            {
+              "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+              "experiment_id": "BASE-001",
+              "source_sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+              "value": 0.09034103850014807
+            }
+          ]
+        },
+        "tx_payload_mbps": {
+          "n": 1,
+          "mean": 7.457709738235e-05,
+          "median": 7.457709738235e-05,
+          "std": null,
+          "min": 7.457709738235e-05,
+          "max": 7.457709738235e-05,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "Mbit/s",
+          "missing": 0,
+          "observations": [
+            {
+              "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+              "experiment_id": "BASE-001",
+              "source_sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+              "value": 7.457709738235e-05
+            }
+          ]
+        },
+        "bandwidth_mbps": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "Mbit/s",
+          "missing": 1,
+          "observations": []
+        },
+        "node_cpu_pct": {
+          "n": 1,
+          "mean": 19.516666666666666,
+          "median": 19.516666666666666,
+          "std": null,
+          "min": 19.516666666666666,
+          "max": 19.516666666666666,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "% of one logical CPU",
+          "missing": 0,
+          "observations": [
+            {
+              "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+              "experiment_id": "BASE-001",
+              "source_sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+              "value": 19.516666666666666
+            }
+          ]
+        },
+        "system_cpu_pct": {
+          "n": 1,
+          "mean": 61.71666666666667,
+          "median": 61.71666666666667,
+          "std": null,
+          "min": 61.71666666666667,
+          "max": 61.71666666666667,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "%",
+          "missing": 0,
+          "observations": [
+            {
+              "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+              "experiment_id": "BASE-001",
+              "source_sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+              "value": 61.71666666666667
+            }
+          ]
+        },
+        "node_rss_mib": {
+          "n": 1,
+          "mean": 87.86414930555556,
+          "median": 87.86414930555556,
+          "std": null,
+          "min": 87.86414930555556,
+          "max": 87.86414930555556,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "MiB",
+          "missing": 0,
+          "observations": [
+            {
+              "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+              "experiment_id": "BASE-001",
+              "source_sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+              "value": 87.86414930555556
+            }
+          ]
+        },
+        "mission_completion_s": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "s",
+          "missing": 1,
+          "observations": []
+        },
+        "attempt_duration_s": {
+          "n": 1,
+          "mean": 19.3088769950009,
+          "median": 19.3088769950009,
+          "std": null,
+          "min": 19.3088769950009,
+          "max": 19.3088769950009,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "s",
+          "missing": 0,
+          "observations": [
+            {
+              "run_id": "import-9d9d2e719473c6f49ab7b9b0",
+              "experiment_id": "BASE-001",
+              "source_sha256": "9d9d2e719473c6f49ab7b9b0f048568f70167ef4bae322139e792a7435d54224",
+              "value": 19.3088769950009
+            }
+          ]
+        },
+        "energy_wh": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "Wh",
+          "missing": 1,
+          "observations": []
+        },
+        "power_w": {
+          "n": 0,
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "ci95": null,
+          "ci_note": "Withheld: independent runs and configuration equivalence are not established.",
+          "unit": "W",
+          "missing": 1,
+          "observations": []
+        }
+      }
+    }
+  },
+  "metric_definitions": {
+    "end_to_end_latency_ms": {
+      "unit": "ms",
+      "method": "Unavailable: no correlated sender/receiver probe and clock error bound."
+    },
+    "telemetry_latency_ms": {
+      "unit": "ms",
+      "method": "Unavailable: DDS timestamps are offset-adjusted; no independently validated clock mapping."
+    },
+    "command_latency_ms": {
+      "unit": "ms",
+      "method": "Unavailable: ACK records lack a unique request identifier; no independently validated correlation."
+    },
+    "packet_loss_pct": {
+      "unit": "%",
+      "method": "Unavailable: no identifiable transmitted transport packet/sequence denominator."
+    },
+    "rx_payload_mbps": {
+      "unit": "Mbit/s",
+      "method": "Sum received ROS CDR bytes * 8 / whole monotonic run duration / 1e6; excludes transport headers."
+    },
+    "tx_payload_mbps": {
+      "unit": "Mbit/s",
+      "method": "Sum local publish-call CDR bytes * 8 / whole monotonic run duration / 1e6; delivery unconfirmed."
+    },
+    "bandwidth_mbps": {
+      "unit": "Mbit/s",
+      "method": "Unavailable: no wire capture or physical link-capacity measurement. Payload throughput is reported separately."
+    },
+    "node_cpu_pct": {
+      "unit": "% of one logical CPU",
+      "method": "Arithmetic mean of finite primed psutil process CPU interval samples; process can exceed 100%."
+    },
+    "system_cpu_pct": {
+      "unit": "%",
+      "method": "Arithmetic mean of finite psutil WSL guest CPU interval samples; excludes Windows host/QGC/GPU."
+    },
+    "node_rss_mib": {
+      "unit": "MiB",
+      "method": "Arithmetic mean of mission-process resident bytes / 2^20, measured at resource callbacks."
+    },
+    "mission_completion_s": {
+      "unit": "s",
+      "method": "Logger monotonic initialization to terminal result, including preflight; successful active missions only."
+    },
+    "attempt_duration_s": {
+      "unit": "s",
+      "method": "Logger monotonic initialization to terminal result, including failed/passive attempts; not successful mission completion."
+    },
+    "energy_wh": {
+      "unit": "Wh",
+      "method": "Physical UAV energy unavailable in SITL; simulated battery estimates are not physical energy."
+    },
+    "power_w": {
+      "unit": "W",
+      "method": "Physical UAV power unavailable; requires calibrated battery current/voltage or external power analyzer."
+    }
+  },
+  "overall_phase1": "BLOCKED",
+  "phase2_ready": false,
+  "limitations": [
+    "No new autonomous mission was launched by this validator.",
+    "PASS requires controller COMPLETE plus ordered route/landing/disarm/release events, not independent external validation of every run.",
+    "Passive JSON and preflight CSV can describe the same capture; their counts are not summed as experiments.",
+    "No historical configuration hash/version is fabricated from current files.",
+    "Thirty partial measurement records do not satisfy complete historical metadata or unavailable required metrics.",
+    "No confidence intervals: independence and full configuration equivalence unverified."
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "failure_reasons": {
+    "State timeout": 4,
+    "Heading readiness lost during yaw control": 1,
+    "Unsafe vehicle state while waiting for heading": 1,
+    "Vehicle already armed; refusing takeover": 1,
+    "Interrupted by Ctrl+C": 1,
+    "Estimator or source clock reset": 24,
+    "Telemetry stale or PX4 input subscribers absent": 1
+  },
+  "successful_runs": [
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_010.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_012.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_016.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_017.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_020.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_025.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_028.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_034.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_036.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_037.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_042.csv",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_044.csv"
+  ],
+  "examples": [
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_015.csv",
+      "sha256": "652ee6f8c37cee348c15cc0c6a29aeb67b8d9ff2bf5bb80bfe1b9ee19e457cad",
+      "failure_stage": "WAYPOINT_3",
+      "logged_reset_events": [
+        {
+          "line": 9100,
+          "elapsed_s": 68.17246743999931,
+          "state": "WAYPOINT_3",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "previous_us": 1791725963111899,
+          "current_us": 89180000,
+          "grounded_completion": false
+        },
+        {
+          "line": 9102,
+          "elapsed_s": 68.17274986899974,
+          "state": "WAYPOINT_3",
+          "topic": "/fmu/out/vehicle_attitude",
+          "previous_us": 1791725963111899,
+          "current_us": 89184000,
+          "grounded_completion": false
+        }
+      ],
+      "clock_anomalies": [
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "elapsed_s": 68.17260251799962,
+          "previous_us": 1791725963111899,
+          "current_us": 89180000,
+          "line": 9101,
+          "state": "WAYPOINT_3",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 68.17278029599947,
+          "previous_us": 1791725963111899,
+          "current_us": 89184000,
+          "line": 9103,
+          "state": "WAYPOINT_3",
+          "estimator_reset_proven": false
+        }
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_021.csv",
+      "sha256": "81f66a7a8fe7872897a1a2484b1505e4affab09d014acabec1352b7611983727",
+      "failure_stage": "LAND",
+      "logged_reset_events": [
+        {
+          "line": 13141,
+          "elapsed_s": 97.09836954499951,
+          "state": "LAND",
+          "topic": "/fmu/out/vehicle_attitude",
+          "previous_us": 1791728528140349,
+          "current_us": 2536864000,
+          "grounded_completion": false
+        }
+      ],
+      "clock_anomalies": [
+        {
+          "kind": "repeated_source_timestamp",
+          "topic": "/fmu/out/vehicle_status_v4",
+          "elapsed_s": 92.82244648699998,
+          "previous_us": 1791728523764349,
+          "current_us": 1791728523764349,
+          "line": 12687,
+          "state": "LAND",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 97.09859550699912,
+          "previous_us": 1791728528140349,
+          "current_us": 2536864000,
+          "line": 13142,
+          "state": "LAND",
+          "estimator_reset_proven": false
+        }
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_043.csv",
+      "sha256": "2fd6257950356b7788b015ed2346d7b54d8f24fb3fccdb572e4cc2ef29de4bc9",
+      "failure_stage": "LAND",
+      "logged_reset_events": [
+        {
+          "line": 14114,
+          "elapsed_s": 106.16492258200014,
+          "state": "LAND",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "previous_us": 1791735438286172,
+          "current_us": 511880000,
+          "grounded_completion": false
+        },
+        {
+          "line": 14116,
+          "elapsed_s": 106.1652875510008,
+          "state": "LAND",
+          "topic": "/fmu/out/vehicle_attitude",
+          "previous_us": 1791735438290172,
+          "current_us": 511880000,
+          "grounded_completion": false
+        }
+      ],
+      "clock_anomalies": [
+        {
+          "kind": "repeated_source_timestamp",
+          "topic": "/fmu/out/vehicle_status_v4",
+          "elapsed_s": 92.93098524900051,
+          "previous_us": 1791735424962063,
+          "current_us": 1791735424962063,
+          "line": 12711,
+          "state": "LAND",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "elapsed_s": 106.16505283300285,
+          "previous_us": 1791735438286172,
+          "current_us": 511880000,
+          "line": 14115,
+          "state": "LAND",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 106.16533767900182,
+          "previous_us": 1791735438290172,
+          "current_us": 511880000,
+          "line": 14117,
+          "state": "LAND",
+          "estimator_reset_proven": false
+        }
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_045.csv",
+      "sha256": "4955a88afd85596a1ece52a9ae291b09638559d0a2981084bbb7e7d0134ea87b",
+      "failure_stage": "WAYPOINT_2",
+      "logged_reset_events": [
+        {
+          "line": 6080,
+          "elapsed_s": 47.56661011500182,
+          "state": "WAYPOINT_2",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "previous_us": 1791735692265668,
+          "current_us": 754016000,
+          "grounded_completion": false
+        },
+        {
+          "line": 6082,
+          "elapsed_s": 47.56680931200026,
+          "state": "WAYPOINT_2",
+          "topic": "/fmu/out/vehicle_attitude",
+          "previous_us": 1791735692265668,
+          "current_us": 754020000,
+          "grounded_completion": false
+        },
+        {
+          "line": 6137,
+          "elapsed_s": 48.01485696199961,
+          "state": "FAILSAFE",
+          "topic": "/fmu/out/vehicle_status_v4",
+          "previous_us": 1791735694036424,
+          "current_us": 1791735694036198,
+          "grounded_completion": false
+        }
+      ],
+      "clock_anomalies": [
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "elapsed_s": 47.56669993400283,
+          "previous_us": 1791735692265668,
+          "current_us": 754016000,
+          "line": 6081,
+          "state": "WAYPOINT_2",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_attitude",
+          "elapsed_s": 47.566833843000495,
+          "previous_us": 1791735692265668,
+          "current_us": 754020000,
+          "line": 6083,
+          "state": "WAYPOINT_2",
+          "estimator_reset_proven": false
+        },
+        {
+          "kind": "source_timestamp_regression",
+          "topic": "/fmu/out/vehicle_status_v4",
+          "elapsed_s": 48.01498510999954,
+          "previous_us": 1791735694036424,
+          "current_us": 1791735694036198,
+          "line": 6138,
+          "state": "FAILSAFE",
+          "estimator_reset_proven": false
+        }
+      ]
+    }
+  ],
+  "underlying_root_cause": "UNPROVEN",
+  "estimator_reset_inferred_from_timestamp": false
+}

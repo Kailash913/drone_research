@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "connected": true,
+    "healthy": true,
+    "valid": true,
+    "heading_ready": false,
+    "landed": true,
+    "armed": false,
+    "competition": false,
+    "failsafe": false,
+    "reset": false
+  },
+  "passed": false,
+  "grounded_hold_requested": false,
+  "arming_commands": 0,
+  "mission_outcome": "NOT_ATTEMPTED"
+}

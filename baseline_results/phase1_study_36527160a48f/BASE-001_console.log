@@ -1,0 +1,13 @@
+[INFO] [1791742009.856280904] [baseline_mission]: CSV: /home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/baseline_run_001.csv; execute_sitl=True
+[INFO] [1791742009.862478296] [baseline_mission]: [INIT] 
+[INFO] [1791742013.017863908] [baseline_mission]: [WAIT_FOR_HEALTH] 
+[INFO] [1791742015.065559828] [baseline_mission]: [WAIT_FOR_HEADING] 
+[INFO] [1791742015.119672780] [baseline_mission]: QGC Plan exported: /home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/baseline_run_001.plan
+[INFO] [1791742015.121722937] [baseline_mission]: [AUTO_TAKEOFF_REQUEST] 
+[INFO] [1791742015.173845754] [baseline_mission]: [AUTO_TAKEOFF_REQUESTED]
+[INFO] [1791742015.267757684] [baseline_mission]: [AUTO_ARM] 
+[INFO] [1791742015.312791674] [baseline_mission]: [ARM_REQUESTED]
+[INFO] [1791742015.515255558] [baseline_mission]: [TAKEOFF] 
+[INFO] [1791742021.767857679] [baseline_mission]: [LAND_REQUESTED]
+[INFO] [1791742021.774358998] [baseline_mission]: [FAILSAFE] Estimator or source clock reset
+[INFO] [1791742031.045972970] [baseline_mission]: [MISSION_FAIL] Estimator or source clock reset

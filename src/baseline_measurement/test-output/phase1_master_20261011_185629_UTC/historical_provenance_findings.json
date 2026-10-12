@@ -1,0 +1,15 @@
+{
+  "records_audited": 45,
+  "records_with_at_least_one_retained_source_byte_match": 45,
+  "missing_original_metadata_fields": [
+    "experiment_id",
+    "run_id",
+    "config_file",
+    "config_sha256",
+    "px4_version",
+    "simulator_version"
+  ],
+  "original_yaml_or_environment_backfilled_from_current_files": false,
+  "strict_historical_valid": 0,
+  "interpretation": "Source byte identity does not recover execution configuration or environment."
+}

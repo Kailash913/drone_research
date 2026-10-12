@@ -1,0 +1,10 @@
+...............................................................s........ [ 42%]
+........................................................................ [ 84%]
+...........................                                              [100%]
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=110289) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/src/baseline_measurement/test-output/final_reports_20261011_195221/full_suite.xml -
+170 passed, 1 skipped, 12 warnings in 4.39s

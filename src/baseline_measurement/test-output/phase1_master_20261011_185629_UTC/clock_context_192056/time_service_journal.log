@@ -1,0 +1,106 @@
+Oct 02 03:53:17 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 02 03:53:27 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 02 03:56:50 Kailash systemd-timesyncd[160]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 02 14:11:38 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 02 14:11:48 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 02 14:11:58 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 02 14:12:08 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 02 14:12:41 Kailash systemd-timesyncd[160]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 02 15:15:43 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 02 15:15:53 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 02 15:16:04 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 02 15:16:14 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 02 15:33:33 Kailash systemd-timesyncd[160]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 02 16:23:12 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 02 16:23:22 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 02 16:23:33 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 02 16:23:43 Kailash systemd-timesyncd[160]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 02 16:25:30 Kailash systemd-timesyncd[160]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 02 16:30:15 Kailash systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...
+Oct 02 16:30:15 Kailash systemd[1]: systemd-timesyncd.service: Deactivated successfully.
+Oct 02 16:30:15 Kailash systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.
+-- Boot 2af46181221a43dc91fa38bf370cc641 --
+Oct 02 16:32:29 Kailash systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 02 16:32:29 Kailash systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 02 16:32:29 Kailash systemd-timesyncd[206]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 02 16:32:29 Kailash systemd-timesyncd[206]: Initial clock synchronization to Fri 2026-10-02 16:32:29.193058 UTC.
+Oct 02 16:38:43 Kailash systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...
+Oct 02 16:38:43 Kailash systemd[1]: systemd-timesyncd.service: Deactivated successfully.
+Oct 02 16:38:43 Kailash systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.
+-- Boot ab5104a81aaa4659a74f0dee04e6fc1c --
+Oct 03 16:36:24 Kailash systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 03 16:36:24 Kailash systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 03 16:36:31 Kailash systemd-timesyncd[197]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 03 16:36:31 Kailash systemd-timesyncd[197]: Initial clock synchronization to Sat 2026-10-03 16:36:31.768093 UTC.
+-- Boot 6cb0b834dede4d089e890c46e908f594 --
+Oct 03 18:35:35 Kailash systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 03 18:35:35 Kailash systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 03 18:35:35 Kailash systemd-timesyncd[189]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 03 18:35:35 Kailash systemd-timesyncd[189]: Initial clock synchronization to Sat 2026-10-03 18:35:35.111175 UTC.
+Oct 04 03:42:44 Kailash systemd-timesyncd[189]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 04 03:42:44 Kailash systemd-timesyncd[189]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 04 15:51:43 Kailash systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...
+Oct 04 15:51:43 Kailash systemd[1]: systemd-timesyncd.service: Deactivated successfully.
+Oct 04 15:51:43 Kailash systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.
+-- Boot ae5878b5fd6d4f3db4610e5eb2cf5792 --
+Oct 04 16:18:23 Kailash systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 04 16:18:23 Kailash systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 04 16:18:24 Kailash systemd-timesyncd[209]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 04 16:18:24 Kailash systemd-timesyncd[209]: Initial clock synchronization to Sun 2026-10-04 16:18:24.681726 UTC.
+Oct 04 16:24:21 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 04 16:24:22 Kailash systemd-timesyncd[209]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 05 15:45:44 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 05 15:45:54 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 05 15:46:05 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 05 15:46:47 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 05 15:46:48 Kailash systemd-timesyncd[209]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 05 22:13:36 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 05 22:13:47 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 05 22:13:57 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 06 02:31:01 Kailash systemd-timesyncd[209]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 06 04:38:03 Kailash systemd-timesyncd[209]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 06 04:38:04 Kailash systemd-timesyncd[209]: Contacted time server 185.125.190.58:123 (ntp.ubuntu.com).
+-- Boot 52e78772ed8a4f13b78b577e893dcc5e --
+Oct 08 15:57:20 Kailash systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 08 15:57:20 Kailash systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 08 15:57:23 Kailash systemd-timesyncd[206]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 08 15:57:23 Kailash systemd-timesyncd[206]: Initial clock synchronization to Thu 2026-10-08 15:57:23.864606 UTC.
+Oct 08 17:17:34 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 08 17:17:44 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 08 17:17:55 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 08 17:18:05 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 09 14:40:19 Kailash systemd-timesyncd[206]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 09 15:12:02 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 09 15:12:12 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 09 15:12:23 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 09 15:12:33 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 09 15:47:00 Kailash systemd-timesyncd[206]: Contacted time server 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 10 03:38:05 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 10 03:38:15 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 10 03:38:26 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 10 03:38:36 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 10 04:13:04 Kailash systemd-timesyncd[206]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 10 08:46:17 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 10 08:46:27 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 10 08:46:37 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 10 08:46:48 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 10 09:21:16 Kailash systemd-timesyncd[206]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 10 11:35:47 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 10 11:35:57 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 10 11:36:08 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 10 11:36:18 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 10 13:53:40 Kailash systemd-timesyncd[206]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 10 15:08:13 Kailash systemd[1]: Stopping systemd-timesyncd.service - Network Time Synchronization...
+Oct 10 15:08:13 Kailash systemd[1]: systemd-timesyncd.service: Deactivated successfully.
+Oct 10 15:08:13 Kailash systemd[1]: Stopped systemd-timesyncd.service - Network Time Synchronization.
+Oct 10 15:08:13 Kailash systemd[1]: systemd-timesyncd.service: Consumed 2.543s CPU time.
+-- Boot f6358b542b7d4d86ae4c2219a613dc72 --
+Oct 10 17:01:28 Kailash systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+Oct 10 17:01:28 Kailash systemd[1]: Started systemd-timesyncd.service - Network Time Synchronization.
+Oct 10 17:02:39 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.56:123 (ntp.ubuntu.com).
+Oct 10 17:02:49 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.57:123 (ntp.ubuntu.com).
+Oct 10 17:03:00 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 185.125.190.58:123 (ntp.ubuntu.com).
+Oct 10 17:03:13 Kailash systemd-timesyncd[206]: Contacted time server 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 10 17:03:13 Kailash systemd-timesyncd[206]: Initial clock synchronization to Sat 2026-10-10 17:03:13.747866 UTC.
+Oct 11 12:51:03 Kailash systemd-timesyncd[206]: Timed out waiting for reply from 91.189.91.157:123 (ntp.ubuntu.com).
+Oct 11 12:51:56 Kailash systemd-timesyncd[206]: Contacted time server 185.125.190.57:123 (ntp.ubuntu.com).

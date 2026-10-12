@@ -1,0 +1,51 @@
+Introspect Gazebo topics
+Usage: /usr/libexec/gz/transport13/gz-transport-topic [OPTIONS]
+
+Options:
+  -h [--help]                 Print this help message and exit
+                              
+  -v [--version]              
+                              
+  -t [--topic] TEXT           Name of a topic.
+                              Required by: --info
+                              Required by: --pub
+                              Required by: --frequency
+                              Required by: --echo
+                              
+  -m [--msgtype] TEXT         Type of message to publish.
+                              Required by: --pub
+                              
+  -d [--duration] FLOAT       Duration (seconds) to run.
+                              Excludes: --num
+                              
+  -n [--num] INT              Number of messages to echo and then exit.
+                              Excludes: --duration
+                              
+[Option Group: command]
+  Command to be executed.
+  Options:
+    -l [--list]                 List all topics.
+                                
+    -i [--info]                 Get info about a topic. E.g.:
+                                  gz topic -i -t /foo
+                                Requires: --topic
+                                
+    -e [--echo]                 Output data to screen. E.g.:
+                                  gz topic -e -t /foo
+                                Requires: --topic
+                                
+    -f [--frequency]            Calculate the frequency of a topic:
+                                  gz topic -f -t /foo
+                                Requires: --topic
+                                
+    --json-output               Output messages in JSON format.
+                                
+    -p [--pub] TEXT             Publish a message.
+                                TEXT is the message data. The format expected is
+                                the same used by google::protobuf::TextFormat::PrintToString(). E.g.:
+                                  gz topic -t /foo -m gz.msgs.StringMsg \
+                                    -p 'data:"Custom data"'
+                                Requires: --topic
+                                Requires: --msgtype
+                                
+

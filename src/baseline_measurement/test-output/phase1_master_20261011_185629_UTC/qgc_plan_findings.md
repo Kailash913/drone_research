@@ -1,0 +1,5 @@
+# QGroundControl plan path — inspection finding
+
+The baseline ROS mission drives OFFBOARD setpoints through XRCE-DDS. qgc_plan.py generates a .plan file for inspection from the retained home/reference and route. Exporting that file is not a MAVLink mission upload. This code path does not implement MISSION_COUNT / MISSION_ITEM_INT / MISSION_ACK transfer into the PX4 mission store. Therefore absence of a QGC onboard Plan is not demonstrated to be caused by missing ROS telemetry, and a successful OFFBOARD flight would not by itself prove QGC mission upload.
+
+Existing raw .plan exports are preserved. No upload, QGC flight control or new mission was performed. Current QGC/MAVLink mission-transfer acceptance remains BLOCKED pending explicit Plan load/upload and matching MAVLink acknowledgment/read-back evidence, if the roadmap requires an onboard MAVLink mission rather than ROS OFFBOARD control. A screen read was occluded by VS Code and is not counted as verified QGC connection evidence. Do not silently replace the existing controller with QGC AUTO mission behavior.

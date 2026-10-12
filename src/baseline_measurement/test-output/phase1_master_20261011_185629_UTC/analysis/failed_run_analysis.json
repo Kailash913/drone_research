@@ -1,0 +1,573 @@
+{
+  "source": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\baseline_results\\phase1_study_36527160a48f\\clock_BASE-001\\clock_probe_963f5bfe48374116917936092407c805.csv",
+  "source_sha256": "c8b65b819d745d3b7c8aed34ad7bb03d30de401c0e82b605cf02b3bb8bfb9576",
+  "duration_monotonic_s": 21.594157281000662,
+  "message_counts": {
+    "/fmu/out/vehicle_attitude": 852,
+    "/fmu/out/vehicle_local_position_v1": 852,
+    "/fmu/out/vehicle_land_detected": 21,
+    "/fmu/out/timesync_status": 27,
+    "/fmu/out/vehicle_status_v4": 38,
+    "/fmu/out/estimator_status_flags": 20
+  },
+  "observed_callback_hz": {
+    "/fmu/out/vehicle_attitude": 39.455116905609515,
+    "/fmu/out/vehicle_local_position_v1": 39.455116905609515,
+    "/fmu/out/vehicle_land_detected": 0.972485275842488,
+    "/fmu/out/timesync_status": 1.2503382117974846,
+    "/fmu/out/vehicle_status_v4": 1.7597352610483117,
+    "/fmu/out/estimator_status_flags": 0.926176453183322
+  },
+  "latest_topic_values": {
+    "/fmu/out/vehicle_attitude": {
+      "utc": "2026-10-11T18:07:13.197551+00:00",
+      "local_monotonic_s": "24412.737065766",
+      "native_delivered_fields": {
+        "timestamp": 1791742030658150,
+        "timestamp_sample": 1791742030658150,
+        "quat_reset_counter": 1
+      }
+    },
+    "/fmu/out/vehicle_local_position_v1": {
+      "utc": "2026-10-11T18:07:13.199085+00:00",
+      "local_monotonic_s": "24412.7384867",
+      "native_delivered_fields": {
+        "timestamp": 1791742030658150,
+        "timestamp_sample": 1791742030658150,
+        "xy_reset_counter": 4,
+        "z_reset_counter": 2,
+        "vxy_reset_counter": 4,
+        "vz_reset_counter": 1,
+        "heading_reset_counter": 1,
+        "heading_good_for_control": false,
+        "heading": 1.6833791732788086,
+        "x": 20.009479522705078,
+        "y": 20.31007957458496,
+        "z": 0.011304587125778198,
+        "vx": 0.011834275908768177,
+        "vy": 0.007327411789447069,
+        "vz": 0.007085838820785284,
+        "ref_alt": 0.22974872589111328,
+        "xy_global": true,
+        "z_global": true,
+        "xy_valid": true,
+        "z_valid": true,
+        "v_xy_valid": true,
+        "v_z_valid": true,
+        "dead_reckoning": false
+      }
+    },
+    "/fmu/out/vehicle_land_detected": {
+      "utc": "2026-10-11T18:07:12.169209+00:00",
+      "local_monotonic_s": "24411.708727214",
+      "native_delivered_fields": {
+        "timestamp": 1791742029774150,
+        "landed": true
+      }
+    },
+    "/fmu/out/timesync_status": {
+      "utc": "2026-10-11T18:07:12.299064+00:00",
+      "local_monotonic_s": "24411.838576946",
+      "native_delivered_fields": {
+        "timestamp": 1791742029878150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742032297600,
+        "observed_offset": -1791735392209600,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0
+      }
+    },
+    "/fmu/out/vehicle_status_v4": {
+      "utc": "2026-10-11T18:07:12.824917+00:00",
+      "local_monotonic_s": "24412.364352269",
+      "native_delivered_fields": {
+        "timestamp": 1791742030310150,
+        "pre_flight_checks_pass": true,
+        "gcs_connection_lost": false,
+        "calibration_enabled": false,
+        "arming_state": 1,
+        "nav_state": 4,
+        "failsafe": false
+      }
+    },
+    "/fmu/out/estimator_status_flags": {
+      "utc": "2026-10-11T18:07:12.421771+00:00",
+      "local_monotonic_s": "24411.961261114",
+      "native_delivered_fields": {
+        "timestamp": 1791742029978150,
+        "timestamp_sample": 1791742029810150,
+        "cs_tilt_align": true,
+        "cs_mag_hdg": true,
+        "cs_mag_3d": false,
+        "cs_yaw_align": true,
+        "cs_mag_aligned_in_flight": false,
+        "cs_mag_fault": false,
+        "cs_mag_field_disturbed": false,
+        "fs_bad_hdg": false
+      }
+    }
+  },
+  "observed_flag_values": {
+    "heading_good_for_control": [
+      false,
+      true
+    ],
+    "landed": [
+      false,
+      true
+    ],
+    "arming_state": [
+      1,
+      2
+    ],
+    "nav_state": [
+      4,
+      17,
+      18
+    ],
+    "failsafe": [
+      false
+    ],
+    "cs_yaw_align": [
+      true
+    ],
+    "cs_mag_hdg": [
+      false,
+      true
+    ],
+    "cs_mag_3d": [
+      false,
+      true
+    ],
+    "cs_mag_aligned_in_flight": [
+      false,
+      true
+    ],
+    "cs_mag_fault": [
+      false
+    ],
+    "cs_mag_field_disturbed": [
+      false
+    ],
+    "fs_bad_hdg": [
+      false
+    ]
+  },
+  "heading_branch_explanation": {
+    "expected_ready": false,
+    "reason": "Magnetic in-flight alignment incomplete"
+  },
+  "receiver_wall_steps": [
+    {
+      "before_utc": "2026-10-11T18:07:04.262429+00:00",
+      "after_utc": "2026-10-11T18:07:06.270286+00:00",
+      "wall_delta_s": 2.007857,
+      "monotonic_delta_s": 0.023754244000883773,
+      "wall_minus_monotonic_s": 1.9841027559991162
+    }
+  ],
+  "dds_analysis": {
+    "samples": [
+      {
+        "utc": "2026-10-11T18:06:52.347665+00:00",
+        "receive_monotonic_s": 24393.868652864,
+        "timestamp": 1791742011994623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742012342552,
+        "observed_offset": -1791735388266552,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 347929,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6624076000
+      },
+      {
+        "utc": "2026-10-11T18:06:53.468839+00:00",
+        "receive_monotonic_s": 24394.958040625,
+        "timestamp": 1791742012998623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742013425656,
+        "observed_offset": -1791735388345656,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 427033,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6625080000
+      },
+      {
+        "utc": "2026-10-11T18:06:54.564459+00:00",
+        "receive_monotonic_s": 24396.087775772,
+        "timestamp": 1791742014002623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742014563253,
+        "observed_offset": -1791735388479253,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 560630,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6626084000
+      },
+      {
+        "utc": "2026-10-11T18:06:55.778412+00:00",
+        "receive_monotonic_s": 24397.301757743,
+        "timestamp": 1791742015006623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742015776840,
+        "observed_offset": -1791735388688840,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 770217,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6627088000
+      },
+      {
+        "utc": "2026-10-11T18:06:56.977450+00:00",
+        "receive_monotonic_s": 24398.500770128,
+        "timestamp": 1791742016010623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742016971394,
+        "observed_offset": -1791735388879394,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 960771,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6628092000
+      },
+      {
+        "utc": "2026-10-11T18:06:58.132289+00:00",
+        "receive_monotonic_s": 24399.655768,
+        "timestamp": 1791742017014623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742018131338,
+        "observed_offset": -1791735389035338,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 1116715,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6629096000
+      },
+      {
+        "utc": "2026-10-11T18:06:59.287654+00:00",
+        "receive_monotonic_s": 24400.811018663,
+        "timestamp": 1791742018018623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742019284313,
+        "observed_offset": -1791735389184313,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 0,
+        "deviation_us": 1265690,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6630100000
+      },
+      {
+        "utc": "2026-10-11T18:07:00.607073+00:00",
+        "receive_monotonic_s": 24402.130489368,
+        "timestamp": 1791742019026623,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742020604465,
+        "observed_offset": -1791735389498465,
+        "estimated_offset": -1791735387918623,
+        "round_trip_time": 4000,
+        "deviation_us": 1579842,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6631106000
+      },
+      {
+        "utc": "2026-10-11T18:07:01.748831+00:00",
+        "receive_monotonic_s": 24403.271490807,
+        "timestamp": 6632112000,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742021747029,
+        "observed_offset": -1791735389635029,
+        "estimated_offset": 0,
+        "round_trip_time": 0,
+        "deviation_us": 1791735389635029,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6632112000
+      },
+      {
+        "utc": "2026-10-11T18:07:01.751031+00:00",
+        "receive_monotonic_s": 24403.274513105,
+        "timestamp": 1791742021747604,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742021747604,
+        "observed_offset": -1791735389635604,
+        "estimated_offset": -1791735389635604,
+        "round_trip_time": 0,
+        "deviation_us": 0,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632112000
+      },
+      {
+        "utc": "2026-10-11T18:07:01.888781+00:00",
+        "receive_monotonic_s": 24403.412254431,
+        "timestamp": 1791742021883844,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742021885416,
+        "observed_offset": -1791735389673416,
+        "estimated_offset": -1791735389671844,
+        "round_trip_time": 0,
+        "deviation_us": 1572,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632212000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.018204+00:00",
+        "receive_monotonic_s": 24403.541714489,
+        "timestamp": 1791742022013211,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022016172,
+        "observed_offset": -1791735389704172,
+        "estimated_offset": -1791735389701211,
+        "round_trip_time": 0,
+        "deviation_us": 2961,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632312000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.153731+00:00",
+        "receive_monotonic_s": 24403.677226193,
+        "timestamp": 1791742022152080,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022147404,
+        "observed_offset": -1791735389737404,
+        "estimated_offset": -1791735389740080,
+        "round_trip_time": 4000,
+        "deviation_us": 2676,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632410000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.286112+00:00",
+        "receive_monotonic_s": 24403.809606198,
+        "timestamp": 1791742022278048,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022284539,
+        "observed_offset": -1791735389770539,
+        "estimated_offset": -1791735389762048,
+        "round_trip_time": 4000,
+        "deviation_us": 8491,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632514000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.381498+00:00",
+        "receive_monotonic_s": 24403.904860012,
+        "timestamp": 1791742022387388,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022379148,
+        "observed_offset": -1791735389767148,
+        "estimated_offset": -1791735389775388,
+        "round_trip_time": 0,
+        "deviation_us": 8240,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632612000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.489959+00:00",
+        "receive_monotonic_s": 24404.013512225,
+        "timestamp": 1791742022485755,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022488525,
+        "observed_offset": -1791735389776525,
+        "estimated_offset": -1791735389773755,
+        "round_trip_time": 0,
+        "deviation_us": 2770,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632712000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.590585+00:00",
+        "receive_monotonic_s": 24404.114107587,
+        "timestamp": 1791742022590690,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022588329,
+        "observed_offset": -1791735389776329,
+        "estimated_offset": -1791735389778690,
+        "round_trip_time": 0,
+        "deviation_us": 2361,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632812000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.698485+00:00",
+        "receive_monotonic_s": 24404.222030133,
+        "timestamp": 1791742022695342,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022695350,
+        "observed_offset": -1791735389783350,
+        "estimated_offset": -1791735389783342,
+        "round_trip_time": 0,
+        "deviation_us": 8,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6632912000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.803416+00:00",
+        "receive_monotonic_s": 24404.326850975,
+        "timestamp": 1791742022799618,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022801372,
+        "observed_offset": -1791735389789372,
+        "estimated_offset": -1791735389787618,
+        "round_trip_time": 0,
+        "deviation_us": 1754,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6633012000
+      },
+      {
+        "utc": "2026-10-11T18:07:02.903312+00:00",
+        "receive_monotonic_s": 24404.426861559,
+        "timestamp": 1791742022845890,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742022847240,
+        "observed_offset": -1791735389791240,
+        "estimated_offset": -1791735389789890,
+        "round_trip_time": 0,
+        "deviation_us": 1350,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6633056000
+      },
+      {
+        "utc": "2026-10-11T18:07:03.913303+00:00",
+        "receive_monotonic_s": 24405.436736871,
+        "timestamp": 1791742023850150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742023911956,
+        "observed_offset": -1791735389851956,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 61806,
+        "qualifying_if_filter_converged": false,
+        "native_midpoint_us": 6634060000
+      },
+      {
+        "utc": "2026-10-11T18:07:06.946867+00:00",
+        "receive_monotonic_s": 24406.486306066,
+        "timestamp": 1791742024854150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742026945599,
+        "observed_offset": -1791735391881599,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 2091449,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6635064000
+      },
+      {
+        "utc": "2026-10-11T18:07:07.975623+00:00",
+        "receive_monotonic_s": 24407.515021043,
+        "timestamp": 1791742025858150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742027974050,
+        "observed_offset": -1791735391906050,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 2115900,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6636068000
+      },
+      {
+        "utc": "2026-10-11T18:07:08.988032+00:00",
+        "receive_monotonic_s": 24408.527610835,
+        "timestamp": 1791742026862150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742028985619,
+        "observed_offset": -1791735391913619,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 2123469,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6637072000
+      },
+      {
+        "utc": "2026-10-11T18:07:09.991504+00:00",
+        "receive_monotonic_s": 24409.531028895,
+        "timestamp": 1791742027866150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742029990434,
+        "observed_offset": -1791735391914434,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 2124284,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6638076000
+      },
+      {
+        "utc": "2026-10-11T18:07:11.092044+00:00",
+        "receive_monotonic_s": 24410.631117156,
+        "timestamp": 1791742028870150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742031090600,
+        "observed_offset": -1791735392010600,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 2220450,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6639080000
+      },
+      {
+        "utc": "2026-10-11T18:07:12.299064+00:00",
+        "receive_monotonic_s": 24411.838576946,
+        "timestamp": 1791742029878150,
+        "source_protocol": 2,
+        "remote_timestamp": 1791742032297600,
+        "observed_offset": -1791735392209600,
+        "estimated_offset": -1791735389790150,
+        "round_trip_time": 0,
+        "deviation_us": 2419450,
+        "qualifying_if_filter_converged": true,
+        "native_midpoint_us": 6640088000
+      }
+    ],
+    "zero_transition_indices": [
+      8
+    ],
+    "intervals_before_first_zero": [
+      {
+        "peer_delta_us": 1083104,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.9269654622270806
+      },
+      {
+        "peer_delta_us": 1137597,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.8825621023965429
+      },
+      {
+        "peer_delta_us": 1213587,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.8272995673157343
+      },
+      {
+        "peer_delta_us": 1194554,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.8404810498311504
+      },
+      {
+        "peer_delta_us": 1159944,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.8655590269875097
+      },
+      {
+        "peer_delta_us": 1152975,
+        "native_midpoint_delta_us": 1004000,
+        "native_to_peer_progression_ratio": 0.8707907803725146
+      },
+      {
+        "peer_delta_us": 1320152,
+        "native_midpoint_delta_us": 1006000,
+        "native_to_peer_progression_ratio": 0.762033462813373
+      }
+    ],
+    "filter_convergence_observed": false,
+    "latency_measured": false,
+    "underlying_os_cause_proven": false,
+    "method": "native midpoint=(originate+receive)/2 from observed+remote fields; integer division has <=1 us rounding, not a calibrated clock mapping",
+    "native_to_peer_cumulative_ratio_before_zero": 0.8508925233175416,
+    "before_zero_count": 8,
+    "before_zero_qualifying_if_converged": 8,
+    "before_zero_max_rtt_us": 4000
+  },
+  "not_mission_or_latency_measurement": true
+}

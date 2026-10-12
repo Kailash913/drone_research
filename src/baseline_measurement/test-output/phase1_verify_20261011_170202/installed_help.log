@@ -1,0 +1,10 @@
+usage: baseline_dataset [-h] --input INPUT [--output OUTPUT]
+                        [--prior-manifest PRIOR_MANIFEST]
+
+Import immutable baseline records and report metric eligibility without ROS.
+
+options:
+  -h, --help            show this help message and exit
+  --input INPUT
+  --output OUTPUT
+  --prior-manifest PRIOR_MANIFEST

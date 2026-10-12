@@ -1,0 +1,1363 @@
+.............................................sFF........................ [ 88%]
+.........                                                                [100%]
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+
+    @pytest.mark.flake8
+    @pytest.mark.linter
+    def test_flake8():
+        rc, errors = main_with_errors(argv=[])
+>       assert rc == 0, \
+            'Found %d code style errors / warnings:\n' % len(errors) + \
+            '\n'.join(errors)
+E       AssertionError: Found 239 code style errors / warnings:
+E         ./baseline_measurement/baseline_node.py:3:1: I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.
+E         ./baseline_measurement/baseline_node.py:5:1: I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.
+E         ./baseline_measurement/baseline_node.py:9:1: I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy
+E         ./baseline_measurement/baseline_node.py:11:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus' should be before 'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy'
+E         ./baseline_measurement/baseline_node.py:12:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleAttitude' should be before 'from px4_msgs.msg import VehicleStatus'
+E         ./baseline_measurement/baseline_node.py:13:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import OffboardControlMode' should be before 'from px4_msgs.msg import VehicleAttitude'
+E         ./baseline_measurement/baseline_node.py:15:1: E302 expected 2 blank lines, found 1
+E         ./baseline_measurement/experiment.py:13:1: I101 Imported names are in the wrong order. Should be describe, OnlineStats, throughput_mbps
+E         ./baseline_measurement/experiment.py:66:34: C408 Unnecessary dict call - rewrite as a literal.
+E         ./baseline_measurement/experiment.py:67:13: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:68:13: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:69:13: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:74:47: E127 continuation line over-indented for visual indent
+E         ./baseline_measurement/experiment.py:92:49: E127 continuation line over-indented for visual indent
+E         ./baseline_measurement/experiment.py:123:33: C408 Unnecessary dict call - rewrite as a literal.
+E         ./baseline_measurement/experiment.py:124:17: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:134:100: E501 line too long (114 > 99 characters)
+E         ./baseline_measurement/experiment.py:135:100: E501 line too long (102 > 99 characters)
+E         ./baseline_measurement/experiment.py:136:100: E501 line too long (107 > 99 characters)
+E         ./baseline_measurement/experiment.py:147:24: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:151:39: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:185:17: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:186:17: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:187:17: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/experiment.py:197:100: E501 line too long (102 > 99 characters)
+E         ./baseline_measurement/experiment.py:198:100: E501 line too long (102 > 99 characters)
+E         ./baseline_measurement/experiment.py:204:100: E501 line too long (112 > 99 characters)
+E         ./baseline_measurement/experiment.py:205:100: E501 line too long (100 > 99 characters)
+E         ./baseline_measurement/experiment.py:245:100: E501 line too long (153 > 99 characters)
+E         ./baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+E         ./baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+E         ./baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, EstimatorStatusFlags, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+E         ./baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus, EstimatorStatusFlags' should be before 'from rclpy.serialization import serialize_message'
+E         ./baseline_measurement/mission_node.py:29:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E         ./baseline_measurement/mission_node.py:29:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+E         ./baseline_measurement/mission_node.py:31:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+E         ./baseline_measurement/mission_node.py:85:17: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/mission_node.py:85:100: E501 line too long (103 > 99 characters)
+E         ./baseline_measurement/mission_node.py:108:100: E501 line too long (101 > 99 characters)
+E         ./baseline_measurement/mission_node.py:113:100: E501 line too long (152 > 99 characters)
+E         ./baseline_measurement/mission_node.py:117:38: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:40: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:45: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:49: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:51: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:56: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:60: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:63: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:68: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:71: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:74: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:79: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:82: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:117:84: E231 missing whitespace after ','
+E         ./baseline_measurement/mission_node.py:123:100: E501 line too long (102 > 99 characters)
+E         ./baseline_measurement/mission_node.py:134:100: E501 line too long (108 > 99 characters)
+E         ./baseline_measurement/mission_node.py:146:100: E501 line too long (101 > 99 characters)
+E         ./baseline_measurement/mission_node.py:154:100: E501 line too long (108 > 99 characters)
+E         ./baseline_measurement/mission_node.py:187:100: E501 line too long (104 > 99 characters)
+E         ./baseline_measurement/mission_node.py:209:100: E501 line too long (102 > 99 characters)
+E         ./baseline_measurement/mission_node.py:299:100: E501 line too long (105 > 99 characters)
+E         ./baseline_measurement/mission_node.py:327:100: E501 line too long (108 > 99 characters)
+E         ./baseline_measurement/mission_node.py:342:100: E501 line too long (102 > 99 characters)
+E         ./baseline_measurement/mission_node.py:354:100: E501 line too long (107 > 99 characters)
+E         ./baseline_measurement/mission_node.py:361:21: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/mission_node.py:364:21: E128 continuation line under-indented for visual indent
+E         ./baseline_measurement/mission_node.py:384:100: E501 line too long (107 > 99 characters)
+E         ./baseline_measurement/mission_node.py:389:1: D401 First line should be in imperative mood; try rephrasing
+E         ./baseline_measurement/mission_node.py:408:100: E501 line too long (132 > 99 characters)
+E         ./baseline_measurement/mission_node.py:409:100: E501 line too long (139 > 99 characters)
+E         ./baseline_measurement/mission_node.py:410:100: E501 line too long (110 > 99 characters)
+E         ./baseline_measurement/mission_node.py:428:100: E501 line too long (126 > 99 characters)
+E         ./baseline_measurement/mission_node.py:458:100: E501 line too long (101 > 99 characters)
+E         ./baseline_measurement/mission_node.py:467:100: E501 line too long (100 > 99 characters)
+E         ./baseline_measurement/mission_node.py:472:100: E501 line too long (117 > 99 characters)
+E         ./baseline_measurement/mission_node.py:473:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus' should be before 'from rclpy.serialization import serialize_message'
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:28:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:28:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:30:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:82:17: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:82:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:105:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:38: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:40: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:45: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:49: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:51: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:56: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:60: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:63: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:68: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:71: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:74: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:79: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:82: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:84: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:119:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:130:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:142:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:184:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:252:100: E501 line too long (105 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:267:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:282:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:293:100: E501 line too long (107 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:300:21: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:303:21: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:323:100: E501 line too long (107 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:328:1: D401 First line should be in imperative mood; try rephrasing
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:347:100: E501 line too long (132 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:348:100: E501 line too long (139 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:349:100: E501 line too long (110 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:367:100: E501 line too long (126 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:397:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:406:100: E501 line too long (100 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:411:100: E501 line too long (117 > 99 characters)
+E         ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:412:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, EstimatorStatusFlags, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus, EstimatorStatusFlags' should be before 'from rclpy.serialization import serialize_message'
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:29:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:29:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:31:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:85:17: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:85:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:108:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:113:100: E501 line too long (172 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:38: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:40: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:45: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:49: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:51: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:56: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:60: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:63: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:68: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:71: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:74: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:79: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:82: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:84: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:123:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:134:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:146:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:174:100: E501 line too long (104 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:196:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:281:100: E501 line too long (105 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:309:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:324:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:336:100: E501 line too long (107 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:343:21: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:346:21: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:366:100: E501 line too long (107 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:371:1: D401 First line should be in imperative mood; try rephrasing
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:390:100: E501 line too long (132 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:391:100: E501 line too long (139 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:392:100: E501 line too long (110 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:410:100: E501 line too long (126 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:440:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:449:100: E501 line too long (100 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:454:100: E501 line too long (117 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:455:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_174221/test/test_auto_takeoff_adapter.py:8:1: I100 Import statements are in the wrong order. 'from baseline_measurement.mission_node import MissionNode' should be before 'from px4_msgs.msg import EstimatorStatusFlags, VehicleCommand, VehicleStatus'
+E         ./heading_fix_backups/20261010_174221/test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+E         ./heading_fix_backups/20261010_174221/test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, EstimatorStatusFlags, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus, EstimatorStatusFlags' should be before 'from rclpy.serialization import serialize_message'
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:29:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:29:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:31:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:85:17: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:85:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:108:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:113:100: E501 line too long (152 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:38: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:40: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:45: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:49: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:51: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:56: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:60: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:63: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:68: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:71: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:74: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:79: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:82: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:84: E231 missing whitespace after ','
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:123:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:134:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:146:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:154:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:187:100: E501 line too long (104 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:209:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:299:100: E501 line too long (105 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:327:100: E501 line too long (108 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:342:100: E501 line too long (102 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:354:100: E501 line too long (107 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:361:21: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:364:21: E128 continuation line under-indented for visual indent
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:384:100: E501 line too long (107 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:389:1: D401 First line should be in imperative mood; try rephrasing
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:408:100: E501 line too long (132 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:409:100: E501 line too long (139 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:410:100: E501 line too long (110 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:428:100: E501 line too long (126 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:458:100: E501 line too long (101 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:467:100: E501 line too long (100 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:472:100: E501 line too long (117 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:473:100: E501 line too long (103 > 99 characters)
+E         ./heading_fix_backups/20261010_174503/test/test_auto_takeoff_adapter.py:8:1: I100 Import statements are in the wrong order. 'from baseline_measurement.mission_node import MissionNode' should be before 'from px4_msgs.msg import EstimatorStatusFlags, VehicleCommand, VehicleStatus'
+E         ./heading_fix_backups/20261010_174503/test/test_auto_takeoff_adapter.py:104:55: E127 continuation line over-indented for visual indent
+E         ./heading_fix_backups/20261010_174503/test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+E         ./heading_fix_backups/20261010_174503/test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+E         ./test/test_auto_takeoff_adapter.py:8:1: I100 Import statements are in the wrong order. 'from baseline_measurement.mission_node import MissionNode' should be before 'from px4_msgs.msg import EstimatorStatusFlags, VehicleCommand, VehicleStatus'
+E         ./test/test_auto_takeoff_adapter.py:104:55: E127 continuation line over-indented for visual indent
+E         ./test/test_baseline_new.py:12:1: I101 Imported names are in the wrong order. Should be describe, integrate_energy_wh, OnlineStats, packet_loss_pct, throughput_mbps
+E         ./test/test_baseline_new.py:14:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E         ./test/test_baseline_new.py:14:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment import Experiment, aggregate_runs' should be before 'from baseline_measurement.metrics import OnlineStats, describe, integrate_energy_wh, packet_loss_pct, throughput_mbps'
+E         ./test/test_baseline_new.py:15:1: I100 Import statements are in the wrong order. 'from baseline_measurement.cli import validate_options' should be before 'from baseline_measurement.experiment import Experiment, aggregate_runs'
+E         ./test/test_baseline_new.py:143:13: E128 continuation line under-indented for visual indent
+E         ./test/test_baseline_new.py:144:13: E128 continuation line under-indented for visual indent
+E         ./test/test_baseline_new.py:164:29: C408 Unnecessary dict call - rewrite as a literal.
+E         ./test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+E         ./test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+E         ./tools/phase1_inspect.py:15:1: E302 expected 2 blank lines, found 1
+E         ./tools/phase1_inspect.py:25:1: E305 expected 2 blank lines after class or function definition, found 1
+E         ./tools/phase1_inspect.py:39:100: E501 line too long (101 > 99 characters)
+E         ./tools/phase1_inspect.py:45:100: E501 line too long (101 > 99 characters)
+E         ./tools/phase1_inspect.py:46:5: E128 continuation line under-indented for visual indent
+E         ./tools/phase1_inspect.py:47:5: E128 continuation line under-indented for visual indent
+E         ./tools/phase1_inspect.py:49:5: E128 continuation line under-indented for visual indent
+E         ./tools/vscode_apply_heading_fix.py:13:100: E501 line too long (21608 > 99 characters)
+E       assert 1 == 0
+
+test/test_flake8.py:23: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+./baseline_measurement/baseline_node.py:3:1: I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.
+import psutil
+^
+
+./baseline_measurement/baseline_node.py:5:1: I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.
+from datetime import datetime
+^
+
+./baseline_measurement/baseline_node.py:9:1: I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+^
+
+./baseline_measurement/baseline_node.py:11:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus' should be before 'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy'
+from px4_msgs.msg import VehicleStatus
+^
+
+./baseline_measurement/baseline_node.py:12:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleAttitude' should be before 'from px4_msgs.msg import VehicleStatus'
+from px4_msgs.msg import VehicleAttitude
+^
+
+./baseline_measurement/baseline_node.py:13:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import OffboardControlMode' should be before 'from px4_msgs.msg import VehicleAttitude'
+from px4_msgs.msg import OffboardControlMode
+^
+
+./baseline_measurement/baseline_node.py:15:1: E302 expected 2 blank lines, found 1
+class BaselineMeasurement(Node):
+^
+
+./baseline_measurement/experiment.py:13:1: I101 Imported names are in the wrong order. Should be describe, OnlineStats, throughput_mbps
+from .metrics import OnlineStats, throughput_mbps, describe
+^
+
+./baseline_measurement/experiment.py:66:34: C408 Unnecessary dict call - rewrite as a literal.
+        self.raw_writer.writerow(dict(experiment_id=self.experiment_id,
+                                 ^
+
+./baseline_measurement/experiment.py:67:13: E128 continuation line under-indented for visual indent
+            run_id=self.run_id, timestamp=utc_now(), elapsed_s=max(0., now-self.start),
+            ^
+
+./baseline_measurement/experiment.py:68:13: E128 continuation line under-indented for visual indent
+            metric_name=name, value=value if value is not None else '',
+            ^
+
+./baseline_measurement/experiment.py:69:13: E128 continuation line under-indented for visual indent
+            unit=unit, source=source, status=status))
+            ^
+
+./baseline_measurement/experiment.py:74:47: E127 continuation line over-indented for visual indent
+                                              'last': None, 'iat': OnlineStats(),
+                                              ^
+
+./baseline_measurement/experiment.py:92:49: E127 continuation line over-indented for visual indent
+                                                'cpu': OnlineStats(), 'rss': OnlineStats()})
+                                                ^
+
+./baseline_measurement/experiment.py:123:33: C408 Unnecessary dict call - rewrite as a literal.
+            topic_stats[name] = dict(count=item['count'], delivered_cdr_bytes=item['bytes'],
+                                ^
+
+./baseline_measurement/experiment.py:124:17: E128 continuation line under-indented for visual indent
+                rate_hz=item['count']/elapsed if elapsed else None,
+                ^
+
+./baseline_measurement/experiment.py:134:100: E501 line too long (114 > 99 characters)
+            'telemetry_latency': 'PX4 source timestamp and host monotonic clock are not validated as one domain.',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:135:100: E501 line too long (102 > 99 characters)
+            'command_latency': 'Passive mode sends no command; ACK lacks unique request correlation.',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:136:100: E501 line too long (107 > 99 characters)
+            'packet_loss': 'ROS callbacks do not expose transmitted sequence counts or transport packets.',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:147:24: E128 continuation line under-indented for visual indent
+                       for name, reason in reasons.items()})
+                       ^
+
+./baseline_measurement/experiment.py:151:39: E128 continuation line under-indented for visual indent
+                                      'kind': 'received ROS CDR traffic rate; not link capacity'}
+                                      ^
+
+./baseline_measurement/experiment.py:185:17: E128 continuation line under-indented for visual indent
+                'run_id': self.run_id, 'scenario': self.scenario,
+                ^
+
+./baseline_measurement/experiment.py:186:17: E128 continuation line under-indented for visual indent
+                'start_time': self.start_time, 'end_time': end_time,
+                ^
+
+./baseline_measurement/experiment.py:187:17: E128 continuation line under-indented for visual indent
+                'observation_duration_s': elapsed, 'mission_status': mission_status},
+                ^
+
+./baseline_measurement/experiment.py:197:100: E501 line too long (102 > 99 characters)
+                'throughput_mbps': 'received ROS CDR bytes * 8 / monotonic observation seconds / 1e6',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:198:100: E501 line too long (102 > 99 characters)
+                'traffic_rate_mbps': 'same observed ROS CDR receive rate; not physical link capacity',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:204:100: E501 line too long (112 > 99 characters)
+                'simulated_energy_wh': 'trapezoidal integral of valid PX4 BatteryStatus voltage*current / 3600',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:205:100: E501 line too long (100 > 99 characters)
+                'latency': 'unavailable until instrumented endpoints and valid clock mapping exist',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:245:100: E501 line too long (153 > 99 characters)
+            'confidence_interval_note': 'Student t for <=30 run means; normal approximation above 30. Runs must be independent under the same scenario.'}
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+import re
+^
+
+./baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+^
+
+./baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, EstimatorStatusFlags, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+from px4_msgs.msg import (
+^
+
+./baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus, EstimatorStatusFlags' should be before 'from rclpy.serialization import serialize_message'
+from px4_msgs.msg import (
+^
+
+./baseline_measurement/mission_node.py:29:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from .experiment import Experiment, aggregate_runs
+^
+
+./baseline_measurement/mission_node.py:29:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+from .experiment import Experiment, aggregate_runs
+^
+
+./baseline_measurement/mission_node.py:31:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+from .cli import validate_options
+^
+
+./baseline_measurement/mission_node.py:85:17: E128 continuation line under-indented for visual indent
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                ^
+
+./baseline_measurement/mission_node.py:85:100: E501 line too long (103 > 99 characters)
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:108:100: E501 line too long (101 > 99 characters)
+            if len(processes['px4']) != 1 or len(processes['agent']) != 1 or not processes['gazebo']:
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:113:100: E501 line too long (152 > 99 characters)
+            'heading_bootstrap': 'PX4 Auto takeoff with initial yaw alignment and global reference; Offboard begins only after final heading readiness',
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:117:38: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                     ^
+
+./baseline_measurement/mission_node.py:117:40: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                       ^
+
+./baseline_measurement/mission_node.py:117:45: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                            ^
+
+./baseline_measurement/mission_node.py:117:49: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                ^
+
+./baseline_measurement/mission_node.py:117:51: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                  ^
+
+./baseline_measurement/mission_node.py:117:56: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                       ^
+
+./baseline_measurement/mission_node.py:117:60: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                           ^
+
+./baseline_measurement/mission_node.py:117:63: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                              ^
+
+./baseline_measurement/mission_node.py:117:68: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                   ^
+
+./baseline_measurement/mission_node.py:117:71: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                      ^
+
+./baseline_measurement/mission_node.py:117:74: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                         ^
+
+./baseline_measurement/mission_node.py:117:79: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                              ^
+
+./baseline_measurement/mission_node.py:117:82: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                 ^
+
+./baseline_measurement/mission_node.py:117:84: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                   ^
+
+./baseline_measurement/mission_node.py:123:100: E501 line too long (102 > 99 characters)
+            'payload': 'ROS CDR serialized bytes including encapsulation; excludes transport headers',
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:134:100: E501 line too long (108 > 99 characters)
+        self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:146:100: E501 line too long (101 > 99 characters)
+        self.timer = self.create_timer(.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:154:100: E501 line too long (108 > 99 characters)
+            and self.mission.reached == ['TAKEOFF', 'WAYPOINT_1', 'WAYPOINT_2', 'WAYPOINT_3', 'RETURN_HOME']
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:187:100: E501 line too long (104 > 99 characters)
+                                    ('AUTO_TAKEOFF_REQUEST', 'AUTO_ARM', 'TAKEOFF', 'WAIT_FOR_HEADING'))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:209:100: E501 line too long (102 > 99 characters)
+            self.competition = any(self.count_publishers(topic) > own for topic, _ in INPUTS.values())
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:299:100: E501 line too long (105 > 99 characters)
+                self.log.row('home', detail=json.dumps({'home_ned': self.mission.home, 'yaw': self.yaw}))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:327:100: E501 line too long (108 > 99 characters)
+                             detail=json.dumps({'event': event, 'elapsed_s': timestamp-self.mission.start}))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:342:100: E501 line too long (102 > 99 characters)
+                         armed=t.armed, nav_state=getattr(self.latest.get('status'), 'nav_state', ''),
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:354:100: E501 line too long (107 > 99 characters)
+        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:361:21: E128 continuation line under-indented for visual indent
+                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),
+                    ^
+
+./baseline_measurement/mission_node.py:364:21: E128 continuation line under-indented for visual indent
+                    sum(rss for _, _, _, rss in resources), 'MiB',
+                    ^
+
+./baseline_measurement/mission_node.py:384:100: E501 line too long (107 > 99 characters)
+            self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:389:1: D401 First line should be in imperative mood; try rephrasing
+    """Default is passive. --execute-sitl is the explicit one-mission command."""
+^
+
+./baseline_measurement/mission_node.py:408:100: E501 line too long (132 > 99 characters)
+    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:409:100: E501 line too long (139 > 99 characters)
+    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:410:100: E501 line too long (110 > 99 characters)
+    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:428:100: E501 line too long (126 > 99 characters)
+            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:458:100: E501 line too long (101 > 99 characters)
+                            node.experiment.finish('interrupted' if interrupted else 'failed', error)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:467:100: E501 line too long (100 > 99 characters)
+                                        error or 'Interrupted or runtime error', node.mission.state)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:472:100: E501 line too long (117 > 99 characters)
+            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:473:100: E501 line too long (103 > 99 characters)
+            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+import re
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+from px4_msgs.msg import (
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus' should be before 'from rclpy.serialization import serialize_message'
+from px4_msgs.msg import (
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:28:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from .experiment import Experiment, aggregate_runs
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:28:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+from .experiment import Experiment, aggregate_runs
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:30:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+from .cli import validate_options
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:82:17: E128 continuation line under-indented for visual indent
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:82:100: E501 line too long (103 > 99 characters)
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:105:100: E501 line too long (101 > 99 characters)
+            if len(processes['px4']) != 1 or len(processes['agent']) != 1 or not processes['gazebo']:
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:38: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                     ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:40: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                       ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:45: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                            ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:49: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:51: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                  ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:56: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                       ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:60: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                           ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:63: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                              ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:68: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:71: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                      ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:74: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                         ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:79: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                              ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:82: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                 ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:113:84: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:119:100: E501 line too long (102 > 99 characters)
+            'payload': 'ROS CDR serialized bytes including encapsulation; excludes transport headers',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:130:100: E501 line too long (108 > 99 characters)
+        self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:142:100: E501 line too long (101 > 99 characters)
+        self.timer = self.create_timer(.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:184:100: E501 line too long (102 > 99 characters)
+            self.competition = any(self.count_publishers(topic) > own for topic, _ in INPUTS.values())
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:252:100: E501 line too long (105 > 99 characters)
+                self.log.row('home', detail=json.dumps({'home_ned': self.mission.home, 'yaw': self.yaw}))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:267:100: E501 line too long (108 > 99 characters)
+                             detail=json.dumps({'event': event, 'elapsed_s': timestamp-self.mission.start}))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:282:100: E501 line too long (102 > 99 characters)
+                         armed=t.armed, nav_state=getattr(self.latest.get('status'), 'nav_state', ''),
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:293:100: E501 line too long (107 > 99 characters)
+        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:300:21: E128 continuation line under-indented for visual indent
+                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),
+                    ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:303:21: E128 continuation line under-indented for visual indent
+                    sum(rss for _, _, _, rss in resources), 'MiB',
+                    ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:323:100: E501 line too long (107 > 99 characters)
+            self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:328:1: D401 First line should be in imperative mood; try rephrasing
+    """Default is passive. --execute-sitl is the explicit one-mission command."""
+^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:347:100: E501 line too long (132 > 99 characters)
+    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:348:100: E501 line too long (139 > 99 characters)
+    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:349:100: E501 line too long (110 > 99 characters)
+    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:367:100: E501 line too long (126 > 99 characters)
+            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:397:100: E501 line too long (101 > 99 characters)
+                            node.experiment.finish('interrupted' if interrupted else 'failed', error)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:406:100: E501 line too long (100 > 99 characters)
+                                        error or 'Interrupted or runtime error', node.mission.state)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:411:100: E501 line too long (117 > 99 characters)
+            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:412:100: E501 line too long (103 > 99 characters)
+            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+import re
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, EstimatorStatusFlags, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+from px4_msgs.msg import (
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus, EstimatorStatusFlags' should be before 'from rclpy.serialization import serialize_message'
+from px4_msgs.msg import (
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:29:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from .experiment import Experiment, aggregate_runs
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:29:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+from .experiment import Experiment, aggregate_runs
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:31:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+from .cli import validate_options
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:85:17: E128 continuation line under-indented for visual indent
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:85:100: E501 line too long (103 > 99 characters)
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:108:100: E501 line too long (101 > 99 characters)
+            if len(processes['px4']) != 1 or len(processes['agent']) != 1 or not processes['gazebo']:
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:113:100: E501 line too long (172 > 99 characters)
+            'heading_bootstrap': 'PX4 Auto takeoff when initial yaw is aligned but final magnetic alignment is pending; Offboard begins only after final heading readiness',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:38: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                     ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:40: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                       ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:45: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                            ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:49: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:51: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                  ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:56: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                       ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:60: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                           ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:63: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                              ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:68: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:71: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                      ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:74: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                         ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:79: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                              ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:82: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                 ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:117:84: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:123:100: E501 line too long (102 > 99 characters)
+            'payload': 'ROS CDR serialized bytes including encapsulation; excludes transport headers',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:134:100: E501 line too long (108 > 99 characters)
+        self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:146:100: E501 line too long (101 > 99 characters)
+        self.timer = self.create_timer(.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:174:100: E501 line too long (104 > 99 characters)
+                                    ('AUTO_TAKEOFF_REQUEST', 'AUTO_ARM', 'TAKEOFF', 'WAIT_FOR_HEADING'))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:196:100: E501 line too long (102 > 99 characters)
+            self.competition = any(self.count_publishers(topic) > own for topic, _ in INPUTS.values())
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:281:100: E501 line too long (105 > 99 characters)
+                self.log.row('home', detail=json.dumps({'home_ned': self.mission.home, 'yaw': self.yaw}))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:309:100: E501 line too long (108 > 99 characters)
+                             detail=json.dumps({'event': event, 'elapsed_s': timestamp-self.mission.start}))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:324:100: E501 line too long (102 > 99 characters)
+                         armed=t.armed, nav_state=getattr(self.latest.get('status'), 'nav_state', ''),
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:336:100: E501 line too long (107 > 99 characters)
+        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:343:21: E128 continuation line under-indented for visual indent
+                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),
+                    ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:346:21: E128 continuation line under-indented for visual indent
+                    sum(rss for _, _, _, rss in resources), 'MiB',
+                    ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:366:100: E501 line too long (107 > 99 characters)
+            self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:371:1: D401 First line should be in imperative mood; try rephrasing
+    """Default is passive. --execute-sitl is the explicit one-mission command."""
+^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:390:100: E501 line too long (132 > 99 characters)
+    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:391:100: E501 line too long (139 > 99 characters)
+    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:392:100: E501 line too long (110 > 99 characters)
+    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:410:100: E501 line too long (126 > 99 characters)
+            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:440:100: E501 line too long (101 > 99 characters)
+                            node.experiment.finish('interrupted' if interrupted else 'failed', error)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:449:100: E501 line too long (100 > 99 characters)
+                                        error or 'Interrupted or runtime error', node.mission.state)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:454:100: E501 line too long (117 > 99 characters)
+            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:455:100: E501 line too long (103 > 99 characters)
+            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174221/test/test_auto_takeoff_adapter.py:8:1: I100 Import statements are in the wrong order. 'from baseline_measurement.mission_node import MissionNode' should be before 'from px4_msgs.msg import EstimatorStatusFlags, VehicleCommand, VehicleStatus'
+from baseline_measurement.mission_node import MissionNode
+^
+
+./heading_fix_backups/20261010_174221/test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+from baseline_measurement.mission_state import Mission, Telemetry, STAGES
+^
+
+./heading_fix_backups/20261010_174221/test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+from baseline_measurement.experiment_logger import RunLog, TopicStats
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+import re
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, EstimatorStatusFlags, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+from px4_msgs.msg import (
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus, EstimatorStatusFlags' should be before 'from rclpy.serialization import serialize_message'
+from px4_msgs.msg import (
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:29:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from .experiment import Experiment, aggregate_runs
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:29:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+from .experiment import Experiment, aggregate_runs
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:31:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+from .cli import validate_options
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:85:17: E128 continuation line under-indented for visual indent
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:85:100: E501 line too long (103 > 99 characters)
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:108:100: E501 line too long (101 > 99 characters)
+            if len(processes['px4']) != 1 or len(processes['agent']) != 1 or not processes['gazebo']:
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:113:100: E501 line too long (152 > 99 characters)
+            'heading_bootstrap': 'PX4 Auto takeoff with initial yaw alignment and global reference; Offboard begins only after final heading readiness',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:38: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                     ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:40: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                       ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:45: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                            ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:49: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:51: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                  ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:56: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                       ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:60: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                           ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:63: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                              ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:68: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:71: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                      ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:74: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                         ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:79: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                              ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:82: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                 ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:117:84: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:123:100: E501 line too long (102 > 99 characters)
+            'payload': 'ROS CDR serialized bytes including encapsulation; excludes transport headers',
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:134:100: E501 line too long (108 > 99 characters)
+        self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:146:100: E501 line too long (101 > 99 characters)
+        self.timer = self.create_timer(.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:154:100: E501 line too long (108 > 99 characters)
+            and self.mission.reached == ['TAKEOFF', 'WAYPOINT_1', 'WAYPOINT_2', 'WAYPOINT_3', 'RETURN_HOME']
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:187:100: E501 line too long (104 > 99 characters)
+                                    ('AUTO_TAKEOFF_REQUEST', 'AUTO_ARM', 'TAKEOFF', 'WAIT_FOR_HEADING'))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:209:100: E501 line too long (102 > 99 characters)
+            self.competition = any(self.count_publishers(topic) > own for topic, _ in INPUTS.values())
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:299:100: E501 line too long (105 > 99 characters)
+                self.log.row('home', detail=json.dumps({'home_ned': self.mission.home, 'yaw': self.yaw}))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:327:100: E501 line too long (108 > 99 characters)
+                             detail=json.dumps({'event': event, 'elapsed_s': timestamp-self.mission.start}))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:342:100: E501 line too long (102 > 99 characters)
+                         armed=t.armed, nav_state=getattr(self.latest.get('status'), 'nav_state', ''),
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:354:100: E501 line too long (107 > 99 characters)
+        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:361:21: E128 continuation line under-indented for visual indent
+                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),
+                    ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:364:21: E128 continuation line under-indented for visual indent
+                    sum(rss for _, _, _, rss in resources), 'MiB',
+                    ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:384:100: E501 line too long (107 > 99 characters)
+            self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:389:1: D401 First line should be in imperative mood; try rephrasing
+    """Default is passive. --execute-sitl is the explicit one-mission command."""
+^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:408:100: E501 line too long (132 > 99 characters)
+    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:409:100: E501 line too long (139 > 99 characters)
+    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:410:100: E501 line too long (110 > 99 characters)
+    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:428:100: E501 line too long (126 > 99 characters)
+            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:458:100: E501 line too long (101 > 99 characters)
+                            node.experiment.finish('interrupted' if interrupted else 'failed', error)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:467:100: E501 line too long (100 > 99 characters)
+                                        error or 'Interrupted or runtime error', node.mission.state)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:472:100: E501 line too long (117 > 99 characters)
+            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:473:100: E501 line too long (103 > 99 characters)
+            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'
+                                                                                                   ^
+
+./heading_fix_backups/20261010_174503/test/test_auto_takeoff_adapter.py:8:1: I100 Import statements are in the wrong order. 'from baseline_measurement.mission_node import MissionNode' should be before 'from px4_msgs.msg import EstimatorStatusFlags, VehicleCommand, VehicleStatus'
+from baseline_measurement.mission_node import MissionNode
+^
+
+./heading_fix_backups/20261010_174503/test/test_auto_takeoff_adapter.py:104:55: E127 continuation line over-indented for visual indent
+                                                      ('WAYPOINT_1', 200, 10.)]:
+                                                      ^
+
+./heading_fix_backups/20261010_174503/test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+from baseline_measurement.mission_state import Mission, Telemetry, STAGES
+^
+
+./heading_fix_backups/20261010_174503/test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+from baseline_measurement.experiment_logger import RunLog, TopicStats
+^
+
+./test/test_auto_takeoff_adapter.py:8:1: I100 Import statements are in the wrong order. 'from baseline_measurement.mission_node import MissionNode' should be before 'from px4_msgs.msg import EstimatorStatusFlags, VehicleCommand, VehicleStatus'
+from baseline_measurement.mission_node import MissionNode
+^
+
+./test/test_auto_takeoff_adapter.py:104:55: E127 continuation line over-indented for visual indent
+                                                      ('WAYPOINT_1', 200, 10.)]:
+                                                      ^
+
+./test/test_baseline_new.py:12:1: I101 Imported names are in the wrong order. Should be describe, integrate_energy_wh, OnlineStats, packet_loss_pct, throughput_mbps
+from baseline_measurement.metrics import (
+^
+
+./test/test_baseline_new.py:14:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from baseline_measurement.experiment import Experiment, aggregate_runs
+^
+
+./test/test_baseline_new.py:14:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment import Experiment, aggregate_runs' should be before 'from baseline_measurement.metrics import OnlineStats, describe, integrate_energy_wh, packet_loss_pct, throughput_mbps'
+from baseline_measurement.experiment import Experiment, aggregate_runs
+^
+
+./test/test_baseline_new.py:15:1: I100 Import statements are in the wrong order. 'from baseline_measurement.cli import validate_options' should be before 'from baseline_measurement.experiment import Experiment, aggregate_runs'
+from baseline_measurement.cli import validate_options
+^
+
+./test/test_baseline_new.py:143:13: E128 continuation line under-indented for visual indent
+            NoSuchProcess=RuntimeError, AccessDenied=PermissionError,
+            ^
+
+./test/test_baseline_new.py:144:13: E128 continuation line under-indented for visual indent
+            ZombieProcess=RuntimeError)
+            ^
+
+./test/test_baseline_new.py:164:29: C408 Unnecessary dict call - rewrite as a literal.
+                arguments = dict(observe_seconds=15., sampling_interval=1.,
+                            ^
+
+./test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+from baseline_measurement.mission_state import Mission, Telemetry, STAGES
+^
+
+./test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+from baseline_measurement.experiment_logger import RunLog, TopicStats
+^
+
+./tools/phase1_inspect.py:15:1: E302 expected 2 blank lines, found 1
+def run(name, argv, cwd=root, timeout=120):
+^
+
+./tools/phase1_inspect.py:25:1: E305 expected 2 blank lines after class or function definition, found 1
+inventory = {'started_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
+^
+
+./tools/phase1_inspect.py:39:100: E501 line too long (101 > 99 characters)
+    ('px4_version', ['git', '-C', '/home/kailash/PX4-Autopilot', 'describe', '--always', '--dirty']),
+                                                                                                   ^
+
+./tools/phase1_inspect.py:45:100: E501 line too long (101 > 99 characters)
+inventory['source_hashes'] = {str(p.relative_to(package)): hashlib.sha256(p.read_bytes()).hexdigest()
+                                                                                                   ^
+
+./tools/phase1_inspect.py:46:5: E128 continuation line under-indented for visual indent
+    for p in package.rglob('*') if p.is_file() and not any(x in p.parts for x in
+    ^
+
+./tools/phase1_inspect.py:47:5: E128 continuation line under-indented for visual indent
+    ('__pycache__', '.pytest_cache', 'test-output', 'heading_fix_backups'))}
+    ^
+
+./tools/phase1_inspect.py:49:5: E128 continuation line under-indented for visual indent
+    'test', '-q', '--junitxml=' + str(out / 'baseline_pytest.xml')], package, 180)
+    ^
+
+./tools/vscode_apply_heading_fix.py:13:100: E501 line too long (21608 > 99 characters)
+PAYLOAD = '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'
+                                                                                                   ^
+
+3     C408 Unnecessary dict call - rewrite as a literal.
+4     D401 First line should be in imperative mood; try rephrasing
+4     E127 continuation line over-indented for visual indent
+26    E128 continuation line under-indented for visual indent
+56    E231 missing whitespace after ','
+2     E302 expected 2 blank lines, found 1
+1     E305 expected 2 blank lines after class or function definition, found 1
+95    E501 line too long (114 > 99 characters)
+28    I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.
+19    I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy
+1     I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.
+
+43 files checked
+239 errors
+
+'C'-type errors: 3
+'D'-type errors: 4
+'E'-type errors: 184
+'I'-type errors: 48
+
+Checked files:
+
+* ./setup.py
+* ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py
+* ./heading_fix_backups/20261010_174221/baseline_measurement/mission_state.py
+* ./heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py
+* ./heading_fix_backups/20261010_174221/test/test_phase1.py
+* ./heading_fix_backups/20261010_174221/test/test_qgc_plan.py
+* ./heading_fix_backups/20261010_174221/test/test_auto_takeoff.py
+* ./heading_fix_backups/20261010_174221/test/test_auto_takeoff_adapter.py
+* ./heading_fix_backups/20261010_174221/tools/vscode_test_runner.py
+* ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py
+* ./heading_fix_backups/20261010_173123/baseline_measurement/mission_state.py
+* ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py
+* ./heading_fix_backups/20261010_174503/baseline_measurement/mission_state.py
+* ./heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py
+* ./heading_fix_backups/20261010_174503/test/test_phase1.py
+* ./heading_fix_backups/20261010_174503/test/test_qgc_plan.py
+* ./heading_fix_backups/20261010_174503/test/test_auto_takeoff.py
+* ./heading_fix_backups/20261010_174503/test/test_auto_takeoff_adapter.py
+* ./heading_fix_backups/20261010_174503/tools/vscode_test_runner.py
+* ./baseline_measurement/cli.py
+* ./baseline_measurement/acceptance.py
+* ./baseline_measurement/mission_node.py
+* ./baseline_measurement/experiment.py
+* ./baseline_measurement/mission_state.py
+* ./baseline_measurement/experiment_logger.py
+* ./baseline_measurement/resource_monitor.py
+* ./baseline_measurement/baseline_node.py
+* ./baseline_measurement/metrics.py
+* ./baseline_measurement/__init__.py
+* ./baseline_measurement/qgc_plan.py
+* ./test/test_copyright.py
+* ./test/test_phase1.py
+* ./test/test_baseline_new.py
+* ./test/test_preflight.py
+* ./test/test_acceptance.py
+* ./test/test_qgc_plan.py
+* ./test/test_flake8.py
+* ./test/test_auto_takeoff.py
+* ./test/test_auto_takeoff_adapter.py
+* ./test/test_pep257.py
+* ./tools/phase1_inspect.py
+* ./tools/vscode_apply_heading_fix.py
+* ./tools/vscode_test_runner.py
+_________________________________ test_pep257 __________________________________
+
+    @pytest.mark.linter
+    @pytest.mark.pep257
+    def test_pep257():
+        rc = main(argv=['.', 'test'])
+>       assert rc == 0, 'Found code style errors / warnings'
+E       AssertionError: Found code style errors / warnings
+E       assert 1 == 0
+
+test/test_pep257.py:23: AssertionError
+----------------------------- Captured stdout call -----------------------------
+checking ./baseline_measurement/__init__.py
+checking ./baseline_measurement/acceptance.py
+checking ./baseline_measurement/baseline_node.py
+checking ./baseline_measurement/cli.py
+checking ./baseline_measurement/experiment.py
+checking ./baseline_measurement/experiment_logger.py
+checking ./baseline_measurement/metrics.py
+checking ./baseline_measurement/mission_node.py
+checking ./baseline_measurement/mission_state.py
+checking ./baseline_measurement/qgc_plan.py
+checking ./baseline_measurement/resource_monitor.py
+checking ./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py
+checking ./heading_fix_backups/20261010_173123/baseline_measurement/mission_state.py
+checking ./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py
+checking ./heading_fix_backups/20261010_174221/baseline_measurement/mission_state.py
+checking ./heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py
+checking ./heading_fix_backups/20261010_174221/test/test_auto_takeoff.py
+checking ./heading_fix_backups/20261010_174221/test/test_auto_takeoff_adapter.py
+checking ./heading_fix_backups/20261010_174221/test/test_phase1.py
+checking ./heading_fix_backups/20261010_174221/test/test_qgc_plan.py
+checking ./heading_fix_backups/20261010_174221/tools/vscode_test_runner.py
+checking ./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py
+checking ./heading_fix_backups/20261010_174503/baseline_measurement/mission_state.py
+checking ./heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py
+checking ./heading_fix_backups/20261010_174503/test/test_auto_takeoff.py
+checking ./heading_fix_backups/20261010_174503/test/test_auto_takeoff_adapter.py
+checking ./heading_fix_backups/20261010_174503/test/test_phase1.py
+checking ./heading_fix_backups/20261010_174503/test/test_qgc_plan.py
+checking ./heading_fix_backups/20261010_174503/tools/vscode_test_runner.py
+checking ./setup.py
+checking ./test/test_acceptance.py
+checking ./test/test_auto_takeoff.py
+checking ./test/test_auto_takeoff_adapter.py
+checking ./test/test_baseline_new.py
+checking ./test/test_copyright.py
+checking ./test/test_flake8.py
+checking ./test/test_pep257.py
+checking ./test/test_phase1.py
+checking ./test/test_preflight.py
+checking ./test/test_qgc_plan.py
+checking ./tools/phase1_inspect.py
+checking ./tools/vscode_apply_heading_fix.py
+checking ./tools/vscode_test_runner.py
+checking test/test_acceptance.py
+checking test/test_auto_takeoff.py
+checking test/test_auto_takeoff_adapter.py
+checking test/test_baseline_new.py
+checking test/test_copyright.py
+checking test/test_flake8.py
+checking test/test_pep257.py
+checking test/test_phase1.py
+checking test/test_preflight.py
+checking test/test_qgc_plan.py
+----------------------------- Captured stderr call -----------------------------
+./baseline_measurement/mission_node.py:389 in public function `main`: D401: First line should be in imperative mood; try rephrasing (found 'Default')
+./heading_fix_backups/20261010_173123/baseline_measurement/mission_node.py:328 in public function `main`: D401: First line should be in imperative mood; try rephrasing (found 'Default')
+./heading_fix_backups/20261010_174221/baseline_measurement/mission_node.py:371 in public function `main`: D401: First line should be in imperative mood; try rephrasing (found 'Default')
+./heading_fix_backups/20261010_174503/baseline_measurement/mission_node.py:389 in public function `main`: D401: First line should be in imperative mood; try rephrasing (found 'Default')
+4 errors
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=54261) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_audit_20261011_163757/baseline_pytest.xml -
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 239 code styl...
+FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+2 failed, 78 passed, 1 skipped, 12 warnings in 22.50s
+0.01s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.

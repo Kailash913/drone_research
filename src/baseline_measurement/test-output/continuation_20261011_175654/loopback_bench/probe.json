@@ -1,0 +1,220 @@
+{
+  "mode": "LOCALHOST_BENCH_ONLY",
+  "mission_outcome": "NOT_ATTEMPTED",
+  "baseline_experiment_id": null,
+  "run_id": "b19f212691d44ddbad86177a50d2c4e0",
+  "sequence_delivery": {
+    "method": "application sequence delivery, not wire packet loss",
+    "transmitted": 50,
+    "unique_received": 50,
+    "duplicate_received": 0,
+    "missing": 0,
+    "loss_fraction": 0.0
+  },
+  "round_trip": {
+    "method": "evidenced correlated request/response interval",
+    "samples": [
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:0",
+        "latency_us": 155.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:1",
+        "latency_us": 118.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:2",
+        "latency_us": 155.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:3",
+        "latency_us": 159.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:4",
+        "latency_us": 112.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:5",
+        "latency_us": 1700.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:6",
+        "latency_us": 187.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:7",
+        "latency_us": 142.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:8",
+        "latency_us": 153.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:9",
+        "latency_us": 168.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:10",
+        "latency_us": 131.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:11",
+        "latency_us": 154.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:12",
+        "latency_us": 201.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:13",
+        "latency_us": 184.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:14",
+        "latency_us": 152.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:15",
+        "latency_us": 154.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:16",
+        "latency_us": 137.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:17",
+        "latency_us": 180.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:18",
+        "latency_us": 133.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:19",
+        "latency_us": 89.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:20",
+        "latency_us": 139.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:21",
+        "latency_us": 112.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:22",
+        "latency_us": 133.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:23",
+        "latency_us": 161.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:24",
+        "latency_us": 160.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:25",
+        "latency_us": 149.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:26",
+        "latency_us": 301.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:27",
+        "latency_us": 160.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:28",
+        "latency_us": 313.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:29",
+        "latency_us": 305.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:30",
+        "latency_us": 163.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:31",
+        "latency_us": 153.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:32",
+        "latency_us": 243.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:33",
+        "latency_us": 119.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:34",
+        "latency_us": 90.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:35",
+        "latency_us": 78.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:36",
+        "latency_us": 158.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:37",
+        "latency_us": 148.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:38",
+        "latency_us": 100.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:39",
+        "latency_us": 144.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:40",
+        "latency_us": 126.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:41",
+        "latency_us": 101.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:42",
+        "latency_us": 133.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:43",
+        "latency_us": 168.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:44",
+        "latency_us": 127.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:45",
+        "latency_us": 127.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:46",
+        "latency_us": 190.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:47",
+        "latency_us": 113.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:48",
+        "latency_us": 180.0
+      },
+      {
+        "request_id": "b19f212691d44ddbad86177a50d2c4e0:49",
+        "latency_us": 586.0
+      }
+    ]
+  },
+  "limitations": "Loopback application delivery/RTT only. Does not measure PX4 telemetry, mission command/E2E latency, wire packet loss or UAV radio bandwidth."
+}

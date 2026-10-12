@@ -1,0 +1,47 @@
+{
+  "study": "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f",
+  "authorized_limit": 30,
+  "attempts": [
+    {
+      "experiment_id": "BASE-001",
+      "source_file": "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/baseline_run_001.csv",
+      "outcome": "FAIL",
+      "strict_provenance_valid": true,
+      "failure_reason": "Estimator or source clock reset",
+      "process_returncode": 0
+    }
+  ],
+  "status": "STOPPED_FAILURE_OR_INVALID_RECORD",
+  "unmeasured_metrics_are_not_zero": true,
+  "last_preflight": {
+    "checks": {
+      "connected": true,
+      "healthy": true,
+      "valid": true,
+      "heading_ready": true,
+      "landed": true,
+      "armed": false,
+      "competition": false,
+      "failsafe": false,
+      "reset": false
+    },
+    "passed": true,
+    "grounded_hold_requested": false,
+    "arming_commands": 0,
+    "mission_outcome": "NOT_ATTEMPTED"
+  },
+  "active_command": [
+    "/usr/bin/python3",
+    "-m",
+    "baseline_measurement.mission_node",
+    "--execute-sitl",
+    "--config",
+    "/home/kailash/ros2_ws/src/baseline_measurement/config/baseline.yaml",
+    "--experiment-id",
+    "BASE-001",
+    "--provenance-json",
+    "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f/context_BASE-001/provenance.json",
+    "--output",
+    "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f"
+  ]
+}

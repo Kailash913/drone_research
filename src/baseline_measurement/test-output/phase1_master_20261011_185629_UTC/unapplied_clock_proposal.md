@@ -1,0 +1,7 @@
+# UNAPPLIED proposal — requires separate authorization
+
+No candidate patch is merged into flight code. A native PX4 timestamp path could avoid changing publication domains at a DDS offset reset, but cannot safely be enabled on incoming topics alone: command/setpoint header conversion must be coordinated and verified against the generated incoming serializer. Review disabling DDS timestamp conversion while confirmed landed/disarmed, restart only the DDS client, verify native source timestamps and outgoing header semantics, then consider a separately reviewed adapter change and the outer bootstrap gate. Preserve WAIT_FOR_HEADING, reset counters, source-ordering, stale telemetry, loss-of-stream, heading-loss, landing and completion guards. This is a proposal rather than a proven cure for the underlying clock disagreement.
+
+Required authorized sequence: grounded clock/header verification; source fixtures and safety regression suite; one supervised SITL trial; complete route/return/landing/disarm evidence; then a newly identified corrected-configuration study. A changed configuration needs its own 30 records; do not add 29 changed runs to the existing failed diagnostic study. User selected reports only, so none of these operations has been performed.
+
+The retained earlier native_clock_candidate_NOT_APPLIED.patch is included solely for review. It has not been applied, and its optional native-header selection requires completed CLI/config integration and independent grounded verification before it could be operational. It is not an approved production fix.

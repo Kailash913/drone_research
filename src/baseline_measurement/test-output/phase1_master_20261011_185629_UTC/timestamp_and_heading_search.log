@@ -1,0 +1,93 @@
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:54:		_control_status.flags.mag_aligned_in_flight = false;
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:189:							       && (!_control_status.flags.yaw_manual || _control_status.flags.mag_aligned_in_flight)
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:194:						       && _control_status.flags.mag_aligned_in_flight;
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:224:					_control_status.flags.mag_aligned_in_flight = true;
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:225:					_flt_mag_align_start_time = _time_delayed_us;
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:363:		_control_status.flags.mag_aligned_in_flight = false;
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:379:	if (_control_status.flags.in_air && _control_status.flags.yaw_align && !_control_status.flags.mag_aligned_in_flight) {
+src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp:611:	if (_control_status.flags.mag_aligned_in_flight) {
+src/modules/ekf2/EKF/ekf.h:268:	bool isYawFinalAlignComplete() const
+src/modules/ekf2/EKF/ekf.h:273:				&& _control_status.flags.mag_aligned_in_flight
+src/modules/ekf2/EKF/ekf.h:274:				&& ((_time_delayed_us - _flt_mag_align_start_time) > (uint64_t)1e6);
+src/modules/ekf2/EKF/ekf.h:670:	uint64_t _flt_mag_align_start_time{0};	///< time that inflight magnetic field alignment started (uSec)
+src/modules/ekf2/EKF/common.h:600:		uint64_t mag_aligned_in_flight   : 1; ///< 23 - true when the in-flight mag field alignment has been completed
+src/modules/uxrce_dds_client/srv_base.h:61:	 * @param time_offset_us time offset between agent and client.
+src/modules/uxrce_dds_client/srv_base.h:64:	virtual bool process_request(ucdrBuffer *ub, const int64_t time_offset_us) = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/include/uxr/client/core/type/xrce_types.h:768:    uint32_t session_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/include/uxr/client/core/type/xrce_types.h:776:    uint32_t session_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/include/uxr/client/core/session/session.h:192:    int64_t time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/session/session.c:168:    session->time_offset = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/session/session.c:562:    return uxr_nanos() - session->time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/session/session.c:1194:        session->time_offset = ((t0 + t3) - (t1 + t2)) / 2;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/serialization/xrce_types.c:1869:    ret &= ucdr_serialize_uint32_t(buffer, input->session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/serialization/xrce_types.c:1879:    ret &= ucdr_deserialize_uint32_t(buffer, &output->session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/serialization/xrce_types.c:1897:                ret &= ucdr_serialize_uint32_t(buffer, input->_.session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/src/c/core/serialization/xrce_types.c:1923:                ret &= ucdr_deserialize_uint32_t(buffer, &output->_.session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSync/main.c:26:int64_t avg_time_offset = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSync/main.c:38:    int64_t current_time_offset = ((current_time - originate_timestamp) - (transmit_timestamp - received_timestamp)) /
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSync/main.c:40:    avg_time_offset = (avg_time_offset * sample_id + current_time_offset) / (sample_id + 1);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSync/main.c:42:    session->time_offset = avg_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSync/main.c:85:        printf("synchronized with time offset %-4I64d us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSync/main.c:88:        printf("synchronized with time offset %" PRId64 " us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSyncWithCb/main.c:26:int64_t avg_time_offset = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSyncWithCb/main.c:38:    int64_t current_time_offset = ((current_time - originate_timestamp) - (transmit_timestamp - received_timestamp)) /
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSyncWithCb/main.c:40:    avg_time_offset = (avg_time_offset * sample_id + current_time_offset) / (sample_id + 1);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSyncWithCb/main.c:42:    session->time_offset = avg_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSyncWithCb/main.c:85:        printf("synchronized with time offset %-5I64d us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client-v3/examples/TimeSyncWithCb/main.c:88:        printf("synchronized with time offset %-5" PRId64 "us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:82:		session->time_offset = -timesync->offset() * 1000; // us -> ns
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:89:	session->time_offset = 0;
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:99:	const int64_t time_offset_us = session->time_offset / 1000; // ns -> us
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:103:	client->process_requests(object_id, sample_id, ub, time_offset_us);
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:347:				PX4_INFO("synchronized with time offset %-5" PRId64 "us", session->time_offset / 1000);
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:601:	int64_t agent_utc = int64_t(hrt_absolute_time()) + (session->time_offset / 1000LL); // ns to us
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:929:				      const int64_t time_offset_us)
+src/modules/uxrce_dds_client/uxrce_dds_client.cpp:935:			_repliers[i]->process_request(ub, time_offset_us);
+src/modules/uxrce_dds_client/dds_topics.h.em:37:typedef bool (*UcdrSerializeMethod)(const void* data, ucdrBuffer& buf, int64_t time_offset);
+src/modules/uxrce_dds_client/dds_topics.h.em:131:	int64_t time_offset_us = session->time_offset / 1000; // ns -> us
+src/modules/uxrce_dds_client/dds_topics.h.em:170:						send_subscriptions[idx].ucdr_serialize_method(&topic_data, ub, time_offset_us);
+src/modules/uxrce_dds_client/dds_topics.h.em:231:	const int64_t time_offset_us = session->time_offset / 1000; // ns -> us
+src/modules/uxrce_dds_client/dds_topics.h.em:238:			if (ucdr_deserialize_@(sub['simple_base_type'])(*ub, data, time_offset_us)) {
+src/modules/uxrce_dds_client/dds_topics.h.em:250:			if (ucdr_deserialize_@(sub['simple_base_type'])(*ub, data, time_offset_us)) {
+src/modules/uxrce_dds_client/vehicle_command_srv.h:69:	bool process_request(ucdrBuffer *ub, const int64_t time_offset_us);
+src/modules/uxrce_dds_client/uxrce_dds_client.h:106:	 * @param time_offset_us time offset between agent and client.
+src/modules/uxrce_dds_client/uxrce_dds_client.h:109:	void process_requests(uxrObjectId object_id, SampleIdentity *sample_id, ucdrBuffer *ub, const int64_t time_offset_us);
+src/modules/uxrce_dds_client/vehicle_command_srv.cpp:52:bool VehicleCommandSrv::process_request(ucdrBuffer *ub, const int64_t time_offset_us)
+src/modules/uxrce_dds_client/vehicle_command_srv.cpp:56:	if (ucdr_deserialize_vehicle_command(*ub, data, time_offset_us)) {
+src/modules/uxrce_dds_client/vehicle_command_srv.cpp:81:			const int64_t time_offset_us = session_->time_offset / 1000; // ns -> us
+src/modules/uxrce_dds_client/vehicle_command_srv.cpp:83:			ucdr_serialize_vehicle_command_ack(&cmd_ack, reply_ub, time_offset_us);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/include/uxr/client/core/type/xrce_types.h:768:    uint32_t session_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/include/uxr/client/core/type/xrce_types.h:776:    uint32_t session_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/include/uxr/client/core/session/session.h:192:    int64_t time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/session/session.c:168:    session->time_offset = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/session/session.c:562:    return uxr_nanos() - session->time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/session/session.c:1194:        session->time_offset = ((t0 + t3) - (t1 + t2)) / 2;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/serialization/xrce_types.c:1869:    ret &= ucdr_serialize_uint32_t(buffer, input->session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/serialization/xrce_types.c:1879:    ret &= ucdr_deserialize_uint32_t(buffer, &output->session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/serialization/xrce_types.c:1897:                ret &= ucdr_serialize_uint32_t(buffer, input->_.session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/serialization/xrce_types.c:1923:                ret &= ucdr_deserialize_uint32_t(buffer, &output->_.session_time_offset);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSync/main.c:26:int64_t avg_time_offset = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSync/main.c:38:    int64_t current_time_offset = ((current_time - originate_timestamp) - (transmit_timestamp - received_timestamp)) /
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSync/main.c:40:    avg_time_offset = (avg_time_offset * sample_id + current_time_offset) / (sample_id + 1);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSync/main.c:42:    session->time_offset = avg_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSync/main.c:85:        printf("synchronized with time offset %-4I64d us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSync/main.c:88:        printf("synchronized with time offset %" PRId64 " us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSyncWithCb/main.c:26:int64_t avg_time_offset = 0;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSyncWithCb/main.c:38:    int64_t current_time_offset = ((current_time - originate_timestamp) - (transmit_timestamp - received_timestamp)) /
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSyncWithCb/main.c:40:    avg_time_offset = (avg_time_offset * sample_id + current_time_offset) / (sample_id + 1);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSyncWithCb/main.c:42:    session->time_offset = avg_time_offset;
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSyncWithCb/main.c:85:        printf("synchronized with time offset %-5I64d us\n", session.time_offset / 1000);
+src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/examples/TimeSyncWithCb/main.c:88:        printf("synchronized with time offset %-5" PRId64 "us\n", session.time_offset / 1000);
+src/lib/timesync/Timesync.cpp:57:		uint64_t deviation = llabs((int64_t)_time_offset - offset_us);
+src/lib/timesync/Timesync.cpp:68:				if (_high_deviation_count > MAX_CONSECUTIVE_HIGH_DEVIATION) {
+src/lib/timesync/Timesync.cpp:116:		tsync_status.estimated_offset = (int64_t)_time_offset;
+src/lib/timesync/Timesync.cpp:128:		return usec + (int64_t)_time_offset;
+src/lib/timesync/Timesync.cpp:140:	double time_offset_prev = _time_offset;
+src/lib/timesync/Timesync.cpp:144:		_time_offset = offset_us;
+src/lib/timesync/Timesync.cpp:148:		_time_offset = _filter_alpha * offset_us + (1.0 - _filter_alpha) * (_time_offset + _time_skew);
+src/lib/timesync/Timesync.cpp:151:		_time_skew = _filter_beta * (_time_offset - time_offset_prev) + (1.0 - _filter_beta) * _time_skew;
+src/lib/timesync/Timesync.cpp:159:	_time_offset = 0.0;
+src/lib/timesync/Timesync.hpp:84:// estimate are not used to update the filter. More than MAX_CONSECUTIVE_HIGH_DEVIATION number
+src/lib/timesync/Timesync.hpp:91:static constexpr uint32_t MAX_CONSECUTIVE_HIGH_DEVIATION = 10;
+src/lib/timesync/Timesync.hpp:107:	int64_t offset() const { return (int64_t)_time_offset; }
+src/lib/timesync/Timesync.hpp:132:	double _time_offset{0};

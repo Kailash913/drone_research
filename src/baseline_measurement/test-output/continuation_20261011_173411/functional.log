@@ -1,0 +1,41 @@
+.............................................F.......................... [ 61%]
+..............................................                           [100%]
+=================================== FAILURES ===================================
+_ ClockGuardTests.test_actual_position_reset_counter_latches_failure_without_timestamp_jump _
+
+self = <test_clock_guard.ClockGuardTests testMethod=test_actual_position_reset_counter_latches_failure_without_timestamp_jump>
+
+    def test_actual_position_reset_counter_latches_failure_without_timestamp_jump(self):
+        node = self.adapter()
+        self.receive(node, 100, 10.0, 1)
+        node.mission.tick(10.05, self.receive(node, 200, 10.05, 2))
+        self.assertTrue(node.reset)
+        self.assertEqual(node.mission.state, 'FAILSAFE')
+>       node.log.row.assert_not_called()
+
+test/test_clock_guard.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Mock name='mock.row' id='140614293047440'>
+
+    def assert_not_called(self):
+        """assert that the mock was never called.
+        """
+        if self.call_count != 0:
+            msg = ("Expected '%s' to not have been called. Called %s times.%s"
+                   % (self._mock_name or 'mock',
+                      self.call_count,
+                      self._calls_repr()))
+>           raise AssertionError(msg)
+E           AssertionError: Expected 'row' to not have been called. Called 1 times.
+E           Calls: [call('estimator_reset_counter_change', state='WAYPOINT_1', detail='{"previous": [1, 0, 0], "current": [2, 0, 0], "auto_alignment": false, "source": "vehicle_local_position reset counters"}')].
+
+/usr/lib/python3.12/unittest/mock.py:905: AssertionError
+- generated xml file: /home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_20261011_173411/functional.xml -
+=========================== short test summary info ============================
+FAILED test/test_clock_guard.py::ClockGuardTests::test_actual_position_reset_counter_latches_failure_without_timestamp_jump
+1 failed, 117 passed in 5.11s
+0.01s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.

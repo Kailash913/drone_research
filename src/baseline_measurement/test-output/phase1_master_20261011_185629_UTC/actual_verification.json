@@ -1,0 +1,214 @@
+{
+  "full_suite": {
+    "tests": 171,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "passed": 170
+  },
+  "build": {
+    "command": [
+      "bash",
+      "-c",
+      "source /opt/ros/jazzy/setup.bash && colcon build --packages-select baseline_measurement"
+    ],
+    "returncode": 0
+  },
+  "verification_directory": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\phase1_master_20261011_185629_UTC\\verification_193155",
+  "report_directory": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\final_reports_20261011_193212",
+  "commands": {
+    "timestamp_tests": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "test/test_clock_guard.py",
+        "test/test_report_analysis.py",
+        "test/test_native_clock.py",
+        "--junitxml=/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/timestamp_tests.xml"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "heading_tests": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "test/test_preflight.py",
+        "test/test_auto_takeoff.py",
+        "test/test_auto_takeoff_adapter.py",
+        "test/test_heading_reports.py",
+        "--junitxml=/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/heading_tests.xml"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "dataset_tests": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "test/test_dataset.py",
+        "test/test_dataset_identity.py",
+        "test/test_acceptance.py",
+        "test/test_reporting_status.py",
+        "--junitxml=/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/dataset_tests.xml"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "measurement_tests": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "test/test_measurements.py",
+        "test/test_run_provenance.py",
+        "--junitxml=/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/measurement_tests.xml"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "final_report_runner": {
+      "argv": [
+        "/usr/bin/python3",
+        "tools/final_report_runner.py"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "validator_0": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "baseline_measurement.dataset",
+        "--input",
+        "/home/kailash/ros2_ws/baseline_results",
+        "--output",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/validator_baseline_results",
+        "--prior-manifest",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/final_reports_20261011_183812/baseline_results/manifest.json"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 2
+    },
+    "validator_1": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "baseline_measurement.dataset",
+        "--input",
+        "/home/kailash/ros2_ws/baseline_results/phase1_study_36527160a48f",
+        "--output",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/validator_phase1_study_36527160a48f",
+        "--prior-manifest",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/final_reports_20261011_183812/phase1_study_36527160a48f/manifest.json"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 2
+    },
+    "validator_2": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "baseline_measurement.dataset",
+        "--input",
+        "/home/kailash/ros2_ws/baseline_results/phase1_study_c57f5de2b96a",
+        "--output",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/validator_phase1_study_c57f5de2b96a",
+        "--prior-manifest",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/final_reports_20261011_183812/phase1_study_c57f5de2b96a/manifest.json"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 2
+    },
+    "provenance_recovery": {
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "baseline_measurement.provenance",
+        "--input",
+        "/home/kailash/ros2_ws/baseline_results",
+        "--evidence-dir",
+        "heading_fix_backups",
+        "--evidence-dir",
+        "test-output/continuation_source_before",
+        "--evidence-dir",
+        "baseline_measurement",
+        "--output",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_193155/provenance.json"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "px4_clock_source": {
+      "argv": [
+        "grep",
+        "-RnE",
+        "ENABLE_LOCKSTEP_SCHEDULER|px4_clock_settime|px4_clock_gettime",
+        "platforms/posix/src/px4/common",
+        "platforms/common/include"
+      ],
+      "cwd": "/home/kailash/PX4-Autopilot",
+      "returncode": 0
+    },
+    "gz_topic_help": {
+      "argv": [
+        "gz",
+        "topic",
+        "--help"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "gz_topic_list": {
+      "argv": [
+        "gz",
+        "topic",
+        "-l"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 0
+    },
+    "gz_stats_passive": {
+      "argv": [
+        "timeout",
+        "-s",
+        "INT",
+        "12",
+        "gz",
+        "topic",
+        "-e",
+        "-t",
+        "/world/default/stats",
+        "--json-output"
+      ],
+      "cwd": "/home/kailash/ros2_ws/src/baseline_measurement",
+      "returncode": 124
+    },
+    "final_git_status": {
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "cwd": "/home/kailash/ros2_ws",
+      "returncode": 0
+    },
+    "final_git_diff": {
+      "argv": [
+        "git",
+        "diff"
+      ],
+      "cwd": "/home/kailash/ros2_ws",
+      "returncode": 0
+    }
+  },
+  "protected_unchanged": true
+}

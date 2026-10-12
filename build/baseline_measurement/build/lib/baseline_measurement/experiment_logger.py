@@ -79,13 +79,23 @@ class RunLog:
             'elapsed_s': time.monotonic()-self.start, **values,
         })
 
-    def message(self, topic, direction, msg, size, state):
-        now = time.monotonic()
+    def message(self, topic, direction, msg, size, state, receive_monotonic=None):
+        now = time.monotonic() if receive_monotonic is None else receive_monotonic
+        evidence = {
+            'local_monotonic_s': now,
+            'timestamp_sample_us': getattr(msg, 'timestamp_sample', None),
+            'reset_counters': {name: getattr(msg, name) for name in (
+                'xy_reset_counter', 'z_reset_counter', 'vxy_reset_counter',
+                'vz_reset_counter', 'heading_reset_counter', 'quat_reset_counter')
+                if hasattr(msg, name)},
+            'clock_method': 'local reception/publish-call monotonic; native source retained',
+        }
         stats = self.stats.setdefault((topic, direction), TopicStats())
         iat = stats.add(now, size)
         self.row('message', state=state, topic=topic, direction=direction,
                  source_timestamp_us=msg.timestamp, iat_ms='' if iat is None else iat,
-                 payload_cdr_bytes=size, count=stats.count)
+                 payload_cdr_bytes=size, count=stats.count,
+                 detail=json.dumps(evidence, allow_nan=False))
 
     def finish(self, success, failure_state='', reason='', state=''):
         if self.finished:

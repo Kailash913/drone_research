@@ -12,12 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from pathlib import Path
+
 from ament_pep257.main import main
+
 import pytest
 
 
 @pytest.mark.linter
 @pytest.mark.pep257
 def test_pep257():
-    rc = main(argv=['.', 'test'])
+    rc = main(argv=['baseline_measurement', 'test', 'setup.py'] + [
+        str(p) for p in sorted(Path('tools').glob('*.py'))
+        if p.name != 'vscode_apply_heading_fix.py'])
     assert rc == 0, 'Found code style errors / warnings'

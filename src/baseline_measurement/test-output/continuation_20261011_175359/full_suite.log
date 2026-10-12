@@ -1,0 +1,97 @@
+..............................................................s......... [ 58%]
+..F.................................................                     [100%]
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+
+    @pytest.mark.flake8
+    @pytest.mark.linter
+    def test_flake8():
+        rc, errors = main_with_errors(argv=['baseline_measurement', 'test', 'setup.py'] + [
+            str(p) for p in sorted(Path('tools').glob('*.py'))
+            if p.name != 'vscode_apply_heading_fix.py'])
+>       assert rc == 0, \
+            'Found %d code style errors / warnings:\n' % len(errors) + \
+            '\n'.join(errors)
+E       AssertionError: Found 3 code style errors / warnings:
+E         baseline_measurement/mission_node.py:38:1: F401 '.run_provenance.run_metadata' imported but unused
+E         test/test_authorized_study.py:7:1: I100 Import statements are in the wrong order. 'import importlib.util' should be before 'from unittest import mock'
+E         tools/continuation_check.py:10:1: I100 Import statements are in the wrong order. 'import subprocess' should be before 'from native_timesync_check import run_check' and in a different group.
+E       assert 1 == 0
+
+test/test_flake8.py:28: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+baseline_measurement/mission_node.py:38:1: F401 '.run_provenance.run_metadata' imported but unused
+from .run_provenance import run_metadata
+^
+
+test/test_authorized_study.py:7:1: I100 Import statements are in the wrong order. 'import importlib.util' should be before 'from unittest import mock'
+import importlib.util
+^
+
+tools/continuation_check.py:10:1: I100 Import statements are in the wrong order. 'import subprocess' should be before 'from native_timesync_check import run_check' and in a different group.
+import subprocess
+^
+
+1     F401 '.run_provenance.run_metadata' imported but unused
+2     I100 Import statements are in the wrong order. 'import importlib.util' should be before 'from unittest import mock'
+
+42 files checked
+3 errors
+
+'F'-type errors: 1
+'I'-type errors: 2
+
+Checked files:
+
+* baseline_measurement/cli.py
+* baseline_measurement/acceptance.py
+* baseline_measurement/provenance.py
+* baseline_measurement/dataset.py
+* baseline_measurement/mission_node.py
+* baseline_measurement/experiment.py
+* baseline_measurement/mission_state.py
+* baseline_measurement/experiment_logger.py
+* baseline_measurement/measurements.py
+* baseline_measurement/resource_monitor.py
+* baseline_measurement/baseline_node.py
+* baseline_measurement/record_context.py
+* baseline_measurement/metrics.py
+* baseline_measurement/run_provenance.py
+* baseline_measurement/sync_evidence.py
+* baseline_measurement/clock_probe.py
+* baseline_measurement/__init__.py
+* baseline_measurement/transport_probe.py
+* baseline_measurement/qgc_plan.py
+* test/test_copyright.py
+* test/test_phase1.py
+* test/test_baseline_new.py
+* test/test_preflight.py
+* test/test_dataset.py
+* test/test_run_provenance.py
+* test/test_acceptance.py
+* test/test_clock_guard.py
+* test/test_qgc_plan.py
+* test/test_flake8.py
+* test/test_auto_takeoff.py
+* test/test_authorized_study.py
+* test/test_auto_takeoff_adapter.py
+* test/test_measurements.py
+* test/test_pep257.py
+* setup.py
+* tools/authorized_study.py
+* tools/continuation_check.py
+* tools/native_timesync_check.py
+* tools/phase1_inspect.py
+* tools/phase1_lint_tools.py
+* tools/phase1_verify.py
+* tools/vscode_test_runner.py
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=73262) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_20261011_175359/full_suite.xml -
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 3 code style ...
+1 failed, 122 passed, 1 skipped, 12 warnings in 7.05s

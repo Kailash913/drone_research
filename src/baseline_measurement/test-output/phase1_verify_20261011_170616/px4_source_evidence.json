@@ -1,0 +1,190 @@
+[
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/msg/versioned/VehicleLocalPosition.msg",
+    "sha256": "4a24c882529ffaa71d834f0ef75e9cbacbe179db72b9227a13bca35205ccdd53",
+    "matches": [
+      {
+        "line": 6,
+        "text": "uint64 timestamp\t\t\t# time since system start (microseconds)"
+      },
+      {
+        "line": 7,
+        "text": "uint64 timestamp_sample                 # the timestamp of the raw data (microseconds)"
+      },
+      {
+        "line": 21,
+        "text": "uint8 xy_reset_counter\t\t\t# Index of latest lateral position estimate reset"
+      },
+      {
+        "line": 23,
+        "text": "uint8 z_reset_counter\t\t\t# Index of latest vertical position estimate reset"
+      },
+      {
+        "line": 33,
+        "text": "uint8 vxy_reset_counter\t\t\t# Index of latest vertical velocity estimate reset"
+      },
+      {
+        "line": 35,
+        "text": "uint8 vz_reset_counter\t\t\t# Index of latest vertical velocity estimate reset"
+      },
+      {
+        "line": 46,
+        "text": "uint8 heading_reset_counter\t\t# Index of latest heading reset"
+      },
+      {
+        "line": 47,
+        "text": "bool heading_good_for_control"
+      },
+      {
+        "line": 54,
+        "text": "uint64 ref_timestamp\t\t\t# Time when reference position was set since system start, (microseconds)"
+      },
+      {
+        "line": 65,
+        "text": "uint8 dist_bottom_reset_counter         # Index of latest dist bottom estimate reset"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/msg/versioned/VehicleAttitude.msg",
+    "sha256": "d23f153b574daad31f21f767bc6e2781bcd486bb9e56c605b8b6fd10814b1c74",
+    "matches": [
+      {
+        "line": 6,
+        "text": "uint64 timestamp                # time since system start (microseconds)"
+      },
+      {
+        "line": 8,
+        "text": "uint64 timestamp_sample         # the timestamp of the raw data (microseconds)"
+      },
+      {
+        "line": 12,
+        "text": "uint8 quat_reset_counter        # Quaternion reset counter"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/Tools/msg/templates/ucdr/msg.h.em",
+    "sha256": "2a434467a412c3dbe441ea5b7fe9d8918c4ba70721b920ee39e2ebe246bbdd8e",
+    "matches": [
+      {
+        "line": 139,
+        "text": "\t\tprint('\\tconst uint64_t timestamp_adjusted = topic.timestamp + time_offset;')"
+      },
+      {
+        "line": 140,
+        "text": "\t\tprint('\\tmemcpy(buf.iterator, &timestamp_adjusted, sizeof(topic.{0}));'.format(field_name))"
+      },
+      {
+        "line": 143,
+        "text": "\t\tprint('\\tconst uint64_t timestamp_sample_adjusted = topic.timestamp_sample + time_offset;')"
+      },
+      {
+        "line": 144,
+        "text": "\t\tprint('\\tmemcpy(buf.iterator, &timestamp_sample_adjusted, sizeof(topic.{0}));'.format(field_name))"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/build/px4_sitl_default/uORB/ucdr/vehicle_local_position.h",
+    "sha256": "2c269f047e5128918074c1a00e53a7e6cd7ec2be773cc82e55edf1c8fb600fb0",
+    "matches": [
+      {
+        "line": 53,
+        "text": "\tconst uint64_t timestamp_adjusted = topic.timestamp + time_offset;"
+      },
+      {
+        "line": 54,
+        "text": "\tmemcpy(buf.iterator, &timestamp_adjusted, sizeof(topic.timestamp));"
+      },
+      {
+        "line": 58,
+        "text": "\tconst uint64_t timestamp_sample_adjusted = topic.timestamp_sample + time_offset;"
+      },
+      {
+        "line": 59,
+        "text": "\tmemcpy(buf.iterator, &timestamp_sample_adjusted, sizeof(topic.timestamp_sample));"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.h.em",
+    "sha256": "7142c2dac186c3659cdf204b0767c821322b33718852c2ed094645f83a1d935f",
+    "matches": [
+      {
+        "line": 70,
+        "text": "\tUcdrSerializeMethod ucdr_serialize_method;"
+      },
+      {
+        "line": 131,
+        "text": "\tint64_t time_offset_us = session->time_offset / 1000; // ns -> us"
+      },
+      {
+        "line": 170,
+        "text": "\t\t\t\t\t\tsend_subscriptions[idx].ucdr_serialize_method(&topic_data, ub, time_offset_us);"
+      },
+      {
+        "line": 231,
+        "text": "\tconst int64_t time_offset_us = session->time_offset / 1000; // ns -> us"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/uxrce_dds_client.cpp",
+    "sha256": "7b63db7f756c61198355eb2abdad34de01b5f9e13a9d47c554866eff7f02e463",
+    "matches": [
+      {
+        "line": 82,
+        "text": "\t\tsession->time_offset = -timesync->offset() * 1000; // us -> ns"
+      },
+      {
+        "line": 89,
+        "text": "\tsession->time_offset = 0;"
+      },
+      {
+        "line": 347,
+        "text": "\t\t\t\tPX4_INFO(\"synchronized with time offset %-5\" PRId64 \"us\", session->time_offset / 1000);"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF2.cpp",
+    "sha256": "5142efa0cb422aa15970196b868d48afa938940fe3df9925386e9dbc0f0d2326",
+    "matches": [
+      {
+        "line": 1182,
+        "text": "\t\tatt.timestamp_sample = timestamp;"
+      },
+      {
+        "line": 1186,
+        "text": "\t\tatt.timestamp = _replay_mode ? timestamp : hrt_absolute_time();"
+      },
+      {
+        "line": 1702,
+        "text": "\tlpos.timestamp_sample = timestamp;"
+      },
+      {
+        "line": 1758,
+        "text": "\tlpos.heading_good_for_control = _ekf.isYawFinalAlignComplete();"
+      },
+      {
+        "line": 1817,
+        "text": "\tlpos.timestamp = _replay_mode ? timestamp : hrt_absolute_time();"
+      }
+    ]
+  },
+  {
+    "linux_file": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF/ekf.h",
+    "sha256": "9b2ae3108802d04f7db6ec7263ed6f54dca570540808953ace3a9aed33154deb",
+    "matches": [
+      {
+        "line": 268,
+        "text": "\tbool isYawFinalAlignComplete() const"
+      },
+      {
+        "line": 273,
+        "text": "\t\t\t\t&& _control_status.flags.mag_aligned_in_flight"
+      }
+    ]
+  }
+]

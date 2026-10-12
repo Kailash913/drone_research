@@ -1,0 +1,13 @@
+{
+  "scope": "Compare flight-decision methods after removing diagnostic log calls only",
+  "before_sha256": "8f80d711730e9b5c868d2aafe9bf3c583362813c8461340ce62a6611a59322b7",
+  "after_sha256": "c050a291be8397a8b438bd28f6d046400fed8dd4cec8f35caa620930e33a995c",
+  "methods": {
+    "receive": true,
+    "telemetry": true,
+    "publish": true,
+    "command": true,
+    "tick": true
+  },
+  "all_decisions_identical": true
+}

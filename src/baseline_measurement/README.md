@@ -110,3 +110,48 @@ Only after these checks may the pre-existing active mission procedure be
 considered separately.
 
 No PX4 firmware, Gazebo model, QGC setup, or XRCE architecture is changed here.
+
+Preflight data validity requires fresh connected telemetry, PX4 health, valid
+finite position/velocity/heading, no dead reckoning, failsafe, or detected reset.
+`heading_ready` separately reports `heading_good_for_control`. After two seconds
+of grounded health, the opt-in policy enters `WAIT_FOR_HEADING` (30 s timeout),
+with no setpoints or commands until heading is ready. All yaw-bearing setpoint
+states abort on heading loss. Passive mode observes only and never ticks the
+mission policy or creates flight-control publishers. A grounded estimator that
+requires in-flight magnetometer alignment can still block this controller; the
+policy deliberately does not bypass that heading requirement.
+
+## Current Phase 1 acceptance
+
+See [PHASE1_ACCEPTANCE.md](PHASE1_ACCEPTANCE.md) and
+[PHASE1_TEST_RESULTS.md](PHASE1_TEST_RESULTS.md). Five new passive demonstrations
+are independently checked; active missions and QGC interaction remain unverified.
+Two rejected captures demonstrate that source-clock regressions are detected.
+
+Run all functional tests with:
+
+```bash
+bash ~/ros2_ws/src/baseline_measurement/test_phase1.sh
+```
+
+The existing `validate_baseline.sh` now runs the complete functional suite and
+validates its bounded passive CSV, returning nonzero if telemetry never becomes
+valid or a clock regression/control publication is recorded. Individual captures
+can also be checked with `ros2 run baseline_measurement phase1_acceptance CSV`.
+
+A standalone C++ subscription-only example is in `tools/telemetry_probe.cpp`.
+With Jazzy and the overlay sourced:
+
+```bash
+cmake -S ~/ros2_ws/src/baseline_measurement/tools -B /tmp/phase1_cpp_build
+cmake --build /tmp/phase1_cpp_build
+timeout 12s /tmp/phase1_cpp_build/telemetry_probe
+```
+
+It observes vehicle status for five seconds and creates no flight-input publishers.
+Measured zero CPU, memory and jitter remain zero; missing measurements remain
+blank. Gazebo's Ruby launchers are included in process resource accounting.
+
+## 11 October 2026 audit
+
+See [PHASE1_VALIDATION.md](PHASE1_VALIDATION.md) for current dataset counts, timestamp evidence, reproducible validation, and remaining Phase 1 blockers. Earlier reports above are historical.

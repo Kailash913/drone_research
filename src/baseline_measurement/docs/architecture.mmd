@@ -1,0 +1,12 @@
+flowchart LR
+  G[Gazebo x500 single UAV] <-->|simulation sensors and actuator state| P[PX4 SITL EKF2 and commander]
+  P <-->|MAVLink UDP| Q[Windows QGroundControl]
+  P <-->|uORB| C[PX4 uXRCE-DDS client]
+  C <-->|UDP 8888 and time synchronization| A[Micro XRCE-DDS Agent in WSL]
+  A <-->|DDS px4_msgs| M[ROS 2 Jazzy mission_node]
+  M -->|active only commands and setpoints| A
+  M --> R[Immutable run CSV and QGC plan export]
+  A -->|subscription only| D[Passive clock_probe]
+  D --> E[Receipt monotonic clock / delivered timestamps / estimator counters / timesync status]
+  R --> V[Offline dataset importer and validator]
+  V --> F[Manifest / per-group statistics / missing metric flags]

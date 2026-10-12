@@ -1,0 +1,82 @@
+    PID COMMAND         COMMAND
+      1 systemd         /sbin/init
+      2 init-systemd(Ub /init
+      3 init-watcher    init-watcher
+      8 init            plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+     44 systemd-journal /usr/lib/systemd/systemd-journald
+     94 systemd-udevd   /usr/lib/systemd/systemd-udevd
+    103 snapfuse        snapfuse /var/lib/snapd/snaps/code_267.snap /snap/code/267 -o ro,nodev,allow_other,suid
+    107 snapfuse        snapfuse /var/lib/snapd/snaps/code_254.snap /snap/code/254 -o ro,nodev,allow_other,suid
+    115 snapfuse        snapfuse /var/lib/snapd/snaps/core20_2922.snap /snap/core20/2922 -o ro,nodev,allow_other,suid
+    116 snapfuse        snapfuse /var/lib/snapd/snaps/core20_2866.snap /snap/core20/2866 -o ro,nodev,allow_other,suid
+    123 snapfuse        snapfuse /var/lib/snapd/snaps/snapd_27738.snap /snap/snapd/27738 -o ro,nodev,allow_other,suid
+    129 snapfuse        snapfuse /var/lib/snapd/snaps/snapd_28254.snap /snap/snapd/28254 -o ro,nodev,allow_other,suid
+    205 systemd-resolve /usr/lib/systemd/systemd-resolved
+    206 systemd-timesyn /usr/lib/systemd/systemd-timesyncd
+    215 avahi-daemon    avahi-daemon: running [Kailash-2.local]
+    216 cron            /usr/sbin/cron -f -P
+    217 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    221 lttng-sessiond  /usr/bin/lttng-sessiond
+    222 polkitd         /usr/lib/polkit-1/polkitd --no-debug
+    225 snapd           /snap/snapd/current/usr/lib/snapd/snapd
+    227 systemd-logind  /usr/lib/systemd/systemd-logind
+    236 lttng-runas     /usr/bin/lttng-sessiond
+    254 avahi-daemon    avahi-daemon: chroot helper
+    267 rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+    270 agetty          /sbin/agetty -o -p -- \u --noclear - linux
+    271 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+    400 SessionLeader   /init
+    401 Relay(402)      /init
+    402 ijent           /tmp/tmp.DnRmk9svwQ/ijent grpc-server --self-delete-on-exit
+    403 SessionLeader   /init
+    404 Relay(405)      /init
+    405 bash            -bash
+    406 login           /bin/login -f
+    450 systemd         /usr/lib/systemd/systemd --user
+    451 (sd-pam)        (sd-pam)
+    469 bash            -bash
+    664 bash            /bin/bash --rcfile /tmp/hl8Nu1/bash-integration.bash -i
+   1062 SessionLeader   /init
+   1063 Relay(1064)     /init
+   1064 sh              sh -c "$VSCODE_WSL_EXT_LOCATION/scripts/wslServer.sh" 2a59476c9bfcb90b3ddc372c36762471b7dfad1c stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=2249643473-2593726615-2811158939-3840508555 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   1065 sh              sh /mnt/c/Users/kaila/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3/scripts/wslServer.sh 2a59476c9bfcb90b3ddc372c36762471b7dfad1c stable code-server .vscode-server --host=127.0.0.1 --port=0 --connection-token=2249643473-2593726615-2811158939-3840508555 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   1071 sh              sh /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/bin/code-server --host=127.0.0.1 --port=0 --connection-token=2249643473-2593726615-2811158939-3840508555 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   1075 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/server-main.js --host=127.0.0.1 --port=0 --connection-token=2249643473-2593726615-2811158939-3840508555 --use-host-proxy --without-browser-env-var --disable-websocket-compression --accept-server-license-terms --telemetry-level=all
+   1110 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/bootstrap-fork --type=fileWatcher
+   1197 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node --dns-result-order=ipv4first /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=true
+   1203 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/bootstrap-fork --type=agentHost --logsPath /home/kailash/.vscode-server/data/logs/20261010T170155 --user-data-dir /home/kailash/.vscode-server/data --telemetry-level all
+   1239 copilot-runtime /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node_modules/@github/copilot-sdk-linux-x64/prebuilds/linux-x64/copilot-runtime --headless --no-auto-update --log-level info --stdio --no-auto-login
+   1271 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/bootstrap-fork --type=ptyHost --logsPath /home/kailash/.vscode-server/data/logs/20261010T170155
+   1294 pet             /home/kailash/.vscode-server/extensions/ms-python.vscode-python-envs-1.38.0/python-env-tools/bin/pet server
+   1339 codex           /home/kailash/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64/codex -c features.code_mode_host=true app-server --analytics-default-enabled
+   1493 bash            /bin/bash --init-file /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+   1639 bash            /bin/bash --init-file /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+   2209 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node /home/kailash/.vscode-server/extensions/ms-python.vscode-pylance-2026.4.1/dist/server.bundle.js --cancellationReceive=file:fd064370d54d6f8d30ec81f62878caa569fb680939 --node-ipc --clientProcessId=1197
+   3727 dbus-daemon     /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   4039 bash            /bin/bash --rcfile /tmp/hl8Nu1/bash-integration.bash -i
+   4216 MicroXRCEAgent  MicroXRCEAgent udp4 -p 8888
+   5174 ros2            /usr/bin/python3 /opt/ros/jazzy/bin/ros2 topic hz /fmu/out/vehicle_local_position_v1
+   5195 SessionLeader   /init
+   5196 Relay(5197)     /init
+   5197 bash            -bash
+   8110 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=1197
+  33112 SessionLeader   /init
+  33113 Relay(33114)    /init
+  33114 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 36301 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+  33142 SessionLeader   /init
+  33144 Relay(33146)    /init
+  33146 MainThread      /home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node -e const net = require('net'); process.stdin.pause(); const client = net.createConnection({ host: '127.0.0.1', port: 36301 }, () => { client.pipe(process.stdout); process.stdin.pipe(client); }); client.on('close', function (hadError) { console.error(hadError ? 'Remote close with error' : 'Remote close'); process.exit(hadError ? 1 : 0); }); client.on('error', function (err) { process.stderr.write(err && (err.stack || err.message) || String(err)); });
+  46529 make            make px4_sitl gz_x500
+  46588 sh              /bin/sh -c cmake --build "/home/kailash/PX4-Autopilot/build/px4_sitl_default" --  gz_x500
+  46589 cmake           cmake --build /home/kailash/PX4-Autopilot/build/px4_sitl_default -- gz_x500
+  46590 ninja           /usr/bin/ninja gz_x500
+  46591 sh              /bin/sh -c cd /home/kailash/PX4-Autopilot/build/px4_sitl_default/src/modules/simulation/gz_bridge && /usr/bin/cmake -E env PX4_SIM_MODEL=gz_x500 GZ_IP=127.0.0.1 /home/kailash/PX4-Autopilot/build/px4_sitl_default/bin/px4
+  46592 cmake           /usr/bin/cmake -E env PX4_SIM_MODEL=gz_x500 GZ_IP=127.0.0.1 /home/kailash/PX4-Autopilot/build/px4_sitl_default/bin/px4
+  46593 px4             /home/kailash/PX4-Autopilot/build/px4_sitl_default/bin/px4
+  46767 ruby            gz sim --verbose=1 -r -s /home/kailash/PX4-Autopilot/Tools/simulation/gz/worlds/default.sdf
+  46768 ruby            gz sim -g
+  51135 python          /home/kailash/ros2_ws/.venv/bin/python /home/kailash/.vscode-server/extensions/ms-python.debugpy-2026.6.0/bundled/libs/debugpy/adapter
+  51142 python          /home/kailash/ros2_ws/.venv/bin/python /home/kailash/.vscode-server/extensions/ms-python.debugpy-2026.6.0/bundled/libs/debugpy/adapter/../../debugpy/launcher 50355 -- /home/kailash/ros2_ws/src/baseline_measurement/tools/phase1_inspect.py
+  51151 python3         /usr/bin/python3 -X frozen_modules=off /home/kailash/.vscode-server/extensions/ms-python.debugpy-2026.6.0/bundled/libs/debugpy/adapter/../../debugpy/launcher/../../debugpy --connect 127.0.0.1:60663 --configure-qt none --adapter-access-token 037c217785e842ea150f7e14afaf9447390095b656e719131277f9130791d73c /home/kailash/ros2_ws/src/baseline_measurement/tools/phase1_inspect.py
+  53414 python3         /usr/bin/python3 -c from ros2cli.daemon.daemonize import main; main() --name ros2-daemon --ros-domain-id 0 --rmw-implementation rmw_fastrtps_cpp
+  54020 ps              ps -eo pid,comm,args

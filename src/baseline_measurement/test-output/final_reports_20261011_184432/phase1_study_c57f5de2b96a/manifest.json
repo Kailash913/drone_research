@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-11T18:44:54.111715+00:00",
+  "input_directory": "/home/kailash/ros2_ws/baseline_results/phase1_study_c57f5de2b96a",
+  "records": [],
+  "passive_records": [],
+  "counts": {
+    "active_attempts": 0,
+    "active_pass": 0,
+    "active_fail": 0,
+    "active_incomplete_or_invalid": 0,
+    "active_complete_records": 0,
+    "study_slots_assigned": 0,
+    "study_complete_records": 0,
+    "strict_valid_active_experiments": 0,
+    "strict_valid_study_experiments": 0,
+    "passive_runlogs": 0,
+    "passive_json_records": 0,
+    "duplicate_files": 0
+  },
+  "primary_configuration_group": null,
+  "group_statistics": {},
+  "metric_definitions": {
+    "end_to_end_latency_ms": {
+      "unit": "ms",
+      "method": "Unavailable: no correlated sender/receiver probe and clock error bound."
+    },
+    "telemetry_latency_ms": {
+      "unit": "ms",
+      "method": "Unavailable: DDS timestamps are offset-adjusted; no independently validated clock mapping."
+    },
+    "command_latency_ms": {
+      "unit": "ms",
+      "method": "Unavailable: ACK records lack a unique request identifier; no independently validated correlation."
+    },
+    "packet_loss_pct": {
+      "unit": "%",
+      "method": "Unavailable: no identifiable transmitted transport packet/sequence denominator."
+    },
+    "rx_payload_mbps": {
+      "unit": "Mbit/s",
+      "method": "Sum received ROS CDR bytes * 8 / whole monotonic run duration / 1e6; excludes transport headers."
+    },
+    "tx_payload_mbps": {
+      "unit": "Mbit/s",
+      "method": "Sum local publish-call CDR bytes * 8 / whole monotonic run duration / 1e6; delivery unconfirmed."
+    },
+    "bandwidth_mbps": {
+      "unit": "Mbit/s",
+      "method": "Unavailable: no wire capture or physical link-capacity measurement. Payload throughput is reported separately."
+    },
+    "node_cpu_pct": {
+      "unit": "% of one logical CPU",
+      "method": "Arithmetic mean of finite primed psutil process CPU interval samples; process can exceed 100%."
+    },
+    "system_cpu_pct": {
+      "unit": "%",
+      "method": "Arithmetic mean of finite psutil WSL guest CPU interval samples; excludes Windows host/QGC/GPU."
+    },
+    "node_rss_mib": {
+      "unit": "MiB",
+      "method": "Arithmetic mean of mission-process resident bytes / 2^20, measured at resource callbacks."
+    },
+    "mission_completion_s": {
+      "unit": "s",
+      "method": "Logger monotonic initialization to terminal result, including preflight; successful active missions only."
+    },
+    "attempt_duration_s": {
+      "unit": "s",
+      "method": "Logger monotonic initialization to terminal result, including failed/passive attempts; not successful mission completion."
+    },
+    "energy_wh": {
+      "unit": "Wh",
+      "method": "Physical UAV energy unavailable in SITL; simulated battery estimates are not physical energy."
+    },
+    "power_w": {
+      "unit": "W",
+      "method": "Physical UAV power unavailable; requires calibrated battery current/voltage or external power analyzer."
+    }
+  },
+  "overall_phase1": "BLOCKED",
+  "phase2_ready": false,
+  "limitations": [
+    "No new autonomous mission was launched by this validator.",
+    "PASS requires controller COMPLETE plus ordered route/landing/disarm/release events, not independent external validation of every run.",
+    "Passive JSON and preflight CSV can describe the same capture; their counts are not summed as experiments.",
+    "No historical configuration hash/version is fabricated from current files.",
+    "Thirty partial measurement records do not satisfy complete historical metadata or unavailable required metrics.",
+    "No confidence intervals: independence and full configuration equivalence unverified."
+  ]
+}

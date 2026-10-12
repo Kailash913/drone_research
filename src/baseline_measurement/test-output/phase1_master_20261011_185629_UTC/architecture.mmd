@@ -1,0 +1,18 @@
+flowchart LR
+ G[Gazebo simulation clock] --> H[PX4 lockstep hrt us]
+ H --> U[Native uORB and ULog]
+ H --> X[XRCE client uxr_nanos ns]
+ A[Agent epoch clock] --> T[Timesync filter]
+ X --> T
+ T --> O[session.time_offset ns]
+ U --> S[Generated serializer adds offset us]
+ O --> S
+ S --> R[px4_msgs ROS callbacks]
+ R --> C[Native-delivered ordering and reset guards]
+ M[Local monotonic receive clock] --> F[Freshness and source progress]
+ F --> C
+ E[Estimator flags and reset counters] --> C
+ C --> Q[Existing mission state and failsafe]
+ R --> L[Raw CSV provenance logger]
+ Q --> L
+ L --> V[Offline dataset validator and reports]

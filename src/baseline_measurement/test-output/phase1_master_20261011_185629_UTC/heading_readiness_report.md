@@ -1,0 +1,11 @@
+# Heading readiness
+
+The captured grounded false value matches the installed PX4 predicate. EKF2 publishes heading_good_for_control = isYawFinalAlignComplete(). With magnetometer enabled, readiness requires yaw_align and either no active magnetic yaw fusion, or mag_aligned_in_flight with delayed EKF time strictly more than one second after the final magnetic alignment. Finite yaw and initial yaw_align alone do not satisfy this condition.
+
+Current capture: yaw_align=true, mag_hdg=true, mag_3d=false, mag_aligned_in_flight=false, magnetic fault/disturbance and bad-heading flags false, landed=true. This combination explains heading_good_for_control=false; it does not prove magnetometer hardware failure or ROS communications loss. The initial passive callback rates were attitude 47.548 Hz, local position 47.508 Hz, status 1.8795 Hz over 25.0063 monotonic seconds. Rates are observations, not fixed acceptance thresholds.
+
+Native diagnostic ULog begins with retained alignment=true, then clears it at entry to in_air at native 6628804000 us. Heading readiness also clears there. Magnetic fusion switches to mag_hdg and never completes final alignment before this failed flight lands. Therefore the initial true value must not be reported as later successful alignment recovery.
+
+The existing mission permits safe AUTO_TAKEOFF bootstrap with fresh initial yaw, then requires continuous heading readiness before OFFBOARD. The outer study preflight requires final heading readiness already on the ground. This gate mismatch is documented, not relaxed. No flight behavior was edited. Offline actual-source C++ predicate tests cover magnetic/nonmagnetic builds, missing alignment and the strict one-second boundary; adapter/controller tests cover stale finite yaw and airborne heading loss with existing failsafe. The hidden final-alignment start time is not exposed by these ROS flags; public flags cannot establish the elapsed-time branch when already aligned.
+
+Operational heading readiness remains BLOCKED: an explicitly authorized, correctly instrumented bootstrap must show the native final-alignment flags, continuous ready heading, OFFBOARD transition, complete route, landing, disarming and final completion. No new mission was launched during this request.

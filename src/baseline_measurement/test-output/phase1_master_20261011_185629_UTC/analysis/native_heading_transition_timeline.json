@@ -1,0 +1,100 @@
+{
+  "estimator_status_flags/cs_mag_hdg": [
+    {
+      "native_us": 6626656000,
+      "value": 0
+    },
+    {
+      "native_us": 6628828000,
+      "value": 1
+    }
+  ],
+  "estimator_status_flags/cs_mag_3d": [
+    {
+      "native_us": 6626656000,
+      "value": 1
+    },
+    {
+      "native_us": 6628828000,
+      "value": 0
+    }
+  ],
+  "estimator_status_flags/cs_mag_aligned_in_flight": [
+    {
+      "native_us": 6626656000,
+      "value": 1
+    },
+    {
+      "native_us": 6628804000,
+      "value": 0
+    }
+  ],
+  "estimator_status_flags/cs_yaw_align": [
+    {
+      "native_us": 6626656000,
+      "value": 1
+    }
+  ],
+  "estimator_status_flags/cs_in_air": [
+    {
+      "native_us": 6626656000,
+      "value": 0
+    },
+    {
+      "native_us": 6628804000,
+      "value": 1
+    },
+    {
+      "native_us": 6637132000,
+      "value": 0
+    }
+  ],
+  "vehicle_land_detected/landed": [
+    {
+      "native_us": 6625968000,
+      "value": 1
+    },
+    {
+      "native_us": 6628652000,
+      "value": 0
+    },
+    {
+      "native_us": 6636980000,
+      "value": 1
+    }
+  ],
+  "vehicle_local_position/heading_good_for_control": [
+    {
+      "native_us": 6626848000,
+      "value": 1
+    },
+    {
+      "native_us": 6628804000,
+      "value": 0
+    }
+  ],
+  "vehicle_status/arming_state": [
+    {
+      "native_us": 6626812000,
+      "value": 2
+    },
+    {
+      "native_us": 6639000000,
+      "value": 1
+    }
+  ],
+  "vehicle_status/nav_state": [
+    {
+      "native_us": 6626812000,
+      "value": 17
+    },
+    {
+      "native_us": 6632140000,
+      "value": 18
+    },
+    {
+      "native_us": 6639000000,
+      "value": 4
+    }
+  ]
+}

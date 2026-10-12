@@ -1,0 +1,475 @@
+[
+  {
+    "path": "/home/kailash/PX4-Autopilot/platforms/posix/src/px4/common/drv_hrt.cpp",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      59,
+      112,
+      114,
+      118,
+      122,
+      132,
+      200,
+      265,
+      287,
+      302,
+      376,
+      391,
+      415,
+      471,
+      478,
+      496,
+      497
+    ],
+    "sha256": "41fc4b4b180b23086c8bf007102ac40cdae79967de667a77727ba725073d0a15",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/simulation/gz_bridge/GZBridge.cpp",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      206,
+      341
+    ],
+    "sha256": "fb43f7159abdaf94a90a3e19bedc146b92ab7d73ca226a8e89c4230288df396b",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/util/time.c",
+    "function_or_trace_stage": "uxr_nanos / read_submessage_timestamp_reply and on_time callback argument order",
+    "units_and_domain": "Client native simulation clock ns; timestamp reply includes Agent epoch ns",
+    "line_numbers": [
+      34,
+      37,
+      76
+    ],
+    "sha256": "2462e00c4b8cd086ff9bdf609063ecbda55e91fbc92397846976788418c8aead",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/session/session.c",
+    "function_or_trace_stage": "uxr_nanos / read_submessage_timestamp_reply and on_time callback argument order",
+    "units_and_domain": "Client native simulation clock ns; timestamp reply includes Agent epoch ns",
+    "line_numbers": [
+      112,
+      166,
+      167,
+      198,
+      199,
+      960,
+      1067,
+      1175,
+      1177,
+      1183
+    ],
+    "sha256": "02ff13dca585902da0611c6b510500003819dbb7c533baee17d0840220344b8e",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/Micro-XRCE-DDS-Agent/include/uxr/agent/utils/Time.hpp",
+    "function_or_trace_stage": "get_epoch_time / PROCESSOR timestamp reply",
+    "units_and_domain": "Agent high_resolution_clock epoch nanoseconds",
+    "line_numbers": [
+      25,
+      28
+    ],
+    "sha256": "b0ad2f1dd99276c51432eb2d2e2c8b0ed81ef9c5f6b097dc6497a8fe5721516c",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/Micro-XRCE-DDS-Agent/src/cpp/processor/Processor.cpp",
+    "function_or_trace_stage": "get_epoch_time / PROCESSOR timestamp reply",
+    "units_and_domain": "Agent high_resolution_clock epoch nanoseconds",
+    "line_numbers": [
+      732,
+      733,
+      734,
+      735,
+      736
+    ],
+    "sha256": "22cd40746b55a00c1d25473f73c48e55ff6358688c84b792dbe5ec19b652f6d9",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/lib/timesync/Timesync.cpp",
+    "function_or_trace_stage": "Timesync::update / reset_filter, exact thresholds and qualifying count",
+    "units_and_domain": "Offset/RTT/deviation in us; originating argument ns converted /1000",
+    "line_numbers": [
+      45,
+      68,
+      71,
+      115,
+      155
+    ],
+    "sha256": "b23e9a893abca013117242dc037d5c47977b3deae357bad2be60a2e7e244cf84",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/lib/timesync/Timesync.hpp",
+    "function_or_trace_stage": "Timesync::update / reset_filter, exact thresholds and qualifying count",
+    "units_and_domain": "Offset/RTT/deviation in us; originating argument ns converted /1000",
+    "line_numbers": [
+      80,
+      83,
+      84,
+      88,
+      89,
+      91
+    ],
+    "sha256": "3f4ca7941d101b0bdc7ce7ebb8f0d352cd974442cb648db83ac1aa346ecc6e6b",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/uxrce_dds_client.cpp",
+    "function_or_trace_stage": "on_time",
+    "units_and_domain": "Native hrt us and Agent ns; session.time_offset ns = -offset_us*1000",
+    "line_numbers": [
+      75,
+      82,
+      86,
+      89,
+      99,
+      103,
+      347,
+      601,
+      929,
+      935
+    ],
+    "sha256": "7b63db7f756c61198355eb2abdad34de01b5f9e13a9d47c554866eff7f02e463",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.h.em",
+    "function_or_trace_stage": "SendTopicsSubs update / ucdr_serialize_* generated code",
+    "units_and_domain": "Adjusted publication timestamp/sample us; session ns converted /1000",
+    "line_numbers": [
+      37,
+      70,
+      85,
+      131,
+      170,
+      231,
+      238,
+      250
+    ],
+    "sha256": "7142c2dac186c3659cdf204b0767c821322b33718852c2ed094645f83a1d935f",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/build/px4_sitl_default/uORB/ucdr/vehicle_local_position.h",
+    "function_or_trace_stage": "SendTopicsSubs update / ucdr_serialize_* generated code",
+    "units_and_domain": "Adjusted publication timestamp/sample us; session ns converted /1000",
+    "line_numbers": [
+      53,
+      54,
+      58,
+      59
+    ],
+    "sha256": "2c269f047e5128918074c1a00e53a7e6cd7ec2be773cc82e55edf1c8fb600fb0",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/build/px4_sitl_default/uORB/ucdr/vehicle_attitude.h",
+    "function_or_trace_stage": "SendTopicsSubs update / ucdr_serialize_* generated code",
+    "units_and_domain": "Adjusted publication timestamp/sample us; session ns converted /1000",
+    "line_numbers": [
+      53,
+      54,
+      58,
+      59
+    ],
+    "sha256": "c190efddb051efbd905040e13b80c6a3a9005a7d157cb030db94df26706016a7",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/msg/versioned/VehicleLocalPosition.msg",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      6,
+      7,
+      21,
+      23,
+      33,
+      35,
+      46,
+      47,
+      54,
+      65
+    ],
+    "sha256": "4a24c882529ffaa71d834f0ef75e9cbacbe179db72b9227a13bca35205ccdd53",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/msg/versioned/VehicleAttitude.msg",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      6,
+      8,
+      12
+    ],
+    "sha256": "d23f153b574daad31f21f767bc6e2781bcd486bb9e56c605b8b6fd10814b1c74",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF2.cpp",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      1758
+    ],
+    "sha256": "5142efa0cb422aa15970196b868d48afa938940fe3df9925386e9dbc0f0d2326",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF/ekf.h",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      268,
+      273,
+      274,
+      670
+    ],
+    "sha256": "9b2ae3108802d04f7db6ec7263ed6f54dca570540808953ace3a9aed33154deb",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp",
+    "function_or_trace_stage": "Source declarations and matched field assignments",
+    "units_and_domain": "PX4 native simulation/lockstep clock, microseconds",
+    "line_numbers": [
+      54,
+      189,
+      194,
+      217,
+      224,
+      363,
+      373,
+      379,
+      611
+    ],
+    "sha256": "ec8a360536a7bbd3504e11f351aa2b4e354350945ab948b07790080c91d1edcc",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_node.py",
+    "function_or_trace_stage": "ROS callbacks / ordering, freshness and reset evidence / CSV serialization",
+    "units_and_domain": "Source uint64 us retained; local monotonic receive seconds; UTC for log identity",
+    "line_numbers": [
+      94,
+      113,
+      121,
+      220,
+      238,
+      247,
+      282,
+      283,
+      284,
+      285,
+      294,
+      296,
+      300,
+      315,
+      397,
+      474
+    ],
+    "sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+    "function_or_trace_stage": "WAIT_FOR_HEADING / FAILSAFE / grounded completion transitions",
+    "units_and_domain": "Local monotonic seconds for state timeouts and source freshness",
+    "line_numbers": [
+      9,
+      13,
+      25,
+      79,
+      116,
+      134,
+      139,
+      143,
+      146,
+      148,
+      151,
+      176,
+      179,
+      183,
+      199,
+      268
+    ],
+    "sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py",
+    "function_or_trace_stage": "ROS callbacks / ordering, freshness and reset evidence / CSV serialization",
+    "units_and_domain": "Source uint64 us retained; local monotonic receive seconds; UTC for log identity",
+    "line_numbers": [
+      13,
+      86,
+      96
+    ],
+    "sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_vehicle_local_position.py",
+    "function_or_trace_stage": "Generated ROS message fields and property setters",
+    "units_and_domain": "Transported uint64 us, no independent clock normalization",
+    "line_numbers": [
+      107,
+      108,
+      136,
+      140,
+      164,
+      165,
+      193,
+      197,
+      286,
+      287,
+      321,
+      325,
+      376,
+      378,
+      434,
+      442,
+      490,
+      491,
+      492,
+      494,
+      495,
+      499,
+      501,
+      502,
+      505,
+      506,
+      507,
+      509,
+      510,
+      514,
+      516,
+      517,
+      949,
+      950,
+      951,
+      953,
+      954,
+      958,
+      959,
+      1003,
+      1004,
+      1005,
+      1007,
+      1008,
+      1012,
+      1014,
+      1015
+    ],
+    "sha256": "01c100c5e62346b92256d779037ec844cf7ec6541fbb84e4386a26201a77eeef",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_vehicle_attitude.py",
+    "function_or_trace_stage": "Generated ROS message fields and property setters",
+    "units_and_domain": "Transported uint64 us, no independent clock normalization",
+    "line_numbers": [
+      83,
+      84,
+      92,
+      93,
+      118,
+      119,
+      160,
+      162,
+      178,
+      179,
+      180,
+      182,
+      183,
+      187,
+      189,
+      190,
+      193,
+      194,
+      195,
+      197,
+      198,
+      202,
+      204,
+      205
+    ],
+    "sha256": "50485c80d30d2b0e4ec4ba5e4b6e28b511f41c03f33140fe5297a2dc6d1c1177",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_estimator_status_flags.py",
+    "function_or_trace_stage": "Generated ROS message fields and property setters",
+    "units_and_domain": "Transported uint64 us, no independent clock normalization",
+    "line_numbers": [
+      65,
+      66,
+      134,
+      135,
+      280,
+      281,
+      376,
+      378,
+      514,
+      515,
+      516,
+      518,
+      519,
+      523,
+      525,
+      526,
+      529,
+      530,
+      531,
+      533,
+      534,
+      538,
+      540,
+      541
+    ],
+    "sha256": "6ae7fcc60dcb275156b8b223b3fcfb3aa6e53e2131b4e683e74ed044f9be7ab6",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_timesync_status.py",
+    "function_or_trace_stage": "Generated ROS message fields and property setters",
+    "units_and_domain": "Transported uint64 us, no independent clock normalization",
+    "line_numbers": [
+      93,
+      95,
+      103,
+      105,
+      131,
+      133,
+      168,
+      172,
+      188,
+      189,
+      190,
+      192,
+      193,
+      197,
+      199,
+      200,
+      218,
+      219,
+      220,
+      222,
+      223,
+      227,
+      229,
+      230
+    ],
+    "sha256": "75723172257790ca0362fcebeec01136698417e9c27ae1e72a6b99f23501e7f4",
+    "configuration": "Actual installed source/build; ENABLE_LOCKSTEP_SCHEDULER and CONFIG_EKF2_MAGNETOMETER confirmed in retained build evidence"
+  }
+]

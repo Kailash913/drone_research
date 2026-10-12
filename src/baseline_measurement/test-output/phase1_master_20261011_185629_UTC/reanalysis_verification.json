@@ -1,0 +1,11 @@
+{
+  "runtime": "WSL /usr/bin/python3; existing pyulog and native ULog",
+  "reproduced_analysis_matches_original": {
+    "failed_run_analysis.json": true,
+    "current_passive_analysis.json": true,
+    "native_heading_and_reset_evidence.json": true
+  },
+  "flight_commands_sent": 0,
+  "source_publications": 0,
+  "outcome": "PASS"
+}

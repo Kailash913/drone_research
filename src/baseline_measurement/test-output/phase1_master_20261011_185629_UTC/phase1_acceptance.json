@@ -1,0 +1,153 @@
+{
+  "phase1": "BLOCKED",
+  "phase2": "NOT READY",
+  "checklist": [
+    {
+      "item": "PX4/Gazebo operational",
+      "status": "PASS",
+      "evidence": "Existing native log and current passive topics; no new flight"
+    },
+    {
+      "item": "MAVLink/QGroundControl operational",
+      "status": "BLOCKED",
+      "evidence": "Historical plan evidence exists; current plan upload/mission transport not demonstrated by ROS OFFBOARD"
+    },
+    {
+      "item": "Micro XRCE-DDS/ROS communication",
+      "status": "PASS",
+      "evidence": "Continuous passive callbacks and protocol-2 status captured"
+    },
+    {
+      "item": "Telemetry and vehicle commands demonstrated",
+      "status": "PASS",
+      "evidence": "Historical active logs; local publish is not proof of MAVLink plan upload"
+    },
+    {
+      "item": "Takeoff/control/waypoints/return/landing/disarm/completion demonstrated",
+      "status": "PASS",
+      "evidence": "12 recorded historical PASS outcomes; original provenance incomplete"
+    },
+    {
+      "item": "Five repeated successful active missions",
+      "status": "PASS",
+      "evidence": "12 historical PASS, zero new diagnostic PASS"
+    },
+    {
+      "item": "Architecture/source/configuration evidence",
+      "status": "PASS",
+      "evidence": "Current hash/source/clock inventory, Mermaid and raw provenance references"
+    },
+    {
+      "item": "30 baseline records with prescribed provenance",
+      "status": "BLOCKED",
+      "evidence": "Historical strict 0/30; diagnostic strict 1/30; 29 missing"
+    },
+    {
+      "item": "Required metrics measured or limitations explicitly accepted",
+      "status": "BLOCKED",
+      "evidence": "Missing latency/loss/wire/power measurements documented; no formal waiver or thresholds found"
+    },
+    {
+      "item": "Timestamp safely understood and resolved",
+      "status": "BLOCKED",
+      "evidence": "Proximate mechanism proved; runtime cause unresolved; production fix not applied"
+    },
+    {
+      "item": "Heading readiness operationally verified",
+      "status": "BLOCKED",
+      "evidence": "Grounded predicate understood; final alignment and successful new flight unverified"
+    },
+    {
+      "item": "Raw data preserved",
+      "status": "PASS",
+      "evidence": "Stage A and final protected SHA-256 maps equal"
+    },
+    {
+      "item": "Safety/full regression suite",
+      "status": "PASS",
+      "evidence": "170 passed, 1 skipped; failures/errors zero"
+    },
+    {
+      "item": "Package build",
+      "status": "PASS",
+      "evidence": "colcon affected-package build return code 0"
+    },
+    {
+      "item": "Reproducible validator/report generation",
+      "status": "PASS",
+      "evidence": "All per-cohort validators produce artifacts and return 2 for incomplete acceptance"
+    }
+  ],
+  "metrics_unmeasured": [
+    "end_to_end_latency",
+    "telemetry_latency",
+    "command_latency",
+    "packet_loss",
+    "wire_bandwidth",
+    "physical_power",
+    "physical_energy"
+  ],
+  "cohorts": [
+    {
+      "study": "baseline_results",
+      "counts": {
+        "active_attempts": 45,
+        "active_pass": 12,
+        "active_fail": 33,
+        "active_incomplete_or_invalid": 0,
+        "active_complete_records": 45,
+        "study_slots_assigned": 30,
+        "study_complete_records": 30,
+        "strict_valid_active_experiments": 0,
+        "strict_valid_study_experiments": 0,
+        "passive_runlogs": 3,
+        "passive_json_records": 2,
+        "duplicate_files": 0
+      },
+      "phase1": "BLOCKED",
+      "source_manifest": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\phase1_master_20261011_185629_UTC\\verification_193155\\validator_baseline_results\\manifest.json",
+      "primary_configuration_group": "4f0c6f1f3749cf568d9dd06cde20b5d205f59a7cfeeed71950931f582750d08c"
+    },
+    {
+      "study": "phase1_study_36527160a48f",
+      "counts": {
+        "active_attempts": 1,
+        "active_pass": 0,
+        "active_fail": 1,
+        "active_incomplete_or_invalid": 0,
+        "active_complete_records": 1,
+        "study_slots_assigned": 1,
+        "study_complete_records": 1,
+        "strict_valid_active_experiments": 1,
+        "strict_valid_study_experiments": 1,
+        "passive_runlogs": 0,
+        "passive_json_records": 0,
+        "duplicate_files": 0
+      },
+      "phase1": "BLOCKED",
+      "source_manifest": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\phase1_master_20261011_185629_UTC\\verification_193155\\validator_phase1_study_36527160a48f\\manifest.json",
+      "primary_configuration_group": "c2fa08f91ce2a03d881b987311b96d19c6c444a2c9c8b89ef946ea86e2dc8934"
+    },
+    {
+      "study": "phase1_study_c57f5de2b96a",
+      "counts": {
+        "active_attempts": 0,
+        "active_pass": 0,
+        "active_fail": 0,
+        "active_incomplete_or_invalid": 0,
+        "active_complete_records": 0,
+        "study_slots_assigned": 0,
+        "study_complete_records": 0,
+        "strict_valid_active_experiments": 0,
+        "strict_valid_study_experiments": 0,
+        "passive_runlogs": 0,
+        "passive_json_records": 0,
+        "duplicate_files": 0
+      },
+      "phase1": "BLOCKED",
+      "source_manifest": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\ros2_ws\\src\\baseline_measurement\\test-output\\phase1_master_20261011_185629_UTC\\verification_193155\\validator_phase1_study_c57f5de2b96a\\manifest.json",
+      "primary_configuration_group": null
+    }
+  ],
+  "formal_metric_thresholds_or_waivers_available": false
+}

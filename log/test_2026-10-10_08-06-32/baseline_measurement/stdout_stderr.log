@@ -1,0 +1,516 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache
+rootdir: /home/kailash/ros2_ws/src/baseline_measurement
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0
+collected 59 items
+
+test/test_acceptance.py ..........                                       [ 16%]
+test/test_baseline_new.py ...............                                [ 42%]
+test/test_copyright.py s                                                 [ 44%]
+test/test_flake8.py F                                                    [ 45%]
+test/test_pep257.py F                                                    [ 47%]
+test/test_phase1.py ..............                                       [ 71%]
+test/test_preflight.py .................                                 [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+test/test_flake8.py:23: in test_flake8
+    assert rc == 0, \
+E   AssertionError: Found 82 code style errors / warnings:
+E     ./baseline_measurement/baseline_node.py:3:1: I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.
+E     ./baseline_measurement/baseline_node.py:5:1: I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.
+E     ./baseline_measurement/baseline_node.py:9:1: I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy
+E     ./baseline_measurement/baseline_node.py:11:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus' should be before 'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy'
+E     ./baseline_measurement/baseline_node.py:12:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleAttitude' should be before 'from px4_msgs.msg import VehicleStatus'
+E     ./baseline_measurement/baseline_node.py:13:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import OffboardControlMode' should be before 'from px4_msgs.msg import VehicleAttitude'
+E     ./baseline_measurement/baseline_node.py:15:1: E302 expected 2 blank lines, found 1
+E     ./baseline_measurement/experiment.py:13:1: I101 Imported names are in the wrong order. Should be describe, OnlineStats, throughput_mbps
+E     ./baseline_measurement/experiment.py:66:34: C408 Unnecessary dict call - rewrite as a literal.
+E     ./baseline_measurement/experiment.py:67:13: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:68:13: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:69:13: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:74:47: E127 continuation line over-indented for visual indent
+E     ./baseline_measurement/experiment.py:92:49: E127 continuation line over-indented for visual indent
+E     ./baseline_measurement/experiment.py:123:33: C408 Unnecessary dict call - rewrite as a literal.
+E     ./baseline_measurement/experiment.py:124:17: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:134:100: E501 line too long (114 > 99 characters)
+E     ./baseline_measurement/experiment.py:135:100: E501 line too long (102 > 99 characters)
+E     ./baseline_measurement/experiment.py:136:100: E501 line too long (107 > 99 characters)
+E     ./baseline_measurement/experiment.py:147:24: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:151:39: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:185:17: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:186:17: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:187:17: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/experiment.py:197:100: E501 line too long (102 > 99 characters)
+E     ./baseline_measurement/experiment.py:198:100: E501 line too long (102 > 99 characters)
+E     ./baseline_measurement/experiment.py:204:100: E501 line too long (112 > 99 characters)
+E     ./baseline_measurement/experiment.py:205:100: E501 line too long (100 > 99 characters)
+E     ./baseline_measurement/experiment.py:245:100: E501 line too long (153 > 99 characters)
+E     ./baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+E     ./baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+E     ./baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+E     ./baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus' should be before 'from rclpy.serialization import serialize_message'
+E     ./baseline_measurement/mission_node.py:28:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E     ./baseline_measurement/mission_node.py:28:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+E     ./baseline_measurement/mission_node.py:30:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+E     ./baseline_measurement/mission_node.py:82:17: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/mission_node.py:82:100: E501 line too long (103 > 99 characters)
+E     ./baseline_measurement/mission_node.py:105:100: E501 line too long (101 > 99 characters)
+E     ./baseline_measurement/mission_node.py:113:38: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:40: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:45: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:49: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:51: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:56: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:60: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:63: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:68: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:71: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:74: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:79: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:82: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:113:84: E231 missing whitespace after ','
+E     ./baseline_measurement/mission_node.py:119:100: E501 line too long (102 > 99 characters)
+E     ./baseline_measurement/mission_node.py:130:100: E501 line too long (108 > 99 characters)
+E     ./baseline_measurement/mission_node.py:142:100: E501 line too long (101 > 99 characters)
+E     ./baseline_measurement/mission_node.py:184:100: E501 line too long (102 > 99 characters)
+E     ./baseline_measurement/mission_node.py:252:100: E501 line too long (105 > 99 characters)
+E     ./baseline_measurement/mission_node.py:267:100: E501 line too long (108 > 99 characters)
+E     ./baseline_measurement/mission_node.py:282:100: E501 line too long (102 > 99 characters)
+E     ./baseline_measurement/mission_node.py:293:100: E501 line too long (107 > 99 characters)
+E     ./baseline_measurement/mission_node.py:300:21: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/mission_node.py:303:21: E128 continuation line under-indented for visual indent
+E     ./baseline_measurement/mission_node.py:323:100: E501 line too long (107 > 99 characters)
+E     ./baseline_measurement/mission_node.py:328:1: D401 First line should be in imperative mood; try rephrasing
+E     ./baseline_measurement/mission_node.py:347:100: E501 line too long (132 > 99 characters)
+E     ./baseline_measurement/mission_node.py:348:100: E501 line too long (139 > 99 characters)
+E     ./baseline_measurement/mission_node.py:349:100: E501 line too long (110 > 99 characters)
+E     ./baseline_measurement/mission_node.py:367:100: E501 line too long (126 > 99 characters)
+E     ./baseline_measurement/mission_node.py:397:100: E501 line too long (101 > 99 characters)
+E     ./baseline_measurement/mission_node.py:406:100: E501 line too long (100 > 99 characters)
+E     ./baseline_measurement/mission_node.py:411:100: E501 line too long (117 > 99 characters)
+E     ./baseline_measurement/mission_node.py:412:100: E501 line too long (103 > 99 characters)
+E     ./test/test_baseline_new.py:12:1: I101 Imported names are in the wrong order. Should be describe, integrate_energy_wh, OnlineStats, packet_loss_pct, throughput_mbps
+E     ./test/test_baseline_new.py:14:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+E     ./test/test_baseline_new.py:14:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment import Experiment, aggregate_runs' should be before 'from baseline_measurement.metrics import OnlineStats, describe, integrate_energy_wh, packet_loss_pct, throughput_mbps'
+E     ./test/test_baseline_new.py:15:1: I100 Import statements are in the wrong order. 'from baseline_measurement.cli import validate_options' should be before 'from baseline_measurement.experiment import Experiment, aggregate_runs'
+E     ./test/test_baseline_new.py:143:13: E128 continuation line under-indented for visual indent
+E     ./test/test_baseline_new.py:144:13: E128 continuation line under-indented for visual indent
+E     ./test/test_baseline_new.py:164:29: C408 Unnecessary dict call - rewrite as a literal.
+E     ./test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+E     ./test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+E   assert 1 == 0
+----------------------------- Captured stdout call -----------------------------
+
+./baseline_measurement/baseline_node.py:3:1: I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.
+import psutil
+^
+
+./baseline_measurement/baseline_node.py:5:1: I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.
+from datetime import datetime
+^
+
+./baseline_measurement/baseline_node.py:9:1: I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+^
+
+./baseline_measurement/baseline_node.py:11:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus' should be before 'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy'
+from px4_msgs.msg import VehicleStatus
+^
+
+./baseline_measurement/baseline_node.py:12:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleAttitude' should be before 'from px4_msgs.msg import VehicleStatus'
+from px4_msgs.msg import VehicleAttitude
+^
+
+./baseline_measurement/baseline_node.py:13:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import OffboardControlMode' should be before 'from px4_msgs.msg import VehicleAttitude'
+from px4_msgs.msg import OffboardControlMode
+^
+
+./baseline_measurement/baseline_node.py:15:1: E302 expected 2 blank lines, found 1
+class BaselineMeasurement(Node):
+^
+
+./baseline_measurement/experiment.py:13:1: I101 Imported names are in the wrong order. Should be describe, OnlineStats, throughput_mbps
+from .metrics import OnlineStats, throughput_mbps, describe
+^
+
+./baseline_measurement/experiment.py:66:34: C408 Unnecessary dict call - rewrite as a literal.
+        self.raw_writer.writerow(dict(experiment_id=self.experiment_id,
+                                 ^
+
+./baseline_measurement/experiment.py:67:13: E128 continuation line under-indented for visual indent
+            run_id=self.run_id, timestamp=utc_now(), elapsed_s=max(0., now-self.start),
+            ^
+
+./baseline_measurement/experiment.py:68:13: E128 continuation line under-indented for visual indent
+            metric_name=name, value=value if value is not None else '',
+            ^
+
+./baseline_measurement/experiment.py:69:13: E128 continuation line under-indented for visual indent
+            unit=unit, source=source, status=status))
+            ^
+
+./baseline_measurement/experiment.py:74:47: E127 continuation line over-indented for visual indent
+                                              'last': None, 'iat': OnlineStats(),
+                                              ^
+
+./baseline_measurement/experiment.py:92:49: E127 continuation line over-indented for visual indent
+                                                'cpu': OnlineStats(), 'rss': OnlineStats()})
+                                                ^
+
+./baseline_measurement/experiment.py:123:33: C408 Unnecessary dict call - rewrite as a literal.
+            topic_stats[name] = dict(count=item['count'], delivered_cdr_bytes=item['bytes'],
+                                ^
+
+./baseline_measurement/experiment.py:124:17: E128 continuation line under-indented for visual indent
+                rate_hz=item['count']/elapsed if elapsed else None,
+                ^
+
+./baseline_measurement/experiment.py:134:100: E501 line too long (114 > 99 characters)
+            'telemetry_latency': 'PX4 source timestamp and host monotonic clock are not validated as one domain.',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:135:100: E501 line too long (102 > 99 characters)
+            'command_latency': 'Passive mode sends no command; ACK lacks unique request correlation.',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:136:100: E501 line too long (107 > 99 characters)
+            'packet_loss': 'ROS callbacks do not expose transmitted sequence counts or transport packets.',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:147:24: E128 continuation line under-indented for visual indent
+                       for name, reason in reasons.items()})
+                       ^
+
+./baseline_measurement/experiment.py:151:39: E128 continuation line under-indented for visual indent
+                                      'kind': 'received ROS CDR traffic rate; not link capacity'}
+                                      ^
+
+./baseline_measurement/experiment.py:185:17: E128 continuation line under-indented for visual indent
+                'run_id': self.run_id, 'scenario': self.scenario,
+                ^
+
+./baseline_measurement/experiment.py:186:17: E128 continuation line under-indented for visual indent
+                'start_time': self.start_time, 'end_time': end_time,
+                ^
+
+./baseline_measurement/experiment.py:187:17: E128 continuation line under-indented for visual indent
+                'observation_duration_s': elapsed, 'mission_status': mission_status},
+                ^
+
+./baseline_measurement/experiment.py:197:100: E501 line too long (102 > 99 characters)
+                'throughput_mbps': 'received ROS CDR bytes * 8 / monotonic observation seconds / 1e6',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:198:100: E501 line too long (102 > 99 characters)
+                'traffic_rate_mbps': 'same observed ROS CDR receive rate; not physical link capacity',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:204:100: E501 line too long (112 > 99 characters)
+                'simulated_energy_wh': 'trapezoidal integral of valid PX4 BatteryStatus voltage*current / 3600',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:205:100: E501 line too long (100 > 99 characters)
+                'latency': 'unavailable until instrumented endpoints and valid clock mapping exist',
+                                                                                                   ^
+
+./baseline_measurement/experiment.py:245:100: E501 line too long (153 > 99 characters)
+            'confidence_interval_note': 'Student t for <=30 run means; normal approximation above 30. Runs must be independent under the same scenario.'}
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'
+import re
+^
+
+./baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+^
+
+./baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+from px4_msgs.msg import (
+^
+
+./baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus' should be before 'from rclpy.serialization import serialize_message'
+from px4_msgs.msg import (
+^
+
+./baseline_measurement/mission_node.py:28:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from .experiment import Experiment, aggregate_runs
+^
+
+./baseline_measurement/mission_node.py:28:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'
+from .experiment import Experiment, aggregate_runs
+^
+
+./baseline_measurement/mission_node.py:30:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'
+from .cli import validate_options
+^
+
+./baseline_measurement/mission_node.py:82:17: E128 continuation line under-indented for visual indent
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                ^
+
+./baseline_measurement/mission_node.py:82:100: E501 line too long (103 > 99 characters)
+                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:105:100: E501 line too long (101 > 99 characters)
+            if len(processes['px4']) != 1 or len(processes['agent']) != 1 or not processes['gazebo']:
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:113:38: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                     ^
+
+./baseline_measurement/mission_node.py:113:40: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                       ^
+
+./baseline_measurement/mission_node.py:113:45: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                            ^
+
+./baseline_measurement/mission_node.py:113:49: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                ^
+
+./baseline_measurement/mission_node.py:113:51: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                  ^
+
+./baseline_measurement/mission_node.py:113:56: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                       ^
+
+./baseline_measurement/mission_node.py:113:60: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                           ^
+
+./baseline_measurement/mission_node.py:113:63: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                              ^
+
+./baseline_measurement/mission_node.py:113:68: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                   ^
+
+./baseline_measurement/mission_node.py:113:71: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                      ^
+
+./baseline_measurement/mission_node.py:113:74: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                         ^
+
+./baseline_measurement/mission_node.py:113:79: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                              ^
+
+./baseline_measurement/mission_node.py:113:82: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                 ^
+
+./baseline_measurement/mission_node.py:113:84: E231 missing whitespace after ','
+            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],
+                                                                                   ^
+
+./baseline_measurement/mission_node.py:119:100: E501 line too long (102 > 99 characters)
+            'payload': 'ROS CDR serialized bytes including encapsulation; excludes transport headers',
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:130:100: E501 line too long (108 > 99 characters)
+        self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:142:100: E501 line too long (101 > 99 characters)
+        self.timer = self.create_timer(.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:184:100: E501 line too long (102 > 99 characters)
+            self.competition = any(self.count_publishers(topic) > own for topic, _ in INPUTS.values())
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:252:100: E501 line too long (105 > 99 characters)
+                self.log.row('home', detail=json.dumps({'home_ned': self.mission.home, 'yaw': self.yaw}))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:267:100: E501 line too long (108 > 99 characters)
+                             detail=json.dumps({'event': event, 'elapsed_s': timestamp-self.mission.start}))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:282:100: E501 line too long (102 > 99 characters)
+                         armed=t.armed, nav_state=getattr(self.latest.get('status'), 'nav_state', ''),
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:293:100: E501 line too long (107 > 99 characters)
+        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:300:21: E128 continuation line under-indented for visual indent
+                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),
+                    ^
+
+./baseline_measurement/mission_node.py:303:21: E128 continuation line under-indented for visual indent
+                    sum(rss for _, _, _, rss in resources), 'MiB',
+                    ^
+
+./baseline_measurement/mission_node.py:323:100: E501 line too long (107 > 99 characters)
+            self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:328:1: D401 First line should be in imperative mood; try rephrasing
+    """Default is passive. --execute-sitl is the explicit one-mission command."""
+^
+
+./baseline_measurement/mission_node.py:347:100: E501 line too long (132 > 99 characters)
+    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:348:100: E501 line too long (139 > 99 characters)
+    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:349:100: E501 line too long (110 > 99 characters)
+    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:367:100: E501 line too long (126 > 99 characters)
+            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:397:100: E501 line too long (101 > 99 characters)
+                            node.experiment.finish('interrupted' if interrupted else 'failed', error)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:406:100: E501 line too long (100 > 99 characters)
+                                        error or 'Interrupted or runtime error', node.mission.state)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:411:100: E501 line too long (117 > 99 characters)
+            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)
+                                                                                                   ^
+
+./baseline_measurement/mission_node.py:412:100: E501 line too long (103 > 99 characters)
+            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'
+                                                                                                   ^
+
+./test/test_baseline_new.py:12:1: I101 Imported names are in the wrong order. Should be describe, integrate_energy_wh, OnlineStats, packet_loss_pct, throughput_mbps
+from baseline_measurement.metrics import (
+^
+
+./test/test_baseline_new.py:14:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment
+from baseline_measurement.experiment import Experiment, aggregate_runs
+^
+
+./test/test_baseline_new.py:14:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment import Experiment, aggregate_runs' should be before 'from baseline_measurement.metrics import OnlineStats, describe, integrate_energy_wh, packet_loss_pct, throughput_mbps'
+from baseline_measurement.experiment import Experiment, aggregate_runs
+^
+
+./test/test_baseline_new.py:15:1: I100 Import statements are in the wrong order. 'from baseline_measurement.cli import validate_options' should be before 'from baseline_measurement.experiment import Experiment, aggregate_runs'
+from baseline_measurement.cli import validate_options
+^
+
+./test/test_baseline_new.py:143:13: E128 continuation line under-indented for visual indent
+            NoSuchProcess=RuntimeError, AccessDenied=PermissionError,
+            ^
+
+./test/test_baseline_new.py:144:13: E128 continuation line under-indented for visual indent
+            ZombieProcess=RuntimeError)
+            ^
+
+./test/test_baseline_new.py:164:29: C408 Unnecessary dict call - rewrite as a literal.
+                arguments = dict(observe_seconds=15., sampling_interval=1.,
+                            ^
+
+./test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry
+from baseline_measurement.mission_state import Mission, Telemetry, STAGES
+^
+
+./test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'
+from baseline_measurement.experiment_logger import RunLog, TopicStats
+^
+
+3     C408 Unnecessary dict call - rewrite as a literal.
+1     D401 First line should be in imperative mood; try rephrasing
+2     E127 continuation line over-indented for visual indent
+14    E128 continuation line under-indented for visual indent
+14    E231 missing whitespace after ','
+1     E302 expected 2 blank lines, found 1
+27    E501 line too long (114 > 99 characters)
+11    I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.
+8     I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy
+1     I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.
+
+18 files checked
+82 errors
+
+'C'-type errors: 3
+'D'-type errors: 1
+'E'-type errors: 58
+'I'-type errors: 20
+
+Checked files:
+
+* ./setup.py
+* ./baseline_measurement/cli.py
+* ./baseline_measurement/acceptance.py
+* ./baseline_measurement/mission_node.py
+* ./baseline_measurement/experiment.py
+* ./baseline_measurement/mission_state.py
+* ./baseline_measurement/experiment_logger.py
+* ./baseline_measurement/resource_monitor.py
+* ./baseline_measurement/baseline_node.py
+* ./baseline_measurement/metrics.py
+* ./baseline_measurement/__init__.py
+* ./test/test_copyright.py
+* ./test/test_phase1.py
+* ./test/test_baseline_new.py
+* ./test/test_preflight.py
+* ./test/test_acceptance.py
+* ./test/test_flake8.py
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=69) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+* ./test/test_pep257.py
+_________________________________ test_pep257 __________________________________
+test/test_pep257.py:23: in test_pep257
+    assert rc == 0, 'Found code style errors / warnings'
+E   AssertionError: Found code style errors / warnings
+E   assert 1 == 0
+----------------------------- Captured stdout call -----------------------------
+checking ./baseline_measurement/__init__.py
+checking ./baseline_measurement/acceptance.py
+checking ./baseline_measurement/baseline_node.py
+checking ./baseline_measurement/cli.py
+checking ./baseline_measurement/experiment.py
+checking ./baseline_measurement/experiment_logger.py
+checking ./baseline_measurement/metrics.py
+checking ./baseline_measurement/mission_node.py
+checking ./baseline_measurement/mission_state.py
+checking ./baseline_measurement/resource_monitor.py
+checking ./setup.py
+checking ./test/test_acceptance.py
+checking ./test/test_baseline_new.py
+checking ./test/test_copyright.py
+checking ./test/test_flake8.py
+checking ./test/test_pep257.py
+checking ./test/test_phase1.py
+checking ./test/test_preflight.py
+checking test/test_acceptance.py
+checking test/test_baseline_new.py
+checking test/test_copyright.py
+checking test/test_flake8.py
+checking test/test_pep257.py
+checking test/test_phase1.py
+checking test/test_preflight.py
+----------------------------- Captured stderr call -----------------------------
+./baseline_measurement/mission_node.py:328 in public function `main`: D401: First line should be in imperative mood; try rephrasing (found 'Default')
+1 errors
+- generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 82 code style...
+FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+============= 2 failed, 56 passed, 1 skipped, 12 warnings in 1.75s =============

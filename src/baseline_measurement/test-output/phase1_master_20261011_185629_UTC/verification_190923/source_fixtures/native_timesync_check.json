@@ -1,0 +1,11 @@
+{
+  "client_callback_sha256": "68aed7e2e06996f6961acdd31d7f8f3cb26879396daf7894ce9515139aa07b9b",
+  "client_source_sha256": "7b63db7f756c61198355eb2abdad34de01b5f9e13a9d47c554866eff7f02e463",
+  "source_sha256": "b23e9a893abca013117242dc037d5c47977b3deae357bad2be60a2e7e244cf84",
+  "header_sha256": "3f4ca7941d101b0bdc7ce7ebb8f0d352cd974442cb648db83ac1aa346ecc6e6b",
+  "compile_returncode": 0,
+  "compile_output": "",
+  "run_returncode": 0,
+  "run_output": "PASS actual PX4 filter and on_time callback: convergence, ns/us conversion, 11 deviations, zero offset, ordered native/adjusted regression, recovery, high-RTT rejection, exact-threshold and synthetic clock ramp\n",
+  "scope": "Actual retained filter methods, mocked platform, diagnostic fixture only; does not prove historical filter reset or cause of clock deviation."
+}

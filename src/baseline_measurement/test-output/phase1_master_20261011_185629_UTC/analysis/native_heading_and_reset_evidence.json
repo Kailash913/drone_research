@@ -1,0 +1,99 @@
+{
+  "source": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\kailash\\PX4-Autopilot\\build\\px4_sitl_default\\rootfs\\log\\2026-10-11\\18_06_55.ulg",
+  "sha256": "be95a73cf559189866302dc1ceb138e69c4096e78f53ba78cb26805e102ad021",
+  "ver_sw": "43cccdea0e57cf92a58562d2d7a1cba0854395f7",
+  "dropouts": 0,
+  "topics": {
+    "estimator_status_flags:0": {
+      "n": 17,
+      "native_regressions": 0,
+      "observed_flag_values": {
+        "cs_yaw_align": [
+          1
+        ],
+        "cs_mag_hdg": [
+          0,
+          1
+        ],
+        "cs_mag_3d": [
+          0,
+          1
+        ],
+        "cs_in_air": [
+          0,
+          1
+        ],
+        "cs_mag_field_disturbed": [
+          0
+        ],
+        "cs_mag_fault": [
+          0
+        ],
+        "cs_mag_aligned_in_flight": [
+          0,
+          1
+        ],
+        "fs_bad_hdg": [
+          0
+        ]
+      },
+      "counter_changes_whole_log": {}
+    },
+    "timesync_status:0": {
+      "n": 13,
+      "native_regressions": 0,
+      "observed_flag_values": {},
+      "counter_changes_whole_log": {}
+    },
+    "vehicle_attitude:0": {
+      "n": 3129,
+      "native_regressions": 0,
+      "observed_flag_values": {},
+      "counter_changes_whole_log": {
+        "quat_reset_counter": 0
+      }
+    },
+    "vehicle_land_detected:0": {
+      "n": 19,
+      "native_regressions": 0,
+      "observed_flag_values": {
+        "landed": [
+          0,
+          1
+        ]
+      },
+      "counter_changes_whole_log": {}
+    },
+    "vehicle_local_position:0": {
+      "n": 1597,
+      "native_regressions": 0,
+      "observed_flag_values": {
+        "heading_good_for_control": [
+          0,
+          1
+        ]
+      },
+      "counter_changes_whole_log": {
+        "xy_reset_counter": 0,
+        "z_reset_counter": 0,
+        "vxy_reset_counter": 0,
+        "vz_reset_counter": 0,
+        "heading_reset_counter": 0,
+        "dist_bottom_reset_counter": 0
+      }
+    },
+    "vehicle_status:0": {
+      "n": 29,
+      "native_regressions": 0,
+      "observed_flag_values": {
+        "arming_state": [
+          1,
+          2
+        ]
+      },
+      "counter_changes_whole_log": {}
+    }
+  },
+  "start_native_us": 6626820000,
+  "end_native_us": 6640000000
+}

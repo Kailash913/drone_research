@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "active_attempts": 45,
+    "active_pass": 12,
+    "active_fail": 33,
+    "active_incomplete_or_invalid": 0,
+    "active_complete_records": 45,
+    "study_slots_assigned": 30,
+    "study_complete_records": 30,
+    "strict_valid_active_experiments": 0,
+    "strict_valid_study_experiments": 0,
+    "passive_runlogs": 3,
+    "passive_json_records": 2,
+    "duplicate_files": 0
+  },
+  "acceptance_checklist": {
+    "Gazebo_PX4_SITL_operational": "PASS",
+    "MAVLink_QGC_operational": "PASS",
+    "XRCE_ROS_communication": "PASS",
+    "telemetry_and_commands_demonstrated": "PASS",
+    "takeoff_control_waypoints_return_landing": "PASS",
+    "five_successful_active_missions": "PASS",
+    "current_architecture_source_config_evidence": "PASS",
+    "thirty_full_baseline_experiments": "BLOCKED",
+    "raw_measurements_preserved": "PASS",
+    "metrics_measured_or_explicitly_unavailable": "PASS",
+    "timestamp_issue_investigated": "PASS",
+    "safety_functional_regressions": "PASS",
+    "package_build": "PASS",
+    "dataset_validation_report_execution": "PASS"
+  },
+  "phase1_status": "BLOCKED",
+  "phase2_ready": false,
+  "new_autonomous_missions": 0,
+  "timestamp_root_cause": "UNPROVEN",
+  "functional_tests": {
+    "passed": 105,
+    "failed": 0
+  },
+  "new_files_style": {
+    "checked": 8,
+    "passed": true
+  },
+  "full_suite": {
+    "passed": 105,
+    "failed": 2,
+    "skipped": 1,
+    "failures": [
+      "pre-existing flake8 findings",
+      "pre-existing pep257 findings"
+    ]
+  },
+  "package_build_returncode": 0,
+  "dataset_returncode": 2,
+  "dataset_returncode_definition": "2 = acceptance gaps after successful report generation",
+  "protected_files_unchanged": true,
+  "current_passive_capture": {
+    "status": "COMPLETE",
+    "duration_s": 20.01246816099956,
+    "mission_outcome": "NOT_ATTEMPTED",
+    "topics": {
+      "/fmu/out/vehicle_local_position_v1": {
+        "count": 996,
+        "observed_callback_hz": 49.7689736212054,
+        "last_receive_age_s": 0.015645799998310395,
+        "local_receive_stale": false
+      },
+      "/fmu/out/vehicle_attitude": {
+        "count": 997,
+        "observed_callback_hz": 49.81894247022267,
+        "last_receive_age_s": 0.0002605340014270041,
+        "local_receive_stale": false
+      },
+      "/fmu/out/vehicle_status_v4": {
+        "count": 39,
+        "observed_callback_hz": 1.9487851116737054,
+        "last_receive_age_s": 0.4043991129983624,
+        "local_receive_stale": false
+      },
+      "/fmu/out/vehicle_land_detected": {
+        "count": 20,
+        "observed_callback_hz": 0.9993769803454899,
+        "last_receive_age_s": 0.7671715639989998,
+        "local_receive_stale": false
+      },
+      "/fmu/out/estimator_status_flags": {
+        "count": 20,
+        "observed_callback_hz": 0.9993769803454899,
+        "last_receive_age_s": 0.3595741130011447,
+        "local_receive_stale": false
+      },
+      "/fmu/out/timesync_status": {
+        "count": 20,
+        "observed_callback_hz": 0.9993769803454899,
+        "last_receive_age_s": 0.774213463999331,
+        "local_receive_stale": false
+      }
+    }
+  },
+  "limitations": [
+    "No new autonomous mission was launched by this validator.",
+    "PASS requires controller COMPLETE plus ordered route/landing/disarm/release events, not independent external validation of every run.",
+    "Passive JSON and preflight CSV can describe the same capture; their counts are not summed as experiments.",
+    "No historical configuration hash/version is fabricated from current files.",
+    "Thirty partial measurement records do not satisfy complete historical metadata or unavailable required metrics.",
+    "No confidence intervals: independence and full configuration equivalence unverified."
+  ],
+  "metric_status": {
+    "end_to_end_latency_ms": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "ms",
+      "status": "NOT_MEASURED"
+    },
+    "telemetry_latency_ms": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "ms",
+      "status": "NOT_MEASURED"
+    },
+    "command_latency_ms": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "ms",
+      "status": "NOT_MEASURED"
+    },
+    "packet_loss_pct": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "%",
+      "status": "NOT_MEASURED"
+    },
+    "rx_payload_mbps": {
+      "valid_n_current_group": 36,
+      "missing_n_current_group": 0,
+      "unit": "Mbit/s",
+      "status": "MEASURED_LIMITED"
+    },
+    "tx_payload_mbps": {
+      "valid_n_current_group": 35,
+      "missing_n_current_group": 1,
+      "unit": "Mbit/s",
+      "status": "MEASURED_LIMITED"
+    },
+    "bandwidth_mbps": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "Mbit/s",
+      "status": "NOT_MEASURED"
+    },
+    "node_cpu_pct": {
+      "valid_n_current_group": 36,
+      "missing_n_current_group": 0,
+      "unit": "% of one logical CPU",
+      "status": "MEASURED_LIMITED"
+    },
+    "system_cpu_pct": {
+      "valid_n_current_group": 36,
+      "missing_n_current_group": 0,
+      "unit": "%",
+      "status": "MEASURED_LIMITED"
+    },
+    "node_rss_mib": {
+      "valid_n_current_group": 36,
+      "missing_n_current_group": 0,
+      "unit": "MiB",
+      "status": "MEASURED_LIMITED"
+    },
+    "mission_completion_s": {
+      "valid_n_current_group": 12,
+      "missing_n_current_group": 24,
+      "unit": "s",
+      "status": "MEASURED_LIMITED"
+    },
+    "attempt_duration_s": {
+      "valid_n_current_group": 36,
+      "missing_n_current_group": 0,
+      "unit": "s",
+      "status": "MEASURED_LIMITED"
+    },
+    "energy_wh": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "Wh",
+      "status": "NOT_MEASURED"
+    },
+    "power_w": {
+      "valid_n_current_group": 0,
+      "missing_n_current_group": 36,
+      "unit": "W",
+      "status": "NOT_MEASURED"
+    }
+  }
+}

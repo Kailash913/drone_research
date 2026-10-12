@@ -1,0 +1,23 @@
+--- mission_node.py (current)
++++ mission_node.py (review candidate)
+@@ -36,6 +36,7 @@
+ from .qgc_plan import make_plan
+ from .resource_monitor import ResourceMonitor
+ from .run_provenance import run_metadata
++from .native_clock import native_header
+ OUTPUTS = (
+     {
+         'status': ('/fmu/out/vehicle_status_v4', VehicleStatus),
+@@ -419,7 +420,11 @@
+     def publish(self, key, msg):
+         if not self.options.execute_sitl:
+             raise RuntimeError('Flight-control publication is disabled in passive mode')
+-        msg.timestamp = self.get_clock().now().nanoseconds // 1000
++        if getattr(self.options, 'px4_native_timestamps', False):
++            # Requires independently verified SYNCT=0 and restarted DDS client.
++            msg.timestamp = native_header(self.latest['position'].timestamp)
++        else:
++            msg.timestamp = self.get_clock().now().nanoseconds // 1000
+         self.publishers_by_key[key].publish(msg)
+         self.log.message(
+             INPUTS[key][0],

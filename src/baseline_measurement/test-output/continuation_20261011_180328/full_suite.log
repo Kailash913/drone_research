@@ -1,0 +1,85 @@
+...............................................................s........ [ 57%]
+...F.................................................                    [100%]
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+
+    @pytest.mark.flake8
+    @pytest.mark.linter
+    def test_flake8():
+        rc, errors = main_with_errors(argv=['baseline_measurement', 'test', 'setup.py'] + [
+            str(p) for p in sorted(Path('tools').glob('*.py'))
+            if p.name != 'vscode_apply_heading_fix.py'])
+>       assert rc == 0, \
+            'Found %d code style errors / warnings:\n' % len(errors) + \
+            '\n'.join(errors)
+E       AssertionError: Found 1 code style errors / warnings:
+E         test/test_authorized_study.py:71:100: E501 line too long (245 > 99 characters)
+E       assert 1 == 0
+
+test/test_flake8.py:28: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+test/test_authorized_study.py:71:100: E501 line too long (245 > 99 characters)
+            ), mock.patch.object(module.rclpy, 'init'), mock.patch.object(module.rclpy, 'shutdown'), mock.patch.object(module.rclpy, 'spin_once', side_effect=finish_capture) as spin, mock.patch.object(module.time, 'monotonic', return_value=1.0):
+                                                                                                   ^
+
+1     E501 line too long (245 > 99 characters)
+
+42 files checked
+1 errors
+
+'E'-type errors: 1
+
+Checked files:
+
+* baseline_measurement/cli.py
+* baseline_measurement/acceptance.py
+* baseline_measurement/provenance.py
+* baseline_measurement/dataset.py
+* baseline_measurement/mission_node.py
+* baseline_measurement/experiment.py
+* baseline_measurement/mission_state.py
+* baseline_measurement/experiment_logger.py
+* baseline_measurement/measurements.py
+* baseline_measurement/resource_monitor.py
+* baseline_measurement/baseline_node.py
+* baseline_measurement/record_context.py
+* baseline_measurement/metrics.py
+* baseline_measurement/run_provenance.py
+* baseline_measurement/sync_evidence.py
+* baseline_measurement/clock_probe.py
+* baseline_measurement/__init__.py
+* baseline_measurement/transport_probe.py
+* baseline_measurement/qgc_plan.py
+* test/test_copyright.py
+* test/test_phase1.py
+* test/test_baseline_new.py
+* test/test_preflight.py
+* test/test_dataset.py
+* test/test_run_provenance.py
+* test/test_acceptance.py
+* test/test_clock_guard.py
+* test/test_qgc_plan.py
+* test/test_flake8.py
+* test/test_auto_takeoff.py
+* test/test_authorized_study.py
+* test/test_auto_takeoff_adapter.py
+* test/test_measurements.py
+* test/test_pep257.py
+* setup.py
+* tools/authorized_study.py
+* tools/continuation_check.py
+* tools/native_timesync_check.py
+* tools/phase1_inspect.py
+* tools/phase1_lint_tools.py
+* tools/phase1_verify.py
+* tools/vscode_test_runner.py
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=76765) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_20261011_180328/full_suite.xml -
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 1 code style ...
+1 failed, 123 passed, 1 skipped, 12 warnings in 6.81s

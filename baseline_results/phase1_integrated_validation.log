@@ -1,0 +1,766 @@
+Dependencies import successfully
+Starting >>> baseline_measurement
+Finished <<< baseline_measurement [2.96s]
+
+Summary: 1 package finished [3.50s]
+.........................................................                [100%]
+57 passed in 0.75s
+# Vehicle Command uORB message. Used for commanding a mission / action / etc.
+# Follows the MAVLink COMMAND_INT / COMMAND_LONG definition
+
+uint32 MESSAGE_VERSION = 0
+
+uint64 timestamp # [us] Time since system start.
+
+uint16 VEHICLE_CMD_CUSTOM_0 = 0 # Test command.
+uint16 VEHICLE_CMD_CUSTOM_1 = 1 # Test command.
+uint16 VEHICLE_CMD_CUSTOM_2 = 2 # Test command.
+uint16 VEHICLE_CMD_NAV_WAYPOINT = 16 # Navigate to MISSION. |[s] (decimal) Hold time. (ignored by fixed wing, time to stay at MISSION for rotary wing)|[m] Acceptance radius (if the sphere with this radius is hit, the MISSION counts as reached)|0 to pass through the WP, if > 0 radius [m] to pass by WP. Positive value for clockwise orbit, negative value for counter-clockwise orbit. Allows trajectory control.|Desired yaw angle at MISSION (rotary wing)|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_LOITER_UNLIM = 17 # Loiter around this MISSION an unlimited amount of time. |Unused|Unused|[m] Radius around MISSION. If positive loiter clockwise, else counter-clockwise|Desired yaw angle.|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_LOITER_TURNS = 18 # Loiter around this MISSION for X turns. |Turns|Unused|Radius around MISSION [m]. If positive loiter clockwise, else counter-clockwise|Desired yaw angle.|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_LOITER_TIME = 19 # Loiter around this MISSION for time. |[s] Seconds (decimal)|Unused|Radius around MISSION [m]. If positive loiter clockwise, else counter-clockwise|Desired yaw angle.|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_RETURN_TO_LAUNCH = 20 # Return to launch location. |Unused|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_NAV_LAND = 21 # Land at location. |Unused|Unused|Unused|Desired yaw angle.|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_TAKEOFF = 22 # Takeoff from ground / hand. |Unused (FW pitch from FW_TKO_PITCH_MIN)|Unused|Unused|[deg] [@range 0,360] Yaw angle in NED if yaw source available, ignored otherwise|Latitude (WGS-84)|Longitude (WGS-84)|[m] Altitude AMSL|
+uint16 VEHICLE_CMD_NAV_PRECLAND = 23 # Attempt a precision landing.
+uint16 VEHICLE_CMD_DO_ORBIT = 34 # Start orbiting on the circumference of a circle defined by the parameters. |[m] Radius|[m/s] Velocity|[@enum ORBIT_YAW_BEHAVIOUR] Yaw behaviour|Unused|Latitude/X|Longitude/Y|Altitude/Z|
+uint16 VEHICLE_CMD_DO_FIGUREEIGHT = 35 # Start flying on the outline of a figure eight defined by the parameters. |[m] Major radius|[m] Minor radius|[m/s] Velocity|Orientation|Latitude/X|Longitude/Y|Altitude/Z|
+uint16 VEHICLE_CMD_NAV_ROI = 80 # Sets the region of interest (ROI) for a sensor set or the vehicle itself. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |[@enum VEHICLE_ROI] Region of interest mode.|MISSION index/ target ID.|ROI index (allows a vehicle to manage multiple ROI's)|Unused|x the location of the fixed ROI (see MAV_FRAME)|y|z|
+uint16 VEHICLE_CMD_NAV_PATHPLANNING = 81 # Control autonomous path planning on the MAV. |0: Disable local obstacle avoidance / local path planning (without resetting map), 1: Enable local path planning, 2: Enable and reset local path planning|0: Disable full path planning (without resetting map), 1: Enable, 2: Enable and reset map/occupancy grid, 3: Enable and reset planned route, but not occupancy grid|Unused|[deg] [@range 0, 360] Yaw angle at goal, in compass degrees|Latitude/X of goal|Longitude/Y of goal|Altitude/Z of goal|
+uint16 VEHICLE_CMD_NAV_VTOL_TAKEOFF = 84 # Takeoff from ground / hand and transition to fixed wing. |Minimum pitch (if airspeed sensor present), desired pitch without sensor|Transition heading, 0: Default, 3: Use specified transition heading|Unused|Yaw angle (if magnetometer present), ignored without magnetometer|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_VTOL_LAND = 85 # Transition to MC and land at location. |Unused|Unused|Unused|Desired yaw angle.|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_NAV_GUIDED_LIMITS = 90 # Set limits for external control. |[s] Timeout  - maximum time that external controller will be allowed to control vehicle. 0 means no timeout|[m] Absolute altitude min AMSL - if vehicle moves below this alt, the command will be aborted and the mission will continue. 0 means no lower altitude limit|[m] Absolute altitude max - if vehicle moves above this alt, the command will be aborted and the mission will continue. 0 means no upper altitude limit|[m] Horizontal move limit (AMSL) - if vehicle moves more than this distance from it's location at the moment the command was executed, the command will be aborted and the mission will continue. 0 means no horizontal altitude limit|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_NAV_GUIDED_MASTER = 91 # Set id of master controller. |System ID|Component ID|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_NAV_DELAY = 93 # Delay the next navigation command a number of seconds or until a specified time. |[s] Delay (decimal, -1 to enable time-of-day fields)|[h] hour (24h format, UTC, -1 to ignore)|minute (24h format, UTC, -1 to ignore)|second (24h format, UTC)|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_NAV_LAST = 95 # NOP - This command is only used to mark the upper limit of the NAV/ACTION commands in the enumeration.|Unused|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_CONDITION_DELAY = 112 # Delay mission state machine. |[s] Delay (decimal seconds)|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_CONDITION_CHANGE_ALT = 113 # Ascend/descend at rate. Delay mission state machine until desired altitude reached.|Descent / Ascend rate (m/s)|Unused|Unused|Unused|Unused|Unused|Finish Altitude|
+uint16 VEHICLE_CMD_CONDITION_DISTANCE = 114 # Delay mission state machine until within desired distance of next NAV point. |Distance [m]|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_CONDITION_YAW = 115 # Reach a certain target angle. |[deg] [@range 0,360] Target angle. 0 is north|[deg/s] Speed during yaw change|[@range -1,1] Direction: negative: counter clockwise, positive: clockwise |[ 1,0] Relative offset or absolute angle|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_CONDITION_LAST = 159 # NOP - This command is only used to mark the upper limit of the CONDITION commands in the enumeration. |Unused|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_CONDITION_GATE = 4501 # Wait until passing a threshold. |2D coord mode: 0: Orthogonal to planned route|Altitude mode: 0: Ignore altitude|Unused|Unused|Lat|Lon|Alt|
+uint16 VEHICLE_CMD_DO_SET_MODE = 176 # Set system mode. |Mode, as defined by ENUM MAV_MODE|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_JUMP = 177 # Jump to the desired command in the mission list. Repeat this action only the specified number of times. |Sequence number|Repeat count|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_CHANGE_SPEED = 178 # Change speed and/or throttle set points. |[@enum SPEED_TYPE] Speed type (0=Airspeed, 1=Ground Speed)|Speed (m/s, -1 indicates no change)|[%] Throttle ( Percent, -1 indicates no change)|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_SET_HOME = 179 # Changes the home location either to the current location or a specified location. |Use current (1=use current location, 0=use specified location)|Unused|Unused|Unused|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_DO_SET_PARAMETER = 180 # Set a system parameter. Caution! Use of this command requires knowledge of the numeric enumeration value of the parameter. |Parameter number|Parameter value|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_SET_RELAY = 181 # Set a relay to a condition. |Relay number|Setting (1=on, 0=off, others possible depending on system hardware)|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_REPEAT_RELAY = 182 # Cycle a relay on and off for a desired number of cycles with a desired period. |Relay number|Cycle count|[s] Cycle time (decimal seconds)|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_REPEAT_SERVO = 184 # Cycle a between its nominal setting and a desired PWM for a desired number of cycles with a desired period. |Servo number|[us] PWM rate (1000 to 2000 typical)|Cycle count|[s] Cycle time|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_FLIGHTTERMINATION = 185 # Terminate flight immediately. |Flight termination activated if > 0.5|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_CHANGE_ALTITUDE = 186 # Set the vehicle to Loiter mode and change the altitude to specified value. |Altitude|Frame of new altitude|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_SET_ACTUATOR = 187 # Sets actuators (e.g. servos) to a desired value. |Actuator 1|Actuator 2|Actuator 3|Actuator 4|Actuator 5|Actuator 6|Index|
+uint16 VEHICLE_CMD_DO_LAND_START = 189 # Mission command to perform a landing. This is used as a marker in a mission to tell the autopilot where a sequence of mission items that represents a landing starts. It may also be sent via a COMMAND_LONG to trigger a landing, in which case the nearest (geographically) landing sequence in the mission will be used. The Latitude/Longitude is optional, and may be set to 0/0 if not needed. If specified then it will be used to help find the closest landing sequence. |Unused|Unused|Unused|Unused|Latitude|Longitude|Unused|
+uint16 VEHICLE_CMD_DO_GO_AROUND = 191 # Mission command to safely abort an autonomous landing. |[m] Altitude|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_REPOSITION = 192 # Reposition to specific WGS84 GPS position. |[m/s] Ground speed|Bitmask|[m] Loiter radius for planes|[deg] Yaw|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_DO_PAUSE_CONTINUE = 193
+uint16 VEHICLE_CMD_DO_SET_ROI_LOCATION = 195 # Sets the region of interest (ROI) to a location. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Unused|Unused|Unused|Unused|Latitude|Longitude|Altitude|
+uint16 VEHICLE_CMD_DO_SET_ROI_WPNEXT_OFFSET = 196 # Sets the region of interest (ROI) to be toward next waypoint, with optional pitch/roll/yaw offset. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Unused|Unused|Unused|Unused|Pitch offset from next waypoint|Roll offset from next waypoint|Yaw offset from next waypoint|
+uint16 VEHICLE_CMD_DO_SET_ROI_NONE = 197 # Cancels any previous ROI command returning the vehicle/sensors to default flight characteristics. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |Unused|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_CONTROL_VIDEO = 200 # Control onboard camera system. |Camera ID (-1 for all)|Transmission: 0: disabled, 1: enabled compressed, 2: enabled raw|Transmission mode: 0: video stream, >0: single images every n seconds (decimal seconds)|Recording: 0: disabled, 1: enabled compressed, 2: enabled raw|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_SET_ROI = 201 # Sets the region of interest (ROI) for a sensor set or the vehicle itself. This can then be used by the vehicles control system to control the vehicle attitude and the attitude of various sensors such as cameras. |[@enum VEHICLE_ROI] Region of interest mode.|MISSION index/ target ID.|ROI index (allows a vehicle to manage multiple ROI's)|Unused|x the location of the fixed ROI (see MAV_FRAME)|y|z|
+uint16 VEHICLE_CMD_DO_DIGICAM_CONTROL=203
+uint16 VEHICLE_CMD_DO_MOUNT_CONFIGURE=204 # Mission command to configure a camera or antenna mount. |[@enum MAV_MOUNT_MODE] Mount operation mode|Stabilize roll? (1 = yes, 0 = no)|Stabilize pitch? (1 = yes, 0 = no)|stabilize yaw? (1 = yes, 0 = no)|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_MOUNT_CONTROL=205 # Mission command to control a camera or antenna mount. |[deg] Pitch or lat, depending on mount mode.|[deg] Roll or lon depending on mount mode|[deg]/[m] Yaw or alt depending on mount mode|Unused|Unused|Unused|[@enum MAV_MOUNT_MODE]|
+uint16 VEHICLE_CMD_DO_SET_CAM_TRIGG_DIST=206 # Mission command to set TRIG_DIST for this flight. |[m] Camera trigger distance|[ms] Shutter integration time|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_FENCE_ENABLE=207 # Mission command to enable the geofence. |enable? (0=disable, 1=enable)|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_PARACHUTE=208 # Mission command to trigger a parachute. |action [@enum PARACHUTE_ACTION] (0=disable, 1=enable, 2=release, for some systems see [@enum PARACHUTE_ACTION], not in general message set.)|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_MOTOR_TEST=209 # Motor test command. |Instance (@range 1, )|throttle type|throttle|timeout [s]|Motor count|Test order|Unused|
+uint16 VEHICLE_CMD_DO_INVERTED_FLIGHT=210 # Change to/from inverted flight. |inverted (0=normal, 1=inverted)|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_GRIPPER = 211 # Command to operate a gripper.
+uint16 VEHICLE_CMD_DO_AUTOTUNE_ENABLE = 212 # Enable autotune module. |1 to enable|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_SET_CAM_TRIGG_INTERVAL=214 # Mission command to set TRIG_INTERVAL for this flight. |[m] Camera trigger distance|Shutter integration time (ms)|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_MOUNT_CONTROL_QUAT=220 # Mission command to control a camera or antenna mount, using a quaternion as reference. |q1 - quaternion param #1, w (1 in null-rotation)|q2 - quaternion param #2, x (0 in null-rotation)|q3 - quaternion param #3, y (0 in null-rotation)|q4 - quaternion param #4, z (0 in null-rotation)|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_GUIDED_MASTER=221 # Set id of master controller. |System ID|Component ID|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_GUIDED_LIMITS=222 # Set limits for external control. |[s] Timeout - maximum time that external controller will be allowed to control vehicle. 0 means no timeout|[m] Absolute altitude min(AMSL) - if vehicle moves below this alt, the command will be aborted and the mission will continue. 0 means no lower altitude limit|[m] Absolute altitude max - if vehicle moves above this alt, the command will be aborted and the mission will continue. 0 means no upper altitude limit|[m] Horizontal move limit (AMSL) - if vehicle moves more than this distance from it's location at the moment the command was executed, the command will be aborted and the mission will continue. 0 means no horizontal altitude limit|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_SET_MISSION_CURRENT = 224 # Set the mission item with sequence number seq as current item and emit MISSION_CURRENT (whether or not the mission mode is active). ACKs FAILED if seq is out of range or there is no current mission item. |Mission sequence value to set, -1 for the current mission item (use to reset jump counters without changing the current item)|Reset repeat/jump counters and clear mission complete flag (1=true,0=false; default:0)|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_DO_LAST = 240 # NOP - This command is only used to mark the upper limit of the DO commands in the enumeration. |Unused|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_PREFLIGHT_CALIBRATION = 241 # Trigger calibration. This command will be only accepted if in pre-flight mode. See MAVLink spec MAV_CMD_PREFLIGHT_CALIBRATION.
+uint16 PREFLIGHT_CALIBRATION_TEMPERATURE_CALIBRATION = 3# Param value for VEHICLE_CMD_PREFLIGHT_CALIBRATION to start temperature calibration.
+uint16 VEHICLE_CMD_PREFLIGHT_SET_SENSOR_OFFSETS = 242 # Set sensor offsets. This command will be only accepted if in pre-flight mode. |Sensor to adjust the offsets for: 0: gyros, 1: accelerometer, 2: magnetometer, 3: barometer, 4: optical flow|X axis offset (or generic dimension 1), in the sensor's raw units|Y axis offset (or generic dimension 2), in the sensor's raw units|Z axis offset (or generic dimension 3), in the sensor's raw units|Generic dimension 4, in the sensor's raw units|Generic dimension 5, in the sensor's raw units|Generic dimension 6, in the sensor's raw units|
+uint16 VEHICLE_CMD_PREFLIGHT_UAVCAN = 243 # UAVCAN configuration. If param 1 == 1 actuator mapping and direction assignment should be started.
+uint16 VEHICLE_CMD_PREFLIGHT_STORAGE = 245 # Request storage of different parameter values and logs. This command will be only accepted if in pre-flight mode. |Parameter storage: 0: READ FROM FLASH/EEPROM, 1: WRITE CURRENT TO FLASH/EEPROM|Mission storage: 0: READ FROM FLASH/EEPROM, 1: WRITE CURRENT TO FLASH/EEPROM|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_PREFLIGHT_REBOOT_SHUTDOWN = 246 # Request the reboot or shutdown of system components. |0: Do nothing for autopilot, 1: Reboot autopilot, 2: Shutdown autopilot.|0: Do nothing for onboard computer, 1: Reboot onboard computer, 2: Shutdown onboard computer.|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_OBLIQUE_SURVEY=260 # Mission command to set a Camera Auto Mount Pivoting Oblique Survey for this flight. |[m] Camera trigger distance|[ms] Shutter integration time|Camera minimum trigger interval|Number of positions|Roll|Pitch|Unused|
+uint16 VEHICLE_CMD_DO_SET_STANDARD_MODE=262 # Enable the specified standard MAVLink mode. |MAV_STANDARD_MODE|
+uint16 VEHICLE_CMD_GIMBAL_DEVICE_INFORMATION = 283 # Command to ask information about a low level gimbal.
+
+uint16 VEHICLE_CMD_MISSION_START = 300 # Start running a mission. |first_item: the first mission item to run|last_item: the last mission item to run (after this item is run, the mission ends)|
+uint16 VEHICLE_CMD_ACTUATOR_GROUP_TEST = 309 # Test groups of related actuators (e.g. all actuators contributing to roll torque). |[@enum ACTUATOR_TEST_GROUP] Group|[@range -1,1] Value|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_ACTUATOR_TEST = 310 # Actuator testing command. |[@range -1,1] value|[s] timeout|Unused|Unused|output function|
+uint16 VEHICLE_CMD_CONFIGURE_ACTUATOR = 311 # Actuator configuration command. |configuration|Unused|Unused|Unused|output function|
+uint16 VEHICLE_CMD_ESC_REQUEST_EEPROM = 312 # Request EEPROM data from an ESC. |ESC Index|Firmware Type|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_COMPONENT_ARM_DISARM = 400 # Arms / Disarms a component. |1 to arm, 0 to disarm.
+uint16 VEHICLE_CMD_RUN_PREARM_CHECKS = 401 # Instructs a target system to run pre-arm checks.
+uint16 VEHICLE_CMD_INJECT_FAILURE = 420 # Inject artificial failure for testing purposes.
+uint16 VEHICLE_CMD_START_RX_PAIR = 500 # Starts receiver pairing. |0:Spektrum|0:Spektrum DSM2, 1:Spektrum DSMX|
+uint16 VEHICLE_CMD_REQUEST_MESSAGE = 512 # Request to send a single instance of the specified message.
+uint16 VEHICLE_CMD_REQUEST_CAMERA_INFORMATION = 521 # Request camera information (CAMERA_INFORMATION). |0: No action 1: Request camera capabilities|Reserved (all remaining params)|Reserved (default:0)|Reserved (default:0)|Reserved (default:0)|Reserved (default:0)|Reserved (default:0)|
+uint16 VEHICLE_CMD_SET_CAMERA_MODE = 530 # Set camera capture mode (photo, video, etc.).
+uint16 VEHICLE_CMD_SET_CAMERA_ZOOM = 531 # Set camera zoom.
+uint16 VEHICLE_CMD_SET_CAMERA_FOCUS = 532
+uint16 VEHICLE_CMD_EXTERNAL_ATTITUDE_ESTIMATE = 620 # Set an external estimate of vehicle attitude in degrees.
+uint16 VEHICLE_CMD_DO_GIMBAL_MANAGER_PITCHYAW = 1000 # Setpoint to be sent to a gimbal manager to set a gimbal pitch and yaw.
+uint16 VEHICLE_CMD_DO_GIMBAL_MANAGER_CONFIGURE = 1001 # Gimbal configuration to set which sysid/compid is in primary and secondary control.
+uint16 VEHICLE_CMD_IMAGE_START_CAPTURE = 2000 # Start image capture sequence.
+uint16 VEHICLE_CMD_DO_TRIGGER_CONTROL = 2003 # Enable or disable on-board camera triggering system.
+uint16 VEHICLE_CMD_VIDEO_START_CAPTURE = 2500 # Start a video capture.
+uint16 VEHICLE_CMD_VIDEO_STOP_CAPTURE = 2501 # Stop the current video capture.
+uint16 VEHICLE_CMD_LOGGING_START = 2510 # Start streaming ULog data.
+uint16 VEHICLE_CMD_LOGGING_STOP = 2511 # Stop streaming ULog data.
+uint16 VEHICLE_CMD_CONTROL_HIGH_LATENCY = 2600 # Control starting/stopping transmitting data over the high latency link.
+uint16 VEHICLE_CMD_DO_VTOL_TRANSITION = 3000 # Command VTOL transition.
+uint16 VEHICLE_CMD_DO_SET_SAFETY_SWITCH_STATE = 5300 # Command safety on/off. |1 to activate safety, 0 to deactivate safety and allow control surface movements|Unused|Unused|Unused|Unused|Unused|Unused|
+uint16 VEHICLE_CMD_ARM_AUTHORIZATION_REQUEST = 3001 # Request arm authorization.
+uint16 VEHICLE_CMD_PAYLOAD_PREPARE_DEPLOY = 30001 # Prepare a payload deployment in the flight plan.
+uint16 VEHICLE_CMD_PAYLOAD_CONTROL_DEPLOY = 30002 # Control a pre-programmed payload deployment.
+uint16 VEHICLE_CMD_FIXED_MAG_CAL_YAW = 42006 # Magnetometer calibration based on provided known yaw. This allows for fast calibration using WMM field tables in the vehicle, given only the known yaw of the vehicle. If Latitude and longitude are both zero then use the current vehicle location.
+uint16 VEHICLE_CMD_DO_WINCH = 42600 # Command to operate winch.
+
+uint16 VEHICLE_CMD_EXTERNAL_POSITION_ESTIMATE = 43003 # External reset of estimator global position when dead reckoning.
+uint16 VEHICLE_CMD_EXTERNAL_WIND_ESTIMATE = 43004
+uint16 VEHICLE_CMD_ESTIMATOR_SENSOR_ENABLE = 43006 # Enable/disable estimator sensor fusion. |Source (FUSION_SOURCE_*)|Sensor instance (0-based)|Enable (1) or Disable (0)|Estimator Instance (NaN: not used)|Empty|Empty|Empty|
+# Sensor fusion source types for VEHICLE_CMD_ESTIMATOR_SENSOR_ENABLE
+uint8 FUSION_SOURCE_GPS = 0   # GNSS (EKF2_GPS{i}_CTRL, use instance param)
+uint8 FUSION_SOURCE_OF = 1    # Optical Flow (EKF2_OF_CTRL)
+uint8 FUSION_SOURCE_EV = 2    # External Vision (EKF2_EV_CTRL)
+uint8 FUSION_SOURCE_AGP = 3   # Auxiliary Global Position (EKF2_AGP{i}_CTRL, use instance param)
+uint8 FUSION_SOURCE_BARO = 4  # Barometer (EKF2_BARO_CTRL)
+uint8 FUSION_SOURCE_RNG = 5   # Range Finder (EKF2_RNG_CTRL)
+uint8 FUSION_SOURCE_MAG = 6   # Magnetometer (EKF2_MAG_TYPE)
+uint8 FUSION_SOURCE_ASPD = 7  # Airspeed (EKF2_ARSP_THR)
+uint8 FUSION_SOURCE_RNGBCN = 8 # Ranging Beacon
+
+# PX4 vehicle commands (beyond 16 bit MAVLink commands).
+uint32 VEHICLE_CMD_PX4_INTERNAL_START = 65537 # Start of PX4 internal only vehicle commands (> UINT16_MAX).
+uint32 VEHICLE_CMD_SET_GPS_GLOBAL_ORIGIN = 100000 # Sets the GPS coordinates of the vehicle local origin (0,0,0) position. |Unused|Unused|Unused|Unused|Latitude (WGS-84)|Longitude (WGS-84)|[m] Altitude (AMSL from GNSS, positive above ground)|
+uint32 VEHICLE_CMD_SET_NAV_STATE = 100001 # Change mode by specifying nav_state directly. |nav_state|Unused|Unused|Unused|Unused|Unused|Unused|
+
+uint16 VEHICLE_CMD_DO_SET_GLOBAL_ORIGIN = 611 # Sets GNSS coordinates of the vehicle local origin (0,0,0) position. Send as COMMAND_INT with MAV_FRAME_GLOBAL_INT. |Unused|Unused|Unused|Unused|Latitude (WGS-84)|Longitude (WGS-84)|[m] Altitude (AMSL)|
+uint16 VEHICLE_CMD_GUIDED_CHANGE_HEADING = 43002 # Change heading/course. param1: heading type (0=course-over-ground, 1=heading). param2: target [deg]. param3: max rate [deg/s]. |Heading type (HEADING_TYPE enum)|[deg] Target bearing [0..360]|[deg/s] Max rate of change|Unused|Unused|Unused|Unused|
+
+uint8 VEHICLE_MOUNT_MODE_RETRACT = 0 # Load and keep safe position (Roll,Pitch,Yaw) from permanent memory and stop stabilization.
+uint8 VEHICLE_MOUNT_MODE_NEUTRAL = 1 # Load and keep neutral position (Roll,Pitch,Yaw) from permanent memory.
+uint8 VEHICLE_MOUNT_MODE_MAVLINK_TARGETING = 2 # Load neutral position and start MAVLink Roll,Pitch,Yaw control with stabilization.
+uint8 VEHICLE_MOUNT_MODE_RC_TARGETING = 3 # Load neutral position and start RC Roll,Pitch,Yaw control with stabilization.
+uint8 VEHICLE_MOUNT_MODE_GPS_POINT = 4 # Load neutral position and start to point to Lat,Lon,Alt.
+uint8 VEHICLE_MOUNT_MODE_ENUM_END = 5 #
+
+uint8 VEHICLE_ROI_NONE = 0 # No region of interest.
+uint8 VEHICLE_ROI_WPNEXT = 1 # Point toward next MISSION.
+uint8 VEHICLE_ROI_WPINDEX = 2 # Point toward given MISSION.
+uint8 VEHICLE_ROI_LOCATION = 3 # Point toward fixed location.
+uint8 VEHICLE_ROI_TARGET = 4 # Point toward target.
+uint8 VEHICLE_ROI_ENUM_END = 5
+
+uint8 ACTUATOR_CONFIGURATION_NONE = 0 # Do nothing.
+uint8 ACTUATOR_CONFIGURATION_BEEP = 1 # Command the actuator to beep now.
+uint8 ACTUATOR_CONFIGURATION_3D_MODE_ON = 2 # Permanently set the actuator (ESC) to 3D mode (reversible thrust).
+uint8 ACTUATOR_CONFIGURATION_3D_MODE_OFF = 3 # Permanently set the actuator (ESC) to non 3D mode (non-reversible thrust).
+uint8 ACTUATOR_CONFIGURATION_SPIN_DIRECTION1 = 4 # Permanently set the actuator (ESC) to spin direction 1 (which can be clockwise or counter-clockwise).
+uint8 ACTUATOR_CONFIGURATION_SPIN_DIRECTION2 = 5 # Permanently set the actuator (ESC) to spin direction 2 (opposite of direction 1).
+
+uint8 PARACHUTE_ACTION_DISABLE = 0
+uint8 PARACHUTE_ACTION_ENABLE = 1
+uint8 PARACHUTE_ACTION_RELEASE = 2
+
+uint8 FAILURE_UNIT_SENSOR_GYRO = 0
+uint8 FAILURE_UNIT_SENSOR_ACCEL = 1
+uint8 FAILURE_UNIT_SENSOR_MAG = 2
+uint8 FAILURE_UNIT_SENSOR_BARO = 3
+uint8 FAILURE_UNIT_SENSOR_GPS = 4
+uint8 FAILURE_UNIT_SENSOR_OPTICAL_FLOW = 5
+uint8 FAILURE_UNIT_SENSOR_VIO = 6
+uint8 FAILURE_UNIT_SENSOR_DISTANCE_SENSOR = 7
+uint8 FAILURE_UNIT_SENSOR_AIRSPEED = 8
+uint8 FAILURE_UNIT_SYSTEM_BATTERY = 100
+uint8 FAILURE_UNIT_SYSTEM_MOTOR = 101
+uint8 FAILURE_UNIT_SYSTEM_SERVO = 102
+uint8 FAILURE_UNIT_SYSTEM_AVOIDANCE = 103
+uint8 FAILURE_UNIT_SYSTEM_RC_SIGNAL = 104
+uint8 FAILURE_UNIT_SYSTEM_MAVLINK_SIGNAL = 105
+uint8 FAILURE_UNIT_SYSTEM_ESC = 106
+uint8 FAILURE_UNIT_SYSTEM_TRAFFIC_AVOIDANCE = 107
+uint8 FAILURE_UNIT_DATALINK_LTE = 150
+uint8 FAILURE_UNIT_DATALINK_WIFI = 151
+uint8 FAILURE_UNIT_DATALINK_TELEM_RADIO = 152
+uint8 FAILURE_UNIT_BUS_CAN = 200
+uint8 FAILURE_UNIT_BUS_I2C = 201
+
+uint8 FAILURE_TYPE_OK = 0
+uint8 FAILURE_TYPE_OFF = 1
+uint8 FAILURE_TYPE_STUCK = 2
+uint8 FAILURE_TYPE_GARBAGE = 3
+uint8 FAILURE_TYPE_WRONG = 4
+uint8 FAILURE_TYPE_SLOW = 5
+uint8 FAILURE_TYPE_DELAYED = 6
+uint8 FAILURE_TYPE_INTERMITTENT = 7
+uint8 FAILURE_TYPE_DRIFT = 8
+
+# Used as param1 in DO_CHANGE_SPEED command.
+uint8 SPEED_TYPE_AIRSPEED = 0
+uint8 SPEED_TYPE_GROUNDSPEED = 1
+uint8 SPEED_TYPE_CLIMB_SPEED = 2
+uint8 SPEED_TYPE_DESCEND_SPEED = 3
+
+# Used as param3 in CMD_DO_ORBIT.
+uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TO_CIRCLE_CENTER = 0
+uint8 ORBIT_YAW_BEHAVIOUR_HOLD_INITIAL_HEADING = 1
+uint8 ORBIT_YAW_BEHAVIOUR_UNCONTROLLED = 2
+uint8 ORBIT_YAW_BEHAVIOUR_HOLD_FRONT_TANGENT_TO_CIRCLE = 3
+uint8 ORBIT_YAW_BEHAVIOUR_RC_CONTROLLED = 4
+uint8 ORBIT_YAW_BEHAVIOUR_UNCHANGED = 5
+
+# Used as param1&2 in CMD_START_RX_PAIR.
+uint8 RC_TYPE_SPEKTRUM = 0
+uint8 RC_TYPE_CRSF = 1
+uint8 RC_SUB_TYPE_SPEKTRUM_DSM2 = 0
+uint8 RC_SUB_TYPE_SPEKTRUM_DSMX = 1
+uint8 RC_SUB_TYPE_SPEKTRUM_DSMX8 = 2
+
+# Used as param1 in ARM_DISARM command.
+int8 ARMING_ACTION_DISARM = 0
+int8 ARMING_ACTION_ARM = 1
+
+# param2 in VEHICLE_CMD_DO_GRIPPER.
+uint8 GRIPPER_ACTION_RELEASE = 0
+uint8 GRIPPER_ACTION_GRAB = 1
+
+# Used as param1 in DO_SET_SAFETY_SWITCH_STATE command.
+uint8 SAFETY_OFF = 0
+uint8 SAFETY_ON = 1
+
+# param1 in VEHICLE_CMD_ACTUATOR_GROUP_TEST (matches MAVLink ACTUATOR_TEST_GROUP enum)
+uint8 ACTUATOR_TEST_GROUP_ROLL_TORQUE = 0
+uint8 ACTUATOR_TEST_GROUP_PITCH_TORQUE = 1
+uint8 ACTUATOR_TEST_GROUP_YAW_TORQUE = 2
+uint8 ACTUATOR_TEST_GROUP_COLLECTIVE_TILT = 3
+uint8 ACTUATOR_TEST_GROUP_X_THRUST = 4
+uint8 ACTUATOR_TEST_GROUP_Y_THRUST = 5
+uint8 ACTUATOR_TEST_GROUP_Z_THRUST = 6
+
+uint8 ORB_QUEUE_LENGTH = 8
+
+float32 param1 # Parameter 1, as defined by MAVLink uint16 VEHICLE_CMD enum.
+float32 param2 # Parameter 2, as defined by MAVLink uint16 VEHICLE_CMD enum.
+float32 param3 # Parameter 3, as defined by MAVLink uint16 VEHICLE_CMD enum.
+float32 param4 # Parameter 4, as defined by MAVLink uint16 VEHICLE_CMD enum.
+float64 param5 # Parameter 5, as defined by MAVLink uint16 VEHICLE_CMD enum.
+float64 param6 # Parameter 6, as defined by MAVLink uint16 VEHICLE_CMD enum.
+float32 param7 # Parameter 7, as defined by MAVLink uint16 VEHICLE_CMD enum.
+uint32 command # Command ID.
+uint8 target_system # System which should execute the command.
+uint8 target_component # Component which should execute the command, 0 for all components.
+uint8 source_system # System sending the command.
+uint16 source_component # Component / mode executor sending the command.
+uint8 confirmation # 0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command).
+bool from_external
+
+uint16 COMPONENT_MODE_EXECUTOR_START = 1000
+
+# TOPICS vehicle_command gimbal_v1_command vehicle_command_mode_executor
+# Trajectory setpoint in NED frame
+# Input to PID position controller.
+# Needs to be kinematically consistent and feasible for smooth flight.
+# setting a value to NaN means the state should not be controlled
+
+uint32 MESSAGE_VERSION = 0
+
+uint64 timestamp # time since system start (microseconds)
+
+# NED local world frame
+float32[3] position # in meters
+float32[3] velocity # in meters/second
+float32[3] acceleration # in meters/second^2
+float32[3] jerk # in meters/second^3 (for logging only)
+
+float32 yaw # euler angle of desired attitude in radians -PI..+PI
+float32 yawspeed # angular velocity around NED frame z-axis in radians/second
+# Off-board control mode
+
+uint64 timestamp		# time since system start (microseconds)
+
+bool position
+bool velocity
+bool acceleration
+bool attitude
+bool body_rate
+bool thrust_and_torque
+bool direct_actuator
+# Encodes the system state of the vehicle published by commander
+
+uint32 MESSAGE_VERSION = 4
+
+uint64 timestamp # time since system start (microseconds)
+
+uint64 armed_time # Arming timestamp (microseconds)
+uint64 takeoff_time # Takeoff timestamp (microseconds)
+
+uint8 arming_state
+uint8 ARMING_STATE_DISARMED = 1
+uint8 ARMING_STATE_ARMED    = 2
+
+uint8 latest_arming_reason
+uint8 latest_disarming_reason
+uint8 ARM_DISARM_REASON_STICK_GESTURE = 1
+uint8 ARM_DISARM_REASON_RC_SWITCH = 2
+uint8 ARM_DISARM_REASON_COMMAND_INTERNAL = 3
+uint8 ARM_DISARM_REASON_COMMAND_EXTERNAL = 4
+uint8 ARM_DISARM_REASON_MISSION_START = 5
+uint8 ARM_DISARM_REASON_LANDING = 6
+uint8 ARM_DISARM_REASON_PREFLIGHT_INACTION = 7
+uint8 ARM_DISARM_REASON_KILL_SWITCH = 8
+uint8 ARM_DISARM_REASON_RC_BUTTON = 13
+uint8 ARM_DISARM_REASON_FAILSAFE = 14
+
+uint64 nav_state_timestamp # time when current nav_state activated
+
+uint8 nav_state_user_intention                  # Mode that the user selected (might be different from nav_state in a failsafe situation)
+
+uint8 nav_state                                 # Currently active mode
+uint8 NAVIGATION_STATE_MANUAL = 0               # Manual mode
+uint8 NAVIGATION_STATE_ALTCTL = 1               # Altitude control mode
+uint8 NAVIGATION_STATE_POSCTL = 2               # Position control mode
+uint8 NAVIGATION_STATE_AUTO_MISSION = 3         # Auto mission mode
+uint8 NAVIGATION_STATE_AUTO_LOITER = 4          # Auto loiter mode
+uint8 NAVIGATION_STATE_AUTO_RTL = 5             # Return mode
+uint8 NAVIGATION_STATE_POSITION_SLOW = 6
+uint8 NAVIGATION_STATE_GUIDED_COURSE = 7 		# Guided Course mode (FW: maintain course/alt/speed)
+uint8 NAVIGATION_STATE_ALTITUDE_CRUISE = 8      # Altitude with Cruise mode
+uint8 NAVIGATION_STATE_MANUAL_PARKING = 9       # Manual Parking mode
+uint8 NAVIGATION_STATE_ACRO = 10                # Acro mode
+uint8 NAVIGATION_STATE_FREE2 = 11
+uint8 NAVIGATION_STATE_DESCEND = 12             # Descend mode (no position control)
+uint8 NAVIGATION_STATE_TERMINATION = 13         # Termination mode
+uint8 NAVIGATION_STATE_OFFBOARD = 14
+uint8 NAVIGATION_STATE_STAB = 15                # Stabilized mode
+uint8 NAVIGATION_STATE_FREE1 = 16
+uint8 NAVIGATION_STATE_AUTO_TAKEOFF = 17        # Takeoff
+uint8 NAVIGATION_STATE_AUTO_LAND = 18           # Land
+uint8 NAVIGATION_STATE_AUTO_FOLLOW_TARGET = 19  # Auto Follow
+uint8 NAVIGATION_STATE_AUTO_PRECLAND = 20       # Precision land with landing target
+uint8 NAVIGATION_STATE_ORBIT = 21               # Orbit in a circle
+uint8 NAVIGATION_STATE_AUTO_VTOL_TAKEOFF = 22   # Takeoff, transition, establish loiter
+uint8 NAVIGATION_STATE_EXTERNAL1 = 23
+uint8 NAVIGATION_STATE_EXTERNAL2 = 24
+uint8 NAVIGATION_STATE_EXTERNAL3 = 25
+uint8 NAVIGATION_STATE_EXTERNAL4 = 26
+uint8 NAVIGATION_STATE_EXTERNAL5 = 27
+uint8 NAVIGATION_STATE_EXTERNAL6 = 28
+uint8 NAVIGATION_STATE_EXTERNAL7 = 29
+uint8 NAVIGATION_STATE_EXTERNAL8 = 30
+uint8 NAVIGATION_STATE_MAX = 31
+
+uint8 executor_in_charge                        # Current mode executor in charge (0=Autopilot)
+uint8 nav_state_display                         # User-visible nav state sent via MAVLink (executor state if active, otherwise nav_state)
+
+bool accepts_offboard_setpoints                 # True if the current mode accepts offboard trajectory setpoints via MAVLink
+
+uint32 valid_nav_states_mask                    # Bitmask for all valid nav_state values
+uint32 can_set_nav_states_mask                  # Bitmask for all modes that a user can select
+
+uint8 hil_state
+uint8 HIL_STATE_OFF = 0
+uint8 HIL_STATE_ON = 1
+
+# Current vehicle locomotion method. A vehicle can have different methods (e.g. VTOL transitions from RW to FW method)
+uint8 vehicle_type
+uint8 VEHICLE_TYPE_UNSPECIFIED = 0
+uint8 VEHICLE_TYPE_ROTARY_WING = 1
+uint8 VEHICLE_TYPE_FIXED_WING = 2
+uint8 VEHICLE_TYPE_ROVER = 3
+
+uint8 FAILSAFE_DEFER_STATE_DISABLED = 0
+uint8 FAILSAFE_DEFER_STATE_ENABLED = 1
+uint8 FAILSAFE_DEFER_STATE_WOULD_FAILSAFE = 2 # Failsafes deferred, but would trigger a failsafe
+
+bool failsafe # true if system is in failsafe state (e.g. Return, Hover, Terminate, ...)
+bool failsafe_and_user_took_over # true if system is in failsafe state but the user took over control
+uint8 failsafe_defer_state # one of FAILSAFE_DEFER_STATE_*
+
+# Link loss
+bool gcs_connection_lost              # datalink to GCS lost
+uint8 gcs_connection_lost_counter     # counts unique GCS connection lost events
+bool high_latency_data_link_lost # Set to true if the high latency data link (eg. RockBlock Iridium 9603 telemetry module) is lost
+
+# VTOL flags
+bool is_vtol             # True if the system is VTOL capable
+bool is_vtol_tailsitter  # True if the system performs a 90° pitch down rotation during transition from MC to FW
+bool in_transition_mode  # True if VTOL is doing a transition
+bool in_transition_to_fw # True if VTOL is doing a transition from MC to FW
+
+# MAVLink identification
+uint8 system_type  # system type, contains mavlink MAV_TYPE
+uint8 system_id	   # system id, contains MAVLink's system ID field
+uint8 component_id # subsystem / component id, contains MAVLink's component ID field
+
+bool safety_button_available # Set to true if a safety button is connected
+bool safety_off # Set to true if safety is off
+
+bool power_input_valid                            # set if input power is valid
+bool usb_connected                                # set to true (never cleared) once telemetry received from usb link
+
+bool open_drone_id_system_present
+bool open_drone_id_system_healthy
+
+bool parachute_system_present
+bool parachute_system_healthy
+
+bool traffic_avoidance_system_present
+
+bool rc_calibration_in_progress
+bool calibration_enabled
+
+bool pre_flight_checks_pass		# true if all checks necessary to arm pass
+# Fused local position in NED.
+# The coordinate system origin is the vehicle position at the time when the EKF2-module was started.
+
+uint32 MESSAGE_VERSION = 1
+
+uint64 timestamp			# time since system start (microseconds)
+uint64 timestamp_sample                 # the timestamp of the raw data (microseconds)
+
+bool xy_valid				# true if x and y are valid
+bool z_valid				# true if z is valid
+bool v_xy_valid				# true if vx and vy are valid
+bool v_z_valid				# true if vz is valid
+
+# Position in local NED frame
+float32 x				# North position in NED earth-fixed frame, (metres)
+float32 y				# East position in NED earth-fixed frame, (metres)
+float32 z				# Down position (negative altitude) in NED earth-fixed frame, (metres)
+
+# Position reset delta
+float32[2] delta_xy			# Amount of lateral shift of position estimate in latest reset (in x and y) [m]
+uint8 xy_reset_counter			# Index of latest lateral position estimate reset
+float32 delta_z				# Amount of vertical shift of position estimate in latest reset [m]
+uint8 z_reset_counter			# Index of latest vertical position estimate reset
+
+# Velocity in NED frame
+float32 vx 				# North velocity in NED earth-fixed frame, (metres/sec)
+float32 vy				# East velocity in NED earth-fixed frame, (metres/sec)
+float32 vz				# Down velocity in NED earth-fixed frame, (metres/sec)
+float32 z_deriv				# Down position time derivative in NED earth-fixed frame, (metres/sec)
+
+# Velocity reset delta
+float32[2] delta_vxy			# Amount of lateral shift of velocity estimate in latest reset (in x and y) [m/s]
+uint8 vxy_reset_counter			# Index of latest vertical velocity estimate reset
+float32 delta_vz			# Amount of vertical shift of velocity estimate in latest reset [m/s]
+uint8 vz_reset_counter			# Index of latest vertical velocity estimate reset
+
+# Acceleration in NED frame
+float32 ax        # North velocity derivative in NED earth-fixed frame, (metres/sec^2)
+float32 ay        # East velocity derivative in NED earth-fixed frame, (metres/sec^2)
+float32 az        # Down velocity derivative in NED earth-fixed frame, (metres/sec^2)
+
+float32 heading				# Euler yaw angle transforming the tangent plane relative to NED earth-fixed frame, -PI..+PI,  (radians)
+float32 heading_var
+float32 unaided_heading                 # Same as heading but generated by integrating corrected gyro data only
+float32 delta_heading			# Heading delta caused by latest heading reset [rad]
+uint8 heading_reset_counter		# Index of latest heading reset
+bool heading_good_for_control
+
+float32 tilt_var
+
+# Position of reference point (local NED frame origin) in global (GPS / WGS84) frame
+bool xy_global				# true if position (x, y) has a valid global reference (ref_lat, ref_lon)
+bool z_global				# true if z has a valid global reference (ref_alt)
+uint64 ref_timestamp			# Time when reference position was set since system start, (microseconds)
+float64 ref_lat				# Reference point latitude, (degrees)
+float64 ref_lon				# Reference point longitude, (degrees)
+float32 ref_alt				# Reference altitude AMSL, (metres)
+
+# Distance to surface
+bool dist_bottom_valid			# true if distance to bottom surface is valid
+float32 dist_bottom			# Distance from from bottom surface to ground, (metres)
+float32 dist_bottom_var                 # height above ground estimate variance (m^2)
+
+float32 delta_dist_bottom               # Amount of vertical shift of dist bottom estimate in latest reset [m]
+uint8 dist_bottom_reset_counter         # Index of latest dist bottom estimate reset
+
+uint8 dist_bottom_sensor_bitfield	# bitfield indicating what type of sensor is used to estimate dist_bottom
+uint8 DIST_BOTTOM_SENSOR_NONE = 0
+uint8 DIST_BOTTOM_SENSOR_RANGE = 1	# (1 << 0) a range sensor is used to estimate dist_bottom field
+uint8 DIST_BOTTOM_SENSOR_FLOW = 2	# (1 << 1) a flow sensor is used to estimate dist_bottom field (mostly fixed-wing use case)
+
+float32 eph				# Standard deviation of horizontal position error, (metres)
+float32 epv				# Standard deviation of vertical position error, (metres)
+float32 evh				# Standard deviation of horizontal velocity error, (metres/sec)
+float32 evv				# Standard deviation of vertical velocity error, (metres/sec)
+
+bool dead_reckoning                     # True if this position is estimated through dead-reckoning
+
+# estimator specified vehicle limits
+# set to INFINITY when limiting not required
+float32 vxy_max				# maximum horizontal speed (meters/sec)
+float32 vz_max				# maximum vertical speed (meters/sec)
+float32 hagl_min			# minimum height above ground level (meters)
+float32 hagl_max_z			# maximum height above ground level for z-control (meters)
+float32 hagl_max_xy			# maximum height above ground level for xy-control (meters)
+
+# TOPICS vehicle_local_position vehicle_local_position_groundtruth external_ins_local_position
+# TOPICS estimator_local_position
+uint32 MESSAGE_VERSION = 0
+
+uint64 timestamp # time since system start (microseconds)
+
+bool freefall # true if vehicle is currently in free-fall
+bool ground_contact # true if vehicle has ground contact but is not landed (1. stage)
+bool maybe_landed # true if the vehicle might have landed (2. stage)
+bool landed # true if vehicle is currently landed on the ground (3. stage)
+
+bool in_ground_effect # indicates if from the perspective of the landing detector the vehicle might be in ground effect (baro). This flag will become true if the vehicle is not moving horizontally and is descending (crude assumption that user is landing).
+
+# Flags in this paragraph are for diagnostic logging only
+bool in_descend # true only if commanded to descend faster than 1.1 * LNDMC_Z_VEL_MAX for every update since the previous publication
+bool has_low_throttle # true only if throttle was at or below the low-throttle threshold for every update since the previous publication
+bool vertical_movement # false only if vertical velocity stayed below LNDMC_Z_VEL_MAX for every update since the previous publication
+bool horizontal_movement # false only if horizontal velocity stayed below LNDMC_XY_VEL_MAX for every update since the previous publication
+bool rotational_movement # false only if roll/pitch rate stayed below LNDMC_ROT_MAX for every update since the previous publication
+bool close_to_ground_or_skipped_check # true only if close to the ground, or the check was skipped (no distance sensor), for every update since the previous publication
+
+bool at_rest
+# Vehicle Command Acknowledgement uORB message.
+#
+# Used for acknowledging the vehicle command being received.
+# Follows the MAVLink COMMAND_ACK message definition
+
+uint32 MESSAGE_VERSION = 1
+
+uint64 timestamp # [us] time since system start
+
+uint8 ORB_QUEUE_LENGTH = 8
+
+uint32 command # [-] Command that is being acknowledged
+
+uint8 result # [@enum VEHICLE_CMD_RESULT] Command result
+# VEHICLE_CMD_RESULT Result cases. Follows the MAVLink MAV_RESULT enum definition
+uint8 VEHICLE_CMD_RESULT_ACCEPTED = 0 # Command ACCEPTED and EXECUTED
+uint8 VEHICLE_CMD_RESULT_TEMPORARILY_REJECTED = 1 # Command TEMPORARY REJECTED/DENIED
+uint8 VEHICLE_CMD_RESULT_DENIED = 2 # Command PERMANENTLY DENIED
+uint8 VEHICLE_CMD_RESULT_UNSUPPORTED = 3 # Command UNKNOWN/UNSUPPORTED
+uint8 VEHICLE_CMD_RESULT_FAILED = 4 # Command executed, but failed
+uint8 VEHICLE_CMD_RESULT_IN_PROGRESS = 5 # Command being executed
+uint8 VEHICLE_CMD_RESULT_CANCELLED = 6 # Command Canceled
+uint8 VEHICLE_CMD_RESULT_COMMAND_LONG_ONLY = 7 # Command is only accepted when sent as a COMMAND_LONG
+uint8 VEHICLE_CMD_RESULT_COMMAND_INT_ONLY = 8 # Command is only accepted when sent as a COMMAND_INT
+uint8 VEHICLE_CMD_RESULT_UNSUPPORTED_MAV_FRAME = 9 # Command does not support specified frame
+
+uint8 result_param1 # [-] Can be set with the reason why the command was denied, or the progress percentage when result is MAV_RESULT_IN_PROGRESS (%)
+
+int32 result_param2 # [enum ARM_AUTH_DENIED_REASON] Additional parameter of the result, example: which parameter of MAV_CMD_NAV_WAYPOINT caused it to be denied, or what ARM_AUTH_DENIED_REASON
+# Arming denied specific cases
+uint16 ARM_AUTH_DENIED_REASON_GENERIC = 0
+uint16 ARM_AUTH_DENIED_REASON_NONE = 1
+uint16 ARM_AUTH_DENIED_REASON_INVALID_WAYPOINT = 2
+uint16 ARM_AUTH_DENIED_REASON_TIMEOUT = 3
+uint16 ARM_AUTH_DENIED_REASON_AIRSPACE_IN_USE = 4
+uint16 ARM_AUTH_DENIED_REASON_BAD_WEATHER = 5
+
+uint8 target_system # [-] Target system
+uint16 target_component # Target component / mode executor
+
+bool from_external # Indicates if the command came from an external source
+/fmu/in/actuator_motors [px4_msgs/msg/ActuatorMotors]
+/fmu/in/actuator_servos_v1 [px4_msgs/msg/ActuatorServos]
+/fmu/in/arming_check_reply_v1 [px4_msgs/msg/ArmingCheckReply]
+/fmu/in/aux_global_position_v1 [px4_msgs/msg/AuxGlobalPosition]
+/fmu/in/config_overrides_request_v1 [px4_msgs/msg/ConfigOverrides]
+/fmu/in/distance_sensor [px4_msgs/msg/DistanceSensor]
+/fmu/in/fixed_wing_lateral_setpoint [px4_msgs/msg/FixedWingLateralSetpoint]
+/fmu/in/fixed_wing_longitudinal_setpoint [px4_msgs/msg/FixedWingLongitudinalSetpoint]
+/fmu/in/goto_setpoint [px4_msgs/msg/GotoSetpoint]
+/fmu/in/landing_gear [px4_msgs/msg/LandingGear]
+/fmu/in/lateral_control_configuration [px4_msgs/msg/LateralControlConfiguration]
+/fmu/in/longitudinal_control_configuration [px4_msgs/msg/LongitudinalControlConfiguration]
+/fmu/in/manual_control_input [px4_msgs/msg/ManualControlSetpoint]
+/fmu/in/message_format_request [px4_msgs/msg/MessageFormatRequest]
+/fmu/in/mode_completed [px4_msgs/msg/ModeCompleted]
+/fmu/in/obstacle_distance [px4_msgs/msg/ObstacleDistance]
+/fmu/in/offboard_control_mode [px4_msgs/msg/OffboardControlMode]
+/fmu/in/onboard_computer_status [px4_msgs/msg/OnboardComputerStatus]
+/fmu/in/register_ext_component_request_v2 [px4_msgs/msg/RegisterExtComponentRequest]
+/fmu/in/rover_attitude_setpoint [px4_msgs/msg/RoverAttitudeSetpoint]
+/fmu/in/rover_position_setpoint [px4_msgs/msg/RoverPositionSetpoint]
+/fmu/in/rover_rate_setpoint [px4_msgs/msg/RoverRateSetpoint]
+/fmu/in/rover_speed_setpoint [px4_msgs/msg/RoverSpeedSetpoint]
+/fmu/in/rover_steering_setpoint [px4_msgs/msg/RoverSteeringSetpoint]
+/fmu/in/rover_throttle_setpoint [px4_msgs/msg/RoverThrottleSetpoint]
+/fmu/in/sensor_optical_flow [px4_msgs/msg/SensorOpticalFlow]
+/fmu/in/setpoint_config [px4_msgs/msg/SetpointConfig]
+/fmu/in/telemetry_status [px4_msgs/msg/TelemetryStatus]
+/fmu/in/trajectory_setpoint [px4_msgs/msg/TrajectorySetpoint]
+/fmu/in/unregister_ext_component [px4_msgs/msg/UnregisterExtComponent]
+/fmu/in/vehicle_attitude_setpoint_v1 [px4_msgs/msg/VehicleAttitudeSetpoint]
+/fmu/in/vehicle_command [px4_msgs/msg/VehicleCommand]
+/fmu/in/vehicle_command_mode_executor [px4_msgs/msg/VehicleCommand]
+/fmu/in/vehicle_mocap_odometry [px4_msgs/msg/VehicleOdometry]
+/fmu/in/vehicle_rates_setpoint [px4_msgs/msg/VehicleRatesSetpoint]
+/fmu/in/vehicle_thrust_setpoint [px4_msgs/msg/VehicleThrustSetpoint]
+/fmu/in/vehicle_torque_setpoint [px4_msgs/msg/VehicleTorqueSetpoint]
+/fmu/in/vehicle_visual_odometry [px4_msgs/msg/VehicleOdometry]
+/fmu/out/airspeed_validated_v1 [px4_msgs/msg/AirspeedValidated]
+/fmu/out/arming_check_request_v1 [px4_msgs/msg/ArmingCheckRequest]
+/fmu/out/battery_status_v1 [px4_msgs/msg/BatteryStatus]
+/fmu/out/collision_constraints [px4_msgs/msg/CollisionConstraints]
+/fmu/out/config_overrides_confirm_v1 [px4_msgs/msg/ConfigOverrides]
+/fmu/out/estimator_status_flags [px4_msgs/msg/EstimatorStatusFlags]
+/fmu/out/failsafe_flags [px4_msgs/msg/FailsafeFlags]
+/fmu/out/gimbal_device_attitude_status [px4_msgs/msg/GimbalDeviceAttitudeStatus]
+/fmu/out/home_position_v2 [px4_msgs/msg/HomePosition]
+/fmu/out/input_rc [px4_msgs/msg/InputRc]
+/fmu/out/manual_control_setpoint [px4_msgs/msg/ManualControlSetpoint]
+/fmu/out/message_format_response [px4_msgs/msg/MessageFormatResponse]
+/fmu/out/mode_completed [px4_msgs/msg/ModeCompleted]
+/fmu/out/position_setpoint_triplet [px4_msgs/msg/PositionSetpointTriplet]
+/fmu/out/register_ext_component_reply_v1 [px4_msgs/msg/RegisterExtComponentReply]
+/fmu/out/sensor_combined [px4_msgs/msg/SensorCombined]
+/fmu/out/setpoint_config_reply [px4_msgs/msg/SetpointConfigReply]
+/fmu/out/timesync_status [px4_msgs/msg/TimesyncStatus]
+/fmu/out/transponder_report [px4_msgs/msg/TransponderReport]
+/fmu/out/vehicle_attitude [px4_msgs/msg/VehicleAttitude]
+/fmu/out/vehicle_command_ack_v1 [px4_msgs/msg/VehicleCommandAck]
+/fmu/out/vehicle_control_mode [px4_msgs/msg/VehicleControlMode]
+/fmu/out/vehicle_global_position [px4_msgs/msg/VehicleGlobalPosition]
+/fmu/out/vehicle_gps_position [px4_msgs/msg/SensorGps]
+/fmu/out/vehicle_land_detected [px4_msgs/msg/VehicleLandDetected]
+/fmu/out/vehicle_local_position_v1 [px4_msgs/msg/VehicleLocalPosition]
+/fmu/out/vehicle_odometry [px4_msgs/msg/VehicleOdometry]
+/fmu/out/vehicle_status_v4 [px4_msgs/msg/VehicleStatus]
+/fmu/out/vtol_vehicle_status [px4_msgs/msg/VtolVehicleStatus]
+/fmu/out/vtx [px4_msgs/msg/Vtx]
+/fmu/out/wind [px4_msgs/msg/Wind]
+/parameter_events [rcl_interfaces/msg/ParameterEvent]
+/rosout [rcl_interfaces/msg/Log]
+Type: px4_msgs/msg/OffboardControlMode
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: _CREATED_BY_BARE_DDS_APP_
+Node namespace: _CREATED_BY_BARE_DDS_APP_
+Topic type: px4_msgs/msg/OffboardControlMode
+Topic type hash: INVALID
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.49.18.4f.06.2f.09.01.00.00.00.00.00.0a.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Type: px4_msgs/msg/TrajectorySetpoint
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: _CREATED_BY_BARE_DDS_APP_
+Node namespace: _CREATED_BY_BARE_DDS_APP_
+Topic type: px4_msgs/msg/TrajectorySetpoint
+Topic type hash: INVALID
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.49.18.4f.06.2f.09.01.00.00.00.00.00.10.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Type: px4_msgs/msg/VehicleCommand
+
+Publisher count: 0
+
+Subscription count: 1
+
+Node name: _CREATED_BY_BARE_DDS_APP_
+Node namespace: _CREATED_BY_BARE_DDS_APP_
+Topic type: px4_msgs/msg/VehicleCommand
+Topic type hash: INVALID
+Endpoint type: SUBSCRIPTION
+GID: 01.0f.49.18.4f.06.2f.09.01.00.00.00.00.00.15.04
+QoS profile:
+  Reliability: BEST_EFFORT
+  History (Depth): UNKNOWN
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+[INFO] [1791619654.268866708] [baseline_preflight]: CSV: /home/kailash/uav_research/baseline/preflight_013.csv; execute_sitl=False
+[INFO] [1791619655.244457665] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619656.293283530] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619657.292998808] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619658.343642703] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619659.349301537] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619660.392812843] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619661.453629043] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619662.493911796] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619663.492654880] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619664.494818987] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619665.542432647] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619666.543317652] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619667.592372039] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619668.641963320] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+{
+  "schema_version": 1,
+  "category": "A_PASSIVE",
+  "runs": [
+    {
+      "csv": "/home/kailash/uav_research/baseline/preflight_013.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-10T08:07:34.212741+00:00",
+      "end_utc": "2026-10-10T08:07:49.244227+00:00",
+      "duration_s": 15.031499741002335,
+      "publication_records": 0,
+      "source_clock_regressions": [],
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 29,
+          "rate_hz": 1.9292818747084124
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 738,
+          "rate_hz": 49.09689736326925
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 738,
+          "rate_hz": 49.09689736326925
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9979044179526271
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9979044179526271
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 1.0308186420006678,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": true,
+      "publisher_status": "clear"
+    }
+  ],
+  "all_passed": true,
+  "phase1_status": "PARTIALLY COMPLETE",
+  "note": "Passive demonstrations do not establish mission or QGC control success."
+}

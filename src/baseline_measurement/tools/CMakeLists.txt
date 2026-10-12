@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(phase1_cpp_probe LANGUAGES CXX)
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(px4_msgs REQUIRED)
+add_executable(telemetry_probe telemetry_probe.cpp)
+target_compile_features(telemetry_probe PRIVATE cxx_std_17)
+ament_target_dependencies(telemetry_probe rclcpp px4_msgs)

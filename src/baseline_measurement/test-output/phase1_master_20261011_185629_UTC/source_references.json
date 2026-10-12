@@ -1,0 +1,1315 @@
+[
+  {
+    "path": "/home/kailash/PX4-Autopilot/platforms/posix/src/px4/common/drv_hrt.cpp",
+    "sha256": "41fc4b4b180b23086c8bf007102ac40cdae79967de667a77727ba725073d0a15",
+    "matches": [
+      {
+        "line": 59,
+        "text": "#if defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 112,
+        "text": "hrt_abstime hrt_absolute_time()"
+      },
+      {
+        "line": 114,
+        "text": "#if defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 118,
+        "text": "#else // defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 122,
+        "text": "#endif // defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 132,
+        "text": "*t = hrt_absolute_time();"
+      },
+      {
+        "line": 200,
+        "text": "entry->deadline = hrt_absolute_time() + delay;"
+      },
+      {
+        "line": 265,
+        "text": "latency_actual = hrt_absolute_time();"
+      },
+      {
+        "line": 287,
+        "text": "hrt_abstime\tnow = hrt_absolute_time();"
+      },
+      {
+        "line": 302,
+        "text": "* hrt_absolute_time runs at least once per timer period."
+      },
+      {
+        "line": 376,
+        "text": "hrt_absolute_time() + delay,"
+      },
+      {
+        "line": 391,
+        "text": "hrt_absolute_time() + delay,"
+      },
+      {
+        "line": 415,
+        "text": "hrt_abstime now = hrt_absolute_time();"
+      },
+      {
+        "line": 471,
+        "text": "#if defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 478,
+        "text": "#endif // defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 496,
+        "text": "#if defined(ENABLE_LOCKSTEP_SCHEDULER)"
+      },
+      {
+        "line": 497,
+        "text": "int px4_clock_settime(clockid_t clk_id, const struct timespec *ts)"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/simulation/gz_bridge/GZBridge.cpp",
+    "sha256": "fb43f7159abdaf94a90a3e19bedc146b92ab7d73ca226a8e89c4230288df396b",
+    "matches": [
+      {
+        "line": 206,
+        "text": "if (!_node.Subscribe(clock_topic, &GZBridge::clockCallback, this)) {"
+      },
+      {
+        "line": 341,
+        "text": "void GZBridge::clockCallback(const gz::msgs::Clock &msg)"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/util/time.c",
+    "sha256": "2462e00c4b8cd086ff9bdf609063ecbda55e91fbc92397846976788418c8aead",
+    "matches": [
+      {
+        "line": 34,
+        "text": "return uxr_nanos() / 1000000;"
+      },
+      {
+        "line": 37,
+        "text": "int64_t uxr_nanos("
+      },
+      {
+        "line": 76,
+        "text": "return (int64_t)(hrt_absolute_time() * 1000);"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client/src/c/core/session/session.c",
+    "sha256": "02ff13dca585902da0611c6b510500003819dbb7c533baee17d0840220344b8e",
+    "matches": [
+      {
+        "line": 112,
+        "text": "static void read_submessage_timestamp_reply("
+      },
+      {
+        "line": 166,
+        "text": "session->on_time = NULL;"
+      },
+      {
+        "line": 167,
+        "text": "session->on_time_args = NULL;"
+      },
+      {
+        "line": 198,
+        "text": "session->on_time = on_time_func;"
+      },
+      {
+        "line": 199,
+        "text": "session->on_time_args = args;"
+      },
+      {
+        "line": 960,
+        "text": "read_submessage_timestamp_reply(session, submessage);"
+      },
+      {
+        "line": 1067,
+        "text": "void read_submessage_timestamp_reply("
+      },
+      {
+        "line": 1175,
+        "text": "if (session->on_time != NULL)"
+      },
+      {
+        "line": 1177,
+        "text": "session->on_time(session,"
+      },
+      {
+        "line": 1183,
+        "text": "session->on_time_args);"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/Micro-XRCE-DDS-Agent/include/uxr/agent/utils/Time.hpp",
+    "sha256": "b0ad2f1dd99276c51432eb2d2e2c8b0ed81ef9c5f6b097dc6497a8fe5721516c",
+    "matches": [
+      {
+        "line": 25,
+        "text": "inline void get_epoch_time(int32_t& sec, uint32_t& nsec)"
+      },
+      {
+        "line": 28,
+        "text": "(std::chrono::high_resolution_clock::now().time_since_epoch()).count());"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/Micro-XRCE-DDS-Agent/src/cpp/processor/Processor.cpp",
+    "sha256": "22cd40746b55a00c1d25473f73c48e55ff6358688c84b792dbe5ec19b652f6d9",
+    "matches": [
+      {
+        "line": 732,
+        "text": "time::get_epoch_time(timestamp_reply.receive_timestamp().seconds(),"
+      },
+      {
+        "line": 733,
+        "text": "timestamp_reply.receive_timestamp().nanoseconds());"
+      },
+      {
+        "line": 734,
+        "text": "timestamp_reply.originate_timestamp(timestamp.transmit_timestamp());"
+      },
+      {
+        "line": 735,
+        "text": "time::get_epoch_time(timestamp_reply.transmit_timestamp().seconds(),"
+      },
+      {
+        "line": 736,
+        "text": "timestamp_reply.transmit_timestamp().nanoseconds());"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/lib/timesync/Timesync.cpp",
+    "sha256": "b23e9a893abca013117242dc037d5c47977b3deae357bad2be60a2e7e244cf84",
+    "matches": [
+      {
+        "line": 45,
+        "text": "void Timesync::update(const uint64_t now_us, const int64_t remote_timestamp_ns, const int64_t originate_timestamp_ns)"
+      },
+      {
+        "line": 68,
+        "text": "if (_high_deviation_count > MAX_CONSECUTIVE_HIGH_DEVIATION) {"
+      },
+      {
+        "line": 71,
+        "text": "reset_filter();"
+      },
+      {
+        "line": 115,
+        "text": "tsync_status.observed_offset = offset_us;"
+      },
+      {
+        "line": 155,
+        "text": "void Timesync::reset_filter()"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/lib/timesync/Timesync.hpp",
+    "sha256": "3f4ca7941d101b0bdc7ce7ebb8f0d352cd974442cb648db83ac1aa346ecc6e6b",
+    "matches": [
+      {
+        "line": 80,
+        "text": "// Samples with round-trip time higher than MAX_RTT_SAMPLE are not used to update the filter."
+      },
+      {
+        "line": 83,
+        "text": "// Samples whose calculated clock offset is more than MAX_DEVIATION_SAMPLE off from the current"
+      },
+      {
+        "line": 84,
+        "text": "// estimate are not used to update the filter. More than MAX_CONSECUTIVE_HIGH_DEVIATION number"
+      },
+      {
+        "line": 88,
+        "text": "static constexpr uint64_t MAX_RTT_SAMPLE = 10_ms;"
+      },
+      {
+        "line": 89,
+        "text": "static constexpr uint64_t MAX_DEVIATION_SAMPLE = 100_ms;"
+      },
+      {
+        "line": 91,
+        "text": "static constexpr uint32_t MAX_CONSECUTIVE_HIGH_DEVIATION = 10;"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/uxrce_dds_client.cpp",
+    "sha256": "7b63db7f756c61198355eb2abdad34de01b5f9e13a9d47c554866eff7f02e463",
+    "matches": [
+      {
+        "line": 75,
+        "text": "static void on_time(uxrSession *session, int64_t current_time, int64_t client_transmit_timestamp,"
+      },
+      {
+        "line": 82,
+        "text": "session->time_offset = -timesync->offset() * 1000; // us -> ns"
+      },
+      {
+        "line": 86,
+        "text": "static void on_time_no_sync(uxrSession *session, int64_t current_time, int64_t client_transmit_timestamp,"
+      },
+      {
+        "line": 89,
+        "text": "session->time_offset = 0;"
+      },
+      {
+        "line": 99,
+        "text": "const int64_t time_offset_us = session->time_offset / 1000; // ns -> us"
+      },
+      {
+        "line": 103,
+        "text": "client->process_requests(object_id, sample_id, ub, time_offset_us);"
+      },
+      {
+        "line": 347,
+        "text": "PX4_INFO(\"synchronized with time offset %-5\" PRId64 \"us\", session->time_offset / 1000);"
+      },
+      {
+        "line": 601,
+        "text": "int64_t agent_utc = int64_t(hrt_absolute_time()) + (session->time_offset / 1000LL); // ns to us"
+      },
+      {
+        "line": 929,
+        "text": "const int64_t time_offset_us)"
+      },
+      {
+        "line": 935,
+        "text": "_repliers[i]->process_request(ub, time_offset_us);"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.h.em",
+    "sha256": "7142c2dac186c3659cdf204b0767c821322b33718852c2ed094645f83a1d935f",
+    "matches": [
+      {
+        "line": 37,
+        "text": "typedef bool (*UcdrSerializeMethod)(const void* data, ucdrBuffer& buf, int64_t time_offset);"
+      },
+      {
+        "line": 70,
+        "text": "UcdrSerializeMethod ucdr_serialize_method;"
+      },
+      {
+        "line": 85,
+        "text": "&ucdr_serialize_@(pub['simple_base_type']),"
+      },
+      {
+        "line": 131,
+        "text": "int64_t time_offset_us = session->time_offset / 1000; // ns -> us"
+      },
+      {
+        "line": 170,
+        "text": "send_subscriptions[idx].ucdr_serialize_method(&topic_data, ub, time_offset_us);"
+      },
+      {
+        "line": 231,
+        "text": "const int64_t time_offset_us = session->time_offset / 1000; // ns -> us"
+      },
+      {
+        "line": 238,
+        "text": "if (ucdr_deserialize_@(sub['simple_base_type'])(*ub, data, time_offset_us)) {"
+      },
+      {
+        "line": 250,
+        "text": "if (ucdr_deserialize_@(sub['simple_base_type'])(*ub, data, time_offset_us)) {"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/build/px4_sitl_default/uORB/ucdr/vehicle_local_position.h",
+    "sha256": "2c269f047e5128918074c1a00e53a7e6cd7ec2be773cc82e55edf1c8fb600fb0",
+    "matches": [
+      {
+        "line": 53,
+        "text": "const uint64_t timestamp_adjusted = topic.timestamp + time_offset;"
+      },
+      {
+        "line": 54,
+        "text": "memcpy(buf.iterator, &timestamp_adjusted, sizeof(topic.timestamp));"
+      },
+      {
+        "line": 58,
+        "text": "const uint64_t timestamp_sample_adjusted = topic.timestamp_sample + time_offset;"
+      },
+      {
+        "line": 59,
+        "text": "memcpy(buf.iterator, &timestamp_sample_adjusted, sizeof(topic.timestamp_sample));"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/build/px4_sitl_default/uORB/ucdr/vehicle_attitude.h",
+    "sha256": "c190efddb051efbd905040e13b80c6a3a9005a7d157cb030db94df26706016a7",
+    "matches": [
+      {
+        "line": 53,
+        "text": "const uint64_t timestamp_adjusted = topic.timestamp + time_offset;"
+      },
+      {
+        "line": 54,
+        "text": "memcpy(buf.iterator, &timestamp_adjusted, sizeof(topic.timestamp));"
+      },
+      {
+        "line": 58,
+        "text": "const uint64_t timestamp_sample_adjusted = topic.timestamp_sample + time_offset;"
+      },
+      {
+        "line": 59,
+        "text": "memcpy(buf.iterator, &timestamp_sample_adjusted, sizeof(topic.timestamp_sample));"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/msg/versioned/VehicleLocalPosition.msg",
+    "sha256": "4a24c882529ffaa71d834f0ef75e9cbacbe179db72b9227a13bca35205ccdd53",
+    "matches": [
+      {
+        "line": 6,
+        "text": "uint64 timestamp\t\t\t# time since system start (microseconds)"
+      },
+      {
+        "line": 7,
+        "text": "uint64 timestamp_sample                 # the timestamp of the raw data (microseconds)"
+      },
+      {
+        "line": 21,
+        "text": "uint8 xy_reset_counter\t\t\t# Index of latest lateral position estimate reset"
+      },
+      {
+        "line": 23,
+        "text": "uint8 z_reset_counter\t\t\t# Index of latest vertical position estimate reset"
+      },
+      {
+        "line": 33,
+        "text": "uint8 vxy_reset_counter\t\t\t# Index of latest vertical velocity estimate reset"
+      },
+      {
+        "line": 35,
+        "text": "uint8 vz_reset_counter\t\t\t# Index of latest vertical velocity estimate reset"
+      },
+      {
+        "line": 46,
+        "text": "uint8 heading_reset_counter\t\t# Index of latest heading reset"
+      },
+      {
+        "line": 47,
+        "text": "bool heading_good_for_control"
+      },
+      {
+        "line": 54,
+        "text": "uint64 ref_timestamp\t\t\t# Time when reference position was set since system start, (microseconds)"
+      },
+      {
+        "line": 65,
+        "text": "uint8 dist_bottom_reset_counter         # Index of latest dist bottom estimate reset"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/msg/versioned/VehicleAttitude.msg",
+    "sha256": "d23f153b574daad31f21f767bc6e2781bcd486bb9e56c605b8b6fd10814b1c74",
+    "matches": [
+      {
+        "line": 6,
+        "text": "uint64 timestamp                # time since system start (microseconds)"
+      },
+      {
+        "line": 8,
+        "text": "uint64 timestamp_sample         # the timestamp of the raw data (microseconds)"
+      },
+      {
+        "line": 12,
+        "text": "uint8 quat_reset_counter        # Quaternion reset counter"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF2.cpp",
+    "sha256": "5142efa0cb422aa15970196b868d48afa938940fe3df9925386e9dbc0f0d2326",
+    "matches": [
+      {
+        "line": 1758,
+        "text": "lpos.heading_good_for_control = _ekf.isYawFinalAlignComplete();"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF/ekf.h",
+    "sha256": "9b2ae3108802d04f7db6ec7263ed6f54dca570540808953ace3a9aed33154deb",
+    "matches": [
+      {
+        "line": 268,
+        "text": "bool isYawFinalAlignComplete() const"
+      },
+      {
+        "line": 273,
+        "text": "&& _control_status.flags.mag_aligned_in_flight"
+      },
+      {
+        "line": 274,
+        "text": "&& ((_time_delayed_us - _flt_mag_align_start_time) > (uint64_t)1e6);"
+      },
+      {
+        "line": 670,
+        "text": "uint64_t _flt_mag_align_start_time{0};\t///< time that inflight magnetic field alignment started (uSec)"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF/aid_sources/magnetometer/mag_control.cpp",
+    "sha256": "ec8a360536a7bbd3504e11f351aa2b4e354350945ab948b07790080c91d1edcc",
+    "matches": [
+      {
+        "line": 54,
+        "text": "_control_status.flags.mag_aligned_in_flight = false;"
+      },
+      {
+        "line": 189,
+        "text": "&& (!_control_status.flags.yaw_manual || _control_status.flags.mag_aligned_in_flight)"
+      },
+      {
+        "line": 194,
+        "text": "&& _control_status.flags.mag_aligned_in_flight;"
+      },
+      {
+        "line": 217,
+        "text": "if (checkHaglYawResetReq() && (_control_status.flags.mag_hdg || _control_status.flags.mag_3D"
+      },
+      {
+        "line": 224,
+        "text": "_control_status.flags.mag_aligned_in_flight = true;"
+      },
+      {
+        "line": 363,
+        "text": "_control_status.flags.mag_aligned_in_flight = false;"
+      },
+      {
+        "line": 373,
+        "text": "bool Ekf::checkHaglYawResetReq() const"
+      },
+      {
+        "line": 379,
+        "text": "if (_control_status.flags.in_air && _control_status.flags.yaw_align && !_control_status.flags.mag_aligned_in_flight) {"
+      },
+      {
+        "line": 611,
+        "text": "if (_control_status.flags.mag_aligned_in_flight) {"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_node.py",
+    "sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+    "matches": [
+      {
+        "line": 94,
+        "text": "self.last_baseline_sample = time.monotonic()"
+      },
+      {
+        "line": 113,
+        "text": "self.reset_counters = None"
+      },
+      {
+        "line": 121,
+        "text": "self.last_resource = time.monotonic()"
+      },
+      {
+        "line": 220,
+        "text": "now = time.monotonic()"
+      },
+      {
+        "line": 238,
+        "text": "'source_clock_reset',"
+      },
+      {
+        "line": 247,
+        "text": "'timestamp_sample_us': getattr(msg, 'timestamp_sample', None),"
+      },
+      {
+        "line": 282,
+        "text": "counters = (msg.xy_reset_counter, msg.z_reset_counter, msg.heading_reset_counter)"
+      },
+      {
+        "line": 283,
+        "text": "if self.reset_counters is not None:"
+      },
+      {
+        "line": 284,
+        "text": "position_reset = counters[:2] != self.reset_counters[:2]"
+      },
+      {
+        "line": 285,
+        "text": "heading_reset = counters[2] != self.reset_counters[2]"
+      },
+      {
+        "line": 294,
+        "text": "if counters != self.reset_counters:"
+      },
+      {
+        "line": 296,
+        "text": "'estimator_reset_counter_change',"
+      },
+      {
+        "line": 300,
+        "text": "'previous': self.reset_counters,"
+      },
+      {
+        "line": 315,
+        "text": "self.reset_counters = counters"
+      },
+      {
+        "line": 397,
+        "text": "t.heading_ready = bool(p.heading_good_for_control and math.isfinite(p.heading))"
+      },
+      {
+        "line": 474,
+        "text": "now = time.monotonic()"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+    "sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+    "matches": [
+      {
+        "line": 9,
+        "text": "'WAIT_FOR_PX4': 30., 'WAIT_FOR_HEALTH': 30., 'WAIT_FOR_HEADING': 30.,"
+      },
+      {
+        "line": 13,
+        "text": "'LAND': 90., 'DISARM': 15., 'RELEASE_CONTROL': 10., 'FAILSAFE': 90.,"
+      },
+      {
+        "line": 25,
+        "text": "heading_ready: bool = False"
+      },
+      {
+        "line": 79,
+        "text": "self.transition('FAILSAFE', now)"
+      },
+      {
+        "line": 116,
+        "text": "active = self.state not in ('WAIT_FOR_PX4', 'WAIT_FOR_HEALTH', 'FAILSAFE')"
+      },
+      {
+        "line": 134,
+        "text": "('AUTO_TAKEOFF_REQUEST', 'AUTO_ARM', 'TAKEOFF', 'WAIT_FOR_HEADING')"
+      },
+      {
+        "line": 139,
+        "text": "and not t.heading_ready):"
+      },
+      {
+        "line": 143,
+        "text": "if self.state != 'FAILSAFE' and now - self.start > 480.:"
+      },
+      {
+        "line": 146,
+        "text": "if self.state == 'FAILSAFE':"
+      },
+      {
+        "line": 148,
+        "text": "self.events.append(('FAILSAFE_UNCONFIRMED', now))"
+      },
+      {
+        "line": 151,
+        "text": "if self.state == 'FAILSAFE':"
+      },
+      {
+        "line": 176,
+        "text": "self.transition('WAIT_FOR_HEADING', now)"
+      },
+      {
+        "line": 179,
+        "text": "elif self.state == 'WAIT_FOR_HEADING':"
+      },
+      {
+        "line": 183,
+        "text": "elif t.heading_ready:"
+      },
+      {
+        "line": 199,
+        "text": "elif t.heading_ready:"
+      },
+      {
+        "line": 268,
+        "text": "self.transition('WAIT_FOR_HEADING', now)"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py",
+    "sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+    "matches": [
+      {
+        "line": 13,
+        "text": "'source_timestamp_us', 'iat_ms', 'payload_cdr_bytes', 'count',"
+      },
+      {
+        "line": 86,
+        "text": "'timestamp_sample_us': getattr(msg, 'timestamp_sample', None),"
+      },
+      {
+        "line": 96,
+        "text": "source_timestamp_us=msg.timestamp, iat_ms='' if iat is None else iat,"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_vehicle_local_position.py",
+    "sha256": "01c100c5e62346b92256d779037ec844cf7ec6541fbb84e4386a26201a77eeef",
+    "type": "VehicleLocalPosition",
+    "fields": {
+      "timestamp": "uint64",
+      "timestamp_sample": "uint64",
+      "xy_valid": "boolean",
+      "z_valid": "boolean",
+      "v_xy_valid": "boolean",
+      "v_z_valid": "boolean",
+      "x": "float",
+      "y": "float",
+      "z": "float",
+      "delta_xy": "float[2]",
+      "xy_reset_counter": "uint8",
+      "delta_z": "float",
+      "z_reset_counter": "uint8",
+      "vx": "float",
+      "vy": "float",
+      "vz": "float",
+      "z_deriv": "float",
+      "delta_vxy": "float[2]",
+      "vxy_reset_counter": "uint8",
+      "delta_vz": "float",
+      "vz_reset_counter": "uint8",
+      "ax": "float",
+      "ay": "float",
+      "az": "float",
+      "heading": "float",
+      "heading_var": "float",
+      "unaided_heading": "float",
+      "delta_heading": "float",
+      "heading_reset_counter": "uint8",
+      "heading_good_for_control": "boolean",
+      "tilt_var": "float",
+      "xy_global": "boolean",
+      "z_global": "boolean",
+      "ref_timestamp": "uint64",
+      "ref_lat": "double",
+      "ref_lon": "double",
+      "ref_alt": "float",
+      "dist_bottom_valid": "boolean",
+      "dist_bottom": "float",
+      "dist_bottom_var": "float",
+      "delta_dist_bottom": "float",
+      "dist_bottom_reset_counter": "uint8",
+      "dist_bottom_sensor_bitfield": "uint8",
+      "eph": "float",
+      "epv": "float",
+      "evh": "float",
+      "evv": "float",
+      "dead_reckoning": "boolean",
+      "vxy_max": "float",
+      "vz_max": "float",
+      "hagl_min": "float",
+      "hagl_max_z": "float",
+      "hagl_max_xy": "float"
+    },
+    "matches": [
+      {
+        "line": 107,
+        "text": "'_timestamp',"
+      },
+      {
+        "line": 108,
+        "text": "'_timestamp_sample',"
+      },
+      {
+        "line": 136,
+        "text": "'_heading_good_for_control',"
+      },
+      {
+        "line": 140,
+        "text": "'_ref_timestamp',"
+      },
+      {
+        "line": 164,
+        "text": "'timestamp': 'uint64',"
+      },
+      {
+        "line": 165,
+        "text": "'timestamp_sample': 'uint64',"
+      },
+      {
+        "line": 193,
+        "text": "'heading_good_for_control': 'boolean',"
+      },
+      {
+        "line": 197,
+        "text": "'ref_timestamp': 'uint64',"
+      },
+      {
+        "line": 286,
+        "text": "self.timestamp = kwargs.get('timestamp', int())"
+      },
+      {
+        "line": 287,
+        "text": "self.timestamp_sample = kwargs.get('timestamp_sample', int())"
+      },
+      {
+        "line": 321,
+        "text": "self.heading_good_for_control = kwargs.get('heading_good_for_control', bool())"
+      },
+      {
+        "line": 325,
+        "text": "self.ref_timestamp = kwargs.get('ref_timestamp', int())"
+      },
+      {
+        "line": 376,
+        "text": "if self.timestamp != other.timestamp:"
+      },
+      {
+        "line": 378,
+        "text": "if self.timestamp_sample != other.timestamp_sample:"
+      },
+      {
+        "line": 434,
+        "text": "if self.heading_good_for_control != other.heading_good_for_control:"
+      },
+      {
+        "line": 442,
+        "text": "if self.ref_timestamp != other.ref_timestamp:"
+      },
+      {
+        "line": 490,
+        "text": "def timestamp(self):"
+      },
+      {
+        "line": 491,
+        "text": "\"\"\"Message field 'timestamp'.\"\"\""
+      },
+      {
+        "line": 492,
+        "text": "return self._timestamp"
+      },
+      {
+        "line": 494,
+        "text": "@timestamp.setter"
+      },
+      {
+        "line": 495,
+        "text": "def timestamp(self, value):"
+      },
+      {
+        "line": 499,
+        "text": "\"The 'timestamp' field must be of type 'int'\""
+      },
+      {
+        "line": 501,
+        "text": "\"The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 502,
+        "text": "self._timestamp = value"
+      },
+      {
+        "line": 505,
+        "text": "def timestamp_sample(self):"
+      },
+      {
+        "line": 506,
+        "text": "\"\"\"Message field 'timestamp_sample'.\"\"\""
+      },
+      {
+        "line": 507,
+        "text": "return self._timestamp_sample"
+      },
+      {
+        "line": 509,
+        "text": "@timestamp_sample.setter"
+      },
+      {
+        "line": 510,
+        "text": "def timestamp_sample(self, value):"
+      },
+      {
+        "line": 514,
+        "text": "\"The 'timestamp_sample' field must be of type 'int'\""
+      },
+      {
+        "line": 516,
+        "text": "\"The 'timestamp_sample' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 517,
+        "text": "self._timestamp_sample = value"
+      },
+      {
+        "line": 949,
+        "text": "def heading_good_for_control(self):"
+      },
+      {
+        "line": 950,
+        "text": "\"\"\"Message field 'heading_good_for_control'.\"\"\""
+      },
+      {
+        "line": 951,
+        "text": "return self._heading_good_for_control"
+      },
+      {
+        "line": 953,
+        "text": "@heading_good_for_control.setter"
+      },
+      {
+        "line": 954,
+        "text": "def heading_good_for_control(self, value):"
+      },
+      {
+        "line": 958,
+        "text": "\"The 'heading_good_for_control' field must be of type 'bool'\""
+      },
+      {
+        "line": 959,
+        "text": "self._heading_good_for_control = value"
+      },
+      {
+        "line": 1003,
+        "text": "def ref_timestamp(self):"
+      },
+      {
+        "line": 1004,
+        "text": "\"\"\"Message field 'ref_timestamp'.\"\"\""
+      },
+      {
+        "line": 1005,
+        "text": "return self._ref_timestamp"
+      },
+      {
+        "line": 1007,
+        "text": "@ref_timestamp.setter"
+      },
+      {
+        "line": 1008,
+        "text": "def ref_timestamp(self, value):"
+      },
+      {
+        "line": 1012,
+        "text": "\"The 'ref_timestamp' field must be of type 'int'\""
+      },
+      {
+        "line": 1014,
+        "text": "\"The 'ref_timestamp' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 1015,
+        "text": "self._ref_timestamp = value"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_vehicle_attitude.py",
+    "sha256": "50485c80d30d2b0e4ec4ba5e4b6e28b511f41c03f33140fe5297a2dc6d1c1177",
+    "type": "VehicleAttitude",
+    "fields": {
+      "timestamp": "uint64",
+      "timestamp_sample": "uint64",
+      "q": "float[4]",
+      "delta_q_reset": "float[4]",
+      "quat_reset_counter": "uint8"
+    },
+    "matches": [
+      {
+        "line": 83,
+        "text": "'_timestamp',"
+      },
+      {
+        "line": 84,
+        "text": "'_timestamp_sample',"
+      },
+      {
+        "line": 92,
+        "text": "'timestamp': 'uint64',"
+      },
+      {
+        "line": 93,
+        "text": "'timestamp_sample': 'uint64',"
+      },
+      {
+        "line": 118,
+        "text": "self.timestamp = kwargs.get('timestamp', int())"
+      },
+      {
+        "line": 119,
+        "text": "self.timestamp_sample = kwargs.get('timestamp_sample', int())"
+      },
+      {
+        "line": 160,
+        "text": "if self.timestamp != other.timestamp:"
+      },
+      {
+        "line": 162,
+        "text": "if self.timestamp_sample != other.timestamp_sample:"
+      },
+      {
+        "line": 178,
+        "text": "def timestamp(self):"
+      },
+      {
+        "line": 179,
+        "text": "\"\"\"Message field 'timestamp'.\"\"\""
+      },
+      {
+        "line": 180,
+        "text": "return self._timestamp"
+      },
+      {
+        "line": 182,
+        "text": "@timestamp.setter"
+      },
+      {
+        "line": 183,
+        "text": "def timestamp(self, value):"
+      },
+      {
+        "line": 187,
+        "text": "\"The 'timestamp' field must be of type 'int'\""
+      },
+      {
+        "line": 189,
+        "text": "\"The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 190,
+        "text": "self._timestamp = value"
+      },
+      {
+        "line": 193,
+        "text": "def timestamp_sample(self):"
+      },
+      {
+        "line": 194,
+        "text": "\"\"\"Message field 'timestamp_sample'.\"\"\""
+      },
+      {
+        "line": 195,
+        "text": "return self._timestamp_sample"
+      },
+      {
+        "line": 197,
+        "text": "@timestamp_sample.setter"
+      },
+      {
+        "line": 198,
+        "text": "def timestamp_sample(self, value):"
+      },
+      {
+        "line": 202,
+        "text": "\"The 'timestamp_sample' field must be of type 'int'\""
+      },
+      {
+        "line": 204,
+        "text": "\"The 'timestamp_sample' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 205,
+        "text": "self._timestamp_sample = value"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_estimator_status_flags.py",
+    "sha256": "6ae7fcc60dcb275156b8b223b3fcfb3aa6e53e2131b4e683e74ed044f9be7ab6",
+    "type": "EstimatorStatusFlags",
+    "fields": {
+      "timestamp": "uint64",
+      "timestamp_sample": "uint64",
+      "control_status_changes": "uint32",
+      "cs_tilt_align": "boolean",
+      "cs_yaw_align": "boolean",
+      "cs_gnss_pos": "boolean",
+      "cs_opt_flow": "boolean",
+      "cs_mag_hdg": "boolean",
+      "cs_mag_3d": "boolean",
+      "cs_mag_dec": "boolean",
+      "cs_in_air": "boolean",
+      "cs_wind": "boolean",
+      "cs_baro_hgt": "boolean",
+      "cs_rng_hgt": "boolean",
+      "cs_gps_hgt": "boolean",
+      "cs_ev_pos": "boolean",
+      "cs_ev_yaw": "boolean",
+      "cs_ev_hgt": "boolean",
+      "cs_fuse_beta": "boolean",
+      "cs_mag_field_disturbed": "boolean",
+      "cs_fixed_wing": "boolean",
+      "cs_mag_fault": "boolean",
+      "cs_fuse_aspd": "boolean",
+      "cs_gnd_effect": "boolean",
+      "cs_rng_stuck": "boolean",
+      "cs_gnss_yaw": "boolean",
+      "cs_mag_aligned_in_flight": "boolean",
+      "cs_ev_vel": "boolean",
+      "cs_synthetic_mag_z": "boolean",
+      "cs_vehicle_at_rest": "boolean",
+      "cs_gnss_yaw_fault": "boolean",
+      "cs_rng_fault": "boolean",
+      "cs_inertial_dead_reckoning": "boolean",
+      "cs_wind_dead_reckoning": "boolean",
+      "cs_rng_kin_consistent": "boolean",
+      "cs_fake_pos": "boolean",
+      "cs_fake_hgt": "boolean",
+      "cs_gravity_vector": "boolean",
+      "cs_mag": "boolean",
+      "cs_ev_yaw_fault": "boolean",
+      "cs_mag_heading_consistent": "boolean",
+      "cs_aux_gpos": "boolean",
+      "cs_rng_terrain": "boolean",
+      "cs_opt_flow_terrain": "boolean",
+      "cs_valid_fake_pos": "boolean",
+      "cs_constant_pos": "boolean",
+      "cs_baro_fault": "boolean",
+      "cs_gnss_vel": "boolean",
+      "cs_gnss_fault": "boolean",
+      "cs_yaw_manual": "boolean",
+      "cs_gnss_hgt_fault": "boolean",
+      "cs_in_transition": "boolean",
+      "cs_heading_observable": "boolean",
+      "fault_status_changes": "uint32",
+      "fs_bad_mag_x": "boolean",
+      "fs_bad_mag_y": "boolean",
+      "fs_bad_mag_z": "boolean",
+      "fs_bad_hdg": "boolean",
+      "fs_bad_mag_decl": "boolean",
+      "fs_bad_airspeed": "boolean",
+      "fs_bad_sideslip": "boolean",
+      "fs_bad_optflow_x": "boolean",
+      "fs_bad_optflow_y": "boolean",
+      "fs_bad_acc_vertical": "boolean",
+      "fs_bad_acc_clipping": "boolean"
+    },
+    "matches": [
+      {
+        "line": 65,
+        "text": "'_timestamp',"
+      },
+      {
+        "line": 66,
+        "text": "'_timestamp_sample',"
+      },
+      {
+        "line": 134,
+        "text": "'timestamp': 'uint64',"
+      },
+      {
+        "line": 135,
+        "text": "'timestamp_sample': 'uint64',"
+      },
+      {
+        "line": 280,
+        "text": "self.timestamp = kwargs.get('timestamp', int())"
+      },
+      {
+        "line": 281,
+        "text": "self.timestamp_sample = kwargs.get('timestamp_sample', int())"
+      },
+      {
+        "line": 376,
+        "text": "if self.timestamp != other.timestamp:"
+      },
+      {
+        "line": 378,
+        "text": "if self.timestamp_sample != other.timestamp_sample:"
+      },
+      {
+        "line": 514,
+        "text": "def timestamp(self):"
+      },
+      {
+        "line": 515,
+        "text": "\"\"\"Message field 'timestamp'.\"\"\""
+      },
+      {
+        "line": 516,
+        "text": "return self._timestamp"
+      },
+      {
+        "line": 518,
+        "text": "@timestamp.setter"
+      },
+      {
+        "line": 519,
+        "text": "def timestamp(self, value):"
+      },
+      {
+        "line": 523,
+        "text": "\"The 'timestamp' field must be of type 'int'\""
+      },
+      {
+        "line": 525,
+        "text": "\"The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 526,
+        "text": "self._timestamp = value"
+      },
+      {
+        "line": 529,
+        "text": "def timestamp_sample(self):"
+      },
+      {
+        "line": 530,
+        "text": "\"\"\"Message field 'timestamp_sample'.\"\"\""
+      },
+      {
+        "line": 531,
+        "text": "return self._timestamp_sample"
+      },
+      {
+        "line": 533,
+        "text": "@timestamp_sample.setter"
+      },
+      {
+        "line": 534,
+        "text": "def timestamp_sample(self, value):"
+      },
+      {
+        "line": 538,
+        "text": "\"The 'timestamp_sample' field must be of type 'int'\""
+      },
+      {
+        "line": 540,
+        "text": "\"The 'timestamp_sample' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 541,
+        "text": "self._timestamp_sample = value"
+      }
+    ]
+  },
+  {
+    "path": "/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages/px4_msgs/msg/_timesync_status.py",
+    "sha256": "75723172257790ca0362fcebeec01136698417e9c27ae1e72a6b99f23501e7f4",
+    "type": "TimesyncStatus",
+    "fields": {
+      "timestamp": "uint64",
+      "source_protocol": "uint8",
+      "remote_timestamp": "uint64",
+      "observed_offset": "int64",
+      "estimated_offset": "int64",
+      "round_trip_time": "uint32"
+    },
+    "matches": [
+      {
+        "line": 93,
+        "text": "'_timestamp',"
+      },
+      {
+        "line": 95,
+        "text": "'_remote_timestamp',"
+      },
+      {
+        "line": 103,
+        "text": "'timestamp': 'uint64',"
+      },
+      {
+        "line": 105,
+        "text": "'remote_timestamp': 'uint64',"
+      },
+      {
+        "line": 131,
+        "text": "self.timestamp = kwargs.get('timestamp', int())"
+      },
+      {
+        "line": 133,
+        "text": "self.remote_timestamp = kwargs.get('remote_timestamp', int())"
+      },
+      {
+        "line": 168,
+        "text": "if self.timestamp != other.timestamp:"
+      },
+      {
+        "line": 172,
+        "text": "if self.remote_timestamp != other.remote_timestamp:"
+      },
+      {
+        "line": 188,
+        "text": "def timestamp(self):"
+      },
+      {
+        "line": 189,
+        "text": "\"\"\"Message field 'timestamp'.\"\"\""
+      },
+      {
+        "line": 190,
+        "text": "return self._timestamp"
+      },
+      {
+        "line": 192,
+        "text": "@timestamp.setter"
+      },
+      {
+        "line": 193,
+        "text": "def timestamp(self, value):"
+      },
+      {
+        "line": 197,
+        "text": "\"The 'timestamp' field must be of type 'int'\""
+      },
+      {
+        "line": 199,
+        "text": "\"The 'timestamp' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 200,
+        "text": "self._timestamp = value"
+      },
+      {
+        "line": 218,
+        "text": "def remote_timestamp(self):"
+      },
+      {
+        "line": 219,
+        "text": "\"\"\"Message field 'remote_timestamp'.\"\"\""
+      },
+      {
+        "line": 220,
+        "text": "return self._remote_timestamp"
+      },
+      {
+        "line": 222,
+        "text": "@remote_timestamp.setter"
+      },
+      {
+        "line": 223,
+        "text": "def remote_timestamp(self, value):"
+      },
+      {
+        "line": 227,
+        "text": "\"The 'remote_timestamp' field must be of type 'int'\""
+      },
+      {
+        "line": 229,
+        "text": "\"The 'remote_timestamp' field must be an unsigned integer in [0, 18446744073709551615]\""
+      },
+      {
+        "line": 230,
+        "text": "self._remote_timestamp = value"
+      }
+    ]
+  }
+]

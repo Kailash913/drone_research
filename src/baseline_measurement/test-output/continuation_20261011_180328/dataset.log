@@ -1,0 +1,18 @@
+{
+  "output": "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_20261011_180328/dataset",
+  "counts": {
+    "active_attempts": 45,
+    "active_pass": 12,
+    "active_fail": 33,
+    "active_incomplete_or_invalid": 0,
+    "active_complete_records": 45,
+    "study_slots_assigned": 30,
+    "study_complete_records": 30,
+    "strict_valid_active_experiments": 0,
+    "strict_valid_study_experiments": 0,
+    "passive_runlogs": 3,
+    "passive_json_records": 2,
+    "duplicate_files": 0
+  },
+  "phase1": "BLOCKED"
+}

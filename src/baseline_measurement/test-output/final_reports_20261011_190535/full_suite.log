@@ -1,0 +1,196 @@
+...............................................................s........ [ 44%]
+.........F.............................................................. [ 88%]
+...................                                                      [100%]
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+
+    @pytest.mark.flake8
+    @pytest.mark.linter
+    def test_flake8():
+        rc, errors = main_with_errors(argv=['baseline_measurement', 'test', 'setup.py'] + [
+            str(p) for p in sorted(Path('tools').glob('*.py'))
+            if p.name != 'vscode_apply_heading_fix.py'])
+>       assert rc == 0, \
+            'Found %d code style errors / warnings:\n' % len(errors) + \
+            '\n'.join(errors)
+E       AssertionError: Found 12 code style errors / warnings:
+E         tools/native_heading_check.py:14:14: Q001 Single quote multiline found but double quotes preferred
+E         tools/native_heading_check.py:25:12: Q001 Single quote multiline found but double quotes preferred
+E         tools/native_heading_check.py:66:100: E501 line too long (109 > 99 characters)
+E         tools/native_timesync_check.py:91:100: E501 line too long (110 > 99 characters)
+E         tools/reports_only_audit.py:49:36: E128 continuation line under-indented for visual indent
+E         tools/reports_only_audit.py:54:9: E128 continuation line under-indented for visual indent
+E         tools/reports_only_audit.py:55:9: E128 continuation line under-indented for visual indent
+E         tools/reports_only_audit.py:79:30: E127 continuation line over-indented for visual indent
+E         tools/reports_only_audit.py:99:40: E128 continuation line under-indented for visual indent
+E         tools/reports_only_audit.py:105:26: E128 continuation line under-indented for visual indent
+E         tools/reports_only_verify.py:62:100: E501 line too long (100 > 99 characters)
+E         tools/reports_only_verify.py:77:31: E127 continuation line over-indented for visual indent
+E       assert 1 == 0
+
+test/test_flake8.py:28: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+tools/native_heading_check.py:14:14: Q001 Single quote multiline found but double quotes preferred
+    prefix = r'''
+#include <cstdint>
+#include <cassert>
+#include <chrono>
+#include <iostream>
+#include <type_traits>
+struct Flags { bool mag_3D{}, mag_hdg{}, mag_aligned_in_flight{}, yaw_align{}; };
+struct Predicate {
+struct { Flags flags; } _control_status;
+uint64_t _time_delayed_us{}, _flt_mag_align_start_time{};
+'''
+             ^
+
+tools/native_heading_check.py:25:12: Q001 Single quote multiline found but double quotes preferred
+    main = r'''
+};
+int main() {
+Predicate p;
+assert(!p.isYawFinalAlignComplete());
+p._control_status.flags.yaw_align = true;
+assert(p.isYawFinalAlignComplete());
+#ifdef CONFIG_EKF2_MAGNETOMETER
+p._control_status.flags.mag_hdg = true;
+assert(!p.isYawFinalAlignComplete());
+p._control_status.flags.mag_aligned_in_flight = true;
+p._flt_mag_align_start_time = 1000000;
+p._time_delayed_us = 2000000;
+assert(!p.isYawFinalAlignComplete());
+p._time_delayed_us = 2000001;
+assert(p.isYawFinalAlignComplete());
+p._control_status.flags.yaw_align = false;
+assert(!p.isYawFinalAlignComplete());
+p._control_status.flags.yaw_align = true;
+p._control_status.flags.mag_hdg = false;
+p._control_status.flags.mag_3D = true;
+p._control_status.flags.mag_aligned_in_flight = false;
+assert(!p.isYawFinalAlignComplete());
+#endif
+std::cout << "PASS actual heading predicate; high_resolution_clock steady="
+<< std::chrono::high_resolution_clock::is_steady << "; alias_system_clock="
+<< std::is_same<std::chrono::high_resolution_clock, std::chrono::system_clock>::value
+<< "\n";
+}
+'''
+           ^
+
+tools/native_heading_check.py:66:100: E501 line too long (109 > 99 characters)
+        run = subprocess.run([str(binary)], capture_output=True, text=True) if not built.returncode else None
+                                                                                                   ^
+
+tools/native_timesync_check.py:91:100: E501 line too long (110 > 99 characters)
+    fixture.write_text(cpp[:cpp.index('#include')] + prefix + platform_header + filter_body + callback + main)
+                                                                                                   ^
+
+tools/reports_only_audit.py:49:36: E128 continuation line under-indented for visual indent
+                                   workspace / 'src/px4_msgs')
+                                   ^
+
+tools/reports_only_audit.py:54:9: E128 continuation line under-indented for visual indent
+        'time_offset|MAX_CONSECUTIVE_HIGH_DEVIATION|heading_good_for_control',
+        ^
+
+tools/reports_only_audit.py:55:9: E128 continuation line under-indented for visual indent
+        'src/modules/ekf2/EKF', 'src/modules/uxrce_dds_client', 'src/lib/timesync'], px4)
+        ^
+
+tools/reports_only_audit.py:79:30: E127 continuation line over-indented for visual indent
+                             'VS Code nonflight launch selection']
+                             ^
+
+tools/reports_only_audit.py:99:40: E128 continuation line under-indented for visual indent
+                                       'px4_version', 'gazebo_version')}, indent=2), flush=True)
+                                       ^
+
+tools/reports_only_audit.py:105:26: E128 continuation line under-indented for visual indent
+                         '--seconds', '25', '--output', str(output / 'passive_clock')], package)
+                         ^
+
+tools/reports_only_verify.py:62:100: E501 line too long (100 > 99 characters)
+    prior = package / 'test-output/final_reports_20261011_183812' / directory.name / 'manifest.json'
+                                                                                                   ^
+
+tools/reports_only_verify.py:77:31: E127 continuation line over-indented for visual indent
+                              for name in initial['protected_before']}
+                              ^
+
+2     E127 continuation line over-indented for visual indent
+5     E128 continuation line under-indented for visual indent
+3     E501 line too long (109 > 99 characters)
+2     Q001 Single quote multiline found but double quotes preferred
+
+54 files checked
+12 errors
+
+'E'-type errors: 10
+'Q'-type errors: 2
+
+Checked files:
+
+* baseline_measurement/native_clock.py
+* baseline_measurement/cli.py
+* baseline_measurement/acceptance.py
+* baseline_measurement/provenance.py
+* baseline_measurement/dataset.py
+* baseline_measurement/mission_node.py
+* baseline_measurement/experiment.py
+* baseline_measurement/mission_state.py
+* baseline_measurement/experiment_logger.py
+* baseline_measurement/measurements.py
+* baseline_measurement/resource_monitor.py
+* baseline_measurement/baseline_node.py
+* baseline_measurement/record_context.py
+* baseline_measurement/metrics.py
+* baseline_measurement/run_provenance.py
+* baseline_measurement/sync_evidence.py
+* baseline_measurement/clock_probe.py
+* baseline_measurement/diagnostic_analysis.py
+* baseline_measurement/__init__.py
+* baseline_measurement/transport_probe.py
+* baseline_measurement/qgc_plan.py
+* test/test_report_analysis.py
+* test/test_copyright.py
+* test/test_phase1.py
+* test/test_native_clock.py
+* test/test_baseline_new.py
+* test/test_preflight.py
+* test/test_dataset.py
+* test/test_run_provenance.py
+* test/test_acceptance.py
+* test/test_heading_reports.py
+* test/test_clock_guard.py
+* test/test_qgc_plan.py
+* test/test_flake8.py
+* test/test_auto_takeoff.py
+* test/test_authorized_study.py
+* test/test_auto_takeoff_adapter.py
+* test/test_measurements.py
+* test/test_pep257.py
+* test/test_dataset_identity.py
+* setup.py
+* tools/authorized_study.py
+* tools/continuation_check.py
+* tools/final_report_runner.py
+* tools/live_clock_audit.py
+* tools/native_heading_check.py
+* tools/native_timesync_check.py
+* tools/phase1_inspect.py
+* tools/phase1_lint_tools.py
+* tools/phase1_verify.py
+* tools/quick_checks.py
+* tools/reports_only_audit.py
+* tools/reports_only_verify.py
+* tools/vscode_test_runner.py
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=91272) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/src/baseline_measurement/test-output/final_reports_20261011_190535/full_suite.xml -
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 12 code style...
+1 failed, 161 passed, 1 skipped, 12 warnings in 7.87s

@@ -1,0 +1,59 @@
+{
+  "scope": "PASSIVE_CLOCK_DIAGNOSTIC_ONLY",
+  "flight_commands_sent": 0,
+  "parameter_writes": 0,
+  "component_restarts": 0,
+  "commands": {
+    "timedatectl": {
+      "argv": [
+        "timedatectl",
+        "show"
+      ],
+      "returncode": 0
+    },
+    "timesync_service": {
+      "argv": [
+        "systemctl",
+        "show",
+        "systemd-timesyncd.service",
+        "-p",
+        "ActiveState",
+        "-p",
+        "SubState",
+        "-p",
+        "MainPID"
+      ],
+      "returncode": 0
+    },
+    "time_service_journal": {
+      "argv": [
+        "journalctl",
+        "--utc",
+        "-u",
+        "systemd-timesyncd",
+        "-n",
+        "100",
+        "--no-pager"
+      ],
+      "returncode": 0
+    },
+    "chrony_tracking": {
+      "status": "NOT AVAILABLE"
+    }
+  },
+  "output": "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/clock_context_192056",
+  "/proc/version": "Linux version 6.18.40.1-microsoft-standard-WSL2 (root@71c659030f6c) (gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41) #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026\n",
+  "/etc/wsl.conf": "[boot]\nsystemd=true\n\n[user]\ndefault=kailash\n",
+  "/etc/systemd/timesyncd.conf": "#  This file is part of systemd.\n#\n#  systemd is free software; you can redistribute it and/or modify it under the\n#  terms of the GNU Lesser General Public License as published by the Free\n#  Software Foundation; either version 2.1 of the License, or (at your option)\n#  any later version.\n#\n# Entries in this file show the compile time defaults. Local configuration\n# should be created by either modifying this file (or a copy of it placed in\n# /etc/ if the original file is shipped in /usr/), or by creating \"drop-ins\" in\n# the /etc/systemd/timesyncd.conf.d/ directory. The latter is generally\n# recommended. Defaults can be restored by simply deleting the main\n# configuration file and all drop-ins located in /etc/.\n#\n# Use 'systemd-analyze cat-config systemd/timesyncd.conf' to display the full config.\n#\n# See timesyncd.conf(5) for details.\n\n[Time]\n#NTP=\n#FallbackNTP=ntp.ubuntu.com\n#RootDistanceMaxSec=5\n#PollIntervalMinSec=32\n#PollIntervalMaxSec=2048\n#ConnectionRetrySec=30\n#SaveIntervalSec=60\n",
+  "/sys/devices/system/clocksource/clocksource0/current_clocksource": "tsc\n",
+  "/sys/devices/system/clocksource/clocksource0/available_clocksource": "tsc hyperv_clocksource_tsc_page hyperv_clocksource_msr acpi_pm \n",
+  "sample_count": 150,
+  "clock_deltas_s": {
+    "CLOCK_REALTIME": 14.932650343,
+    "CLOCK_MONOTONIC": 14.932650257,
+    "CLOCK_MONOTONIC_RAW": 15.994190099,
+    "CLOCK_BOOTTIME": 14.932648677
+  },
+  "realtime_to_monotonic_progression_ratio": 1.000000005759192,
+  "latency_or_baseline_experiment": false
+}

@@ -14,7 +14,7 @@ def role_for(name, cmdline, own_pid):
         return 'px4_sitl'
     if 'microxrceagent' in name or 'microxrceagent' in command:
         return 'xrce_agent'
-    if name.startswith('gz') and ('sim' in command or 'server' in name):
+    if (name.startswith('gz') or name == 'ruby') and ('gz sim' in command or 'gz-sim' in name):
         return 'gazebo_sim'
     return None
 

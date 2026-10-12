@@ -1,0 +1,37 @@
+{
+  "source": "/home/kailash/PX4-Autopilot/src/modules/ekf2/EKF/ekf.h",
+  "source_sha256": "9b2ae3108802d04f7db6ec7263ed6f54dca570540808953ace3a9aed33154deb",
+  "source_method": "bool isYawFinalAlignComplete() const\n\t{\n#if defined(CONFIG_EKF2_MAGNETOMETER)\n\t\tconst bool is_using_mag = (_control_status.flags.mag_3D || _control_status.flags.mag_hdg);\n\t\tconst bool is_mag_alignment_in_flight_complete = is_using_mag\n\t\t\t\t&& _control_status.flags.mag_aligned_in_flight\n\t\t\t\t&& ((_time_delayed_us - _flt_mag_align_start_time) > (uint64_t)1e6);\n\t\treturn _control_status.flags.yaw_align\n\t\t       && (is_mag_alignment_in_flight_complete || !is_using_mag);\n#else\n\t\treturn _control_status.flags.yaw_align;\n#endif\n\t}",
+  "results": [
+    {
+      "magnetometer_compiled": true,
+      "compile_command": [
+        "g++",
+        "-std=c++17",
+        "-DCONFIG_EKF2_MAGNETOMETER=1",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_191436/source_fixtures/native_heading_fixture.cpp",
+        "-o",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_191436/source_fixtures/heading_mag"
+      ],
+      "compile_returncode": 0,
+      "compile_output": "",
+      "run_returncode": 0,
+      "run_output": "PASS actual heading predicate; high_resolution_clock steady=0; alias_system_clock=1\n"
+    },
+    {
+      "magnetometer_compiled": false,
+      "compile_command": [
+        "g++",
+        "-std=c++17",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_191436/source_fixtures/native_heading_fixture.cpp",
+        "-o",
+        "/home/kailash/ros2_ws/src/baseline_measurement/test-output/phase1_master_20261011_185629_UTC/verification_191436/source_fixtures/heading_nonmag"
+      ],
+      "compile_returncode": 0,
+      "compile_output": "",
+      "run_returncode": 0,
+      "run_output": "PASS actual heading predicate; high_resolution_clock steady=0; alias_system_clock=1\n"
+    }
+  ],
+  "scope": "Actual source predicate with synthetic mocked state, never a mission"
+}

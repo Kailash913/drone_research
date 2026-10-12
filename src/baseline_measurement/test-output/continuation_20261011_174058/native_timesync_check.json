@@ -1,0 +1,9 @@
+{
+  "source_sha256": "b23e9a893abca013117242dc037d5c47977b3deae357bad2be60a2e7e244cf84",
+  "header_sha256": "3f4ca7941d101b0bdc7ce7ebb8f0d352cd974442cb648db83ac1aa346ecc6e6b",
+  "compile_returncode": 0,
+  "compile_output": "",
+  "run_returncode": 0,
+  "run_output": "PASS actual PX4 filter: 500 convergence samples, 11 high deviations, zero offset publication, next-sample offset recovery; mocked hrt/uORB only\n",
+  "scope": "Actual retained filter methods, mocked platform, diagnostic fixture only; does not prove historical filter reset or cause of clock deviation."
+}

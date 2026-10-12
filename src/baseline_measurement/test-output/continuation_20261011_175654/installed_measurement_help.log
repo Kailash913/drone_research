@@ -1,0 +1,14 @@
+usage: measurement_import [-h] --input INPUT --metadata METADATA --output
+                          OUTPUT
+                          {telemetry,correlated,sequence,traffic,power}
+
+Validate explicit measurement evidence without controlling a vehicle.
+
+positional arguments:
+  {telemetry,correlated,sequence,traffic,power}
+
+options:
+  -h, --help            show this help message and exit
+  --input INPUT
+  --metadata METADATA
+  --output OUTPUT

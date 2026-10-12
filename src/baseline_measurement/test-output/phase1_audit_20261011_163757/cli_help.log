@@ -1,0 +1,18 @@
+usage: mission_node [-h] [--execute-sitl] [--observe-seconds OBSERVE_SECONDS]
+                    [--sampling-interval SAMPLING_INTERVAL] [--output OUTPUT]
+                    [--experiment-id EXPERIMENT_ID] [--scenario SCENARIO]
+                    [--config CONFIG] [--run-count RUN_COUNT] [--passive-only]
+
+Unsecured Phase 1 SITL controller and integrated measurement adapter.
+
+options:
+  -h, --help            show this help message and exit
+  --execute-sitl
+  --observe-seconds OBSERVE_SECONDS
+  --sampling-interval SAMPLING_INTERVAL
+  --output OUTPUT, --output-dir OUTPUT
+  --experiment-id EXPERIMENT_ID
+  --scenario SCENARIO
+  --config CONFIG
+  --run-count RUN_COUNT
+  --passive-only

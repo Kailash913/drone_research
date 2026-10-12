@@ -1,0 +1,584 @@
+[0.000000] (-) TimerEvent: {}
+[0.001076] (baseline_measurement) JobQueued: {'identifier': 'baseline_measurement', 'dependencies': OrderedDict({'px4_msgs': '/home/kailash/ros2_ws/install/px4_msgs', 'baseline_measurement': '/home/kailash/ros2_ws/install/baseline_measurement'})}
+[0.002065] (baseline_measurement) JobStarted: {'identifier': 'baseline_measurement'}
+[0.098529] (-) TimerEvent: {}
+[0.198940] (-) TimerEvent: {}
+[0.299403] (-) TimerEvent: {}
+[0.400541] (-) TimerEvent: {}
+[0.501136] (-) TimerEvent: {}
+[0.601489] (-) TimerEvent: {}
+[0.701903] (-) TimerEvent: {}
+[0.802278] (-) TimerEvent: {}
+[0.902736] (-) TimerEvent: {}
+[1.005221] (-) TimerEvent: {}
+[1.085839] (baseline_measurement) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/kailash/ros2_ws/src/baseline_measurement', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/kaila/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'USER': 'kailash', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/kaila/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/kailash/ros2_ws/install/px4_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/kailash', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-88576615-af44-455a-a3c9-622c111e51a8.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'COPILOT_OTEL_FILE_EXPORTER_PATH': '/dev/null', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'VSCODE_L10N_BUNDLE_LOCATION': '', 'COLCON_PREFIX_PATH': '/home/kailash/ros2_ws/install', 'CODEX_PERMISSION_PROFILE': ':workspace', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kailash', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/27130_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS': '1', 'RUST_LOG': 'warn', 'TERM': 'xterm-256color', 'PATH': '/home/kailash/.local/bin:/home/kailash/.codex/tmp/arg0/codex-arg0ShKTVt:/home/kailash/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_3.0.1.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/:/mnt/c/Users/kaila/.local/bin:/mnt/c/Users/kaila/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kaila/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/MinGW/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Ollama:/mnt/c/Users/kaila/AppData/Roaming/npm:/mnt/c/Users/kaila/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/kaila/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/kaila/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Kiro/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2/:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/kailash/.vscode-server/extensions/openai.chatgpt-26.1007.21434-linux-x64/bin/linux-x86_64', 'CODEX_VERSION': '0.162.0-alpha.17.2', 'CODEX_SESSION_ID': '01a124a6-88dd-74f2-ab9e-09b413797f58', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/kailash/ros2_ws/install/baseline_measurement:/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'MXC_BIN_DIR': '/home/kailash/.vscode-server/bin/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/node_modules/@microsoft/mxc-sdk/bin', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '01a124a6-88dd-74f2-ab9e-09b413797f58', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'PWD': '/home/kailash/ros2_ws/build/baseline_measurement', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'COPILOT_CLI_ENABLED_FEATURE_FLAGS': 'SHELL_SPAWN_BACKEND', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/kailash/ros2_ws/build/baseline_measurement/pytest.xml --junit-prefix=baseline_measurement -o cache_dir=/home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache'}, 'shell': False}
+[1.105380] (-) TimerEvent: {}
+[1.205639] (-) TimerEvent: {}
+[1.305962] (-) TimerEvent: {}
+[1.406269] (-) TimerEvent: {}
+[1.506596] (-) TimerEvent: {}
+[1.606896] (-) TimerEvent: {}
+[1.707279] (-) TimerEvent: {}
+[1.807975] (-) TimerEvent: {}
+[1.908420] (-) TimerEvent: {}
+[2.008766] (-) TimerEvent: {}
+[2.109138] (-) TimerEvent: {}
+[2.209487] (-) TimerEvent: {}
+[2.310560] (-) TimerEvent: {}
+[2.411177] (-) TimerEvent: {}
+[2.513207] (-) TimerEvent: {}
+[2.583637] (baseline_measurement) StdoutLine: {'line': b'============================= test session starts ==============================\n'}
+[2.584117] (baseline_measurement) StdoutLine: {'line': b'platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[2.584258] (baseline_measurement) StdoutLine: {'line': b'cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache\n'}
+[2.584388] (baseline_measurement) StdoutLine: {'line': b'rootdir: /home/kailash/ros2_ws/src/baseline_measurement\n'}
+[2.584513] (baseline_measurement) StdoutLine: {'line': b'plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0\n'}
+[2.584647] (baseline_measurement) StdoutLine: {'line': b'collected 56 items\n'}
+[2.584769] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[2.613396] (-) TimerEvent: {}
+[2.713697] (-) TimerEvent: {}
+[2.743104] (baseline_measurement) StdoutLine: {'line': b'test/test_acceptance.py .........                                        [ 16%]\n'}
+[2.814059] (-) TimerEvent: {}
+[2.835490] (baseline_measurement) StdoutLine: {'line': b'test/test_baseline_new.py .............                                  [ 39%]\n'}
+[2.838079] (baseline_measurement) StdoutLine: {'line': b'test/test_copyright.py s                                                 [ 41%]\n'}
+[2.914201] (-) TimerEvent: {}
+[3.014510] (-) TimerEvent: {}
+[3.118191] (-) TimerEvent: {}
+[3.218564] (-) TimerEvent: {}
+[3.338465] (-) TimerEvent: {}
+[3.439128] (-) TimerEvent: {}
+[3.543392] (-) TimerEvent: {}
+[3.671034] (-) TimerEvent: {}
+[3.771807] (-) TimerEvent: {}
+[3.877802] (-) TimerEvent: {}
+[3.978096] (-) TimerEvent: {}
+[4.078436] (-) TimerEvent: {}
+[4.178938] (-) TimerEvent: {}
+[4.279245] (-) TimerEvent: {}
+[4.362447] (baseline_measurement) StdoutLine: {'line': b'test/test_flake8.py F                                                    [ 42%]\n'}
+[4.379434] (-) TimerEvent: {}
+[4.479754] (-) TimerEvent: {}
+[4.580117] (-) TimerEvent: {}
+[4.681458] (-) TimerEvent: {}
+[4.690992] (baseline_measurement) StdoutLine: {'line': b'test/test_pep257.py F                                                    [ 44%]\n'}
+[4.781926] (-) TimerEvent: {}
+[4.882772] (-) TimerEvent: {}
+[4.905642] (baseline_measurement) StdoutLine: {'line': b'test/test_phase1.py ..............                                       [ 69%]\n'}
+[4.983343] (-) TimerEvent: {}
+[5.085361] (-) TimerEvent: {}
+[5.108789] (baseline_measurement) StdoutLine: {'line': b'test/test_preflight.py .................                                 [100%]\n'}
+[5.109400] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.109609] (baseline_measurement) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[5.109795] (baseline_measurement) StdoutLine: {'line': b'_________________________________ test_flake8 __________________________________\n'}
+[5.109960] (baseline_measurement) StdoutLine: {'line': b'test/test_flake8.py:23: in test_flake8\n'}
+[5.110250] (baseline_measurement) StdoutLine: {'line': b'    assert rc == 0, \\\n'}
+[5.110701] (baseline_measurement) StdoutLine: {'line': b'E   AssertionError: Found 83 code style errors / warnings:\n'}
+[5.111191] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/acceptance.py:109:100: E501 line too long (115 > 99 characters)\n'}
+[5.111519] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/baseline_node.py:3:1: I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.\n"}
+[5.111843] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/baseline_node.py:5:1: I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.\n"}
+[5.112271] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/baseline_node.py:9:1: I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy\n'}
+[5.112555] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/baseline_node.py:11:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus' should be before 'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy'\n"}
+[5.112981] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/baseline_node.py:12:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleAttitude' should be before 'from px4_msgs.msg import VehicleStatus'\n"}
+[5.113225] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/baseline_node.py:13:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import OffboardControlMode' should be before 'from px4_msgs.msg import VehicleAttitude'\n"}
+[5.113408] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/baseline_node.py:15:1: E302 expected 2 blank lines, found 1\n'}
+[5.113570] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:13:1: I101 Imported names are in the wrong order. Should be describe, OnlineStats, throughput_mbps\n'}
+[5.113764] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:66:34: C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.119505] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:67:13: E128 continuation line under-indented for visual indent\n'}
+[5.119805] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:68:13: E128 continuation line under-indented for visual indent\n'}
+[5.119919] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:69:13: E128 continuation line under-indented for visual indent\n'}
+[5.120005] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:74:47: E127 continuation line over-indented for visual indent\n'}
+[5.120097] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:92:49: E127 continuation line over-indented for visual indent\n'}
+[5.120219] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:123:33: C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.120350] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:124:17: E128 continuation line under-indented for visual indent\n'}
+[5.120442] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:134:100: E501 line too long (114 > 99 characters)\n'}
+[5.120569] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:135:100: E501 line too long (102 > 99 characters)\n'}
+[5.120701] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:136:100: E501 line too long (107 > 99 characters)\n'}
+[5.120827] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:147:24: E128 continuation line under-indented for visual indent\n'}
+[5.120955] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:151:39: E128 continuation line under-indented for visual indent\n'}
+[5.121156] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:182:17: E128 continuation line under-indented for visual indent\n'}
+[5.121369] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:183:17: E128 continuation line under-indented for visual indent\n'}
+[5.121662] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:184:17: E128 continuation line under-indented for visual indent\n'}
+[5.121899] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:194:100: E501 line too long (102 > 99 characters)\n'}
+[5.122103] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:195:100: E501 line too long (102 > 99 characters)\n'}
+[5.122367] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:201:100: E501 line too long (112 > 99 characters)\n'}
+[5.122596] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:202:100: E501 line too long (100 > 99 characters)\n'}
+[5.122824] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/experiment.py:242:100: E501 line too long (153 > 99 characters)\n'}
+[5.123030] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'\n"}
+[5.123269] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy\n'}
+[5.123647] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus\n'}
+[5.124323] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus' should be before 'from rclpy.serialization import serialize_message'\n"}
+[5.126233] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:28:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment\n'}
+[5.129419] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:28:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'\n"}
+[5.132690] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:30:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'\n"}
+[5.133596] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:82:17: E128 continuation line under-indented for visual indent\n'}
+[5.134084] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:82:100: E501 line too long (103 > 99 characters)\n'}
+[5.134534] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:105:100: E501 line too long (101 > 99 characters)\n'}
+[5.134932] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:38: E231 missing whitespace after ','\n"}
+[5.135217] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:40: E231 missing whitespace after ','\n"}
+[5.135503] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:45: E231 missing whitespace after ','\n"}
+[5.135786] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:49: E231 missing whitespace after ','\n"}
+[5.136112] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:51: E231 missing whitespace after ','\n"}
+[5.136252] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:56: E231 missing whitespace after ','\n"}
+[5.136487] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:60: E231 missing whitespace after ','\n"}
+[5.136708] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:63: E231 missing whitespace after ','\n"}
+[5.136870] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:68: E231 missing whitespace after ','\n"}
+[5.137080] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:71: E231 missing whitespace after ','\n"}
+[5.137270] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:74: E231 missing whitespace after ','\n"}
+[5.137387] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:79: E231 missing whitespace after ','\n"}
+[5.137481] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:82: E231 missing whitespace after ','\n"}
+[5.137726] (baseline_measurement) StdoutLine: {'line': b"E     ./baseline_measurement/mission_node.py:113:84: E231 missing whitespace after ','\n"}
+[5.137993] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:119:100: E501 line too long (102 > 99 characters)\n'}
+[5.138494] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:130:100: E501 line too long (108 > 99 characters)\n'}
+[5.138942] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:142:100: E501 line too long (101 > 99 characters)\n'}
+[5.139285] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:184:100: E501 line too long (102 > 99 characters)\n'}
+[5.139557] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:252:100: E501 line too long (105 > 99 characters)\n'}
+[5.139798] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:267:100: E501 line too long (108 > 99 characters)\n'}
+[5.140107] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:282:100: E501 line too long (102 > 99 characters)\n'}
+[5.140407] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:293:100: E501 line too long (107 > 99 characters)\n'}
+[5.140494] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:300:21: E128 continuation line under-indented for visual indent\n'}
+[5.140686] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:303:21: E128 continuation line under-indented for visual indent\n'}
+[5.141247] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:323:100: E501 line too long (107 > 99 characters)\n'}
+[5.141363] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:328:1: D401 First line should be in imperative mood; try rephrasing\n'}
+[5.141521] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:347:100: E501 line too long (132 > 99 characters)\n'}
+[5.141988] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:348:100: E501 line too long (139 > 99 characters)\n'}
+[5.142214] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:349:100: E501 line too long (110 > 99 characters)\n'}
+[5.142350] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:367:100: E501 line too long (126 > 99 characters)\n'}
+[5.150353] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:397:100: E501 line too long (101 > 99 characters)\n'}
+[5.151780] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:406:100: E501 line too long (100 > 99 characters)\n'}
+[5.152156] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:411:100: E501 line too long (117 > 99 characters)\n'}
+[5.152441] (baseline_measurement) StdoutLine: {'line': b'E     ./baseline_measurement/mission_node.py:412:100: E501 line too long (103 > 99 characters)\n'}
+[5.152683] (baseline_measurement) StdoutLine: {'line': b'E     ./test/test_baseline_new.py:12:1: I101 Imported names are in the wrong order. Should be describe, integrate_energy_wh, OnlineStats, packet_loss_pct, throughput_mbps\n'}
+[5.152926] (baseline_measurement) StdoutLine: {'line': b'E     ./test/test_baseline_new.py:14:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment\n'}
+[5.153163] (baseline_measurement) StdoutLine: {'line': b"E     ./test/test_baseline_new.py:14:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment import Experiment, aggregate_runs' should be before 'from baseline_measurement.metrics import OnlineStats, describe, integrate_energy_wh, packet_loss_pct, throughput_mbps'\n"}
+[5.153422] (baseline_measurement) StdoutLine: {'line': b"E     ./test/test_baseline_new.py:15:1: I100 Import statements are in the wrong order. 'from baseline_measurement.cli import validate_options' should be before 'from baseline_measurement.experiment import Experiment, aggregate_runs'\n"}
+[5.153690] (baseline_measurement) StdoutLine: {'line': b'E     ./test/test_baseline_new.py:121:13: E128 continuation line under-indented for visual indent\n'}
+[5.153957] (baseline_measurement) StdoutLine: {'line': b'E     ./test/test_baseline_new.py:122:13: E128 continuation line under-indented for visual indent\n'}
+[5.154223] (baseline_measurement) StdoutLine: {'line': b'E     ./test/test_baseline_new.py:142:29: C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.154443] (baseline_measurement) StdoutLine: {'line': b'E     ./test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry\n'}
+[5.154837] (baseline_measurement) StdoutLine: {'line': b"E     ./test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'\n"}
+[5.156787] (baseline_measurement) StdoutLine: {'line': b'E   assert 1 == 0\n'}
+[5.157646] (baseline_measurement) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[5.158624] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.161315] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/acceptance.py:109:100: E501 line too long (115 > 99 characters)\n'}
+[5.164493] (baseline_measurement) StdoutLine: {'line': b'    except (OSError, ValueError, KeyError, TypeError, OverflowError, AttributeError, IndexError, csv.Error) as exc:\n'}
+[5.165595] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.166144] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.166491] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/baseline_node.py:3:1: I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.\n"}
+[5.166704] (baseline_measurement) StdoutLine: {'line': b'import psutil\n'}
+[5.167275] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.167985] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.168188] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/baseline_node.py:5:1: I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.\n"}
+[5.168374] (baseline_measurement) StdoutLine: {'line': b'from datetime import datetime\n'}
+[5.168544] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.168703] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.168871] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/baseline_node.py:9:1: I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy\n'}
+[5.169069] (baseline_measurement) StdoutLine: {'line': b'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy\n'}
+[5.169219] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.169369] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.169957] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/baseline_node.py:11:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus' should be before 'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy'\n"}
+[5.170376] (baseline_measurement) StdoutLine: {'line': b'from px4_msgs.msg import VehicleStatus\n'}
+[5.170856] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.171283] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.171640] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/baseline_node.py:12:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleAttitude' should be before 'from px4_msgs.msg import VehicleStatus'\n"}
+[5.172009] (baseline_measurement) StdoutLine: {'line': b'from px4_msgs.msg import VehicleAttitude\n'}
+[5.172347] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.172810] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.173250] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/baseline_node.py:13:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import OffboardControlMode' should be before 'from px4_msgs.msg import VehicleAttitude'\n"}
+[5.173649] (baseline_measurement) StdoutLine: {'line': b'from px4_msgs.msg import OffboardControlMode\n'}
+[5.173986] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.174181] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.174574] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/baseline_node.py:15:1: E302 expected 2 blank lines, found 1\n'}
+[5.175067] (baseline_measurement) StdoutLine: {'line': b'class BaselineMeasurement(Node):\n'}
+[5.175553] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.176139] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.176849] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:13:1: I101 Imported names are in the wrong order. Should be describe, OnlineStats, throughput_mbps\n'}
+[5.181041] (baseline_measurement) StdoutLine: {'line': b'from .metrics import OnlineStats, throughput_mbps, describe\n'}
+[5.181484] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.181672] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.182132] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:66:34: C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.182561] (baseline_measurement) StdoutLine: {'line': b'        self.raw_writer.writerow(dict(experiment_id=self.experiment_id,\n'}
+[5.183772] (baseline_measurement) StdoutLine: {'line': b'                                 ^\n'}
+[5.184988] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.186096] (-) TimerEvent: {}
+[5.186307] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:67:13: E128 continuation line under-indented for visual indent\n'}
+[5.186683] (baseline_measurement) StdoutLine: {'line': b'            run_id=self.run_id, timestamp=utc_now(), elapsed_s=max(0., now-self.start),\n'}
+[5.186919] (baseline_measurement) StdoutLine: {'line': b'            ^\n'}
+[5.187075] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.187209] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:68:13: E128 continuation line under-indented for visual indent\n'}
+[5.187430] (baseline_measurement) StdoutLine: {'line': b"            metric_name=name, value=value if value is not None else '',\n"}
+[5.187603] (baseline_measurement) StdoutLine: {'line': b'            ^\n'}
+[5.187737] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.187940] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:69:13: E128 continuation line under-indented for visual indent\n'}
+[5.188072] (baseline_measurement) StdoutLine: {'line': b'            unit=unit, source=source, status=status))\n'}
+[5.188178] (baseline_measurement) StdoutLine: {'line': b'            ^\n'}
+[5.188307] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.188417] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:74:47: E127 continuation line over-indented for visual indent\n'}
+[5.188526] (baseline_measurement) StdoutLine: {'line': b"                                              'last': None, 'iat': OnlineStats(),\n"}
+[5.188666] (baseline_measurement) StdoutLine: {'line': b'                                              ^\n'}
+[5.188837] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.188948] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:92:49: E127 continuation line over-indented for visual indent\n'}
+[5.189061] (baseline_measurement) StdoutLine: {'line': b"                                                'cpu': OnlineStats(), 'rss': OnlineStats()})\n"}
+[5.189184] (baseline_measurement) StdoutLine: {'line': b'                                                ^\n'}
+[5.189300] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.189407] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:123:33: C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.189518] (baseline_measurement) StdoutLine: {'line': b"            topic_stats[name] = dict(count=item['count'], delivered_cdr_bytes=item['bytes'],\n"}
+[5.189615] (baseline_measurement) StdoutLine: {'line': b'                                ^\n'}
+[5.189718] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.189825] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:124:17: E128 continuation line under-indented for visual indent\n'}
+[5.189957] (baseline_measurement) StdoutLine: {'line': b"                rate_hz=item['count']/elapsed if elapsed else None,\n"}
+[5.190068] (baseline_measurement) StdoutLine: {'line': b'                ^\n'}
+[5.190170] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.190296] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:134:100: E501 line too long (114 > 99 characters)\n'}
+[5.190407] (baseline_measurement) StdoutLine: {'line': b"            'telemetry_latency': 'PX4 source timestamp and host monotonic clock are not validated as one domain.',\n"}
+[5.190510] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.190615] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.191014] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:135:100: E501 line too long (102 > 99 characters)\n'}
+[5.192333] (baseline_measurement) StdoutLine: {'line': b"            'command_latency': 'Passive mode sends no command; ACK lacks unique request correlation.',\n"}
+[5.192665] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.192986] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.193247] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:136:100: E501 line too long (107 > 99 characters)\n'}
+[5.197162] (baseline_measurement) StdoutLine: {'line': b"            'packet_loss': 'ROS callbacks do not expose transmitted sequence counts or transport packets.',\n"}
+[5.199095] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.199291] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.199404] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:147:24: E128 continuation line under-indented for visual indent\n'}
+[5.200590] (baseline_measurement) StdoutLine: {'line': b'                       for name, reason in reasons.items()})\n'}
+[5.201837] (baseline_measurement) StdoutLine: {'line': b'                       ^\n'}
+[5.201994] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.202211] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:151:39: E128 continuation line under-indented for visual indent\n'}
+[5.202589] (baseline_measurement) StdoutLine: {'line': b"                                      'kind': 'received ROS CDR traffic rate; not link capacity'}\n"}
+[5.203150] (baseline_measurement) StdoutLine: {'line': b'                                      ^\n'}
+[5.203346] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.203581] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:182:17: E128 continuation line under-indented for visual indent\n'}
+[5.203808] (baseline_measurement) StdoutLine: {'line': b"                'run_id': self.run_id, 'scenario': self.scenario,\n"}
+[5.203929] (baseline_measurement) StdoutLine: {'line': b'                ^\n'}
+[5.204029] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.204164] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:183:17: E128 continuation line under-indented for visual indent\n'}
+[5.204301] (baseline_measurement) StdoutLine: {'line': b"                'start_time': self.start_time, 'end_time': end_time,\n"}
+[5.204403] (baseline_measurement) StdoutLine: {'line': b'                ^\n'}
+[5.204576] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.204732] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:184:17: E128 continuation line under-indented for visual indent\n'}
+[5.204859] (baseline_measurement) StdoutLine: {'line': b"                'observation_duration_s': elapsed, 'mission_status': mission_status},\n"}
+[5.204977] (baseline_measurement) StdoutLine: {'line': b'                ^\n'}
+[5.205072] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.205173] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:194:100: E501 line too long (102 > 99 characters)\n'}
+[5.205281] (baseline_measurement) StdoutLine: {'line': b"                'throughput_mbps': 'received ROS CDR bytes * 8 / monotonic observation seconds / 1e6',\n"}
+[5.205380] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.205467] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.205558] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:195:100: E501 line too long (102 > 99 characters)\n'}
+[5.205661] (baseline_measurement) StdoutLine: {'line': b"                'traffic_rate_mbps': 'same observed ROS CDR receive rate; not physical link capacity',\n"}
+[5.205762] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.205898] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.205999] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:201:100: E501 line too long (112 > 99 characters)\n'}
+[5.206094] (baseline_measurement) StdoutLine: {'line': b"                'simulated_energy_wh': 'trapezoidal integral of valid PX4 BatteryStatus voltage*current / 3600',\n"}
+[5.206193] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.206297] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.206401] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:202:100: E501 line too long (100 > 99 characters)\n'}
+[5.206618] (baseline_measurement) StdoutLine: {'line': b"                'latency': 'unavailable until instrumented endpoints and valid clock mapping exist',\n"}
+[5.206965] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.207124] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.207287] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/experiment.py:242:100: E501 line too long (153 > 99 characters)\n'}
+[5.207608] (baseline_measurement) StdoutLine: {'line': b"            'confidence_interval_note': 'Student t for <=30 run means; normal approximation above 30. Runs must be independent under the same scenario.'}\n"}
+[5.207781] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.207976] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.208274] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:11:1: I100 Import statements are in the wrong order. 'import re' should be before 'import time'\n"}
+[5.208511] (baseline_measurement) StdoutLine: {'line': b'import re\n'}
+[5.208752] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.209019] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.209328] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:18:1: I101 Imported names are in the wrong order. Should be DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy\n'}
+[5.209670] (baseline_measurement) StdoutLine: {'line': b'from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy\n'}
+[5.209995] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.210284] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.210476] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:20:1: I101 Imported names are in the wrong order. Should be BatteryStatus, OffboardControlMode, TrajectorySetpoint, VehicleAttitude, VehicleCommand, VehicleCommandAck, VehicleLandDetected, VehicleLocalPosition, VehicleStatus\n'}
+[5.210655] (baseline_measurement) StdoutLine: {'line': b'from px4_msgs.msg import (\n'}
+[5.210961] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.217383] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.217889] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:20:1: I100 Import statements are in the wrong order. 'from px4_msgs.msg import VehicleStatus, VehicleLocalPosition, VehicleAttitude, VehicleLandDetected, VehicleCommandAck, VehicleCommand, TrajectorySetpoint, OffboardControlMode, BatteryStatus' should be before 'from rclpy.serialization import serialize_message'\n"}
+[5.218434] (baseline_measurement) StdoutLine: {'line': b'from px4_msgs.msg import (\n'}
+[5.218696] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.219037] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.220044] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:28:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment\n'}
+[5.222197] (baseline_measurement) StdoutLine: {'line': b'from .experiment import Experiment, aggregate_runs\n'}
+[5.222585] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.222883] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.223074] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:28:1: I100 Import statements are in the wrong order. 'from .experiment import Experiment, aggregate_runs' should be before 'from .mission_state import Mission, Telemetry'\n"}
+[5.223296] (baseline_measurement) StdoutLine: {'line': b'from .experiment import Experiment, aggregate_runs\n'}
+[5.223531] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.223817] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.224066] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:30:1: I100 Import statements are in the wrong order. 'from .cli import validate_options' should be before 'from .resource_monitor import ResourceMonitor'\n"}
+[5.224286] (baseline_measurement) StdoutLine: {'line': b'from .cli import validate_options\n'}
+[5.224397] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.224595] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.224768] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:82:17: E128 continuation line under-indented for visual indent\n'}
+[5.224947] (baseline_measurement) StdoutLine: {'line': b"                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',\n"}
+[5.225111] (baseline_measurement) StdoutLine: {'line': b'                ^\n'}
+[5.225267] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.225434] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:82:100: E501 line too long (103 > 99 characters)\n'}
+[5.225618] (baseline_measurement) StdoutLine: {'line': b"                options.scenario, {'px4_version': '1.18.0-beta1 (configured; live version unverified)',\n"}
+[5.225759] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.225974] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.226156] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:105:100: E501 line too long (101 > 99 characters)\n'}
+[5.226341] (baseline_measurement) StdoutLine: {'line': b"            if len(processes['px4']) != 1 or len(processes['agent']) != 1 or not processes['gazebo']:\n"}
+[5.229028] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.233857] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.235670] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:38: E231 missing whitespace after ','\n"}
+[5.236763] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.237545] (baseline_measurement) StdoutLine: {'line': b'                                     ^\n'}
+[5.237768] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.237886] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:40: E231 missing whitespace after ','\n"}
+[5.238089] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.238213] (baseline_measurement) StdoutLine: {'line': b'                                       ^\n'}
+[5.238333] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.238453] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:45: E231 missing whitespace after ','\n"}
+[5.238581] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.238698] (baseline_measurement) StdoutLine: {'line': b'                                            ^\n'}
+[5.239043] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.239206] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:49: E231 missing whitespace after ','\n"}
+[5.239323] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.239425] (baseline_measurement) StdoutLine: {'line': b'                                                ^\n'}
+[5.239522] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.239619] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:51: E231 missing whitespace after ','\n"}
+[5.239730] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.239828] (baseline_measurement) StdoutLine: {'line': b'                                                  ^\n'}
+[5.239953] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.240229] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:56: E231 missing whitespace after ','\n"}
+[5.240346] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.240483] (baseline_measurement) StdoutLine: {'line': b'                                                       ^\n'}
+[5.240664] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.240764] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:60: E231 missing whitespace after ','\n"}
+[5.240859] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.240962] (baseline_measurement) StdoutLine: {'line': b'                                                           ^\n'}
+[5.241052] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.241143] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:63: E231 missing whitespace after ','\n"}
+[5.241226] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.241308] (baseline_measurement) StdoutLine: {'line': b'                                                              ^\n'}
+[5.241402] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.241497] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:68: E231 missing whitespace after ','\n"}
+[5.241587] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.241683] (baseline_measurement) StdoutLine: {'line': b'                                                                   ^\n'}
+[5.241776] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.241870] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:71: E231 missing whitespace after ','\n"}
+[5.241975] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.242236] (baseline_measurement) StdoutLine: {'line': b'                                                                      ^\n'}
+[5.242432] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.242538] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:74: E231 missing whitespace after ','\n"}
+[5.242710] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.242942] (baseline_measurement) StdoutLine: {'line': b'                                                                         ^\n'}
+[5.243073] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.243264] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:79: E231 missing whitespace after ','\n"}
+[5.243399] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.243625] (baseline_measurement) StdoutLine: {'line': b'                                                                              ^\n'}
+[5.243826] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.243951] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:82: E231 missing whitespace after ','\n"}
+[5.245363] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.249011] (baseline_measurement) StdoutLine: {'line': b'                                                                                 ^\n'}
+[5.249950] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.251860] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:113:84: E231 missing whitespace after ','\n"}
+[5.252244] (baseline_measurement) StdoutLine: {'line': b"            'waypoint_offsets_m': [[0,0,-10],[20,0,-10],[20,20,-10],[0,20,-10],[0,0,-10]],\n"}
+[5.252531] (baseline_measurement) StdoutLine: {'line': b'                                                                                   ^\n'}
+[5.252713] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.252903] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:119:100: E501 line too long (102 > 99 characters)\n'}
+[5.253187] (baseline_measurement) StdoutLine: {'line': b"            'payload': 'ROS CDR serialized bytes including encapsulation; excludes transport headers',\n"}
+[5.253332] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.254220] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.254990] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:130:100: E501 line too long (108 > 99 characters)\n'}
+[5.255203] (baseline_measurement) StdoutLine: {'line': b"        self.log = RunLog(options.output, 'baseline_run' if options.execute_sitl else 'preflight', metadata)\n"}
+[5.255332] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.255566] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.255849] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:142:100: E501 line too long (101 > 99 characters)\n'}
+[5.256095] (baseline_measurement) StdoutLine: {'line': b'        self.timer = self.create_timer(.05, self.tick, clock=Clock(clock_type=ClockType.STEADY_TIME))\n'}
+[5.256328] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.256497] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.256698] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:184:100: E501 line too long (102 > 99 characters)\n'}
+[5.256913] (baseline_measurement) StdoutLine: {'line': b'            self.competition = any(self.count_publishers(topic) > own for topic, _ in INPUTS.values())\n'}
+[5.257035] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.257128] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.257199] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:252:100: E501 line too long (105 > 99 characters)\n'}
+[5.257284] (baseline_measurement) StdoutLine: {'line': b"                self.log.row('home', detail=json.dumps({'home_ned': self.mission.home, 'yaw': self.yaw}))\n"}
+[5.257371] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.257470] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.257768] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:267:100: E501 line too long (108 > 99 characters)\n'}
+[5.257934] (baseline_measurement) StdoutLine: {'line': b"                             detail=json.dumps({'event': event, 'elapsed_s': timestamp-self.mission.start}))\n"}
+[5.258079] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.258252] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.258398] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:282:100: E501 line too long (102 > 99 characters)\n'}
+[5.258562] (baseline_measurement) StdoutLine: {'line': b"                         armed=t.armed, nav_state=getattr(self.latest.get('status'), 'nav_state', ''),\n"}
+[5.258696] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.258915] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.259101] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:293:100: E501 line too long (107 > 99 characters)\n'}
+[5.259227] (baseline_measurement) StdoutLine: {'line': b'        if self.experiment is not None and now-self.last_baseline_sample >= self.options.sampling_interval:\n'}
+[5.259327] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.259434] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.259650] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:300:21: E128 continuation line under-indented for visual indent\n'}
+[5.259812] (baseline_measurement) StdoutLine: {'line': b'                    sum(cpu for _, _, cpu, _ in resources if cpu is not None),\n'}
+[5.260021] (baseline_measurement) StdoutLine: {'line': b'                    ^\n'}
+[5.260257] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.260462] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:303:21: E128 continuation line under-indented for visual indent\n'}
+[5.260686] (baseline_measurement) StdoutLine: {'line': b"                    sum(rss for _, _, _, rss in resources), 'MiB',\n"}
+[5.260936] (baseline_measurement) StdoutLine: {'line': b'                    ^\n'}
+[5.261117] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.261291] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:323:100: E501 line too long (107 > 99 characters)\n'}
+[5.261470] (baseline_measurement) StdoutLine: {'line': b"            self.log.finish('', reason='Passive observation only; no mission attempted', state='PREFLIGHT')\n"}
+[5.261665] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.261808] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.261918] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:328:1: D401 First line should be in imperative mood; try rephrasing\n'}
+[5.262050] (baseline_measurement) StdoutLine: {'line': b'    """Default is passive. --execute-sitl is the explicit one-mission command."""\n'}
+[5.262135] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.262280] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.262429] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:347:100: E501 line too long (132 > 99 characters)\n'}
+[5.262654] (baseline_measurement) StdoutLine: {'line': b"    options.observe_seconds = options.observe_seconds if options.observe_seconds is not None else config.get('observe_seconds', 15.)\n"}
+[5.263108] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.263237] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.263329] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:348:100: E501 line too long (139 > 99 characters)\n'}
+[5.263425] (baseline_measurement) StdoutLine: {'line': b"    options.sampling_interval = options.sampling_interval if options.sampling_interval is not None else config.get('sampling_interval', 1.)\n"}
+[5.263523] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.268802] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.270077] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:349:100: E501 line too long (110 > 99 characters)\n'}
+[5.270651] (baseline_measurement) StdoutLine: {'line': b"    options.output = options.output or config.get('output_dir', str(Path.home()/'ros2_ws'/'baseline_results'))\n"}
+[5.272304] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.274812] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.275268] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:367:100: E501 line too long (126 > 99 characters)\n'}
+[5.275621] (baseline_measurement) StdoutLine: {'line': b"            parser.error('BASE-001 through BASE-030 are exhausted; choose an existing ID explicitly or a new study directory')\n"}
+[5.275978] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.276161] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.276359] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:397:100: E501 line too long (101 > 99 characters)\n'}
+[5.276575] (baseline_measurement) StdoutLine: {'line': b"                            node.experiment.finish('interrupted' if interrupted else 'failed', error)\n"}
+[5.276832] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.277053] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.277217] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:406:100: E501 line too long (100 > 99 characters)\n'}
+[5.277407] (baseline_measurement) StdoutLine: {'line': b"                                        error or 'Interrupted or runtime error', node.mission.state)\n"}
+[5.277719] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.278050] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.278284] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:411:100: E501 line too long (117 > 99 characters)\n'}
+[5.278535] (baseline_measurement) StdoutLine: {'line': b"            aggregate = aggregate_runs(Path(options.output).expanduser() / 'baseline_summary.csv', completed_run_ids)\n"}
+[5.278806] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.279115] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.279337] (baseline_measurement) StdoutLine: {'line': b'./baseline_measurement/mission_node.py:412:100: E501 line too long (103 > 99 characters)\n'}
+[5.279588] (baseline_measurement) StdoutLine: {'line': b"            destination = Path(options.output).expanduser() / f'aggregate_{uuid.uuid4().hex[:12]}.json'\n"}
+[5.279787] (baseline_measurement) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[5.279963] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.280236] (baseline_measurement) StdoutLine: {'line': b'./test/test_baseline_new.py:12:1: I101 Imported names are in the wrong order. Should be describe, integrate_energy_wh, OnlineStats, packet_loss_pct, throughput_mbps\n'}
+[5.280460] (baseline_measurement) StdoutLine: {'line': b'from baseline_measurement.metrics import (\n'}
+[5.280666] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.289678] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.291137] (-) TimerEvent: {}
+[5.291206] (baseline_measurement) StdoutLine: {'line': b'./test/test_baseline_new.py:14:1: I101 Imported names are in the wrong order. Should be aggregate_runs, Experiment\n'}
+[5.291437] (baseline_measurement) StdoutLine: {'line': b'from baseline_measurement.experiment import Experiment, aggregate_runs\n'}
+[5.291568] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.291695] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.291844] (baseline_measurement) StdoutLine: {'line': b"./test/test_baseline_new.py:14:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment import Experiment, aggregate_runs' should be before 'from baseline_measurement.metrics import OnlineStats, describe, integrate_energy_wh, packet_loss_pct, throughput_mbps'\n"}
+[5.292034] (baseline_measurement) StdoutLine: {'line': b'from baseline_measurement.experiment import Experiment, aggregate_runs\n'}
+[5.292175] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.292307] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.292458] (baseline_measurement) StdoutLine: {'line': b"./test/test_baseline_new.py:15:1: I100 Import statements are in the wrong order. 'from baseline_measurement.cli import validate_options' should be before 'from baseline_measurement.experiment import Experiment, aggregate_runs'\n"}
+[5.292679] (baseline_measurement) StdoutLine: {'line': b'from baseline_measurement.cli import validate_options\n'}
+[5.292811] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.292958] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.293095] (baseline_measurement) StdoutLine: {'line': b'./test/test_baseline_new.py:121:13: E128 continuation line under-indented for visual indent\n'}
+[5.293201] (baseline_measurement) StdoutLine: {'line': b'            NoSuchProcess=RuntimeError, AccessDenied=PermissionError,\n'}
+[5.293285] (baseline_measurement) StdoutLine: {'line': b'            ^\n'}
+[5.293366] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.293452] (baseline_measurement) StdoutLine: {'line': b'./test/test_baseline_new.py:122:13: E128 continuation line under-indented for visual indent\n'}
+[5.293624] (baseline_measurement) StdoutLine: {'line': b'            ZombieProcess=RuntimeError)\n'}
+[5.293706] (baseline_measurement) StdoutLine: {'line': b'            ^\n'}
+[5.293784] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.293854] (baseline_measurement) StdoutLine: {'line': b'./test/test_baseline_new.py:142:29: C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.293917] (baseline_measurement) StdoutLine: {'line': b'                arguments = dict(observe_seconds=15., sampling_interval=1.,\n'}
+[5.293993] (baseline_measurement) StdoutLine: {'line': b'                            ^\n'}
+[5.294075] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.294153] (baseline_measurement) StdoutLine: {'line': b'./test/test_phase1.py:8:1: I101 Imported names are in the wrong order. Should be Mission, STAGES, Telemetry\n'}
+[5.294236] (baseline_measurement) StdoutLine: {'line': b'from baseline_measurement.mission_state import Mission, Telemetry, STAGES\n'}
+[5.294369] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.294443] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.294522] (baseline_measurement) StdoutLine: {'line': b"./test/test_phase1.py:9:1: I100 Import statements are in the wrong order. 'from baseline_measurement.experiment_logger import RunLog, TopicStats' should be before 'from baseline_measurement.mission_state import Mission, Telemetry, STAGES'\n"}
+[5.294613] (baseline_measurement) StdoutLine: {'line': b'from baseline_measurement.experiment_logger import RunLog, TopicStats\n'}
+[5.294693] (baseline_measurement) StdoutLine: {'line': b'^\n'}
+[5.294856] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.294969] (baseline_measurement) StdoutLine: {'line': b'3     C408 Unnecessary dict call - rewrite as a literal.\n'}
+[5.295149] (baseline_measurement) StdoutLine: {'line': b'1     D401 First line should be in imperative mood; try rephrasing\n'}
+[5.295339] (baseline_measurement) StdoutLine: {'line': b'2     E127 continuation line over-indented for visual indent\n'}
+[5.295518] (baseline_measurement) StdoutLine: {'line': b'14    E128 continuation line under-indented for visual indent\n'}
+[5.295780] (baseline_measurement) StdoutLine: {'line': b"14    E231 missing whitespace after ','\n"}
+[5.296690] (baseline_measurement) StdoutLine: {'line': b'1     E302 expected 2 blank lines, found 1\n'}
+[5.297010] (baseline_measurement) StdoutLine: {'line': b'28    E501 line too long (115 > 99 characters)\n'}
+[5.297319] (baseline_measurement) StdoutLine: {'line': b"11    I100 Import statements are in the wrong order. 'from datetime import datetime' should be before 'import psutil' and in a different group.\n"}
+[5.297540] (baseline_measurement) StdoutLine: {'line': b'8     I101 Imported names are in the wrong order. Should be HistoryPolicy, QoSProfile, ReliabilityPolicy\n'}
+[5.297999] (baseline_measurement) StdoutLine: {'line': b"1     I201 Missing newline between import groups. 'import psutil' is identified as Third Party and 'import time' is identified as Stdlib.\n"}
+[5.299123] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.299406] (baseline_measurement) StdoutLine: {'line': b'18 files checked\n'}
+[5.299602] (baseline_measurement) StdoutLine: {'line': b'83 errors\n'}
+[5.299902] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.300115] (baseline_measurement) StdoutLine: {'line': b"'C'-type errors: 3\n"}
+[5.300264] (baseline_measurement) StdoutLine: {'line': b"'D'-type errors: 1\n"}
+[5.300404] (baseline_measurement) StdoutLine: {'line': b"'E'-type errors: 59\n"}
+[5.300505] (baseline_measurement) StdoutLine: {'line': b"'I'-type errors: 20\n"}
+[5.300674] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.300871] (baseline_measurement) StdoutLine: {'line': b'Checked files:\n'}
+[5.300978] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[5.301229] (baseline_measurement) StdoutLine: {'line': b'* ./setup.py\n'}
+[5.302103] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/cli.py\n'}
+[5.302823] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/acceptance.py\n'}
+[5.302925] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/mission_node.py\n'}
+[5.303009] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/experiment.py\n'}
+[5.303085] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/mission_state.py\n'}
+[5.303177] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/experiment_logger.py\n'}
+[5.303254] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/resource_monitor.py\n'}
+[5.303398] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/baseline_node.py\n'}
+[5.303489] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/metrics.py\n'}
+[5.303565] (baseline_measurement) StdoutLine: {'line': b'* ./baseline_measurement/__init__.py\n'}
+[5.303642] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_copyright.py\n'}
+[5.303730] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_phase1.py\n'}
+[5.304063] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_baseline_new.py\n'}
+[5.304199] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_preflight.py\n'}
+[5.304315] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_acceptance.py\n'}
+[5.304574] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_flake8.py\n'}
+[5.304735] (baseline_measurement) StderrLine: {'line': b'=============================== warnings summary ===============================\n'}
+[5.304902] (baseline_measurement) StderrLine: {'line': b'test/test_flake8.py: 12 warnings\n'}
+[5.305075] (baseline_measurement) StderrLine: {'line': b'  Warning: This process (pid=69) is multi-threaded, use of fork() may lead to deadlocks in the child.\n'}
+[5.305186] (baseline_measurement) StderrLine: {'line': b'\n'}
+[5.305707] (baseline_measurement) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n'}
+[5.305801] (baseline_measurement) StdoutLine: {'line': b'* ./test/test_pep257.py\n'}
+[5.305879] (baseline_measurement) StdoutLine: {'line': b'_________________________________ test_pep257 __________________________________\n'}
+[5.305948] (baseline_measurement) StdoutLine: {'line': b'test/test_pep257.py:23: in test_pep257\n'}
+[5.306016] (baseline_measurement) StdoutLine: {'line': b"    assert rc == 0, 'Found code style errors / warnings'\n"}
+[5.306095] (baseline_measurement) StdoutLine: {'line': b'E   AssertionError: Found code style errors / warnings\n'}
+[5.306165] (baseline_measurement) StdoutLine: {'line': b'E   assert 1 == 0\n'}
+[5.306327] (baseline_measurement) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[5.306456] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/__init__.py\n'}
+[5.306549] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/acceptance.py\n'}
+[5.306635] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/baseline_node.py\n'}
+[5.306712] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/cli.py\n'}
+[5.307458] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/experiment.py\n'}
+[5.307646] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/experiment_logger.py\n'}
+[5.308112] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/metrics.py\n'}
+[5.310708] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/mission_node.py\n'}
+[5.310941] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/mission_state.py\n'}
+[5.311023] (baseline_measurement) StdoutLine: {'line': b'checking ./baseline_measurement/resource_monitor.py\n'}
+[5.311090] (baseline_measurement) StdoutLine: {'line': b'checking ./setup.py\n'}
+[5.311163] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_acceptance.py\n'}
+[5.311241] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_baseline_new.py\n'}
+[5.311322] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_copyright.py\n'}
+[5.311420] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_flake8.py\n'}
+[5.311659] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_pep257.py\n'}
+[5.311880] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_phase1.py\n'}
+[5.312031] (baseline_measurement) StdoutLine: {'line': b'checking ./test/test_preflight.py\n'}
+[5.312261] (baseline_measurement) StdoutLine: {'line': b'checking test/test_acceptance.py\n'}
+[5.312431] (baseline_measurement) StdoutLine: {'line': b'checking test/test_baseline_new.py\n'}
+[5.312588] (baseline_measurement) StdoutLine: {'line': b'checking test/test_copyright.py\n'}
+[5.312727] (baseline_measurement) StdoutLine: {'line': b'checking test/test_flake8.py\n'}
+[5.312863] (baseline_measurement) StdoutLine: {'line': b'checking test/test_pep257.py\n'}
+[5.313036] (baseline_measurement) StdoutLine: {'line': b'checking test/test_phase1.py\n'}
+[5.313127] (baseline_measurement) StdoutLine: {'line': b'checking test/test_preflight.py\n'}
+[5.313201] (baseline_measurement) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[5.313310] (baseline_measurement) StdoutLine: {'line': b"./baseline_measurement/mission_node.py:328 in public function `main`: D401: First line should be in imperative mood; try rephrasing (found 'Default')\n"}
+[5.313502] (baseline_measurement) StdoutLine: {'line': b'1 errors\n'}
+[5.313630] (baseline_measurement) StdoutLine: {'line': b'- generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -\n'}
+[5.313787] (baseline_measurement) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[5.313953] (baseline_measurement) StdoutLine: {'line': b'FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 83 code style...\n'}
+[5.314128] (baseline_measurement) StdoutLine: {'line': b'FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...\n'}
+[5.314218] (baseline_measurement) StdoutLine: {'line': b'============= 2 failed, 53 passed, 1 skipped, 12 warnings in 3.51s =============\n'}
+[5.394247] (-) TimerEvent: {}
+[5.494875] (-) TimerEvent: {}
+[5.594668] (baseline_measurement) CommandEnded: {'returncode': 1}
+[5.596109] (-) TimerEvent: {}
+[5.596232] (baseline_measurement) TestFailure: {'identifier': 'baseline_measurement'}
+[5.596506] (baseline_measurement) JobEnded: {'identifier': 'baseline_measurement', 'rc': 0}
+[5.597719] (-) EventReactorShutdown: {}

@@ -1,0 +1,649 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "active_attempts": 45,
+    "active_pass": 12,
+    "active_fail": 33,
+    "active_incomplete_or_invalid": 0,
+    "active_complete_records": 45,
+    "study_slots_assigned": 30,
+    "study_complete_records": 30,
+    "strict_valid_active_experiments": 0,
+    "strict_valid_study_experiments": 0,
+    "passive_runlogs": 3,
+    "passive_json_records": 2,
+    "duplicate_files": 0
+  },
+  "phase1": "BLOCKED",
+  "source_hashes": {
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_001.csv": "f1fe396d6bef1be3029a0d0710388d1b9f5f153d75c8dd15e1895890405d4899",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_002.csv": "19bdaf98798f9fb50d9905c1890c24810ff198ead61fb188ca023caec6e1e1ee",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_003.csv": "3cf012c66089d6056ec07272e5469583ec3f3a94f9710099023fe6da3d795999",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_004.csv": "05d2fd82d66a4da338119d67bd67d8b017ca5cdd4c0d501bd35b88f88dfadad0",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_005.csv": "6170b1f4c6b93f735ef971e82a6cbec9992a968efd9952e427d3247c973db377",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_006.csv": "c6f442027e06f76d74045a9c01c9a35c1d43992a82e32d5f895f77d3316af731",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_007.csv": "14303e993c1c9d6ba21ef160e363c502c089f821094766d440ba68fcc07b2988",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_008.csv": "9dba27260e80acac7645f262ccf3aa3fce8d079ffd887a0e28dd113f238a57fc",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_009.csv": "edc60a5ff50387a1d2331d595c2ba69804bc7d0afe25708e02e49f3b5c2f6fc9",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_010.csv": "2fa7bd81398e62531306477ce8becf64c06f58537da096ca5361e3076da3ad1e",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_011.csv": "a2052c74f13bb92499e77ece98d73a307e77a15072790c786d7078c6fcb94d02",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_012.csv": "282314b22ac257abf67cddf133a4be8071b32306ff6eb34c67b3efddb4f80b9f",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_013.csv": "08242b1e22052375e46ba85130ac13b2397962d7bbc33e663a90456162529253",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_014.csv": "e6f7556f24bdb80dff223fc6f1a013a014224b591ac7cbd7749e0e290424c3b0",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_015.csv": "652ee6f8c37cee348c15cc0c6a29aeb67b8d9ff2bf5bb80bfe1b9ee19e457cad",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_016.csv": "7f40f1cd655d9a4c991049e8513cab75e867a361ffe1f2e552640b1075233741",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_017.csv": "0602869fb585a549d9152034b1e4a2e618fd1c41c6d3c93e12ba37c85f9c86fb",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_018.csv": "8c7dc298d118df60780bc936a25901875a6e9a72c8e09dd7c2df33dd9dc8143c",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_019.csv": "cd2da7d457950352a47216722d0f5c427a1e95a3acf96dff37646263e6ad4f36",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_020.csv": "da9c6d0d51aa8b41ea5016ee7d44e38664730cc5b8bc30a9fdd2a52cda52dfd3",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_021.csv": "81f66a7a8fe7872897a1a2484b1505e4affab09d014acabec1352b7611983727",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_022.csv": "1b65449838f053f5b8b6033229eb7266aee8465619d68b2244693fead55d8922",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_023.csv": "7a3f7ad3af81d8854d6a8966f4407202dbc36653cf4a86d64ff1a635c82a64a7",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_024.csv": "6d5b830758315f7153928123c14f794b0ca772028de649741c28a52e69587c58",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_025.csv": "31ac84b027595c5fe0e257911fa37c422459948a183cacce7e3c99081f76b4a0",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_026.csv": "314cd61906a20ecc00ca03239e53d23a381b19315efa9dc8f2565197c6f00573",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_027.csv": "15a8cb8b79aa1738e29bd0e87b792d6e128a7ef9bc6e7fe6ae45c9e4778bccef",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_028.csv": "ea99a4289e2b6f1af7f4bb09bd9efc1d54683912300cab36449fcdf4f069043d",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_029.csv": "cb72927613ae351099b007a7fda26a7ead54119faa6c8f74b98afb0d27b4a8ef",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_030.csv": "65bcef158c24673cbf50f24edcdbf548304ebf2e5f1088645bc15496b8c4b408",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_031.csv": "84fd4d11a68839c8bdd37530451349a5382e5783d73e266c3c9ba7109161b226",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_032.csv": "d01e9c2f6b40f585b74c9bd2cbb077ddbd72de7a3eca16455b04034025bfad58",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_033.csv": "0e3c745ca909f7d66010e341b0ac49eac0710da91c7735b62f30efa80fbd9086",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_034.csv": "870f2277e9a2f4b13130c866b4c0c44415a58ee277e8f88e96fffb0396b29d96",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_035.csv": "32a5870b37407ec815b94d4fa4ccd11db3e26f7f13a23ae74824f0149ceb641d",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_036.csv": "7e43a294d8cc3404e99cd026b6a11105844f58055815ce96a54c3c6c61fbc41b",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_037.csv": "ef26ce902a78b2bce7a8c0964e99dd4a1071725a29bf7a2a1dc387423b5416cc",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_038.csv": "68bd413994c6fdcb58c5b5f5b35e94de291bf85bc737b2f2319cf59ca113c950",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_039.csv": "ac96393f6d01d019dfbe7c59635917763cbb64f7eb3b0c5839fe34ee25ea30b6",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_040.csv": "0e84ff9f097cb3091f51e9b05aa389446619e8200c1c842a6f209f4ef96d60fb",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_041.csv": "b38a0f25db64c6b67cb73b96c1f3c46fed5498ca8dfce8425e72125cab0e443d",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_042.csv": "0f4544b5b7c4a0c3a966bf67da5a791df92b0af7ddb15b4a7646409d0ddf92e5",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_043.csv": "2fd6257950356b7788b015ed2346d7b54d8f24fb3fccdb572e4cc2ef29de4bc9",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_044.csv": "4bb53420626f0aa6607938dd6fb78071a64e692057d842cf6c63b5349d7450a1",
+    "/home/kailash/ros2_ws/baseline_results/baseline_run_045.csv": "4955a88afd85596a1ece52a9ae291b09638559d0a2981084bbb7e7d0134ea87b",
+    "/home/kailash/ros2_ws/baseline_results/preflight_001.csv": "f7b8f64d19f0c914b6ac2a55d95b86fc0ae5283fcba79600d31ee001c74456cf",
+    "/home/kailash/ros2_ws/baseline_results/preflight_002.csv": "07cf8a94d392d5e6ac6dbad0822c44d2f409f94b4316479368de7f9ac88717b6",
+    "/home/kailash/ros2_ws/baseline_results/preflight_003.csv": "a93c521b0dc4b193757e472d3df807178e67cba324ab8e249a4a9d0d9a0ab43c",
+    "/home/kailash/ros2_ws/baseline_results/BASE-001_c01043f4edba.json": "ca19400d55f251643d3bc021e66d36cf11b8ae2bcbe587335f112564223e4efc",
+    "/home/kailash/ros2_ws/baseline_results/BASE-002_dc4ddca839b9.json": "4c2edbd5e7881730abdc294806a91ef3afdfe00f7225463b6ce5576277d14382"
+  },
+  "invalid_records": [
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_001.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_002.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_003.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_004.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_005.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_006.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_007.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_008.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_009.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_010.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_011.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_012.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_013.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_014.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_015.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_016.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_017.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_018.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_019.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_020.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_021.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_022.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_023.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_024.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_025.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_026.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_027.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_028.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_029.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_030.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_031.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_032.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_033.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_034.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_035.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_036.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_037.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_038.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_039.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_040.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_041.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_042.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_043.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_044.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/baseline_run_045.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/preflight_001.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/preflight_002.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/baseline_results/preflight_003.csv",
+      "errors": [],
+      "metadata_gaps": [
+        "Historical metadata missing experiment_id",
+        "Historical metadata missing run_id",
+        "Historical metadata missing config_sha256",
+        "Historical metadata missing config_file",
+        "Historical metadata missing px4_version",
+        "Historical metadata missing simulator_version"
+      ]
+    }
+  ],
+  "missing_study_requirements": 30
+}

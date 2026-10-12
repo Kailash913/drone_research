@@ -1,0 +1,15 @@
+[INFO] [1791619431.858387476] [baseline_preflight]: CSV: /home/kailash/uav_research/baseline/preflight_012.csv; execute_sitl=False
+[INFO] [1791619432.478206624] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619433.528439888] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619434.577812027] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619435.578944568] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619436.627865862] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619437.630980884] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619438.678073268] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619439.680675409] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619440.728412297] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619441.728899125] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619442.777808765] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619443.778714922] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619444.827755964] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False
+[INFO] [1791619445.827959162] [baseline_preflight]: PASSIVE: connected=True, healthy=True, valid=True, heading_ready=True, landed=True, armed=False, competing_publisher=False

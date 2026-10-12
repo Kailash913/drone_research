@@ -1,0 +1,21 @@
+platforms/posix/src/px4/common/main.cpp:186:#if (_POSIX_MEMLOCK > 0) && !defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/main.cpp:200:#endif // (_POSIX_MEMLOCK > 0) && !ENABLE_LOCKSTEP_SCHEDULER
+platforms/posix/src/px4/common/drv_hrt.cpp:59:#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:114:#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:118:#else // defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:120:	px4_clock_gettime(CLOCK_MONOTONIC, &ts);
+platforms/posix/src/px4/common/drv_hrt.cpp:122:#endif // defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:469:int px4_clock_gettime(clockid_t clk_id, struct timespec *tp)
+platforms/posix/src/px4/common/drv_hrt.cpp:471:#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:478:#endif // defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:496:#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/posix/src/px4/common/drv_hrt.cpp:497:int px4_clock_settime(clockid_t clk_id, const struct timespec *ts)
+platforms/posix/src/px4/common/CMakeLists.txt:58:if(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/common/include/px4_platform_common/time.h:10:__EXPORT int px4_clock_gettime(clockid_t clk_id, struct timespec *tp);
+platforms/common/include/px4_platform_common/time.h:13:#define px4_clock_gettime system_clock_gettime
+platforms/common/include/px4_platform_common/time.h:16:#if defined(ENABLE_LOCKSTEP_SCHEDULER) || defined(__PX4_QURT)
+platforms/common/include/px4_platform_common/time.h:19:__EXPORT int px4_clock_settime(clockid_t clk_id, const struct timespec *tp);
+platforms/common/include/px4_platform_common/time.h:24:#define px4_clock_settime system_clock_settime
+platforms/common/include/px4_platform_common/time.h:28:#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/common/include/px4_platform_common/px4_work_queue/WorkQueue.hpp:112:#if defined(ENABLE_LOCKSTEP_SCHEDULER)
+platforms/common/include/px4_platform_common/px4_work_queue/WorkQueue.hpp:114:#endif // ENABLE_LOCKSTEP_SCHEDULER
