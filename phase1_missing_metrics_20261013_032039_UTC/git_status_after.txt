@@ -1,0 +1,30 @@
+ M ../../build/baseline_measurement/baseline_measurement.egg-info/entry_points.txt
+ M ../../build/baseline_measurement/build/lib/baseline_measurement/mission_node.py
+ M ../../build/baseline_measurement/colcon_command_prefix_setup_py.sh
+ M ../../build/baseline_measurement/colcon_command_prefix_setup_py.sh.env
+ M ../../build/baseline_measurement/install.log
+ M ../../build/baseline_measurement/prefix_override/__pycache__/sitecustomize.cpython-312.pyc
+ M ../../build/baseline_measurement/pytest.xml
+ M ../../install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement-0.0.0-py3.12.egg-info/entry_points.txt
+ M ../../install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/__pycache__/mission_node.cpython-312.pyc
+ M ../../install/baseline_measurement/lib/python3.12/site-packages/baseline_measurement/mission_node.py
+ M ../../log/latest
+ M ../../log/latest_build
+ M ../../log/latest_test
+ M ../../log/latest_test-result
+ M baseline_measurement/measurements.py
+ M baseline_measurement/mission_node.py
+ M test/test_preflight.py
+?? ../../install/baseline_measurement/lib/baseline_measurement/transport_probe
+?? ../../log/build_2026-10-13_03-07-14/
+?? ../../log/test-result_2026-10-13_03-00-12/
+?? ../../log/test-result_2026-10-13_03-07-06/
+?? ../../log/test_2026-10-13_03-00-03/
+?? ../../log/test_2026-10-13_03-06-59/
+?? ../../phase1_missing_metrics_20261013_032039_UTC/
+?? baseline_measurement/metrics_audit.py
+?? baseline_measurement/native_log_audit.py
+?? baseline_measurement/passive_metrics.py
+?? baseline_measurement/trajectory_metrics.py
+?? baseline_measurement/wire_capture.py
+?? test/test_missing_metrics.py

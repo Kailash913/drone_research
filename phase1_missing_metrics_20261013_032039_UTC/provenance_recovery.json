@@ -1,0 +1,860 @@
+{
+  "records": [
+    {
+      "source_file": "/home/kailash/ros2_ws/phase1_active_run_001/baseline_run_001.csv",
+      "raw_sha256": "73f2d0ed6e2dbef1400dceb75db6f1deb4e771fe317740f281538a05945bff82",
+      "source_identity": {
+        "__init__.py": {
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/__init__.py"
+          ]
+        },
+        "acceptance.py": {
+          "recorded_sha256": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/acceptance.py"
+          ]
+        },
+        "baseline_node.py": {
+          "recorded_sha256": "08cd921784e8c28b390101a7a54b9057d0e508b9c7eb1d6e93b1b77e243cf910",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/baseline_node.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/baseline_node.py"
+          ]
+        },
+        "cli.py": {
+          "recorded_sha256": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/cli.py"
+          ]
+        },
+        "clock_probe.py": {
+          "recorded_sha256": "bb18ad6793a02fb38de919b7743d18557a5c5982e5f30fe4836423706bca0d62",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/clock_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/clock_probe.py"
+          ]
+        },
+        "dataset.py": {
+          "recorded_sha256": "a551451c3e2ec058491f07fc22e82a699fb58465048d3ce20ebb4cd374cfeb48",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/dataset.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/dataset.py"
+          ]
+        },
+        "diagnostic_analysis.py": {
+          "recorded_sha256": "19fd18559ac7906a1e269766551f3fb59af466155dcc1d8ddc05e815463208d2",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/diagnostic_analysis.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/diagnostic_analysis.py"
+          ]
+        },
+        "experiment.py": {
+          "recorded_sha256": "bec0d867b0f0bc706f021fe472dabf075506caed33d97950044b41aebbec306c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment.py"
+          ]
+        },
+        "experiment_logger.py": {
+          "recorded_sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment_logger.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py"
+          ]
+        },
+        "measurements.py": {
+          "recorded_sha256": "6027f65190678533041d7b107e3f33809655c372fbeeaa6335b1620d371937e5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/measurements.py"
+          ]
+        },
+        "metrics.py": {
+          "recorded_sha256": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/metrics.py"
+          ]
+        },
+        "mission_node.py": {
+          "recorded_sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_node.py"
+          ]
+        },
+        "mission_state.py": {
+          "recorded_sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/mission_state.py"
+          ]
+        },
+        "native_clock.py": {
+          "recorded_sha256": "c8186f043bc9654b3683f56fe19dcd55a273cdabd7368420cb36ac54215728aa",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/native_clock.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/native_clock.py"
+          ]
+        },
+        "provenance.py": {
+          "recorded_sha256": "68032fd26683930486dba2d947b271a66c6cbbe07f47bc6d8aaed1ee1c58d47c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/provenance.py"
+          ]
+        },
+        "qgc_plan.py": {
+          "recorded_sha256": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/qgc_plan.py"
+          ]
+        },
+        "record_context.py": {
+          "recorded_sha256": "1a686ca8c30539aea5fb04806e1b684f42973d681c64cba98e4d03e362da048c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/record_context.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/record_context.py"
+          ]
+        },
+        "reporting.py": {
+          "recorded_sha256": "93735380310429123e792567128170a32aa12fabd2530e26df561a727ea018fb",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/reporting.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/reporting.py"
+          ]
+        },
+        "resource_monitor.py": {
+          "recorded_sha256": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/resource_monitor.py"
+          ]
+        },
+        "run_provenance.py": {
+          "recorded_sha256": "e942d7204ca8503c41ad29939f56a470d92865b23b522ba0e2b410cc599854ed",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/run_provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/run_provenance.py"
+          ]
+        },
+        "sync_evidence.py": {
+          "recorded_sha256": "ccaa99264d171bdab5629842650c50c09508bd4c5c432e29e9ea9f3ae9c57936",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/sync_evidence.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/sync_evidence.py"
+          ]
+        },
+        "transport_probe.py": {
+          "recorded_sha256": "4bd9ff9a55ec8e99bbfc82b46390cc56cdc4fddf5705fd4d6d4ec926810cf97e",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/transport_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/transport_probe.py"
+          ]
+        }
+      },
+      "historical_config_file": null,
+      "historical_config_sha256": null,
+      "historical_px4_version": null,
+      "interpretation": "Retained byte matches support source identity only; current versions/configuration cannot establish historical provenance."
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/phase1_active_run_002/baseline_run_001.csv",
+      "raw_sha256": "fef521e4642ea87f6b3c4670393e9a17531039f32d52d4b5903e695bf4094d6c",
+      "source_identity": {
+        "__init__.py": {
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/__init__.py"
+          ]
+        },
+        "acceptance.py": {
+          "recorded_sha256": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/acceptance.py"
+          ]
+        },
+        "baseline_node.py": {
+          "recorded_sha256": "08cd921784e8c28b390101a7a54b9057d0e508b9c7eb1d6e93b1b77e243cf910",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/baseline_node.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/baseline_node.py"
+          ]
+        },
+        "cli.py": {
+          "recorded_sha256": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/cli.py"
+          ]
+        },
+        "clock_probe.py": {
+          "recorded_sha256": "bb18ad6793a02fb38de919b7743d18557a5c5982e5f30fe4836423706bca0d62",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/clock_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/clock_probe.py"
+          ]
+        },
+        "dataset.py": {
+          "recorded_sha256": "a551451c3e2ec058491f07fc22e82a699fb58465048d3ce20ebb4cd374cfeb48",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/dataset.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/dataset.py"
+          ]
+        },
+        "diagnostic_analysis.py": {
+          "recorded_sha256": "19fd18559ac7906a1e269766551f3fb59af466155dcc1d8ddc05e815463208d2",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/diagnostic_analysis.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/diagnostic_analysis.py"
+          ]
+        },
+        "experiment.py": {
+          "recorded_sha256": "bec0d867b0f0bc706f021fe472dabf075506caed33d97950044b41aebbec306c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment.py"
+          ]
+        },
+        "experiment_logger.py": {
+          "recorded_sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment_logger.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py"
+          ]
+        },
+        "measurements.py": {
+          "recorded_sha256": "6027f65190678533041d7b107e3f33809655c372fbeeaa6335b1620d371937e5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/measurements.py"
+          ]
+        },
+        "metrics.py": {
+          "recorded_sha256": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/metrics.py"
+          ]
+        },
+        "mission_node.py": {
+          "recorded_sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_node.py"
+          ]
+        },
+        "mission_state.py": {
+          "recorded_sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/mission_state.py"
+          ]
+        },
+        "native_clock.py": {
+          "recorded_sha256": "c8186f043bc9654b3683f56fe19dcd55a273cdabd7368420cb36ac54215728aa",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/native_clock.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/native_clock.py"
+          ]
+        },
+        "provenance.py": {
+          "recorded_sha256": "68032fd26683930486dba2d947b271a66c6cbbe07f47bc6d8aaed1ee1c58d47c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/provenance.py"
+          ]
+        },
+        "qgc_plan.py": {
+          "recorded_sha256": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/qgc_plan.py"
+          ]
+        },
+        "record_context.py": {
+          "recorded_sha256": "1a686ca8c30539aea5fb04806e1b684f42973d681c64cba98e4d03e362da048c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/record_context.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/record_context.py"
+          ]
+        },
+        "reporting.py": {
+          "recorded_sha256": "93735380310429123e792567128170a32aa12fabd2530e26df561a727ea018fb",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/reporting.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/reporting.py"
+          ]
+        },
+        "resource_monitor.py": {
+          "recorded_sha256": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/resource_monitor.py"
+          ]
+        },
+        "run_provenance.py": {
+          "recorded_sha256": "e942d7204ca8503c41ad29939f56a470d92865b23b522ba0e2b410cc599854ed",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/run_provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/run_provenance.py"
+          ]
+        },
+        "sync_evidence.py": {
+          "recorded_sha256": "ccaa99264d171bdab5629842650c50c09508bd4c5c432e29e9ea9f3ae9c57936",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/sync_evidence.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/sync_evidence.py"
+          ]
+        },
+        "transport_probe.py": {
+          "recorded_sha256": "4bd9ff9a55ec8e99bbfc82b46390cc56cdc4fddf5705fd4d6d4ec926810cf97e",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/transport_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/transport_probe.py"
+          ]
+        }
+      },
+      "historical_config_file": null,
+      "historical_config_sha256": null,
+      "historical_px4_version": null,
+      "interpretation": "Retained byte matches support source identity only; current versions/configuration cannot establish historical provenance."
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/phase1_active_run_003/baseline_run_001.csv",
+      "raw_sha256": "80e8b85611a47316b0911c642acb31dae299d818efb9325328eaec5baa254e99",
+      "source_identity": {
+        "__init__.py": {
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/__init__.py"
+          ]
+        },
+        "acceptance.py": {
+          "recorded_sha256": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/acceptance.py"
+          ]
+        },
+        "baseline_node.py": {
+          "recorded_sha256": "08cd921784e8c28b390101a7a54b9057d0e508b9c7eb1d6e93b1b77e243cf910",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/baseline_node.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/baseline_node.py"
+          ]
+        },
+        "cli.py": {
+          "recorded_sha256": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/cli.py"
+          ]
+        },
+        "clock_probe.py": {
+          "recorded_sha256": "bb18ad6793a02fb38de919b7743d18557a5c5982e5f30fe4836423706bca0d62",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/clock_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/clock_probe.py"
+          ]
+        },
+        "dataset.py": {
+          "recorded_sha256": "a551451c3e2ec058491f07fc22e82a699fb58465048d3ce20ebb4cd374cfeb48",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/dataset.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/dataset.py"
+          ]
+        },
+        "diagnostic_analysis.py": {
+          "recorded_sha256": "19fd18559ac7906a1e269766551f3fb59af466155dcc1d8ddc05e815463208d2",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/diagnostic_analysis.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/diagnostic_analysis.py"
+          ]
+        },
+        "experiment.py": {
+          "recorded_sha256": "bec0d867b0f0bc706f021fe472dabf075506caed33d97950044b41aebbec306c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment.py"
+          ]
+        },
+        "experiment_logger.py": {
+          "recorded_sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment_logger.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py"
+          ]
+        },
+        "measurements.py": {
+          "recorded_sha256": "6027f65190678533041d7b107e3f33809655c372fbeeaa6335b1620d371937e5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/measurements.py"
+          ]
+        },
+        "metrics.py": {
+          "recorded_sha256": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/metrics.py"
+          ]
+        },
+        "mission_node.py": {
+          "recorded_sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_node.py"
+          ]
+        },
+        "mission_state.py": {
+          "recorded_sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/mission_state.py"
+          ]
+        },
+        "native_clock.py": {
+          "recorded_sha256": "c8186f043bc9654b3683f56fe19dcd55a273cdabd7368420cb36ac54215728aa",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/native_clock.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/native_clock.py"
+          ]
+        },
+        "provenance.py": {
+          "recorded_sha256": "68032fd26683930486dba2d947b271a66c6cbbe07f47bc6d8aaed1ee1c58d47c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/provenance.py"
+          ]
+        },
+        "qgc_plan.py": {
+          "recorded_sha256": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/qgc_plan.py"
+          ]
+        },
+        "record_context.py": {
+          "recorded_sha256": "1a686ca8c30539aea5fb04806e1b684f42973d681c64cba98e4d03e362da048c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/record_context.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/record_context.py"
+          ]
+        },
+        "reporting.py": {
+          "recorded_sha256": "93735380310429123e792567128170a32aa12fabd2530e26df561a727ea018fb",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/reporting.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/reporting.py"
+          ]
+        },
+        "resource_monitor.py": {
+          "recorded_sha256": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/resource_monitor.py"
+          ]
+        },
+        "run_provenance.py": {
+          "recorded_sha256": "e942d7204ca8503c41ad29939f56a470d92865b23b522ba0e2b410cc599854ed",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/run_provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/run_provenance.py"
+          ]
+        },
+        "sync_evidence.py": {
+          "recorded_sha256": "ccaa99264d171bdab5629842650c50c09508bd4c5c432e29e9ea9f3ae9c57936",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/sync_evidence.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/sync_evidence.py"
+          ]
+        },
+        "transport_probe.py": {
+          "recorded_sha256": "4bd9ff9a55ec8e99bbfc82b46390cc56cdc4fddf5705fd4d6d4ec926810cf97e",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/transport_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/transport_probe.py"
+          ]
+        }
+      },
+      "historical_config_file": null,
+      "historical_config_sha256": null,
+      "historical_px4_version": null,
+      "interpretation": "Retained byte matches support source identity only; current versions/configuration cannot establish historical provenance."
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/phase1_active_run_004/baseline_run_001.csv",
+      "raw_sha256": "41a6108897a3d9c2d0e8d3ed7d99b5e2e6b617c27a3b5f30d64025f86248462a",
+      "source_identity": {
+        "__init__.py": {
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/__init__.py"
+          ]
+        },
+        "acceptance.py": {
+          "recorded_sha256": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/acceptance.py"
+          ]
+        },
+        "baseline_node.py": {
+          "recorded_sha256": "08cd921784e8c28b390101a7a54b9057d0e508b9c7eb1d6e93b1b77e243cf910",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/baseline_node.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/baseline_node.py"
+          ]
+        },
+        "cli.py": {
+          "recorded_sha256": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/cli.py"
+          ]
+        },
+        "clock_probe.py": {
+          "recorded_sha256": "bb18ad6793a02fb38de919b7743d18557a5c5982e5f30fe4836423706bca0d62",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/clock_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/clock_probe.py"
+          ]
+        },
+        "dataset.py": {
+          "recorded_sha256": "a551451c3e2ec058491f07fc22e82a699fb58465048d3ce20ebb4cd374cfeb48",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/dataset.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/dataset.py"
+          ]
+        },
+        "diagnostic_analysis.py": {
+          "recorded_sha256": "19fd18559ac7906a1e269766551f3fb59af466155dcc1d8ddc05e815463208d2",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/diagnostic_analysis.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/diagnostic_analysis.py"
+          ]
+        },
+        "experiment.py": {
+          "recorded_sha256": "bec0d867b0f0bc706f021fe472dabf075506caed33d97950044b41aebbec306c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment.py"
+          ]
+        },
+        "experiment_logger.py": {
+          "recorded_sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment_logger.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py"
+          ]
+        },
+        "measurements.py": {
+          "recorded_sha256": "6027f65190678533041d7b107e3f33809655c372fbeeaa6335b1620d371937e5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/measurements.py"
+          ]
+        },
+        "metrics.py": {
+          "recorded_sha256": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/metrics.py"
+          ]
+        },
+        "mission_node.py": {
+          "recorded_sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_node.py"
+          ]
+        },
+        "mission_state.py": {
+          "recorded_sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/mission_state.py"
+          ]
+        },
+        "native_clock.py": {
+          "recorded_sha256": "c8186f043bc9654b3683f56fe19dcd55a273cdabd7368420cb36ac54215728aa",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/native_clock.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/native_clock.py"
+          ]
+        },
+        "provenance.py": {
+          "recorded_sha256": "68032fd26683930486dba2d947b271a66c6cbbe07f47bc6d8aaed1ee1c58d47c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/provenance.py"
+          ]
+        },
+        "qgc_plan.py": {
+          "recorded_sha256": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/qgc_plan.py"
+          ]
+        },
+        "record_context.py": {
+          "recorded_sha256": "1a686ca8c30539aea5fb04806e1b684f42973d681c64cba98e4d03e362da048c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/record_context.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/record_context.py"
+          ]
+        },
+        "reporting.py": {
+          "recorded_sha256": "93735380310429123e792567128170a32aa12fabd2530e26df561a727ea018fb",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/reporting.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/reporting.py"
+          ]
+        },
+        "resource_monitor.py": {
+          "recorded_sha256": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/resource_monitor.py"
+          ]
+        },
+        "run_provenance.py": {
+          "recorded_sha256": "e942d7204ca8503c41ad29939f56a470d92865b23b522ba0e2b410cc599854ed",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/run_provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/run_provenance.py"
+          ]
+        },
+        "sync_evidence.py": {
+          "recorded_sha256": "ccaa99264d171bdab5629842650c50c09508bd4c5c432e29e9ea9f3ae9c57936",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/sync_evidence.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/sync_evidence.py"
+          ]
+        },
+        "transport_probe.py": {
+          "recorded_sha256": "4bd9ff9a55ec8e99bbfc82b46390cc56cdc4fddf5705fd4d6d4ec926810cf97e",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/transport_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/transport_probe.py"
+          ]
+        }
+      },
+      "historical_config_file": null,
+      "historical_config_sha256": null,
+      "historical_px4_version": null,
+      "interpretation": "Retained byte matches support source identity only; current versions/configuration cannot establish historical provenance."
+    },
+    {
+      "source_file": "/home/kailash/ros2_ws/phase1_active_run_005/baseline_run_001.csv",
+      "raw_sha256": "1b7af5e424bdaaabbd51c248db5c277ac187428da915500cf10655ce67480f0d",
+      "source_identity": {
+        "__init__.py": {
+          "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/__init__.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/__init__.py"
+          ]
+        },
+        "acceptance.py": {
+          "recorded_sha256": "656372c00d7e7717fccf0f0e7add080fbafadff79fce58550b8864be20fe72f5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/acceptance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/acceptance.py"
+          ]
+        },
+        "baseline_node.py": {
+          "recorded_sha256": "08cd921784e8c28b390101a7a54b9057d0e508b9c7eb1d6e93b1b77e243cf910",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/baseline_node.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/baseline_node.py"
+          ]
+        },
+        "cli.py": {
+          "recorded_sha256": "5e61774e80edfa347e95ed7e4fca38d0191fba9e99d4f0b6e548d23a09e5bcb7",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/cli.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/cli.py"
+          ]
+        },
+        "clock_probe.py": {
+          "recorded_sha256": "bb18ad6793a02fb38de919b7743d18557a5c5982e5f30fe4836423706bca0d62",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/clock_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/clock_probe.py"
+          ]
+        },
+        "dataset.py": {
+          "recorded_sha256": "a551451c3e2ec058491f07fc22e82a699fb58465048d3ce20ebb4cd374cfeb48",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/dataset.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/dataset.py"
+          ]
+        },
+        "diagnostic_analysis.py": {
+          "recorded_sha256": "19fd18559ac7906a1e269766551f3fb59af466155dcc1d8ddc05e815463208d2",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/diagnostic_analysis.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/diagnostic_analysis.py"
+          ]
+        },
+        "experiment.py": {
+          "recorded_sha256": "bec0d867b0f0bc706f021fe472dabf075506caed33d97950044b41aebbec306c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment.py"
+          ]
+        },
+        "experiment_logger.py": {
+          "recorded_sha256": "ee9381870edab5413da76873ac34532426ce30db8ba91ac0e440d7391ddb81c5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/experiment_logger.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/experiment_logger.py"
+          ]
+        },
+        "measurements.py": {
+          "recorded_sha256": "6027f65190678533041d7b107e3f33809655c372fbeeaa6335b1620d371937e5",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/measurements.py"
+          ]
+        },
+        "metrics.py": {
+          "recorded_sha256": "a9e70f2ecfb581e4972647fe2c43b76773d94ebd3f9fe23c1f554976b3d439c8",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/metrics.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/metrics.py"
+          ]
+        },
+        "mission_node.py": {
+          "recorded_sha256": "274752431aad174779524cdb88e08f11e4c7651e45449868abe00c7f5ba1b6cc",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_node.py"
+          ]
+        },
+        "mission_state.py": {
+          "recorded_sha256": "261c1558540238706b1010523424d400178304608ec4047bd10ea02d4985a98a",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/mission_state.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/mission_state.py"
+          ]
+        },
+        "native_clock.py": {
+          "recorded_sha256": "c8186f043bc9654b3683f56fe19dcd55a273cdabd7368420cb36ac54215728aa",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/native_clock.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/native_clock.py"
+          ]
+        },
+        "provenance.py": {
+          "recorded_sha256": "68032fd26683930486dba2d947b271a66c6cbbe07f47bc6d8aaed1ee1c58d47c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/provenance.py"
+          ]
+        },
+        "qgc_plan.py": {
+          "recorded_sha256": "5b7d98e694ca2bee9777adb3cb5ad765110db428df60d3f6145a12ef1d561f24",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174221/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/heading_fix_backups/20261010_174503/baseline_measurement/qgc_plan.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/qgc_plan.py"
+          ]
+        },
+        "record_context.py": {
+          "recorded_sha256": "1a686ca8c30539aea5fb04806e1b684f42973d681c64cba98e4d03e362da048c",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/record_context.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/record_context.py"
+          ]
+        },
+        "reporting.py": {
+          "recorded_sha256": "93735380310429123e792567128170a32aa12fabd2530e26df561a727ea018fb",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/reporting.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/reporting.py"
+          ]
+        },
+        "resource_monitor.py": {
+          "recorded_sha256": "97676df95ce32a24cb9068ec80563f7a5a7b24430780269eaaa07e2a8d79b8e3",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/resource_monitor.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/test-output/continuation_source_before/baseline_measurement/resource_monitor.py"
+          ]
+        },
+        "run_provenance.py": {
+          "recorded_sha256": "e942d7204ca8503c41ad29939f56a470d92865b23b522ba0e2b410cc599854ed",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/run_provenance.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/run_provenance.py"
+          ]
+        },
+        "sync_evidence.py": {
+          "recorded_sha256": "ccaa99264d171bdab5629842650c50c09508bd4c5c432e29e9ea9f3ae9c57936",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/sync_evidence.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/sync_evidence.py"
+          ]
+        },
+        "transport_probe.py": {
+          "recorded_sha256": "4bd9ff9a55ec8e99bbfc82b46390cc56cdc4fddf5705fd4d6d4ec926810cf97e",
+          "retained_matches": [
+            "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/retained_head_source/transport_probe.py",
+            "/home/kailash/ros2_ws/src/baseline_measurement/baseline_measurement/transport_probe.py"
+          ]
+        }
+      },
+      "historical_config_file": null,
+      "historical_config_sha256": null,
+      "historical_px4_version": null,
+      "interpretation": "Retained byte matches support source identity only; current versions/configuration cannot establish historical provenance."
+    }
+  ],
+  "historical_files_modified": false
+}

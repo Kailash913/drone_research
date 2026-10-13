@@ -1,0 +1,16 @@
+{
+  "modified": [
+    "baseline_measurement/mission_node.py",
+    "baseline_measurement/measurements.py",
+    "test/test_preflight.py"
+  ],
+  "added": [
+    "baseline_measurement/native_log_audit.py",
+    "baseline_measurement/passive_metrics.py",
+    "baseline_measurement/metrics_audit.py",
+    "baseline_measurement/wire_capture.py",
+    "baseline_measurement/trajectory_metrics.py",
+    "test/test_missing_metrics.py"
+  ],
+  "deleted": []
+}

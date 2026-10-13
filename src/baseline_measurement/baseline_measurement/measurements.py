@@ -76,10 +76,15 @@ def sequence_loss(rows):
     duplicates = 0
     window_closed = False
     for row in rows:
+        if window_closed:
+            raise ValueError('Events after observation window closure')
         if row['event'] == 'window_closed':
             window_closed = True
             continue
-        identity = (row['run_id'], int(row['sequence']))
+        raw_sequence = row['sequence']
+        if isinstance(raw_sequence, bool) or not str(raw_sequence).isdigit():
+            raise ValueError('Sequence must be an exact nonnegative integer')
+        identity = (row['run_id'], int(raw_sequence))
         if not identity[0] or identity[1] < 0:
             raise ValueError('Invalid sequence identity')
         if row['event'] == 'sent':
@@ -123,6 +128,11 @@ def captured_traffic(path, start_s, end_s, capture_evidence):
         if len(header) != 24 or header[:4] not in formats:
             raise ValueError('Classic PCAP required')
         endian, divisor = formats[header[:4]]
+        major, minor, _, _, snaplen, _ = struct.unpack(endian + 'HHIIII', header[4:])
+        if (major, minor) != (2, 4) or snaplen <= 0:
+            raise ValueError('Invalid PCAP version or snapshot length')
+        captured_bytes = truncated_packets = 0
+        first_stamp = last_stamp = previous_stamp = None
         link_type = struct.unpack(endian + 'I', header[20:24])[0]
         while True:
             record = stream.read(16)
@@ -131,14 +141,23 @@ def captured_traffic(path, start_s, end_s, capture_evidence):
             if len(record) != 16:
                 raise ValueError('Truncated packet header')
             seconds, fraction, included, original = struct.unpack(endian + 'IIII', record)
-            if included > original or included > 16 * 1024 * 1024:
+            if included > original or included > snaplen or included > 16 * 1024 * 1024:
                 raise ValueError('Invalid captured length')
             if len(stream.read(included)) != included:
                 raise ValueError('Truncated packet')
+            if fraction >= divisor:
+                raise ValueError('Invalid timestamp fraction')
             stamp = seconds + fraction / divisor
+            if previous_stamp is not None and stamp < previous_stamp:
+                raise ValueError('Reversed capture timestamps')
+            previous_stamp = stamp
             if start_s <= stamp < end_s:
                 count += 1
                 total += original
+                captured_bytes += included
+                truncated_packets += included < original
+                first_stamp = stamp if first_stamp is None else first_stamp
+                last_stamp = stamp
     return {
         'method': 'captured frame offered traffic; excludes uncaptured overhead',
         'capture_evidence': capture_evidence,
@@ -146,6 +165,12 @@ def captured_traffic(path, start_s, end_s, capture_evidence):
         'window_s': end_s - start_s,
         'packet_count': count,
         'original_frame_bytes': total,
+        'captured_bytes': captured_bytes,
+        'truncated_packets': truncated_packets,
+        'first_packet_s': first_stamp,
+        'last_packet_s': last_stamp,
+        'packets_per_s': count / (end_s - start_s),
+        'bytes_per_s': total / (end_s - start_s),
         'bits_per_s': total * 8 / (end_s - start_s),
         'capacity_bandwidth': None,
         'wire_packet_loss': None
@@ -216,6 +241,58 @@ def main(args=None):
     with Path(options.output).open('x') as stream:
         json.dump(result, stream, indent=2, allow_nan=False)
         stream.write('\n')
+
+
+def battery_power(voltage_v, current_a, connected):
+    """Reject disconnected, nonfinite and invalid-sentinel simulated battery readings."""
+    if connected is not True:
+        raise ValueError('Battery disconnected or connection state unknown')
+    voltage, current = finite(voltage_v), finite(current_a)
+    if voltage <= 0 or current < 0:
+        raise ValueError('Invalid voltage/current; negative current is not measured power')
+    power = voltage * current
+    if not math.isfinite(power):
+        raise ValueError('Nonfinite power')
+    return power
+
+
+def battery_energy(rows, max_gap_s):
+    """Integrate only consecutive valid simulated readings; never bridge invalid data."""
+    gap = finite(max_gap_s)
+    if gap <= 0:
+        raise ValueError('Positive maximum power sample gap required')
+    previous = None
+    power = []
+    energy = 0.
+    integrated_s = 0.
+    intervals = 0
+    rejected = []
+    for index, row in enumerate(rows):
+        try:
+            when = finite(row['monotonic_s'])
+            watts = battery_power(row['voltage_v'], row['current_a'], row['connected'])
+        except (KeyError, TypeError, ValueError) as exc:
+            rejected.append({'index': index, 'reason': str(exc)})
+            previous = None
+            continue
+        power.append(watts)
+        if previous is not None:
+            delta = when - previous[0]
+            if 0 < delta <= gap:
+                energy += (watts + previous[1]) * .5 * delta
+                integrated_s += delta
+                intervals += 1
+            else:
+                rejected.append({'index': index, 'reason': 'Nonpositive or excessive sample gap'})
+        previous = (when, watts)
+    return {'scope': 'PX4 simulated battery estimate; not physical UAV consumption',
+            'status': 'MEASURED_UNVALIDATED' if power else 'UNAVAILABLE_IN_CURRENT_SETUP',
+            'power_w': power, 'valid_sample_count': len(power), 'rejected': rejected,
+            'energy_j': energy if intervals else None,
+            'energy_wh': energy / 3600 if intervals else None,
+            'integrated_duration_s': integrated_s, 'integrated_interval_count': intervals,
+            'method': 'Trapezoids across consecutive valid samples with bounded positive gaps',
+            'limitation': 'A credible electrical model or physical calibrated sensor is required'}
 
 
 if __name__ == '__main__':

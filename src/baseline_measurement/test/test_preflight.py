@@ -1,10 +1,15 @@
 """Exercise the real ROS adapter predicates without a live ROS graph."""
 
+import csv
+import json
 import math
+import tempfile
 from types import SimpleNamespace
 import unittest
 from unittest import mock
 
+from baseline_measurement.experiment_logger import FIELDS, RunLog
+from baseline_measurement.measurements import correlated_latency
 from baseline_measurement.mission_node import MissionNode, OUTPUTS
 from baseline_measurement.mission_state import Mission, STAGES
 from px4_msgs.msg import VehicleLandDetected, VehicleLocalPosition, VehicleStatus
@@ -203,8 +208,166 @@ class PreflightTests(unittest.TestCase):
         node.experiment = None
         node.mission = Mission(10.)
         node.pending_command = None
+        node.command_publications = []
         node.reset_counters = None
         return node
+
+    def timing_adapter(self):
+        node = self.callback_adapter()
+        node.options.execute_sitl = True
+        node.publishers_by_key = {'command': mock.Mock()}
+        node.get_clock = mock.Mock()
+        node.get_clock.return_value.now.return_value.nanoseconds = 999000
+        return node
+
+    def publish_timed_command(self, node):
+        from px4_msgs.msg import VehicleCommand
+        msg = VehicleCommand()
+        msg.command = VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM
+        msg.source_system, msg.source_component = 245, 191
+        msg.target_system, msg.target_component = 1, 1
+        node.pending_command = msg.command
+        with mock.patch('baseline_measurement.mission_node.time.monotonic_ns',
+                        return_value=1000) as clock:
+            node.publishers_by_key['command'].publish.side_effect = (
+                lambda message: clock.assert_called_once_with())
+            MissionNode.publish(node, 'command', msg)
+        return msg.command
+
+    def receive_timed_ack(self, node, command, system=245, component=191, result=0):
+        from px4_msgs.msg import VehicleCommandAck
+        ack = VehicleCommandAck()
+        ack.command = command
+        ack.target_system, ack.target_component = system, component
+        ack.result = result
+        ack.timestamp = 900000000
+        with mock.patch('baseline_measurement.mission_node.time.monotonic_ns',
+                        return_value=1600) as clock:
+            with mock.patch('baseline_measurement.mission_node.time.monotonic',
+                            side_effect=lambda: (clock.assert_called_once_with() or 10.)):
+                MissionNode.receive(node, 'ack', ack)
+        return json.loads(node.log.row.call_args.kwargs['detail'])
+
+    def test_command_ack_records_host_nanoseconds(self):
+        node = self.timing_adapter()
+        command = self.publish_timed_command(node)
+        publication = json.loads(node.log.row.call_args.kwargs['detail'])
+        self.assertEqual(publication['publish_monotonic_ns'], 1000)
+        detail = self.receive_timed_ack(node, command)
+        self.assertEqual(detail['association'], 'candidate_unverified_association')
+        self.assertEqual(detail['publish_monotonic_ns'], 1000)
+        self.assertEqual(detail['ack_receive_monotonic_ns'], 1600)
+        self.assertEqual(detail['elapsed_ns'], 600)
+        self.assertFalse(detail['validated_latency'])
+        self.assertFalse(node.mission.failure_reason)
+
+    def test_unmatched_acks_have_no_interval(self):
+        for case in ('missing', 'command', 'system', 'component', 'pending',
+                     'repeated', 'duplicate', 'clock'):
+            with self.subTest(case=case):
+                node = self.timing_adapter()
+                command = self.publish_timed_command(node)
+                system, component = 245, 191
+                if case == 'missing':
+                    node.command_publications.clear()
+                elif case == 'command':
+                    command += 1
+                elif case == 'system':
+                    system = 1
+                elif case == 'component':
+                    component = 1
+                elif case == 'pending':
+                    node.pending_command = None
+                elif case == 'repeated':
+                    self.publish_timed_command(node)
+                elif case == 'duplicate':
+                    self.receive_timed_ack(node, command)
+                elif case == 'clock':
+                    node.command_publications[0]['publish_monotonic_ns'] = 1700
+                detail = self.receive_timed_ack(node, command, system, component)
+                self.assertTrue(detail['association'].startswith('unmatched'))
+                self.assertEqual(detail['ack_receive_monotonic_ns'], 1600)
+                self.assertNotIn('elapsed_ns', detail)
+                self.assertNotIn('publish_monotonic_ns', detail)
+                self.assertFalse(detail['validated_latency'])
+
+    def test_timing_evidence_preserves_csv_schema(self):
+        with tempfile.TemporaryDirectory() as directory:
+            log = RunLog(directory)
+            self.addCleanup(log.finish, False)
+            node = self.timing_adapter()
+            node.log = mock.Mock(wraps=log)
+            command = self.publish_timed_command(node)
+            self.receive_timed_ack(node, command)
+            self.receive_timed_ack(node, command)
+            log.finish(False)
+            with log.path.open() as stream:
+                reader = csv.DictReader(stream)
+                self.assertEqual(reader.fieldnames, FIELDS)
+                rows = list(reader)
+            publication = next(row for row in rows
+                               if row['record_type'] == 'command_publication')
+            self.assertEqual(json.loads(publication['detail'])['publish_monotonic_ns'], 1000)
+            acks = [json.loads(row['detail']) for row in rows
+                    if row['record_type'] == 'command_ack']
+            self.assertEqual(acks[0]['elapsed_ns'], 600)
+            self.assertNotIn('elapsed_ns', acks[1])
+            self.assertTrue(all(not ack['validated_latency'] for ack in acks))
+
+    def test_candidate_ack_is_ineligible_for_validated_latency(self):
+        node = self.timing_adapter()
+        detail = self.receive_timed_ack(node, self.publish_timed_command(node))
+        self.assertNotIn('request_id', detail)
+        with self.assertRaises(ValueError):
+            correlated_latency([{
+                'request_id': detail.get('request_id', ''),
+                'endpoint_evidence': 'VehicleCommandAck',
+                'clock_validation_evidence': 'host monotonic'
+            }])
+
+    def test_command_evidence_retains_parameters_and_source_target_identity(self):
+        node = self.timing_adapter()
+        command = self.publish_timed_command(node)
+        record = node.command_publications[0]
+        self.assertEqual((record['source_system'], record['source_component']), (245, 191))
+        self.assertEqual((record['target_system'], record['target_component']), (1, 1))
+        self.assertEqual(record['mission_state'], node.mission.state)
+        self.assertEqual(set(record['parameters']), {f'param{i}' for i in range(1, 8)})
+        detail = self.receive_timed_ack(node, command)
+        self.assertEqual(detail['publication_evidence']['parameters'], record['parameters'])
+        self.assertFalse(detail['association_evidence']['unique_request_id_available'])
+        self.assertFalse(detail['association_evidence']['ack_source_identity_available'])
+
+    def test_repeated_command_with_different_parameters_remains_ambiguous(self):
+        from px4_msgs.msg import VehicleCommand
+        node = self.timing_adapter()
+        command = self.publish_timed_command(node)
+        msg = VehicleCommand()
+        msg.command = command
+        msg.source_system, msg.source_component = 245, 191
+        msg.target_system, msg.target_component = 1, 1
+        msg.param1 = 1.
+        msg.param4 = math.nan
+        with mock.patch('baseline_measurement.mission_node.time.monotonic_ns', return_value=1100):
+            node.publishers_by_key['command'].publish.side_effect = None
+            MissionNode.publish(node, 'command', msg)
+        detail = self.receive_timed_ack(node, command)
+        self.assertEqual(detail['association_status'], 'ambiguous')
+        self.assertEqual(detail['association_evidence']['matching_publication_count'], 2)
+        self.assertNotIn('elapsed_ns', detail)
+        self.assertEqual(node.command_publications[1]['parameters']['param1'], 1.)
+        self.assertEqual(node.command_publications[1]['nonfinite_parameters']['param4'], 'nan')
+
+    def test_timing_does_not_change_rejection_handling(self):
+        for result in (0, 1, 2, 3, 4, 5, 6):
+            for ambiguous in (False, True):
+                with self.subTest(result=result, ambiguous=ambiguous):
+                    node = self.timing_adapter()
+                    command = self.publish_timed_command(node)
+                    if ambiguous:
+                        self.publish_timed_command(node)
+                    self.receive_timed_ack(node, command, result=result)
+                    self.assertEqual(bool(node.mission.failure_reason), result not in (0, 5))
 
     def test_source_freeze_and_clock_reversal_do_not_refresh_telemetry(self):
         node = self.callback_adapter()

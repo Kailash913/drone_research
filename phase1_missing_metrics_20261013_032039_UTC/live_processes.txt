@@ -1,0 +1,5 @@
+    PID COMMAND
+  13840 MicroXRCEAgent udp4 -p 8888
+  48332 /home/kailash/PX4-Autopilot/build/px4_sitl_default/bin/px4
+  48504 gz sim --verbose=1 -r -s /home/kailash/PX4-Autopilot/Tools/simulation/gz/worlds/default.sdf
+  48505 gz sim -g

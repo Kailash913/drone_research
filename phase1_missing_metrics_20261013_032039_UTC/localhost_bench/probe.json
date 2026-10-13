@@ -1,0 +1,100 @@
+{
+  "mode": "LOCALHOST_BENCH_ONLY",
+  "mission_outcome": "NOT_ATTEMPTED",
+  "baseline_experiment_id": null,
+  "run_id": "e0d1d187a3ae495e9e972ccfea139748",
+  "sequence_delivery": {
+    "method": "application sequence delivery, not wire packet loss",
+    "transmitted": 20,
+    "unique_received": 20,
+    "duplicate_received": 0,
+    "missing": 0,
+    "loss_fraction": 0.0
+  },
+  "round_trip": {
+    "method": "evidenced correlated request/response interval",
+    "samples": [
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:0",
+        "latency_us": 1132.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:1",
+        "latency_us": 205.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:2",
+        "latency_us": 228.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:3",
+        "latency_us": 180.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:4",
+        "latency_us": 138.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:5",
+        "latency_us": 78.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:6",
+        "latency_us": 161.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:7",
+        "latency_us": 167.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:8",
+        "latency_us": 249.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:9",
+        "latency_us": 194.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:10",
+        "latency_us": 137.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:11",
+        "latency_us": 95.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:12",
+        "latency_us": 104.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:13",
+        "latency_us": 103.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:14",
+        "latency_us": 131.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:15",
+        "latency_us": 157.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:16",
+        "latency_us": 135.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:17",
+        "latency_us": 109.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:18",
+        "latency_us": 188.0
+      },
+      {
+        "request_id": "e0d1d187a3ae495e9e972ccfea139748:19",
+        "latency_us": 144.0
+      }
+    ]
+  },
+  "limitations": "Loopback application delivery/RTT only. Does not measure PX4 telemetry, mission command/E2E latency, wire packet loss or UAV radio bandwidth."
+}

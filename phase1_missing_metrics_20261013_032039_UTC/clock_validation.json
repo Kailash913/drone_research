@@ -1,0 +1,65 @@
+{
+  "captures": [
+    {
+      "file": "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/clock/clock_probe_d90e76bbde7e4295904e87b70b188454.csv",
+      "sha256": "2c91c8f242483991d6eaf4aeb5048a97c220145b666600bc0c261212f0cdb069",
+      "message_counts": {
+        "/fmu/out/vehicle_local_position_v1": 499,
+        "/fmu/out/vehicle_attitude": 498,
+        "/fmu/out/vehicle_land_detected": 10,
+        "/fmu/out/vehicle_status_v4": 20,
+        "/fmu/out/estimator_status_flags": 10,
+        "/fmu/out/timesync_status": 10
+      },
+      "event_counts": {
+        "metadata": 1,
+        "result": 1
+      },
+      "result": {
+        "status": "COMPLETE",
+        "duration_s": 10.002957821001473,
+        "mission_outcome": "NOT_ATTEMPTED",
+        "topics": {
+          "/fmu/out/vehicle_local_position_v1": {
+            "count": 499,
+            "observed_callback_hz": 49.88524483751559,
+            "last_receive_age_s": 0.0003114600003755186,
+            "local_receive_stale": false
+          },
+          "/fmu/out/vehicle_attitude": {
+            "count": 498,
+            "observed_callback_hz": 49.78527440697949,
+            "last_receive_age_s": 0.020151540000370005,
+            "local_receive_stale": false
+          },
+          "/fmu/out/vehicle_status_v4": {
+            "count": 20,
+            "observed_callback_hz": 1.9994086107220679,
+            "last_receive_age_s": 0.10295192999910796,
+            "local_receive_stale": false
+          },
+          "/fmu/out/vehicle_land_detected": {
+            "count": 10,
+            "observed_callback_hz": 0.9997043053610339,
+            "last_receive_age_s": 0.7321665540002869,
+            "local_receive_stale": false
+          },
+          "/fmu/out/estimator_status_flags": {
+            "count": 10,
+            "observed_callback_hz": 0.9997043053610339,
+            "last_receive_age_s": 0.09592552799949772,
+            "local_receive_stale": false
+          },
+          "/fmu/out/timesync_status": {
+            "count": 10,
+            "observed_callback_hz": 0.9997043053610339,
+            "last_receive_age_s": 0.008536322999134427,
+            "local_receive_stale": false
+          }
+        }
+      }
+    }
+  ],
+  "calibration_validated": false,
+  "reason": "Timesync offsets/RTT are diagnostic evidence, not independently validated endpoint latency"
+}

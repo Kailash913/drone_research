@@ -1,0 +1,427 @@
+diff --git a/src/baseline_measurement/baseline_measurement/measurements.py b/src/baseline_measurement/baseline_measurement/measurements.py
+index 5ae30d2..06358f9 100644
+--- a/src/baseline_measurement/baseline_measurement/measurements.py
++++ b/src/baseline_measurement/baseline_measurement/measurements.py
+@@ -76,10 +76,15 @@ def sequence_loss(rows):
+     duplicates = 0
+     window_closed = False
+     for row in rows:
++        if window_closed:
++            raise ValueError('Events after observation window closure')
+         if row['event'] == 'window_closed':
+             window_closed = True
+             continue
+-        identity = (row['run_id'], int(row['sequence']))
++        raw_sequence = row['sequence']
++        if isinstance(raw_sequence, bool) or not str(raw_sequence).isdigit():
++            raise ValueError('Sequence must be an exact nonnegative integer')
++        identity = (row['run_id'], int(raw_sequence))
+         if not identity[0] or identity[1] < 0:
+             raise ValueError('Invalid sequence identity')
+         if row['event'] == 'sent':
+@@ -123,6 +128,11 @@ def captured_traffic(path, start_s, end_s, capture_evidence):
+         if len(header) != 24 or header[:4] not in formats:
+             raise ValueError('Classic PCAP required')
+         endian, divisor = formats[header[:4]]
++        major, minor, _, _, snaplen, _ = struct.unpack(endian + 'HHIIII', header[4:])
++        if (major, minor) != (2, 4) or snaplen <= 0:
++            raise ValueError('Invalid PCAP version or snapshot length')
++        captured_bytes = truncated_packets = 0
++        first_stamp = last_stamp = previous_stamp = None
+         link_type = struct.unpack(endian + 'I', header[20:24])[0]
+         while True:
+             record = stream.read(16)
+@@ -131,14 +141,23 @@ def captured_traffic(path, start_s, end_s, capture_evidence):
+             if len(record) != 16:
+                 raise ValueError('Truncated packet header')
+             seconds, fraction, included, original = struct.unpack(endian + 'IIII', record)
+-            if included > original or included > 16 * 1024 * 1024:
++            if included > original or included > snaplen or included > 16 * 1024 * 1024:
+                 raise ValueError('Invalid captured length')
+             if len(stream.read(included)) != included:
+                 raise ValueError('Truncated packet')
++            if fraction >= divisor:
++                raise ValueError('Invalid timestamp fraction')
+             stamp = seconds + fraction / divisor
++            if previous_stamp is not None and stamp < previous_stamp:
++                raise ValueError('Reversed capture timestamps')
++            previous_stamp = stamp
+             if start_s <= stamp < end_s:
+                 count += 1
+                 total += original
++                captured_bytes += included
++                truncated_packets += included < original
++                first_stamp = stamp if first_stamp is None else first_stamp
++                last_stamp = stamp
+     return {
+         'method': 'captured frame offered traffic; excludes uncaptured overhead',
+         'capture_evidence': capture_evidence,
+@@ -146,6 +165,12 @@ def captured_traffic(path, start_s, end_s, capture_evidence):
+         'window_s': end_s - start_s,
+         'packet_count': count,
+         'original_frame_bytes': total,
++        'captured_bytes': captured_bytes,
++        'truncated_packets': truncated_packets,
++        'first_packet_s': first_stamp,
++        'last_packet_s': last_stamp,
++        'packets_per_s': count / (end_s - start_s),
++        'bytes_per_s': total / (end_s - start_s),
+         'bits_per_s': total * 8 / (end_s - start_s),
+         'capacity_bandwidth': None,
+         'wire_packet_loss': None
+@@ -218,5 +243,57 @@ def main(args=None):
+         stream.write('\n')
+ 
+ 
++def battery_power(voltage_v, current_a, connected):
++    """Reject disconnected, nonfinite and invalid-sentinel simulated battery readings."""
++    if connected is not True:
++        raise ValueError('Battery disconnected or connection state unknown')
++    voltage, current = finite(voltage_v), finite(current_a)
++    if voltage <= 0 or current < 0:
++        raise ValueError('Invalid voltage/current; negative current is not measured power')
++    power = voltage * current
++    if not math.isfinite(power):
++        raise ValueError('Nonfinite power')
++    return power
++
++
++def battery_energy(rows, max_gap_s):
++    """Integrate only consecutive valid simulated readings; never bridge invalid data."""
++    gap = finite(max_gap_s)
++    if gap <= 0:
++        raise ValueError('Positive maximum power sample gap required')
++    previous = None
++    power = []
++    energy = 0.
++    integrated_s = 0.
++    intervals = 0
++    rejected = []
++    for index, row in enumerate(rows):
++        try:
++            when = finite(row['monotonic_s'])
++            watts = battery_power(row['voltage_v'], row['current_a'], row['connected'])
++        except (KeyError, TypeError, ValueError) as exc:
++            rejected.append({'index': index, 'reason': str(exc)})
++            previous = None
++            continue
++        power.append(watts)
++        if previous is not None:
++            delta = when - previous[0]
++            if 0 < delta <= gap:
++                energy += (watts + previous[1]) * .5 * delta
++                integrated_s += delta
++                intervals += 1
++            else:
++                rejected.append({'index': index, 'reason': 'Nonpositive or excessive sample gap'})
++        previous = (when, watts)
++    return {'scope': 'PX4 simulated battery estimate; not physical UAV consumption',
++            'status': 'MEASURED_UNVALIDATED' if power else 'UNAVAILABLE_IN_CURRENT_SETUP',
++            'power_w': power, 'valid_sample_count': len(power), 'rejected': rejected,
++            'energy_j': energy if intervals else None,
++            'energy_wh': energy / 3600 if intervals else None,
++            'integrated_duration_s': integrated_s, 'integrated_interval_count': intervals,
++            'method': 'Trapezoids across consecutive valid samples with bounded positive gaps',
++            'limitation': 'A credible electrical model or physical calibrated sensor is required'}
++
++
+ if __name__ == '__main__':
+     main()
+diff --git a/src/baseline_measurement/baseline_measurement/mission_node.py b/src/baseline_measurement/baseline_measurement/mission_node.py
+index 9655f6a..3a2e3e2 100644
+--- a/src/baseline_measurement/baseline_measurement/mission_node.py
++++ b/src/baseline_measurement/baseline_measurement/mission_node.py
+@@ -123,6 +123,7 @@ class MissionNode(Node):
+         self.event_cursor = 0
+         self.yaw = 0.0
+         self.pending_command = None
++        self.command_publications = []
+         self.publishers_by_key = {}
+         processes = simulation_processes()
+         if options.execute_sitl:
+@@ -217,6 +218,7 @@ class MissionNode(Node):
+         self.get_logger().info(f'CSV: {self.log.path}; execute_sitl={options.execute_sitl}')
+ 
+     def receive(self, key, msg):
++        ack_receive_ns = time.monotonic_ns() if key == 'ack' else None
+         now = time.monotonic()
+         previous = self.stamps.get(key)
+         grounded_completion = (
+@@ -314,6 +316,44 @@ class MissionNode(Node):
+                     )
+             self.reset_counters = counters
+         if key == 'ack':
++            candidates = [
++                record for record in getattr(self, 'command_publications', [])
++                if record['command'] == msg.command
++                and record['source_system'] == msg.target_system
++                and record['source_component'] == msg.target_component
++            ]
++            timing = {
++                'ack_receive_monotonic_ns': ack_receive_ns,
++                'validated_latency': False,
++                'association': 'unmatched; ACK has no unique request identifier',
++                'association_evidence': {
++                    'matching_publication_count': len(candidates),
++                    'pending_command_matches': self.pending_command == msg.command,
++                    'unique_request_id_available': False,
++                    'ack_source_identity_available': False
++                },
++                'ack_status': (
++                    'accepted' if msg.result == 0 else
++                    'in_progress' if msg.result == 5 else 'rejected'
++                ),
++                'association_status': 'ambiguous' if len(candidates) > 1 else 'unmatched'
++            }
++            # Keep all records: retries and reused command numbers are ambiguous.
++            if (
++                len(candidates) == 1
++                and self.pending_command == msg.command
++                and not candidates[0]['ack_seen']
++                and ack_receive_ns >= candidates[0]['publish_monotonic_ns']
++            ):
++                record = candidates[0]
++                record['ack_seen'] = True
++                timing.update({
++                    'association': 'candidate_unverified_association',
++                    'association_status': 'candidate_unverified_association',
++                    'publication_evidence': dict(record),
++                    'publish_monotonic_ns': record['publish_monotonic_ns'],
++                    'elapsed_ns': ack_receive_ns - record['publish_monotonic_ns']
++                })
+             self.log.row(
+                 'command_ack',
+                 state=self.mission.state,
+@@ -323,7 +363,7 @@ class MissionNode(Node):
+                         'result': msg.result,
+                         'target_system': msg.target_system,
+                         'target_component': msg.target_component,
+-                        'association': 'unmatched; ACK has no unique request identifier'
++                        **timing
+                     }
+                 )
+             )
+@@ -420,7 +460,35 @@ class MissionNode(Node):
+         if not self.options.execute_sitl:
+             raise RuntimeError('Flight-control publication is disabled in passive mode')
+         msg.timestamp = self.get_clock().now().nanoseconds // 1000
++        if key == 'command':
++            record = {
++                'command': msg.command,
++                'source_system': msg.source_system,
++                'source_component': msg.source_component,
++                'target_system': msg.target_system,
++                'target_component': msg.target_component,
++                'mission_state': self.mission.state,
++                'from_external': msg.from_external,
++                'parameters': {
++                    f'param{i}': (
++                        getattr(msg, f'param{i}')
++                        if math.isfinite(getattr(msg, f'param{i}')) else None
++                    ) for i in range(1, 8)
++                },
++                'nonfinite_parameters': {
++                    f'param{i}': str(getattr(msg, f'param{i}'))
++                    for i in range(1, 8) if not math.isfinite(getattr(msg, f'param{i}'))
++                },
++                'ack_seen': False
++            }
++            record['publish_monotonic_ns'] = time.monotonic_ns()
+         self.publishers_by_key[key].publish(msg)
++        if key == 'command':
++            self.command_publications.append(record)
++            self.log.row(
++                'command_publication', state=self.mission.state,
++                detail=json.dumps(record)
++            )
+         self.log.message(
+             INPUTS[key][0],
+             'tx_publish_call',
+diff --git a/src/baseline_measurement/test/test_preflight.py b/src/baseline_measurement/test/test_preflight.py
+index 740b828..438fb01 100644
+--- a/src/baseline_measurement/test/test_preflight.py
++++ b/src/baseline_measurement/test/test_preflight.py
+@@ -1,10 +1,15 @@
+ """Exercise the real ROS adapter predicates without a live ROS graph."""
+ 
++import csv
++import json
+ import math
++import tempfile
+ from types import SimpleNamespace
+ import unittest
+ from unittest import mock
+ 
++from baseline_measurement.experiment_logger import FIELDS, RunLog
++from baseline_measurement.measurements import correlated_latency
+ from baseline_measurement.mission_node import MissionNode, OUTPUTS
+ from baseline_measurement.mission_state import Mission, STAGES
+ from px4_msgs.msg import VehicleLandDetected, VehicleLocalPosition, VehicleStatus
+@@ -203,9 +208,167 @@ class PreflightTests(unittest.TestCase):
+         node.experiment = None
+         node.mission = Mission(10.)
+         node.pending_command = None
++        node.command_publications = []
+         node.reset_counters = None
+         return node
+ 
++    def timing_adapter(self):
++        node = self.callback_adapter()
++        node.options.execute_sitl = True
++        node.publishers_by_key = {'command': mock.Mock()}
++        node.get_clock = mock.Mock()
++        node.get_clock.return_value.now.return_value.nanoseconds = 999000
++        return node
++
++    def publish_timed_command(self, node):
++        from px4_msgs.msg import VehicleCommand
++        msg = VehicleCommand()
++        msg.command = VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM
++        msg.source_system, msg.source_component = 245, 191
++        msg.target_system, msg.target_component = 1, 1
++        node.pending_command = msg.command
++        with mock.patch('baseline_measurement.mission_node.time.monotonic_ns',
++                        return_value=1000) as clock:
++            node.publishers_by_key['command'].publish.side_effect = (
++                lambda message: clock.assert_called_once_with())
++            MissionNode.publish(node, 'command', msg)
++        return msg.command
++
++    def receive_timed_ack(self, node, command, system=245, component=191, result=0):
++        from px4_msgs.msg import VehicleCommandAck
++        ack = VehicleCommandAck()
++        ack.command = command
++        ack.target_system, ack.target_component = system, component
++        ack.result = result
++        ack.timestamp = 900000000
++        with mock.patch('baseline_measurement.mission_node.time.monotonic_ns',
++                        return_value=1600) as clock:
++            with mock.patch('baseline_measurement.mission_node.time.monotonic',
++                            side_effect=lambda: (clock.assert_called_once_with() or 10.)):
++                MissionNode.receive(node, 'ack', ack)
++        return json.loads(node.log.row.call_args.kwargs['detail'])
++
++    def test_command_ack_records_host_nanoseconds(self):
++        node = self.timing_adapter()
++        command = self.publish_timed_command(node)
++        publication = json.loads(node.log.row.call_args.kwargs['detail'])
++        self.assertEqual(publication['publish_monotonic_ns'], 1000)
++        detail = self.receive_timed_ack(node, command)
++        self.assertEqual(detail['association'], 'candidate_unverified_association')
++        self.assertEqual(detail['publish_monotonic_ns'], 1000)
++        self.assertEqual(detail['ack_receive_monotonic_ns'], 1600)
++        self.assertEqual(detail['elapsed_ns'], 600)
++        self.assertFalse(detail['validated_latency'])
++        self.assertFalse(node.mission.failure_reason)
++
++    def test_unmatched_acks_have_no_interval(self):
++        for case in ('missing', 'command', 'system', 'component', 'pending',
++                     'repeated', 'duplicate', 'clock'):
++            with self.subTest(case=case):
++                node = self.timing_adapter()
++                command = self.publish_timed_command(node)
++                system, component = 245, 191
++                if case == 'missing':
++                    node.command_publications.clear()
++                elif case == 'command':
++                    command += 1
++                elif case == 'system':
++                    system = 1
++                elif case == 'component':
++                    component = 1
++                elif case == 'pending':
++                    node.pending_command = None
++                elif case == 'repeated':
++                    self.publish_timed_command(node)
++                elif case == 'duplicate':
++                    self.receive_timed_ack(node, command)
++                elif case == 'clock':
++                    node.command_publications[0]['publish_monotonic_ns'] = 1700
++                detail = self.receive_timed_ack(node, command, system, component)
++                self.assertTrue(detail['association'].startswith('unmatched'))
++                self.assertEqual(detail['ack_receive_monotonic_ns'], 1600)
++                self.assertNotIn('elapsed_ns', detail)
++                self.assertNotIn('publish_monotonic_ns', detail)
++                self.assertFalse(detail['validated_latency'])
++
++    def test_timing_evidence_preserves_csv_schema(self):
++        with tempfile.TemporaryDirectory() as directory:
++            log = RunLog(directory)
++            self.addCleanup(log.finish, False)
++            node = self.timing_adapter()
++            node.log = mock.Mock(wraps=log)
++            command = self.publish_timed_command(node)
++            self.receive_timed_ack(node, command)
++            self.receive_timed_ack(node, command)
++            log.finish(False)
++            with log.path.open() as stream:
++                reader = csv.DictReader(stream)
++                self.assertEqual(reader.fieldnames, FIELDS)
++                rows = list(reader)
++            publication = next(row for row in rows
++                               if row['record_type'] == 'command_publication')
++            self.assertEqual(json.loads(publication['detail'])['publish_monotonic_ns'], 1000)
++            acks = [json.loads(row['detail']) for row in rows
++                    if row['record_type'] == 'command_ack']
++            self.assertEqual(acks[0]['elapsed_ns'], 600)
++            self.assertNotIn('elapsed_ns', acks[1])
++            self.assertTrue(all(not ack['validated_latency'] for ack in acks))
++
++    def test_candidate_ack_is_ineligible_for_validated_latency(self):
++        node = self.timing_adapter()
++        detail = self.receive_timed_ack(node, self.publish_timed_command(node))
++        self.assertNotIn('request_id', detail)
++        with self.assertRaises(ValueError):
++            correlated_latency([{
++                'request_id': detail.get('request_id', ''),
++                'endpoint_evidence': 'VehicleCommandAck',
++                'clock_validation_evidence': 'host monotonic'
++            }])
++
++    def test_command_evidence_retains_parameters_and_source_target_identity(self):
++        node = self.timing_adapter()
++        command = self.publish_timed_command(node)
++        record = node.command_publications[0]
++        self.assertEqual((record['source_system'], record['source_component']), (245, 191))
++        self.assertEqual((record['target_system'], record['target_component']), (1, 1))
++        self.assertEqual(record['mission_state'], node.mission.state)
++        self.assertEqual(set(record['parameters']), {f'param{i}' for i in range(1, 8)})
++        detail = self.receive_timed_ack(node, command)
++        self.assertEqual(detail['publication_evidence']['parameters'], record['parameters'])
++        self.assertFalse(detail['association_evidence']['unique_request_id_available'])
++        self.assertFalse(detail['association_evidence']['ack_source_identity_available'])
++
++    def test_repeated_command_with_different_parameters_remains_ambiguous(self):
++        from px4_msgs.msg import VehicleCommand
++        node = self.timing_adapter()
++        command = self.publish_timed_command(node)
++        msg = VehicleCommand()
++        msg.command = command
++        msg.source_system, msg.source_component = 245, 191
++        msg.target_system, msg.target_component = 1, 1
++        msg.param1 = 1.
++        msg.param4 = math.nan
++        with mock.patch('baseline_measurement.mission_node.time.monotonic_ns', return_value=1100):
++            node.publishers_by_key['command'].publish.side_effect = None
++            MissionNode.publish(node, 'command', msg)
++        detail = self.receive_timed_ack(node, command)
++        self.assertEqual(detail['association_status'], 'ambiguous')
++        self.assertEqual(detail['association_evidence']['matching_publication_count'], 2)
++        self.assertNotIn('elapsed_ns', detail)
++        self.assertEqual(node.command_publications[1]['parameters']['param1'], 1.)
++        self.assertEqual(node.command_publications[1]['nonfinite_parameters']['param4'], 'nan')
++
++    def test_timing_does_not_change_rejection_handling(self):
++        for result in (0, 1, 2, 3, 4, 5, 6):
++            for ambiguous in (False, True):
++                with self.subTest(result=result, ambiguous=ambiguous):
++                    node = self.timing_adapter()
++                    command = self.publish_timed_command(node)
++                    if ambiguous:
++                        self.publish_timed_command(node)
++                    self.receive_timed_ack(node, command, result=result)
++                    self.assertEqual(bool(node.mission.failure_reason), result not in (0, 5))
++
+     def test_source_freeze_and_clock_reversal_do_not_refresh_telemetry(self):
+         node = self.callback_adapter()
+         msg = VehicleStatus()

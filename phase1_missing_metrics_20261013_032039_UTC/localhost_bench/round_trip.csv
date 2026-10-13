@@ -1,0 +1,21 @@
+clock_validation_evidence,endpoint_evidence,request_id,request_us,response_us
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:0,18421401441,18421402573
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:1,18421402657,18421402862
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:2,18421402890,18421403118
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:3,18421403136,18421403316
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:4,18421403324,18421403462
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:5,18421403468,18421403546
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:6,18421403551,18421403712
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:7,18421403719,18421403886
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:8,18421403902,18421404151
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:9,18421404174,18421404368
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:10,18421404383,18421404520
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:11,18421404527,18421404622
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:12,18421404634,18421404738
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:13,18421404743,18421404846
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:14,18421404851,18421404982
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:15,18421405000,18421405157
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:16,18421405173,18421405308
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:17,18421405323,18421405432
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:18,18421405448,18421405636
+same process time.monotonic_ns,isolated localhost UUID+sequence echo,e0d1d187a3ae495e9e972ccfea139748:19,18421405656,18421405800

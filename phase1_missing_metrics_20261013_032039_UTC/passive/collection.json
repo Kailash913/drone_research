@@ -1,0 +1,89 @@
+{
+  "status": "COMPLETE",
+  "counts": {
+    "metadata": 1,
+    "gazebo_subscription": 1,
+    "truth": 742,
+    "estimate": 716,
+    "status": 28,
+    "land": 14,
+    "battery": 14
+  },
+  "start_monotonic_ns": 17927017667362,
+  "end_monotonic_ns": 17942040585253,
+  "window_s": 15.022917891,
+  "mission_outcome": "NOT_ATTEMPTED",
+  "trajectory_rmse_status": "NOT_MEASURED",
+  "trajectory_reason": "No independently validated source-clock/frame mapping supplied",
+  "battery": {
+    "scope": "PX4 simulated battery estimate; not physical UAV consumption",
+    "status": "UNAVAILABLE_IN_CURRENT_SETUP",
+    "power_w": [],
+    "valid_sample_count": 0,
+    "rejected": [
+      {
+        "index": 0,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 1,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 2,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 3,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 4,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 5,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 6,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 7,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 8,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 9,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 10,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 11,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 12,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      },
+      {
+        "index": 13,
+        "reason": "Invalid voltage/current; negative current is not measured power"
+      }
+    ],
+    "energy_j": null,
+    "energy_wh": null,
+    "integrated_duration_s": 0.0,
+    "integrated_interval_count": 0,
+    "method": "Trapezoids across consecutive valid samples with bounded positive gaps",
+    "limitation": "A credible electrical model or physical calibrated sensor is required"
+  },
+  "raw_sha256": "3ec804cb7213fc3d6bc6a304f59850fb86b8e2744cad93e69e4606886e5c3fd1"
+}

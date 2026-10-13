@@ -1,0 +1,52 @@
+[
+  {
+    "source": "/home/kailash/ros2_ws/baseline_results/pcap/xrce_baseline.pcap",
+    "parser": {
+      "method": "captured frame offered traffic; excludes uncaptured overhead",
+      "capture_evidence": {
+        "scope": "historical PCAP; original observation window/drop metadata missing"
+      },
+      "link_type": 1,
+      "window_s": 25.980062246322632,
+      "packet_count": 11290,
+      "original_frame_bytes": 1884248,
+      "captured_bytes": 1884248,
+      "truncated_packets": 0,
+      "first_packet_s": 1791859232.378196,
+      "last_packet_s": 1791859258.358258,
+      "packets_per_s": 434.5640088525212,
+      "bytes_per_s": 72526.69305158063,
+      "bits_per_s": 580213.544412645,
+      "capacity_bandwidth": null,
+      "wire_packet_loss": null
+    },
+    "independent": {
+      "totals": {
+        "packets": 11290,
+        "original_bytes": 1884248,
+        "captured_bytes": 1884248
+      },
+      "flows": {
+        "px4_to_agent": {
+          "packets": 11239,
+          "original_frame_bytes": 1880370,
+          "ip_bytes": 1723024,
+          "udp_bytes": 1498244
+        },
+        "agent_to_px4": {
+          "packets": 51,
+          "original_frame_bytes": 3878,
+          "ip_bytes": 3164,
+          "udp_bytes": 2144
+        }
+      },
+      "first_packet_s": 1791859232.378196,
+      "last_packet_s": 1791859258.358258,
+      "link_type": 1,
+      "pcap_sha256": "4561276f171cfbf4a8b5768c994cedd53383acf044885b42f7786298f2b3fbc0",
+      "packet_csv": "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/report/historical_packets.csv"
+    },
+    "byte_totals_agree": true,
+    "capture_metadata": null
+  }
+]

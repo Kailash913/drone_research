@@ -1,0 +1,88 @@
+[0.435s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', '--log-base', '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release_log', 'build', '--base-paths', 'src/baseline_measurement', '--packages-select', 'baseline_measurement', '--build-base', '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release', '--install-base', '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release', '--event-handlers', 'console_direct+']
+[0.435s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base='/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release_log', log_level=None, verb_name='build', build_base='/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release', install_base='/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=['console_direct+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['src/baseline_measurement'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['baseline_measurement'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7b6b1858cfb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b6b1858cbc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b6b1858cbc0>>)
+[0.538s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.539s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.539s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.539s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.539s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.539s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kailash/ros2_ws/src/baseline_measurement'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extensions ['ignore', 'ignore_ament_install']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extension 'ignore'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extension 'ignore_ament_install'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extensions ['colcon_pkg']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extension 'colcon_pkg'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extensions ['colcon_meta']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extension 'colcon_meta'
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extensions ['ros']
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src/baseline_measurement) by extension 'ros'
+[0.627s] DEBUG:colcon.colcon_core.package_identification:Package 'src/baseline_measurement' with type 'ros.ament_python' and name 'baseline_measurement'
+[0.628s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.747s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.747s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.754s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/kailash/ros2_ws/install
+[0.758s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 287 installed packages in /opt/ros/jazzy
+[0.768s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'cmake_args' from command line to 'None'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'cmake_target' from command line to 'None'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'cmake_clean_cache' from command line to 'False'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'cmake_clean_first' from command line to 'False'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'cmake_force_configure' from command line to 'False'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'ament_cmake_args' from command line to 'None'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'catkin_cmake_args' from command line to 'None'
+[1.004s] Level 5:colcon.colcon_core.verb:set package 'baseline_measurement' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.005s] DEBUG:colcon.colcon_core.verb:Building package 'baseline_measurement' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement', 'merge_install': False, 'path': '/home/kailash/ros2_ws/src/baseline_measurement', 'symlink_install': False, 'test_result_base': None}
+[1.005s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.010s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.010s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/kailash/ros2_ws/src/baseline_measurement' with build type 'ament_python'
+[1.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('baseline_measurement', 'ament_prefix_path')
+[1.013s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/hook/ament_prefix_path.ps1'
+[1.016s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/hook/ament_prefix_path.dsv'
+[1.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/hook/ament_prefix_path.sh'
+[1.019s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.023s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.838s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/kailash/ros2_ws/src/baseline_measurement'
+[1.838s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.838s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.943s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: setopt, symlink_data, install_headers, easy_install, build_ext, build_scripts, develop, install_egg_info, bdist, update_catalog, editable_wheel, egg_info, bdist_rpm, build_clib, install_scripts, register, dist_info, install_data, extract_messages, saveopts, check, alias, sdist, bdist_dumb, bdist_wheel, init_catalog, rotate, install, upload_docs, upload, test, install_lib, bdist_egg, build_py, clean, compile_catalog, build
+[2.946s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kailash/ros2_ws/src/baseline_measurement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement build --build-base /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement/build install --record /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement/install.log --install-scripts $base/lib/baseline_measurement --single-version-externally-managed install_data
+[3.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kailash/ros2_ws/src/baseline_measurement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement build --build-base /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement/build install --record /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_release/baseline_measurement/install.log --install-scripts $base/lib/baseline_measurement --single-version-externally-managed install_data
+[3.940s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement' for CMake module files
+[3.940s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement' for CMake config files
+[3.942s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/lib'
+[3.943s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/bin'
+[3.943s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/lib/pkgconfig/baseline_measurement.pc'
+[3.943s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/lib/python3.12/site-packages'
+[3.944s] Level 1:colcon.colcon_core.shell:create_environment_hook('baseline_measurement', 'pythonpath')
+[3.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/hook/pythonpath.ps1'
+[3.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/hook/pythonpath.dsv'
+[3.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/hook/pythonpath.sh'
+[3.947s] Level 1:colcon.colcon_core.environment:checking '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/bin'
+[3.947s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(baseline_measurement)
+[3.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/package.ps1'
+[3.948s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/package.dsv'
+[3.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/package.sh'
+[3.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/package.bash'
+[3.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/baseline_measurement/package.zsh'
+[3.956s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/baseline_measurement/share/colcon-core/packages/baseline_measurement)
+[3.959s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.960s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.960s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.960s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.106s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.106s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.107s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.107s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.107s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.AccessDenied: Failed to connect to socket /run/user/1000/bus: Operation not permitted
+[4.107s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.107s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/local_setup.ps1'
+[4.109s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/_local_setup_util_ps1.py'
+[4.110s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/setup.ps1'
+[4.111s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/local_setup.sh'
+[4.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/_local_setup_util_sh.py'
+[4.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/setup.sh'
+[4.114s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/local_setup.bash'
+[4.115s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/setup.bash'
+[4.116s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/local_setup.zsh'
+[4.117s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_release/setup.zsh'

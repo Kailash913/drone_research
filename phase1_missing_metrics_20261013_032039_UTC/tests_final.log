@@ -1,0 +1,107 @@
+...............................................................s........ [ 37%]
+............F........................................................... [ 75%]
+................................................                         [100%]
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+
+    @pytest.mark.flake8
+    @pytest.mark.linter
+    def test_flake8():
+        rc, errors = main_with_errors(argv=['baseline_measurement', 'test', 'setup.py'] + [
+            str(p) for p in sorted(Path('tools').glob('*.py'))
+            if p.name != 'vscode_apply_heading_fix.py'])
+>       assert rc == 0, \
+            'Found %d code style errors / warnings:\n' % len(errors) + \
+            '\n'.join(errors)
+E       AssertionError: Found 1 code style errors / warnings:
+E         baseline_measurement/trajectory_metrics.py:50:5: F841 local variable 'offset' is assigned to but never used
+E       assert 1 == 0
+
+test/test_flake8.py:28: AssertionError
+----------------------------- Captured stdout call -----------------------------
+
+baseline_measurement/trajectory_metrics.py:50:5: F841 local variable 'offset' is assigned to but never used
+    offset = finite(calibration['offset_ns'])
+    ^
+
+1     F841 local variable 'offset' is assigned to but never used
+
+62 files checked
+1 errors
+
+'F'-type errors: 1
+
+Checked files:
+
+* baseline_measurement/passive_metrics.py
+* baseline_measurement/native_clock.py
+* baseline_measurement/cli.py
+* baseline_measurement/acceptance.py
+* baseline_measurement/provenance.py
+* baseline_measurement/dataset.py
+* baseline_measurement/mission_node.py
+* baseline_measurement/experiment.py
+* baseline_measurement/metrics_audit.py
+* baseline_measurement/mission_state.py
+* baseline_measurement/experiment_logger.py
+* baseline_measurement/measurements.py
+* baseline_measurement/resource_monitor.py
+* baseline_measurement/baseline_node.py
+* baseline_measurement/record_context.py
+* baseline_measurement/wire_capture.py
+* baseline_measurement/trajectory_metrics.py
+* baseline_measurement/metrics.py
+* baseline_measurement/reporting.py
+* baseline_measurement/run_provenance.py
+* baseline_measurement/sync_evidence.py
+* baseline_measurement/clock_probe.py
+* baseline_measurement/diagnostic_analysis.py
+* baseline_measurement/__init__.py
+* baseline_measurement/transport_probe.py
+* baseline_measurement/qgc_plan.py
+* test/test_report_analysis.py
+* test/test_copyright.py
+* test/test_phase1.py
+* test/test_native_clock.py
+* test/test_baseline_new.py
+* test/test_preflight.py
+* test/test_dataset.py
+* test/test_run_provenance.py
+* test/test_acceptance.py
+* test/test_heading_reports.py
+* test/test_clock_guard.py
+* test/test_qgc_plan.py
+* test/test_flake8.py
+* test/test_auto_takeoff.py
+* test/test_authorized_study.py
+* test/test_auto_takeoff_adapter.py
+* test/test_missing_metrics.py
+* test/test_measurements.py
+* test/test_pep257.py
+* test/test_dataset_identity.py
+* test/test_reporting_status.py
+* setup.py
+* tools/authorized_study.py
+* tools/continuation_check.py
+* tools/final_report_runner.py
+* tools/live_clock_audit.py
+* tools/native_heading_check.py
+* tools/native_timesync_check.py
+* tools/phase1_inspect.py
+* tools/phase1_lint_tools.py
+* tools/phase1_verify.py
+* tools/quick_checks.py
+* tools/reports_only_audit.py
+* tools/reports_only_clock_context.py
+* tools/reports_only_verify.py
+* tools/vscode_test_runner.py
+=============================== warnings summary ===============================
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=23) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/tests_final.xml -
+=========================== short test summary info ============================
+SKIPPED [1] test/test_copyright.py:20: No copyright header has been placed in the generated source file.
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 1 code style ...
+1 failed, 190 passed, 1 skipped, 12 warnings in 5.37s

@@ -1,0 +1,106 @@
+[0.000000] (-) TimerEvent: {}
+[0.001534] (baseline_measurement) JobQueued: {'identifier': 'baseline_measurement', 'dependencies': OrderedDict({'px4_msgs': '/home/kailash/ros2_ws/install/px4_msgs', 'baseline_measurement': '/home/kailash/ros2_ws/install/baseline_measurement'})}
+[0.001866] (baseline_measurement) JobStarted: {'identifier': 'baseline_measurement'}
+[0.099623] (-) TimerEvent: {}
+[0.200018] (-) TimerEvent: {}
+[0.300437] (-) TimerEvent: {}
+[0.403615] (-) TimerEvent: {}
+[0.504168] (-) TimerEvent: {}
+[0.604993] (-) TimerEvent: {}
+[0.705416] (-) TimerEvent: {}
+[0.805902] (-) TimerEvent: {}
+[0.906283] (-) TimerEvent: {}
+[0.961538] (baseline_measurement) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/kailash/ros2_ws/src/baseline_measurement', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kailash', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/kailash/ros2_ws/install/px4_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'MOTD_SHOWN': 'update-motd', 'HOME': '/home/kailash', 'OLDPWD': '/home/kailash/ros2_ws/src/baseline_measurement', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/kailash/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kailash', 'NAME': 'Kailash', 'WSL_INTEROP': '/run/WSL/46080_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/kailash/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_3.0.1.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/:/mnt/c/Users/kaila/.local/bin:/mnt/c/Users/kaila/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kaila/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/MinGW/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Ollama:/mnt/c/Users/kaila/AppData/Roaming/npm:/mnt/c/Users/kaila/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/kaila/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/kaila/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Kiro/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2/:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin:/snap/bin:/opt/xtensa-esp-elf/bin/', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/kailash/ros2_ws/install/baseline_measurement:/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/kailash/ros2_ws/build/baseline_measurement', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': '', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/kailash/ros2_ws/build/baseline_measurement/pytest.xml --junit-prefix=baseline_measurement -o cache_dir=/home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache'}, 'shell': False}
+[1.006433] (-) TimerEvent: {}
+[1.106880] (-) TimerEvent: {}
+[1.208512] (-) TimerEvent: {}
+[1.308927] (-) TimerEvent: {}
+[1.346608] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[1.346860] (baseline_measurement) StdoutLine: {'line': b'platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[1.354744] (baseline_measurement) StdoutLine: {'line': b'cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache\n'}
+[1.355003] (baseline_measurement) StdoutLine: {'line': b'rootdir: /home/kailash/ros2_ws/src/baseline_measurement\n'}
+[1.355115] (baseline_measurement) StdoutLine: {'line': b'configfile: setup.cfg\n'}
+[1.355195] (baseline_measurement) StdoutLine: {'line': b'plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0\n'}
+[1.409083] (-) TimerEvent: {}
+[1.509687] (-) TimerEvent: {}
+[1.610063] (-) TimerEvent: {}
+[1.710532] (-) TimerEvent: {}
+[1.810861] (-) TimerEvent: {}
+[1.911310] (-) TimerEvent: {}
+[2.008319] (baseline_measurement) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[2.011494] (-) TimerEvent: {}
+[2.040730] (baseline_measurement) StdoutLine: {'line': b'collecting 0 items                                                             \x1b[0m\x1b[1m\n'}
+[2.040967] (baseline_measurement) StdoutLine: {'line': b'collected 174 items                                                            \x1b[0m\n'}
+[2.041204] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[2.102535] (baseline_measurement) StdoutLine: {'line': b'test/test_acceptance.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                      [  6%]\x1b[0m\n'}
+[2.111710] (-) TimerEvent: {}
+[2.116554] (baseline_measurement) StdoutLine: {'line': b'test/test_authorized_study.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                         [  7%]\x1b[0m\n'}
+[2.138474] (baseline_measurement) StdoutLine: {'line': b'test/test_auto_takeoff.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                  [ 14%]\x1b[0m\n'}
+[2.187277] (baseline_measurement) StdoutLine: {'line': b'test/test_auto_takeoff_adapter.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                 [ 18%]\x1b[0m\n'}
+[2.211786] (baseline_measurement) StdoutLine: {'line': b'test/test_baseline_new.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                [ 27%]\x1b[0m\n'}
+[2.212051] (-) TimerEvent: {}
+[2.312319] (-) TimerEvent: {}
+[2.315362] (baseline_measurement) StdoutLine: {'line': b'test/test_clock_guard.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                [ 36%]\x1b[0m\n'}
+[2.317427] (baseline_measurement) StdoutLine: {'line': b'test/test_copyright.py \x1b[33ms\x1b[0m\x1b[32m                                                 [ 36%]\x1b[0m\n'}
+[2.360509] (baseline_measurement) StdoutLine: {'line': b'test/test_dataset.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                         [ 43%]\x1b[0m\n'}
+[2.412468] (-) TimerEvent: {}
+[2.416698] (baseline_measurement) StdoutLine: {'line': b'test/test_dataset_identity.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m                                  [ 48%]\x1b[0m\n'}
+[2.512719] (-) TimerEvent: {}
+[2.617574] (-) TimerEvent: {}
+[2.717940] (-) TimerEvent: {}
+[2.818410] (-) TimerEvent: {}
+[2.918943] (-) TimerEvent: {}
+[3.015136] (baseline_measurement) StdoutLine: {'line': b'test/test_flake8.py \x1b[32m.\x1b[0m\x1b[33m                                                    [ 48%]\x1b[0m\n'}
+[3.018205] (baseline_measurement) StdoutLine: {'line': b'test/test_heading_reports.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                          [ 50%]\x1b[0m\n'}
+[3.019033] (-) TimerEvent: {}
+[3.038461] (baseline_measurement) StdoutLine: {'line': b'test/test_measurements.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                  [ 57%]\x1b[0m\n'}
+[3.050181] (baseline_measurement) StdoutLine: {'line': b'test/test_native_clock.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                  [ 64%]\x1b[0m\n'}
+[3.119145] (-) TimerEvent: {}
+[3.219462] (-) TimerEvent: {}
+[3.319874] (-) TimerEvent: {}
+[3.420403] (-) TimerEvent: {}
+[3.470099] (baseline_measurement) StdoutLine: {'line': b'test/test_pep257.py \x1b[32m.\x1b[0m\x1b[33m                                                    [ 65%]\x1b[0m\n'}
+[3.504966] (baseline_measurement) StdoutLine: {'line': b'test/test_phase1.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                       [ 73%]\x1b[0m\n'}
+[3.520553] (-) TimerEvent: {}
+[3.588611] (baseline_measurement) StdoutLine: {'line': b'test/test_preflight.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                              [ 85%]\x1b[0m\n'}
+[3.591692] (baseline_measurement) StdoutLine: {'line': b'test/test_qgc_plan.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                                 [ 86%]\x1b[0m\n'}
+[3.620877] (-) TimerEvent: {}
+[3.721801] (-) TimerEvent: {}
+[3.822346] (-) TimerEvent: {}
+[3.922884] (-) TimerEvent: {}
+[4.023424] (-) TimerEvent: {}
+[4.123898] (-) TimerEvent: {}
+[4.224651] (-) TimerEvent: {}
+[4.325293] (-) TimerEvent: {}
+[4.425738] (-) TimerEvent: {}
+[4.526656] (-) TimerEvent: {}
+[4.627202] (-) TimerEvent: {}
+[4.728132] (-) TimerEvent: {}
+[4.828614] (-) TimerEvent: {}
+[4.928998] (-) TimerEvent: {}
+[5.029300] (-) TimerEvent: {}
+[5.129636] (-) TimerEvent: {}
+[5.230040] (-) TimerEvent: {}
+[5.330419] (-) TimerEvent: {}
+[5.430870] (-) TimerEvent: {}
+[5.531270] (-) TimerEvent: {}
+[5.631646] (-) TimerEvent: {}
+[5.732024] (-) TimerEvent: {}
+[5.832394] (-) TimerEvent: {}
+[5.888994] (baseline_measurement) StdoutLine: {'line': b'test/test_report_analysis.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                           [ 95%]\x1b[0m\n'}
+[5.897339] (baseline_measurement) StdoutLine: {'line': b'test/test_reporting_status.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                      [ 98%]\x1b[0m\n'}
+[5.905427] (baseline_measurement) StdoutLine: {'line': b'test/test_run_provenance.py \x1b[32m.\x1b[0m\x1b[32m.\x1b[0m\x1b[33m                                           [100%]\x1b[0m\n'}
+[5.905922] (baseline_measurement) StderrLine: {'line': b'\n'}
+[5.906264] (baseline_measurement) StderrLine: {'line': b'\x1b[33m=============================== warnings summary ===============================\x1b[0m\n'}
+[5.906633] (baseline_measurement) StderrLine: {'line': b'test/test_flake8.py: 12 warnings\n'}
+[5.906848] (baseline_measurement) StderrLine: {'line': b'  Warning: This process (pid=55491) is multi-threaded, use of fork() may lead to deadlocks in the child.\n'}
+[5.906953] (baseline_measurement) StderrLine: {'line': b'\n'}
+[5.907063] (baseline_measurement) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n'}
+[5.907301] (baseline_measurement) StdoutLine: {'line': b'- generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -\n'}
+[5.907630] (baseline_measurement) StdoutLine: {'line': b'\x1b[33m================= \x1b[32m173 passed\x1b[0m, \x1b[33m\x1b[1m1 skipped\x1b[0m, \x1b[33m\x1b[1m12 warnings\x1b[0m\x1b[33m in 4.56s\x1b[0m\x1b[33m ==================\x1b[0m\n'}
+[5.932576] (-) TimerEvent: {}
+[6.033328] (-) TimerEvent: {}
+[6.134248] (-) TimerEvent: {}
+[6.146902] (baseline_measurement) CommandEnded: {'returncode': 0}
+[6.148260] (baseline_measurement) JobEnded: {'identifier': 'baseline_measurement', 'rc': 0}
+[6.149018] (-) EventReactorShutdown: {}

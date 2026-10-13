@@ -123,6 +123,7 @@ class MissionNode(Node):
         self.event_cursor = 0
         self.yaw = 0.0
         self.pending_command = None
+        self.command_publications = []
         self.publishers_by_key = {}
         processes = simulation_processes()
         if options.execute_sitl:
@@ -217,6 +218,7 @@ class MissionNode(Node):
         self.get_logger().info(f'CSV: {self.log.path}; execute_sitl={options.execute_sitl}')
 
     def receive(self, key, msg):
+        ack_receive_ns = time.monotonic_ns() if key == 'ack' else None
         now = time.monotonic()
         previous = self.stamps.get(key)
         grounded_completion = (
@@ -314,6 +316,44 @@ class MissionNode(Node):
                     )
             self.reset_counters = counters
         if key == 'ack':
+            candidates = [
+                record for record in getattr(self, 'command_publications', [])
+                if record['command'] == msg.command
+                and record['source_system'] == msg.target_system
+                and record['source_component'] == msg.target_component
+            ]
+            timing = {
+                'ack_receive_monotonic_ns': ack_receive_ns,
+                'validated_latency': False,
+                'association': 'unmatched; ACK has no unique request identifier',
+                'association_evidence': {
+                    'matching_publication_count': len(candidates),
+                    'pending_command_matches': self.pending_command == msg.command,
+                    'unique_request_id_available': False,
+                    'ack_source_identity_available': False
+                },
+                'ack_status': (
+                    'accepted' if msg.result == 0 else
+                    'in_progress' if msg.result == 5 else 'rejected'
+                ),
+                'association_status': 'ambiguous' if len(candidates) > 1 else 'unmatched'
+            }
+            # Keep all records: retries and reused command numbers are ambiguous.
+            if (
+                len(candidates) == 1
+                and self.pending_command == msg.command
+                and not candidates[0]['ack_seen']
+                and ack_receive_ns >= candidates[0]['publish_monotonic_ns']
+            ):
+                record = candidates[0]
+                record['ack_seen'] = True
+                timing.update({
+                    'association': 'candidate_unverified_association',
+                    'association_status': 'candidate_unverified_association',
+                    'publication_evidence': dict(record),
+                    'publish_monotonic_ns': record['publish_monotonic_ns'],
+                    'elapsed_ns': ack_receive_ns - record['publish_monotonic_ns']
+                })
             self.log.row(
                 'command_ack',
                 state=self.mission.state,
@@ -323,7 +363,7 @@ class MissionNode(Node):
                         'result': msg.result,
                         'target_system': msg.target_system,
                         'target_component': msg.target_component,
-                        'association': 'unmatched; ACK has no unique request identifier'
+                        **timing
                     }
                 )
             )
@@ -420,7 +460,35 @@ class MissionNode(Node):
         if not self.options.execute_sitl:
             raise RuntimeError('Flight-control publication is disabled in passive mode')
         msg.timestamp = self.get_clock().now().nanoseconds // 1000
+        if key == 'command':
+            record = {
+                'command': msg.command,
+                'source_system': msg.source_system,
+                'source_component': msg.source_component,
+                'target_system': msg.target_system,
+                'target_component': msg.target_component,
+                'mission_state': self.mission.state,
+                'from_external': msg.from_external,
+                'parameters': {
+                    f'param{i}': (
+                        getattr(msg, f'param{i}')
+                        if math.isfinite(getattr(msg, f'param{i}')) else None
+                    ) for i in range(1, 8)
+                },
+                'nonfinite_parameters': {
+                    f'param{i}': str(getattr(msg, f'param{i}'))
+                    for i in range(1, 8) if not math.isfinite(getattr(msg, f'param{i}'))
+                },
+                'ack_seen': False
+            }
+            record['publish_monotonic_ns'] = time.monotonic_ns()
         self.publishers_by_key[key].publish(msg)
+        if key == 'command':
+            self.command_publications.append(record)
+            self.log.row(
+                'command_publication', state=self.mission.state,
+                detail=json.dumps(record)
+            )
         self.log.message(
             INPUTS[key][0],
             'tx_publish_call',

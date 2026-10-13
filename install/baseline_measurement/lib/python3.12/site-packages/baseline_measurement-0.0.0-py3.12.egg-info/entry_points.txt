@@ -7,3 +7,4 @@ mission_node = baseline_measurement.mission_node:main
 phase1_acceptance = baseline_measurement.acceptance:main
 provenance_recovery = baseline_measurement.provenance:main
 record_context = baseline_measurement.record_context:main
+transport_probe = baseline_measurement.transport_probe:main

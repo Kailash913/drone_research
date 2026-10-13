@@ -1,0 +1,20 @@
+{
+  "scope": "LOCALHOST_BENCH_ONLY; not PX4 or UAV transport",
+  "transmitted": 20,
+  "unique_received": 20,
+  "duplicates": 0,
+  "missing": 0,
+  "sample_count": 20,
+  "rtt_us": {
+    "mean": 201.75,
+    "std": 223.55521512710527,
+    "median": 150.5,
+    "p95": 249.0
+  },
+  "raw_recomputation_agrees": true,
+  "evidence_files": [
+    "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/localhost_bench/sequence.csv",
+    "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/localhost_bench/round_trip.csv",
+    "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/localhost_bench/probe.json"
+  ]
+}

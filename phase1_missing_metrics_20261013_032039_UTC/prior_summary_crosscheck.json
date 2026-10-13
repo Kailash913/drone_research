@@ -1,0 +1,42 @@
+{
+  "source_file": "/home/kailash/ros2_ws/phase1_five_run_summary.csv",
+  "sha256": "4092aa711ea22cdd96b0778ce98f768faf72fbab7b26e5057fa8c4cc9e051310",
+  "checks": [
+    {
+      "run": "1",
+      "duration_agrees": true,
+      "row_count_agrees": true,
+      "ack_count_agrees": true,
+      "ack_results_agree": true
+    },
+    {
+      "run": "2",
+      "duration_agrees": true,
+      "row_count_agrees": true,
+      "ack_count_agrees": true,
+      "ack_results_agree": true
+    },
+    {
+      "run": "3",
+      "duration_agrees": true,
+      "row_count_agrees": true,
+      "ack_count_agrees": true,
+      "ack_results_agree": true
+    },
+    {
+      "run": "4",
+      "duration_agrees": true,
+      "row_count_agrees": true,
+      "ack_count_agrees": true,
+      "ack_results_agree": true
+    },
+    {
+      "run": "5",
+      "duration_agrees": true,
+      "row_count_agrees": true,
+      "ack_count_agrees": true,
+      "ack_results_agree": true
+    }
+  ],
+  "discrepancy": "The old phase1_audit_20261012 report counted zero active attempts because it did not inventory the five phase1_active_run folders; the five-run CSV agrees with the raw logs."
+}

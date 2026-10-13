@@ -1,0 +1,97 @@
+running egg_info
+creating ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info
+writing ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/PKG-INFO
+writing dependency_links to ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/dependency_links.txt
+writing entry points to ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/entry_points.txt
+writing requirements to ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/requires.txt
+writing top-level names to ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/top_level.txt
+writing manifest file '../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'
+reading manifest file '../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'
+writing manifest file '../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/native_log_audit.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/passive_metrics.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/native_clock.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/cli.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/acceptance.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/provenance.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/dataset.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/mission_node.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/experiment.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/metrics_audit.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/mission_state.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/experiment_logger.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/measurements.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/resource_monitor.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/baseline_node.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/record_context.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/wire_capture.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/trajectory_metrics.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/metrics.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/reporting.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/run_provenance.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/sync_evidence.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/clock_probe.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/diagnostic_analysis.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/__init__.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/transport_probe.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+copying baseline_measurement/qgc_plan.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement
+warning: build_py: byte-compiling is disabled, skipping.
+
+running install
+running install_lib
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/native_log_audit.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/passive_metrics.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/native_clock.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/cli.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/acceptance.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/provenance.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/dataset.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/mission_node.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/experiment.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/metrics_audit.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/mission_state.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/experiment_logger.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/measurements.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/resource_monitor.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/baseline_node.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/record_context.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/wire_capture.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/trajectory_metrics.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/metrics.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/reporting.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/run_provenance.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/sync_evidence.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/clock_probe.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/diagnostic_analysis.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/__init__.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/transport_probe.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+copying /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/build/lib/baseline_measurement/qgc_plan.py -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement
+warning: install_lib: byte-compiling is disabled, skipping.
+
+running install_data
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/ament_index
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/ament_index/resource_index
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/ament_index/resource_index/packages
+copying resource/baseline_measurement -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/ament_index/resource_index/packages
+copying package.xml -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/baseline_measurement
+creating /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/baseline_measurement/config
+copying config/baseline.yaml -> /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/share/baseline_measurement/config
+running install_egg_info
+Copying ../../phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/baseline_measurement.egg-info to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/python3.12/site-packages/baseline_measurement-0.0.0-py3.12.egg-info
+running install_scripts
+Installing baseline_dataset script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing baseline_node script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing clock_probe script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing measurement_import script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing mission_node script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing phase1_acceptance script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing provenance_recovery script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing record_context script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+Installing transport_probe script to /home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/install_final/baseline_measurement/lib/baseline_measurement
+writing list of installed files to '/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/build_final/baseline_measurement/install.log'

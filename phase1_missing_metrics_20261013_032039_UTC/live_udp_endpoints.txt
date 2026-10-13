@@ -1,0 +1,35 @@
+State  Recv-Q Send-Q  Local Address:Port  Peer Address:PortProcess                                    
+UNCONN 0      0             0.0.0.0:40452      0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=22))
+UNCONN 0      0      10.255.255.254:36588      0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=23))
+UNCONN 0      0      172.21.137.223:36695      0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=24))
+UNCONN 0      0          127.0.0.54:53         0.0.0.0:*                                              
+UNCONN 0      0       127.0.0.53%lo:53         0.0.0.0:*                                              
+UNCONN 0      0      10.255.255.254:53         0.0.0.0:*                                              
+UNCONN 0      0             0.0.0.0:57492      0.0.0.0:*    users:(("python3",pid=47289,fd=30))       
+UNCONN 0      0      10.255.255.254:41228      0.0.0.0:*    users:(("python3",pid=47289,fd=31))       
+UNCONN 0      0           127.0.0.1:323        0.0.0.0:*                                              
+UNCONN 0      0             0.0.0.0:8888       0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=3)) 
+UNCONN 0      0             0.0.0.0:13030      0.0.0.0:*    users:(("px4",pid=48332,fd=32))           
+UNCONN 0      0             0.0.0.0:5353       0.0.0.0:*                                              
+UNCONN 0      0      172.21.137.223:34128      0.0.0.0:*    users:(("python3",pid=47289,fd=32))       
+UNCONN 0      0             0.0.0.0:14280      0.0.0.0:*    users:(("px4",pid=48332,fd=31))           
+UNCONN 0      0             0.0.0.0:10317      0.0.0.0:*    users:(("px4",pid=48332,fd=18))           
+UNCONN 0      0             0.0.0.0:10317      0.0.0.0:*    users:(("ruby",pid=48505,fd=19))          
+UNCONN 0      0             0.0.0.0:10317      0.0.0.0:*    users:(("ruby",pid=48504,fd=19))          
+UNCONN 0      0             0.0.0.0:10318      0.0.0.0:*    users:(("px4",pid=48332,fd=19))           
+UNCONN 0      0             0.0.0.0:10318      0.0.0.0:*    users:(("ruby",pid=48505,fd=20))          
+UNCONN 0      0             0.0.0.0:10318      0.0.0.0:*    users:(("ruby",pid=48504,fd=20))          
+UNCONN 0      0             0.0.0.0:18570      0.0.0.0:*    users:(("px4",pid=48332,fd=29))           
+ESTAB  0      0           127.0.0.1:47246    127.0.0.1:8888 users:(("px4",pid=48332,fd=27))           
+UNCONN 0      0             0.0.0.0:14580      0.0.0.0:*    users:(("px4",pid=48332,fd=30))           
+UNCONN 0      0             0.0.0.0:7000       0.0.0.0:*    users:(("python3",pid=47289,fd=34))       
+UNCONN 0      0             0.0.0.0:39838      0.0.0.0:*                                              
+UNCONN 0      0             0.0.0.0:7400       0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=20))
+UNCONN 0      0             0.0.0.0:7400       0.0.0.0:*    users:(("python3",pid=47289,fd=27))       
+UNCONN 0      0             0.0.0.0:7412       0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=19))
+UNCONN 0      0             0.0.0.0:7413       0.0.0.0:*    users:(("MicroXRCEAgent",pid=13840,fd=21))
+UNCONN 0      0             0.0.0.0:7414       0.0.0.0:*    users:(("python3",pid=47289,fd=26))       
+UNCONN 0      0             0.0.0.0:7415       0.0.0.0:*    users:(("python3",pid=47289,fd=29))       
+UNCONN 0      0               [::1]:323           [::]:*                                              
+UNCONN 0      0                [::]:58070         [::]:*                                              
+UNCONN 0      0                [::]:5353          [::]:*                                              

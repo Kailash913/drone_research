@@ -1,0 +1,42 @@
+{
+  "status": "NOT_MEASURED",
+  "evidence": {
+    "argv": [
+      "tcpdump",
+      "-i",
+      "lo",
+      "-Q",
+      "inout",
+      "-n",
+      "-s",
+      "0",
+      "-U",
+      "-w",
+      "/home/kailash/ros2_ws/phase1_missing_metrics_20261013_032039_UTC/wire/traffic.pcap",
+      "udp",
+      "port",
+      "8888"
+    ],
+    "interface": "lo",
+    "filter": "udp port 8888",
+    "direction": "both; PX4-to-agent and agent-to-PX4 separated by UDP endpoints offline",
+    "scope": "WSL guest captured link-layer frames; not a physical radio link",
+    "utc": "2026-10-13T03:26:56.109044+00:00",
+    "start_s": 1791862016.0419946,
+    "end_s": 1791862016.1085954,
+    "start_monotonic_ns": 17930029664375,
+    "end_monotonic_ns": 17930096263295,
+    "monotonic_window_s": 0.06659892,
+    "timestamp_source": "libpcap host wall-clock packet timestamps",
+    "capture_drops": {
+      "captured": null,
+      "received_by_filter": null,
+      "kernel_dropped": null
+    },
+    "returncode": 1,
+    "wire_loss": null,
+    "loss_reason": "Capture counts lack independent sent/received wire IDs"
+  },
+  "traffic": null,
+  "limitations": "Zero kernel capture drops do not prove absence of network loss; localhost offered traffic is not physical link capacity. Process window includes startup."
+}
