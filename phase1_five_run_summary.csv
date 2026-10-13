@@ -1,0 +1,6 @@
+run,result_state,success,duration_s,failure_state,failure_reason,command_ack_count,command_ack_results,failure_record_count,csv_rows
+1,COMPLETE,True,108.71627415699913,,,5,0;0;0;0;0,0,14410
+2,COMPLETE,True,109.21775645700109,,,5,0;0;0;0;0,0,14430
+3,COMPLETE,True,109.14154245399914,,,5,0;0;0;0;0,0,14464
+4,COMPLETE,True,108.01509639799951,,,5,0;0;0;0;0,0,14334
+5,COMPLETE,True,108.81420386399986,,,5,0;0;0;0;0,0,14419

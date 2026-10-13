@@ -1,0 +1,38 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache
+rootdir: /home/kailash/ros2_ws/src/baseline_measurement
+configfile: setup.cfg
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0
+[1mcollecting ... [0m[1m
+collecting 0 items                                                             [0m[1m
+collected 171 items                                                            [0m
+
+test/test_acceptance.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                      [  6%][0m
+test/test_authorized_study.py [32m.[0m[32m.[0m[32m                                         [  7%][0m
+test/test_auto_takeoff.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                  [ 15%][0m
+test/test_auto_takeoff_adapter.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                 [ 18%][0m
+test/test_baseline_new.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                [ 27%][0m
+test/test_clock_guard.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                [ 36%][0m
+test/test_copyright.py [33ms[0m[32m                                                 [ 37%][0m
+test/test_dataset.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                         [ 43%][0m
+test/test_dataset_identity.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                  [ 49%][0m
+test/test_flake8.py [32m.[0m[33m                                                    [ 49%][0m
+test/test_heading_reports.py [32m.[0m[32m.[0m[33m                                          [ 50%][0m
+test/test_measurements.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                  [ 58%][0m
+test/test_native_clock.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                  [ 66%][0m
+test/test_pep257.py [32m.[0m[33m                                                    [ 66%][0m
+test/test_phase1.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                       [ 74%][0m
+test/test_preflight.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                 [ 84%][0m
+test/test_qgc_plan.py [32m.[0m[32m.[0m[33m                                                 [ 85%][0m
+test/test_report_analysis.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                           [ 95%][0m
+test/test_reporting_status.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                      [ 98%][0m
+test/test_run_provenance.py [32m.[0m[32m.[0m[33m                                           [100%][0m
+
+[33m=============================== warnings summary ===============================[0m
+test/test_flake8.py: 12 warnings
+  Warning: This process (pid=36731) is multi-threaded, use of fork() may lead to deadlocks in the child.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -
+[33m================= [32m170 passed[0m, [33m[1m1 skipped[0m, [33m[1m12 warnings[0m[33m in 7.81s[0m[33m ==================[0m

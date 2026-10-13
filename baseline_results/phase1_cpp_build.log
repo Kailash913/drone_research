@@ -1,3 +1,0 @@
-[ 50%] Building CXX object CMakeFiles/telemetry_probe.dir/telemetry_probe.cpp.o
-[100%] Linking CXX executable telemetry_probe
-[100%] Built target telemetry_probe

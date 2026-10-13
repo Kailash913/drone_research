@@ -1,0 +1,49 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache
+rootdir: /home/kailash/ros2_ws/src/baseline_measurement
+plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0
+[1mcollecting ... [0m[1m
+collecting 0 items / 1 error                                                   [0m[1m
+collected 0 items / 1 error                                                    [0m
+
+==================================== ERRORS ====================================
+[31m[1m________________________ ERROR collecting test session _________________________[0m
+[1m[31m/usr/lib/python3/dist-packages/pluggy/_hooks.py[0m:501: in __call__
+    [94mreturn[39;49;00m [96mself[39;49;00m._hookexec([96mself[39;49;00m.name, [96mself[39;49;00m._hookimpls.copy(), kwargs, firstresult)[90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/pluggy/_manager.py[0m:119: in _hookexec
+    [94mreturn[39;49;00m [96mself[39;49;00m._inner_hookexec(hook_name, methods, kwargs, firstresult)[90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/_pytest/python.py[0m:215: in pytest_collect_file
+    module: Module = ihook.pytest_pycollect_makemodule([90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/_pytest/config/compat.py[0m:66: in fixed_hook
+    [94mreturn[39;49;00m hook(**kw)[90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/pluggy/_hooks.py[0m:501: in __call__
+    [94mreturn[39;49;00m [96mself[39;49;00m._hookexec([96mself[39;49;00m.name, [96mself[39;49;00m._hookimpls.copy(), kwargs, firstresult)[90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/pluggy/_manager.py[0m:119: in _hookexec
+    [94mreturn[39;49;00m [96mself[39;49;00m._inner_hookexec(hook_name, methods, kwargs, firstresult)[90m[39;49;00m
+[1m[31m/opt/ros/jazzy/lib/python3.12/site-packages/launch_testing/pytest/hooks.py[0m:193: in pytest_pycollect_makemodule
+    entrypoint = find_launch_test_entrypoint(path)[90m[39;49;00m
+[1m[31m/opt/ros/jazzy/lib/python3.12/site-packages/launch_testing/pytest/hooks.py[0m:183: in find_launch_test_entrypoint
+    module = import_path(path, root=[94mNone[39;49;00m)[90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/_pytest/pathlib.py[0m:567: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/lib/python3.12/importlib/__init__.py[0m:90: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1387: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1360: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1331: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:935: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m/usr/lib/python3/dist-packages/_pytest/assertion/rewrite.py[0m:186: in exec_module
+    exec(co, module.[91m__dict__[39;49;00m)[90m[39;49;00m
+[1m[31mheading_fix_backups/20261010_174221/test/test_auto_takeoff_adapter.py[0m:9: in <module>
+    [94mimport[39;49;00m [04m[96mtest_preflight[39;49;00m [94mas[39;49;00m [04m[96mpreflight[39;49;00m[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'test_preflight'[0m
+- generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -
+[36m[1m=========================== short test summary info ============================[0m
+[31mERROR[0m  - ModuleNotFoundError: No module named 'test_preflight'
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+[31m=============================== [31m[1m1 error[0m[31m in 1.53s[0m[31m ===============================[0m

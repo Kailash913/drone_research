@@ -31,6 +31,7 @@ setup(
             'phase1_acceptance = baseline_measurement.acceptance:main',
             'baseline_dataset = baseline_measurement.dataset:main',
             'clock_probe = baseline_measurement.clock_probe:main',
+            'transport_probe = baseline_measurement.transport_probe:main',
             'record_context = baseline_measurement.record_context:main',
             'measurement_import = baseline_measurement.measurements:main',
             'provenance_recovery = baseline_measurement.provenance:main',

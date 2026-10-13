@@ -1,0 +1,40 @@
+[1.937s] Invoking command in '/home/kailash/ros2_ws/src/baseline_measurement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kailash/ros2_ws/build/baseline_measurement/pytest.xml --junit-prefix=baseline_measurement -o cache_dir=/home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[2.360s] [1m============================= test session starts ==============================[0m
+[2.361s] platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+[2.365s] cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache
+[2.366s] rootdir: /home/kailash/ros2_ws/src/baseline_measurement
+[2.366s] configfile: setup.cfg
+[2.366s] plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0
+[3.459s] [1mcollecting ... [0m[1m
+[3.499s] collecting 0 items                                                             [0m[1m
+[3.499s] collected 171 items                                                            [0m
+[3.499s] 
+[3.566s] test/test_acceptance.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                      [  6%][0m
+[3.574s] test/test_authorized_study.py [32m.[0m[32m.[0m[32m                                         [  7%][0m
+[3.608s] test/test_auto_takeoff.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                  [ 15%][0m
+[3.763s] test/test_auto_takeoff_adapter.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                 [ 18%][0m
+[3.792s] test/test_baseline_new.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                [ 27%][0m
+[3.906s] test/test_clock_guard.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                [ 36%][0m
+[3.908s] test/test_copyright.py [33ms[0m[32m                                                 [ 37%][0m
+[3.946s] test/test_dataset.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                         [ 43%][0m
+[4.013s] test/test_dataset_identity.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                  [ 49%][0m
+[5.109s] test/test_flake8.py [32m.[0m[33m                                                    [ 49%][0m
+[5.112s] test/test_heading_reports.py [32m.[0m[32m.[0m[33m                                          [ 50%][0m
+[5.132s] test/test_measurements.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                  [ 58%][0m
+[5.145s] test/test_native_clock.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                  [ 66%][0m
+[5.608s] test/test_pep257.py [32m.[0m[33m                                                    [ 66%][0m
+[5.642s] test/test_phase1.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                       [ 74%][0m
+[5.807s] test/test_preflight.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                 [ 84%][0m
+[5.807s] test/test_qgc_plan.py [32m.[0m[32m.[0m[33m                                                 [ 85%][0m
+[10.149s] test/test_report_analysis.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                           [ 95%][0m
+[10.156s] test/test_reporting_status.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                                      [ 98%][0m
+[10.164s] test/test_run_provenance.py [32m.[0m[32m.[0m[33m                                           [100%][0m
+[10.165s] 
+[10.165s] [33m=============================== warnings summary ===============================[0m
+[10.165s] test/test_flake8.py: 12 warnings
+[10.165s]   Warning: This process (pid=36731) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[10.165s] 
+[10.166s] -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+[10.166s] - generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -
+[10.166s] [33m================= [32m170 passed[0m, [33m[1m1 skipped[0m, [33m[1m12 warnings[0m[33m in 7.81s[0m[33m ==================[0m
+[10.397s] Invoked command in '/home/kailash/ros2_ws/src/baseline_measurement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTEST_ADDOPTS=--tb=short --junit-xml=/home/kailash/ros2_ws/build/baseline_measurement/pytest.xml --junit-prefix=baseline_measurement -o cache_dir=/home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest

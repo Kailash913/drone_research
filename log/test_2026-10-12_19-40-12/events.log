@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.000341] (baseline_measurement) JobQueued: {'identifier': 'baseline_measurement', 'dependencies': OrderedDict({'px4_msgs': '/home/kailash/ros2_ws/install/px4_msgs', 'baseline_measurement': '/home/kailash/ros2_ws/install/baseline_measurement'})}
+[0.001503] (baseline_measurement) JobStarted: {'identifier': 'baseline_measurement'}
+[0.098966] (-) TimerEvent: {}
+[0.199431] (-) TimerEvent: {}
+[0.300079] (-) TimerEvent: {}
+[0.400645] (-) TimerEvent: {}
+[0.501435] (-) TimerEvent: {}
+[0.602133] (-) TimerEvent: {}
+[0.702736] (-) TimerEvent: {}
+[0.803978] (-) TimerEvent: {}
+[0.904413] (-) TimerEvent: {}
+[1.005002] (-) TimerEvent: {}
+[1.105500] (-) TimerEvent: {}
+[1.205861] (-) TimerEvent: {}
+[1.306363] (-) TimerEvent: {}
+[1.406796] (-) TimerEvent: {}
+[1.507157] (-) TimerEvent: {}
+[1.607532] (-) TimerEvent: {}
+[1.707937] (-) TimerEvent: {}
+[1.808626] (-) TimerEvent: {}
+[1.909231] (-) TimerEvent: {}
+[2.009691] (-) TimerEvent: {}
+[2.056474] (baseline_measurement) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/kailash/ros2_ws/src/baseline_measurement', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'kailash', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/kailash/ros2_ws/install/px4_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/kailash', 'OLDPWD': '/home/kailash/ros2_ws', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/kailash/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'kailash', 'NAME': 'Kailash', 'WSL_INTEROP': '/run/WSL/22473_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/kailash/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_3.0.1.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-21.0.12.8-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2026.2.0/:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/bin:/mnt/c/Users/kaila/Downloads/hadoop-3.5.0.tar/hadoop-3.5.0/hadoop-3.5.0/sbin:/mnt/c/Users/kaila/Downloads/apache-maven-3.9.16-bin/apache-maven-3.9.16/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/WINDOWS/System32":/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/":/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/":/mnt/c/Program Files/WSL/:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/:/mnt/c/Users/kaila/.local/bin:/mnt/c/Users/kaila/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kaila/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/MinGW/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Ollama:/mnt/c/Users/kaila/AppData/Roaming/npm:/mnt/c/Users/kaila/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/kaila/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/kaila/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Kiro/bin:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2/:/mnt/c/Users/kaila/AppData/Local/Programs/Amazon/AWSCLIV2:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin:/snap/bin:/opt/xtensa-esp-elf/bin/', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/kailash/ros2_ws/install/baseline_measurement:/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/kailash/ros2_ws/build/baseline_measurement', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/kailash/ros2_ws/install/baseline_measurement/lib/python3.12/site-packages:/home/kailash/ros2_ws/install/px4_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/kailash/ros2_ws/install/px4_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': '', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/kailash/ros2_ws/build/baseline_measurement/pytest.xml --junit-prefix=baseline_measurement -o cache_dir=/home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache'}, 'shell': False}
+[2.110064] (-) TimerEvent: {}
+[2.210597] (-) TimerEvent: {}
+[2.310930] (-) TimerEvent: {}
+[2.411333] (-) TimerEvent: {}
+[2.511770] (-) TimerEvent: {}
+[2.612225] (-) TimerEvent: {}
+[2.713175] (-) TimerEvent: {}
+[2.813864] (-) TimerEvent: {}
+[2.835942] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[2.836379] (baseline_measurement) StdoutLine: {'line': b'platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0\n'}
+[2.845223] (baseline_measurement) StdoutLine: {'line': b'cachedir: /home/kailash/ros2_ws/build/baseline_measurement/.pytest_cache\n'}
+[2.845493] (baseline_measurement) StdoutLine: {'line': b'rootdir: /home/kailash/ros2_ws/src/baseline_measurement\n'}
+[2.845603] (baseline_measurement) StdoutLine: {'line': b'plugins: ament-pep257-0.17.5, launch-testing-ros-0.26.12, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, ament-xmllint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, cov-4.1.0\n'}
+[2.913970] (-) TimerEvent: {}
+[3.014283] (-) TimerEvent: {}
+[3.114642] (-) TimerEvent: {}
+[3.215073] (-) TimerEvent: {}
+[3.315480] (-) TimerEvent: {}
+[3.416328] (-) TimerEvent: {}
+[3.516726] (-) TimerEvent: {}
+[3.617404] (-) TimerEvent: {}
+[3.718277] (-) TimerEvent: {}
+[3.818837] (-) TimerEvent: {}
+[3.919452] (-) TimerEvent: {}
+[4.020032] (-) TimerEvent: {}
+[4.120735] (-) TimerEvent: {}
+[4.221313] (-) TimerEvent: {}
+[4.252517] (baseline_measurement) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[4.258570] (baseline_measurement) StdoutLine: {'line': b'collecting 0 items / 1 error                                                   \x1b[0m\x1b[1m\n'}
+[4.258949] (baseline_measurement) StdoutLine: {'line': b'collected 0 items / 1 error                                                    \x1b[0m\n'}
+[4.302288] (baseline_measurement) StdoutLine: {'line': b'\n'}
+[4.303144] (baseline_measurement) StdoutLine: {'line': b'==================================== ERRORS ====================================\n'}
+[4.303443] (baseline_measurement) StdoutLine: {'line': b'\x1b[31m\x1b[1m________________________ ERROR collecting test session _________________________\x1b[0m\n'}
+[4.303649] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/pluggy/_hooks.py\x1b[0m:501: in __call__\n'}
+[4.321540] (-) TimerEvent: {}
+[4.356553] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mreturn\x1b[39;49;00m \x1b[96mself\x1b[39;49;00m._hookexec(\x1b[96mself\x1b[39;49;00m.name, \x1b[96mself\x1b[39;49;00m._hookimpls.copy(), kwargs, firstresult)\x1b[90m\x1b[39;49;00m\n'}
+[4.356900] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/pluggy/_manager.py\x1b[0m:119: in _hookexec\n'}
+[4.357366] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mreturn\x1b[39;49;00m \x1b[96mself\x1b[39;49;00m._inner_hookexec(hook_name, methods, kwargs, firstresult)\x1b[90m\x1b[39;49;00m\n'}
+[4.357758] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/_pytest/python.py\x1b[0m:215: in pytest_collect_file\n'}
+[4.358240] (baseline_measurement) StdoutLine: {'line': b'    module: Module = ihook.pytest_pycollect_makemodule(\x1b[90m\x1b[39;49;00m\n'}
+[4.359408] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/_pytest/config/compat.py\x1b[0m:66: in fixed_hook\n'}
+[4.359753] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mreturn\x1b[39;49;00m hook(**kw)\x1b[90m\x1b[39;49;00m\n'}
+[4.359851] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/pluggy/_hooks.py\x1b[0m:501: in __call__\n'}
+[4.359921] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mreturn\x1b[39;49;00m \x1b[96mself\x1b[39;49;00m._hookexec(\x1b[96mself\x1b[39;49;00m.name, \x1b[96mself\x1b[39;49;00m._hookimpls.copy(), kwargs, firstresult)\x1b[90m\x1b[39;49;00m\n'}
+[4.360011] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/pluggy/_manager.py\x1b[0m:119: in _hookexec\n'}
+[4.360260] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mreturn\x1b[39;49;00m \x1b[96mself\x1b[39;49;00m._inner_hookexec(hook_name, methods, kwargs, firstresult)\x1b[90m\x1b[39;49;00m\n'}
+[4.360491] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/opt/ros/jazzy/lib/python3.12/site-packages/launch_testing/pytest/hooks.py\x1b[0m:193: in pytest_pycollect_makemodule\n'}
+[4.360583] (baseline_measurement) StdoutLine: {'line': b'    entrypoint = find_launch_test_entrypoint(path)\x1b[90m\x1b[39;49;00m\n'}
+[4.360892] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/opt/ros/jazzy/lib/python3.12/site-packages/launch_testing/pytest/hooks.py\x1b[0m:183: in find_launch_test_entrypoint\n'}
+[4.361088] (baseline_measurement) StdoutLine: {'line': b'    module = import_path(path, root=\x1b[94mNone\x1b[39;49;00m)\x1b[90m\x1b[39;49;00m\n'}
+[4.361246] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/_pytest/pathlib.py\x1b[0m:567: in import_path\n'}
+[4.361371] (baseline_measurement) StdoutLine: {'line': b'    importlib.import_module(module_name)\x1b[90m\x1b[39;49;00m\n'}
+[4.361485] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3.12/importlib/__init__.py\x1b[0m:90: in import_module\n'}
+[4.361599] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mreturn\x1b[39;49;00m _bootstrap._gcd_import(name[level:], package, level)\x1b[90m\x1b[39;49;00m\n'}
+[4.361715] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m<frozen importlib._bootstrap>\x1b[0m:1387: in _gcd_import\n'}
+[4.361889] (baseline_measurement) StdoutLine: {'line': b'    \x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[90m\x1b[39;49;00m\n'}
+[4.362252] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m<frozen importlib._bootstrap>\x1b[0m:1360: in _find_and_load\n'}
+[4.362569] (baseline_measurement) StdoutLine: {'line': b'    \x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[90m\x1b[39;49;00m\n'}
+[4.362789] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m<frozen importlib._bootstrap>\x1b[0m:1331: in _find_and_load_unlocked\n'}
+[4.363029] (baseline_measurement) StdoutLine: {'line': b'    \x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[90m\x1b[39;49;00m\n'}
+[4.363278] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m<frozen importlib._bootstrap>\x1b[0m:935: in _load_unlocked\n'}
+[4.363747] (baseline_measurement) StdoutLine: {'line': b'    \x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[04m\x1b[91m?\x1b[39;49;00m\x1b[90m\x1b[39;49;00m\n'}
+[4.364066] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31m/usr/lib/python3/dist-packages/_pytest/assertion/rewrite.py\x1b[0m:186: in exec_module\n'}
+[4.364364] (baseline_measurement) StdoutLine: {'line': b'    exec(co, module.\x1b[91m__dict__\x1b[39;49;00m)\x1b[90m\x1b[39;49;00m\n'}
+[4.364488] (baseline_measurement) StdoutLine: {'line': b'\x1b[1m\x1b[31mheading_fix_backups/20261010_174221/test/test_auto_takeoff_adapter.py\x1b[0m:9: in <module>\n'}
+[4.364756] (baseline_measurement) StdoutLine: {'line': b'    \x1b[94mimport\x1b[39;49;00m \x1b[04m\x1b[96mtest_preflight\x1b[39;49;00m \x1b[94mas\x1b[39;49;00m \x1b[04m\x1b[96mpreflight\x1b[39;49;00m\x1b[90m\x1b[39;49;00m\n'}
+[4.364844] (baseline_measurement) StdoutLine: {'line': b"\x1b[1m\x1b[31mE   ModuleNotFoundError: No module named 'test_preflight'\x1b[0m\n"}
+[4.365068] (baseline_measurement) StdoutLine: {'line': b'- generated xml file: /home/kailash/ros2_ws/build/baseline_measurement/pytest.xml -\n'}
+[4.365394] (baseline_measurement) StdoutLine: {'line': b'\x1b[36m\x1b[1m=========================== short test summary info ============================\x1b[0m\n'}
+[4.365497] (baseline_measurement) StdoutLine: {'line': b"\x1b[31mERROR\x1b[0m  - ModuleNotFoundError: No module named 'test_preflight'\n"}
+[4.365564] (baseline_measurement) StdoutLine: {'line': b'!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n'}
+[4.365799] (baseline_measurement) StdoutLine: {'line': b'\x1b[31m=============================== \x1b[31m\x1b[1m1 error\x1b[0m\x1b[31m in 1.53s\x1b[0m\x1b[31m ===============================\x1b[0m\n'}
+[4.421721] (-) TimerEvent: {}
+[4.522246] (-) TimerEvent: {}
+[4.573103] (baseline_measurement) CommandEnded: {'returncode': 2}
+[4.573553] (baseline_measurement) JobEnded: {'identifier': 'baseline_measurement', 'rc': 2}
+[4.583941] (-) EventReactorShutdown: {}

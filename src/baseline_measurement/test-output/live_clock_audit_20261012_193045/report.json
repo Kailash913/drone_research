@@ -1,0 +1,88 @@
+{
+  "flight_commands_sent": 0,
+  "parameter_writes": 0,
+  "processes": [
+    {
+      "cmdline": [
+        "/home/kailash/PX4-Autopilot/build/px4_sitl_default/bin/px4"
+      ],
+      "pid": 11514,
+      "name": "px4"
+    },
+    {
+      "cmdline": [
+        "MicroXRCEAgent",
+        "udp4",
+        "-p",
+        "8888"
+      ],
+      "pid": 13840,
+      "name": "MicroXRCEAgent"
+    }
+  ],
+  "git": "## master\n D ../../baseline_results/BASE-001_c01043f4edba.json\n D ../../baseline_results/BASE-001_c01043f4edba_raw.csv\n D ../../baseline_results/BASE-002_dc4ddca839b9.json\n D ../../baseline_results/BASE-002_dc4ddca839b9_raw.csv\n D ../../baseline_results/baseline_run_001.csv\n D ../../baseline_results/baseline_run_002.csv\n D ../../baseline_results/baseline_run_003.csv\n D ../../baseline_results/baseline_run_004.csv\n D ../../baseline_results/baseline_run_005.csv\n D ../../baseline_results/baseline_run_006.csv\n D ../../baseline_results/baseline_run_007.csv\n D ../../baseline_results/baseline_run_008.csv\n D ../../baseline_results/baseline_run_009.csv\n D ../../baseline_results/baseline_run_009.plan\n D ../../baseline_results/baseline_run_010.csv\n D ../../baseline_results/baseline_run_010.plan\n D ../../baseline_results/baseline_run_011.csv\n D ../../baseline_results/baseline_run_011.plan\n D ../../baseline_results/baseline_run_012.csv\n D ../../baseline_results/baseline_run_012.plan\n D ../../baseline_results/baseline_run_013.csv\n D ../../baseline_results/baseline_run_013.plan\n D ../../baseline_results/baseline_run_014.csv\n D ../../baseline_results/baseline_run_014.plan\n D ../../baseline_results/baseline_run_015.csv\n D ../../baseline_results/baseline_run_015.plan\n D ../../baseline_results/baseline_run_016.csv\n D ../../baseline_results/baseline_run_016.plan\n D ../../baseline_results/baseline_run_017.csv\n D ../../baseline_results/baseline_run_017.plan\n D ../../baseline_results/baseline_run_018.csv\n D ../../baseline_results/baseline_run_018.plan\n D ../../baseline_results/baseline_run_019.csv\n D ../../baseline_results/baseline_run_019.plan\n D ../../baseline_results/baseline_run_020.csv\n D ../../baseline_results/baseline_run_020.plan\n D ../../baseline_results/baseline_run_021.csv\n D ../../baseline_results/baseline_run_021.plan\n D ../../baseline_results/baseline_run_022.csv\n D ../../baseline_results/baseline_run_022.plan\n D ../../baseline_results/baseline_run_023.csv\n D ../../baseline_results/baseline_run_023.plan\n D ../../baseline_results/baseline_run_024.csv\n D ../../baseline_results/baseline_run_024.plan\n D ../../baseline_results/baseline_run_025.csv\n D ../../baseline_results/baseline_run_025.plan\n D ../../baseline_results/baseline_run_026.csv\n D ../../baseline_results/baseline_run_026.plan\n D ../../baseline_results/baseline_run_027.csv\n D ../../baseline_results/baseline_run_027.plan\n D ../../baseline_results/baseline_run_028.csv\n D ../../baseline_results/baseline_run_028.plan\n D ../../baseline_results/baseline_run_029.csv\n D ../../baseline_results/baseline_run_029.plan\n D ../../baseline_results/baseline_run_030.csv\n D ../../baseline_results/baseline_run_030.plan\n D ../../baseline_results/baseline_run_031.csv\n D ../../baseline_results/baseline_run_031.plan\n D ../../baseline_results/baseline_run_032.csv\n D ../../baseline_results/baseline_run_032.plan\n D ../../baseline_results/baseline_run_033.csv\n D ../../baseline_results/baseline_run_033.plan\n D ../../baseline_results/baseline_run_034.csv\n D ../../baseline_results/baseline_run_034.plan\n D ../../baseline_results/baseline_run_035.csv\n D ../../baseline_results/baseline_run_035.plan\n D ../../baseline_results/baseline_run_036.csv\n D ../../baseline_results/baseline_run_036.plan\n D ../../baseline_results/baseline_run_037.csv\n D ../../baseline_results/baseline_run_037.plan\n D ../../baseline_results/baseline_run_038.csv\n D ../../baseline_results/baseline_run_038.plan\n D ../../baseline_results/baseline_run_039.csv\n D ../../baseline_results/baseline_run_039.plan\n D ../../baseline_results/baseline_run_040.csv\n D ../../baseline_results/baseline_run_040.plan\n D ../../baseline_results/baseline_run_041.csv\n D ../../baseline_results/baseline_run_041.plan\n D ../../baseline_results/baseline_run_042.csv\n D ../../baseline_results/baseline_run_042.plan\n D ../../baseline_results/baseline_run_043.csv\n D ../../baseline_results/baseline_run_043.plan\n D ../../baseline_results/baseline_run_044.csv\n D ../../baseline_results/baseline_run_044.plan\n D ../../baseline_results/baseline_run_045.csv\n D ../../baseline_results/baseline_run_045.plan\n D ../../baseline_results/baseline_summary.csv\n D ../../baseline_results/heading_passive_diagnostic.json\n D ../../baseline_results/phase1_build.log\n D ../../baseline_results/phase1_colcon_result.log\n D ../../baseline_results/phase1_colcon_tests.log\n D ../../baseline_results/phase1_cpp_build.log\n D ../../baseline_results/phase1_cpp_configure.log\n D ../../baseline_results/phase1_cpp_probe.log\n D ../../baseline_results/phase1_five_passive.json\n D ../../baseline_results/phase1_five_passive_final.json\n D ../../baseline_results/phase1_functional_tests.log\n D ../../baseline_results/phase1_initial_batch.json\n D ../../baseline_results/phase1_integrated_validation.log\n D ../../baseline_results/phase1_live_chain.json\n D ../../baseline_results/phase1_passive_batch.log\n D ../../baseline_results/phase1_passive_replacement.log\n D ../../baseline_results/phase1_passive_replacement2.log\n D ../../baseline_results/phase1_pytest.xml\n D ../../baseline_results/phase1_results.json\n D ../../baseline_results/phase1_study_36527160a48f/BASE-001_clock_console.log\n D ../../baseline_results/phase1_study_36527160a48f/BASE-001_console.log\n D ../../baseline_results/phase1_study_36527160a48f/baseline_run_001.csv\n D ../../baseline_results/phase1_study_36527160a48f/baseline_run_001.plan\n D ../../baseline_results/phase1_study_36527160a48f/clock_BASE-001/clock_probe_963f5bfe48374116917936092407c805.csv\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/build_git_version.h\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/config.yaml\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/provenance.json\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/__init__.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/acceptance.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/baseline_node.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/cli.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/clock_probe.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/dataset.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/experiment.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/experiment_logger.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/measurements.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/metrics.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/mission_node.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/mission_state.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/provenance.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/qgc_plan.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/record_context.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/resource_monitor.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/run_provenance.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/sync_evidence.py\n D ../../baseline_results/phase1_study_36527160a48f/context_BASE-001/source/transport_probe.py\n D ../../baseline_results/phase1_study_36527160a48f/preflight_BASE-001/BASE-001_e12bc984413b.json\n D ../../baseline_results/phase1_study_36527160a48f/preflight_BASE-001/BASE-001_e12bc984413b_raw.csv\n D ../../baseline_results/phase1_study_36527160a48f/preflight_BASE-001/baseline_summary.csv\n D ../../baseline_results/phase1_study_36527160a48f/preflight_BASE-001/preflight.json\n D ../../baseline_results/phase1_study_36527160a48f/preflight_BASE-001/preflight_001.csv\n D ../../baseline_results/phase1_study_36527160a48f/study_progress.json\n D ../../baseline_results/phase1_study_36527160a48f/validation_after_BASE-001/baseline_summary.md\n D ../../baseline_results/phase1_study_36527160a48f/validation_after_BASE-001/manifest.csv\n D ../../baseline_results/phase1_study_36527160a48f/validation_after_BASE-001/manifest.json\n D ../../baseline_results/phase1_study_36527160a48f/validation_after_BASE-001/validation_report.json\n D ../../baseline_results/phase1_study_c57f5de2b96a/preflight_BASE-001/BASE-001_f12b26ea441a.json\n D ../../baseline_results/phase1_study_c57f5de2b96a/preflight_BASE-001/BASE-001_f12b26ea441a_raw.csv\n D ../../baseline_results/phase1_study_c57f5de2b96a/preflight_BASE-001/baseline_summary.csv\n D ../../baseline_results/phase1_study_c57f5de2b96a/preflight_BASE-001/preflight_001.csv\n D ../../baseline_results/phase1_study_c57f5de2b96a/study_progress.json\n D ../../baseline_results/preflight_001.csv\n D ../../baseline_results/preflight_002.csv\n D ../../baseline_results/preflight_003.csv\n M ../../build/baseline_measurement/colcon_command_prefix_setup_py.sh.env\n M ../../build/baseline_measurement/prefix_override/__pycache__/sitecustomize.cpython-312.pyc\n M ../../log/latest_build\n M setup.py\n?? ../../log/build_2026-10-12_17-02-40/\n?? ../../phase1_audit_20261012/\n?? ../../phase1_baseline_30/\n?? ../../phase1_clock_diagnostics/\n?? build/\n?? install/\n?? log/\n?? ../../transport_probe_001/\n",
+  "preflight": {
+    "checks": {
+      "connected": true,
+      "healthy": true,
+      "valid": true,
+      "heading_ready": false,
+      "landed": true,
+      "armed": false,
+      "competition": false,
+      "failsafe": false,
+      "reset": false
+    },
+    "passed": false,
+    "grounded_hold_requested": false,
+    "arming_commands": 0,
+    "mission_outcome": "NOT_ATTEMPTED"
+  },
+  "px4_udp_ports": [
+    10317,
+    10318,
+    13030,
+    14280,
+    14580,
+    18570,
+    43513
+  ],
+  "mavlink_heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 2,
+    "autopilot": 12,
+    "base_mode": 29,
+    "custom_mode": 50593792,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "parameters": {
+    "UXRCE_DDS_SYNCT": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "UXRCE_DDS_SYNCT",
+      "param_value": 1.401298464324817e-45,
+      "param_type": 6,
+      "param_count": 1122,
+      "param_index": 1087,
+      "decoded_int32": 1
+    },
+    "UXRCE_DDS_PRT": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "UXRCE_DDS_PRT",
+      "param_value": 1.2454740750918974e-41,
+      "param_type": 6,
+      "param_count": 1122,
+      "param_index": 65535,
+      "decoded_int32": 8888
+    },
+    "UXRCE_DDS_DOM_ID": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "UXRCE_DDS_DOM_ID",
+      "param_value": 0.0,
+      "param_type": 6,
+      "param_count": 1122,
+      "param_index": 1080,
+      "decoded_int32": 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: baseline-measurement
+Version: 0.0.0
+Summary: PX4 ROS2 baseline measurement node
+Maintainer: kailash
+Maintainer-email: kailash@example.com
+License: Apache-2.0

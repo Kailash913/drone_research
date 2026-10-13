@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "category": "A_PASSIVE",
+  "runs": [
+    {
+      "csv": "/home/kailash/ros2_ws/phase1_baseline_30/preflight_002.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-12T18:04:58.090735+00:00",
+      "end_utc": "2026-10-12T18:05:13.104590+00:00",
+      "duration_s": 15.013812139999573,
+      "publication_records": 0,
+      "source_clock_regressions": [],
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 30,
+          "rate_hz": 1.9981600755529938
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 749,
+          "rate_hz": 49.88739655297308
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 749,
+          "rate_hz": 49.88739655297308
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9990800377764969
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9990800377764969
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 1.012134096000409,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": false,
+      "publisher_status": "clear"
+    },
+    {
+      "csv": "/home/kailash/ros2_ws/phase1_baseline_30/preflight_003.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-12T18:05:13.134643+00:00",
+      "end_utc": "2026-10-12T18:05:28.138602+00:00",
+      "duration_s": 15.003900992999661,
+      "publication_records": 0,
+      "source_clock_regressions": [],
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 30,
+          "rate_hz": 1.9994800028337323
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 745,
+          "rate_hz": 49.65375340370435
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 745,
+          "rate_hz": 49.65375340370435
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9997400014168661
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9997400014168661
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.003364856999724,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": false,
+      "publisher_status": "clear"
+    },
+    {
+      "csv": "/home/kailash/ros2_ws/phase1_baseline_30/preflight_004.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-12T18:05:28.165053+00:00",
+      "end_utc": "2026-10-12T18:05:43.170570+00:00",
+      "duration_s": 15.005489801000294,
+      "publication_records": 0,
+      "source_clock_regressions": [],
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 30,
+          "rate_hz": 1.9992682943278628
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 745,
+          "rate_hz": 49.64849597580859
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 745,
+          "rate_hz": 49.64849597580859
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9996341471639314
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9996341471639314
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.054109628000333,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": false,
+      "publisher_status": "clear"
+    },
+    {
+      "csv": "/home/kailash/ros2_ws/phase1_baseline_30/preflight_005.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-12T18:05:43.197962+00:00",
+      "end_utc": "2026-10-12T18:05:58.206311+00:00",
+      "duration_s": 15.008317206000356,
+      "publication_records": 0,
+      "source_clock_regressions": [],
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 30,
+          "rate_hz": 1.9988916537562211
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 745,
+          "rate_hz": 49.639142734946155
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 745,
+          "rate_hz": 49.639142734946155
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9994458268781106
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9994458268781106
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.0568128830000205,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": false,
+      "publisher_status": "clear"
+    },
+    {
+      "csv": "/home/kailash/ros2_ws/phase1_baseline_30/preflight_006.csv",
+      "category": "A_PASSIVE",
+      "decision": "PASS",
+      "errors": [],
+      "mission_status": "not_demonstrated",
+      "start_utc": "2026-10-12T18:05:58.235570+00:00",
+      "end_utc": "2026-10-12T18:06:13.242509+00:00",
+      "duration_s": 15.006895212999552,
+      "publication_records": 0,
+      "source_clock_regressions": [],
+      "topics": {
+        "status": {
+          "topic": "/fmu/out/vehicle_status_v4",
+          "count": 29,
+          "rate_hz": 1.932445025329362
+        },
+        "position": {
+          "topic": "/fmu/out/vehicle_local_position_v1",
+          "count": 745,
+          "rate_hz": 49.64384634035775
+        },
+        "attitude": {
+          "topic": "/fmu/out/vehicle_attitude",
+          "count": 745,
+          "rate_hz": 49.64384634035775
+        },
+        "land": {
+          "topic": "/fmu/out/vehicle_land_detected",
+          "count": 15,
+          "rate_hz": 0.9995405303427735
+        },
+        "battery": {
+          "topic": "/fmu/out/battery_status_v1",
+          "count": 15,
+          "rate_hz": 0.9995405303427735
+        }
+      },
+      "resource_records": 14,
+      "first_valid_sample_s": 2.0559838009994564,
+      "startup_records": 4,
+      "stable_records": 10,
+      "heading_ready_at_end": false,
+      "publisher_status": "clear"
+    }
+  ],
+  "all_passed": true,
+  "phase1_status": "PARTIALLY COMPLETE",
+  "note": "Passive demonstrations do not establish mission or QGC control success."
+}
